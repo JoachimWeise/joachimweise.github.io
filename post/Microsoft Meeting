@@ -1,0 +1,80 @@
+Microsoft Meeting
+
+Types of partnerships
+* Commercial partnership (e.g. Daimler, Extollo)
+* Market-building partnership
+	+ Allianz, Syncier, Saas
+	+ VW Automotive Cloud (everything around the car)
+	+ Co-engineering with clients
+* Standards-building partnerships
+	+ Open manufacturing platform (Industry 4.0 for real, includes BMW and others)
+
+
+Microsoft Dynamics
+* Common Data Model
+	+ Will be standardized by vertical
+	+ Developed with industry vertical leaders
+* CDM support various services / components, e.g.
+	+ optimization
+	+ warehouse management model
+
+
+Power Platform
+* SaaS with common governance model
+* Low-code development
+* PowerApps, PowerBI, PowerAI, RPA, Virtual Agent
+
+
+Azure
+* 54 regions
+* 30+ datacenters
+* Global network, mostly leased lines, partly own fiber, 20ms away from you
+* 125 services
+
+
+Data Lake
+* Azure Data Lake Service Gen 2 (ADLS Gen 2)
+* S3 is not really open source but controlled by AWS
+* At Azure, it's HDFS protocol on top of POSIX FS on top of blob storage
+* But there's also Blob API on top POSIX
+* Don't use proprietary interfaces (don't tie directly into S3)
+* Parquet (columnar) and Avro (IoT) in future as standard file formats
+* Policies / encryption can be built into Parquet files
+
+
+* Azure Key Vault > Customer managed encryption keys (CMEK)
+* Not Internet travel (private IP + Express Route)
+
+* HD Insight, more or less equivalent to EMR, supports Kerberos encryption
+* DataBricks lacking a little bit Enterprise orientation
+* Azure Synapse. Combines various services
+	+ Single workbench, like SageMaker Studio
+	+ Language support Python, R, .Net, SQL
+	+ 2 engines: 
+		Spark
+		SQL Datawarehouse (can read Parquet, comparable to Snowflake)
+	+ Common metadata exchange servicebetween the 2 engines
+	+ In addition "linked services": PowerBI, Azure ML services
+	+ Pay by capacity, or pay by query ("serverless")
+
+
+Azure Data Catalogue
+* UX's
+* Apache Atlas: Metadata
+* Discover Engine: Elasticsearch
+* Adapters underneath
+
+Azure Data Factory as competitor to Informatica, integrated with Workbench
+
+Service Mesh:
+* Google Istio
+* Azure Service Mesh Interface (SMI)
+
+Event Based Programming
+* AWS Lambda
+* Google Functions
+* Azure Functions
+
+Serverless computing / event-driven portable runtime
+Google's proposal: Knative (monolithic, focused on Kubernetes)
+MS approach: DAPR Distributed Application Runtime (agnostic to hosting runtime). Our code binds to dapr.io, DAPR then to Azure Event Grid or AMazon equivalent

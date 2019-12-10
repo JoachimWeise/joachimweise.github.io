@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Image Manipulation with Python Pillow - Joachim Weise</title>
+  <meta name="description" content="Normally I use GIMP when I need to resize, crop or retouch images in various ways. However, for my last post on the Berlin Festival of Light I would have had to manually resize and crop a whole bunch of images at a time. That&#39;s why I took a look how Python could help with this task, and found PIL, the Python Imaging Library, in newer versions known as Pillow.">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2019-10-27-python-pillow\/",
+          "name": "Image manipulation with python pillow"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "Image Manipulation with Python Pillow",
+  "description" : "Normally I use GIMP when I need to resize, crop or retouch images in various ways. However, for my last post on the Berlin Festival of Light I would have had to manually resize and crop a whole bunch of images at a time. That\x27s why I took a look how Python could help with this task, and found PIL, the Python Imaging Library, in newer versions known as Pillow.\n",
+  "inLanguage" : "en",
+  "wordCount":  609 ,
+  "datePublished" : "2019-10-27T00:00:00",
+  "dateModified" : "2019-10-27T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "python, code, website" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2019-10-27-python-pillow\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Image Manipulation with Python Pillow" />
+<meta property="og:description" content="Normally I use GIMP when I need to resize, crop or retouch images in various ways. However, for my last post on the Berlin Festival of Light I would have had to manually resize and crop a whole bunch of images at a time. That&#39;s why I took a look how Python could help with this task, and found PIL, the Python Imaging Library, in newer versions known as Pillow.">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2019-10-27-python-pillow/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="Image Manipulation with Python Pillow" />
+  <meta name="twitter:description" content="Normally I use GIMP when I need to resize, crop or retouch images in various ways. However, for my last post on the Berlin Festival of Light I would have had to manually resize and crop a whole bunch …">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/2019-10-27-python-pillow.jpg" 
+         
+         data-img-desc-1="Saint-Tropez (July 2018)"
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>Image Manipulation with Python Pillow</h1>
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Oct 27, 2019
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;609&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Image Manipulation with Python Pillow</h1>
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Oct 27, 2019
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;609&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>Normally I use <a href="https://www.gimp.org/">GIMP</a> when I need to resize, crop or retouch images in various ways. However, for my last <a href="/post/2019-10-19-first-post/">post</a> on the Berlin Festival of Light I would have had to manually resize and crop a whole bunch of images at a time. That's why I took a look how Python could help with this task, and found PIL, the Python Imaging Library, in newer versions known as <a href="https://python-pillow.org/">Pillow</a>.</p>
+
+<p>I decided to write a small Python script, without any sophisticated bells and whistles, just good enough to get the task done. It is supposed to cover the following workflow:</p>
+
+<ul>
+<li>Implicity assume <code>.jpg</code> files with aspect ratio 16:9, because that's currently my default setting for my Lumix camera.</li>
+<li>Loop through the images in an input directory</li>
+<li>Let function <code>scale_image()</code> resize an image to 1920x1080 pixels, then save it in the output directory</li>
+<li>Let function <code>crop_image()</code> produce six different thumbnails out of the rescaled image, in order to give some choice, and save them in the output directory</li>
+<li>Finally, I inspect the thumbnails with IrfanView and manually delete the redundant ones.</li>
+</ul>
+
+<p>Here's the code:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="ln"> 1</span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="ln"> 2</span><span class="kn">import</span> <span class="nn">os</span>
+<span class="ln"> 3</span> 
+<span class="ln"> 4</span><span class="k">def</span> <span class="nf">scale_image</span><span class="p">(</span><span class="n">input_image_path</span><span class="p">,</span> <span class="n">scaled_image_path</span><span class="p">):</span> 
+<span class="ln"> 5</span>    <span class="s2">&#34;&#34;&#34; Resize an image to 1920 pixels width and save it into out directory&#34;&#34;&#34;</span>
+<span class="ln"> 6</span>    <span class="n">original_image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">input_image_path</span><span class="p">)</span> 
+<span class="ln"> 7</span>    <span class="n">original_image</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="mi">1920</span><span class="p">,</span> <span class="mi">10000</span><span class="p">),</span> <span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
+<span class="ln"> 8</span>    <span class="n">original_image</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">scaled_image_path</span><span class="p">)</span>
+<span class="ln"> 9</span> 
+<span class="ln">10</span>
+<span class="ln">11</span><span class="k">def</span> <span class="nf">crop_image</span><span class="p">(</span><span class="n">scaled_image_path</span><span class="p">):</span>
+<span class="ln">12</span>    <span class="s2">&#34;&#34;&#34; 
+</span><span class="ln">13</span><span class="s2">    Produce all-in-all 6 thumbnails of an image: 2 centered, in different sizes, 
+</span><span class="ln">14</span><span class="s2">    and then 4 other ones off-center, in order to present options to choose the 
+</span><span class="ln">15</span><span class="s2">    nicest version. All thumbs are resized to 500x500 pixels
+</span><span class="ln">16</span><span class="s2">    &#34;&#34;&#34;</span>
+<span class="ln">17</span>    <span class="n">scaled_image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">scaled_image_path</span><span class="p">)</span>
+<span class="ln">18</span>    <span class="n">f</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">scaled_image_path</span><span class="p">)</span>
+<span class="ln">19</span>    
+<span class="ln">20</span>    <span class="n">cropdims</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">510</span><span class="p">,</span>  <span class="mi">90</span><span class="p">,</span> <span class="mi">1410</span><span class="p">,</span> <span class="mi">990</span><span class="p">),</span>
+<span class="ln">21</span>                <span class="p">(</span><span class="mi">610</span><span class="p">,</span> <span class="mi">190</span><span class="p">,</span> <span class="mi">1310</span><span class="p">,</span> <span class="mi">890</span><span class="p">),</span>
+<span class="ln">22</span>                <span class="p">(</span><span class="mi">510</span><span class="p">,</span>  <span class="mi">90</span><span class="p">,</span> <span class="mi">1210</span><span class="p">,</span> <span class="mi">790</span><span class="p">),</span>
+<span class="ln">23</span>                <span class="p">(</span><span class="mi">510</span><span class="p">,</span> <span class="mi">290</span><span class="p">,</span> <span class="mi">1210</span><span class="p">,</span> <span class="mi">990</span><span class="p">),</span>
+<span class="ln">24</span>                <span class="p">(</span><span class="mi">710</span><span class="p">,</span>  <span class="mi">90</span><span class="p">,</span> <span class="mi">1410</span><span class="p">,</span> <span class="mi">790</span><span class="p">),</span>
+<span class="ln">25</span>                <span class="p">(</span><span class="mi">710</span><span class="p">,</span> <span class="mi">290</span><span class="p">,</span> <span class="mi">1410</span><span class="p">,</span> <span class="mi">990</span><span class="p">)]</span>
+<span class="ln">26</span>    
+<span class="ln">27</span>    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cropdims</span><span class="p">)</span>
+<span class="ln">28</span>
+<span class="ln">29</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>    
+<span class="ln">30</span>        <span class="n">thumb</span> <span class="o">=</span> <span class="n">scaled_image</span><span class="o">.</span><span class="n">crop</span><span class="p">(</span><span class="n">cropdims</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="ln">31</span>        <span class="n">thumb_image_path</span> <span class="o">=</span> <span class="n">f</span> <span class="o">+</span> <span class="s1">&#39;-thumb&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">e</span>
+<span class="ln">32</span>        <span class="n">thumb</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="mi">500</span><span class="p">,</span> <span class="mi">10000</span><span class="p">),</span> <span class="n">Image</span><span class="o">.</span><span class="n">ANTIALIAS</span><span class="p">)</span>
+<span class="ln">33</span>        <span class="n">thumb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">thumb_image_path</span><span class="p">)</span>
+<span class="ln">34</span> 
+<span class="ln">35</span>
+<span class="ln">36</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="ln">37</span>    <span class="n">in_path</span> <span class="o">=</span> <span class="s2">&#34;C:/Users/JOACWEIS/Pictures/input/&#34;</span> 
+<span class="ln">38</span>    <span class="n">out_path</span> <span class="o">=</span> <span class="s2">&#34;C:/Users/JOACWEIS/Pictures/output/&#34;</span> 
+<span class="ln">39</span>    <span class="n">input_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">in_path</span><span class="p">)</span>
+<span class="ln">40</span>    <span class="n">output_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">out_path</span><span class="p">)</span>
+<span class="ln">41</span>    
+<span class="ln">42</span>    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">input_path</span><span class="p">:</span>
+<span class="ln">43</span>        <span class="n">input_image_path</span> <span class="o">=</span> <span class="n">in_path</span> <span class="o">+</span> <span class="n">item</span>
+<span class="ln">44</span>        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">input_image_path</span><span class="p">):</span>
+<span class="ln">45</span>            <span class="n">f</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">out_path</span> <span class="o">+</span> <span class="n">item</span><span class="p">)</span>
+<span class="ln">46</span>            <span class="n">scaled_image_path</span> <span class="o">=</span> <span class="n">out_path</span> <span class="o">+</span> <span class="n">item</span>
+<span class="ln">47</span>            <span class="n">scale_image</span><span class="p">(</span><span class="n">input_image_path</span><span class="p">,</span> <span class="n">scaled_image_path</span><span class="p">)</span>
+<span class="ln">48</span>            <span class="n">crop_image</span><span class="p">(</span><span class="n">scaled_image_path</span><span class="p">)</span></code></pre></div>
+
+<p>Using Pillow is straightforward, the <a href="https://pillow.readthedocs.io/en/stable/">documentation</a> is  extensive and gives lots of examples. A crucial class in the Python Imaging Library is the <code>Image</code> class. It is defined in the <code>Image</code> module and provides a PIL image on which manipulation operations can be carried out. An instance of this class can be created in several ways: by loading images from a file, creating images from scratch or as a result of processing other images. After obtaining an <code>Image</code> object, we can use the methods and attributes defined by the class to process and manipulate it.</p>
+
+<p>I found it desirable to thumbnail all images so that they have the same width and height. Using the <code>crop()</code> function, 6 quadratic thumbs are created, a centered large one, as well as 5 smaller ones, one of them centered, the others slight offset along the x and y axes. Resizing to 500x500 pixels is done using the Pillow  <code>thumbnail()</code> method. It takes a tuple (width,  height), and the image will be resized so that the width and height of the image are equal or smaller than the specified shape, retaining the aspect ratio of the image. I could also have used the <code>resize()</code> function, which also accepts a size tuple, but then resizes the image to fit within the specified size, potentially distorting the picture.</p>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/python/">python</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/code/">code</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/website/">website</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2019-10-19-first-post/">First post!</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2019-10-20-festival-of-light/" data-toggle="tooltip" data-placement="top" title="Berlin Festival of Light 2019">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://joachimweise.github.io/post/2019-11-14-data-leader-days/" data-toggle="tooltip" data-placement="top" title="Data Leader Days 2019">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

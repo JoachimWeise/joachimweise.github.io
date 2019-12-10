@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>NPT: Network Planning at UPS - Joachim Weise</title>
+  <meta name="description" content="UPS Uses AI When the Weather Outside is Frightful">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2019-11-23-ups-npt\/",
+          "name": "N p t network planning at u p s"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "NPT: Network Planning at UPS",
+  "description" : "UPS aims to reroute packages away from snow and other trouble spots in its global network. An app called Network Planning Tools (NPT) is used to view all their facilities and divert their packages around the storms, or to move a particularly large shipment efficiently. It utilizes machine learning to handle the massive amounts of data required to move packages around the world and on time, regardless of the weather.\n",
+  "inLanguage" : "en",
+  "wordCount":  985 ,
+  "datePublished" : "2019-11-23T00:00:00",
+  "dateModified" : "2019-11-23T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "ai_applications, business" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2019-11-23-ups-npt\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="NPT: Network Planning at UPS" />
+<meta property="og:description" content="UPS Uses AI When the Weather Outside is Frightful">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2019-11-23-ups-npt/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="NPT: Network Planning at UPS" />
+  <meta name="twitter:description" content="UPS Uses AI When the Weather Outside is Frightful">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/2019-11-30-UPS-NPT.jpg" 
+         
+         
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>NPT: Network Planning at UPS</h1>
+                  
+                    
+                      <h2 class="post-subheading">UPS Uses AI When the Weather Outside is Frightful</h2>
+                    
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Nov 23, 2019
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;985&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>NPT: Network Planning at UPS</h1>
+              
+              
+                
+                  <h2 class="post-subheading">UPS Uses AI When the Weather Outside is Frightful</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Nov 23, 2019
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;985&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>UPS aims to reroute packages away from snow and other trouble spots in its global network. An app called Network Planning Tools (NPT) is used to view all their facilities and divert their packages around the storms, or to move a particularly large shipment efficiently. It utilizes machine learning to handle the massive amounts of data required to move packages around the world and on time, regardless of the weather.</p>
+
+<h3 id="on-ups">On UPS</h3>
+
+<p>UPS was founded in 1907 as the <em>American Messenger Company</em> in Seattle, Washington. The company focused primarily on package delivery to retail stores with special delivery mail delivered for its largest client, the United States Postal Service. Most deliveries at this time were made on foot and bicycles were used for longer trips. In 1913, the company acquired a Model T Ford as its first delivery vehicle. Today, there are typically 96,000 UPS vehicles on the road handling 19 million packages, every day.</p>
+
+<p>UPS has a history of embracing change and evolving as new technologies arise. The company invests $1 billion annually in technology to enhance efficiency, improve customer service and support the ever increasing consumer demand to have as close to immediate delivery of packages as humanly possible.</p>
+
+<p>It’s the use of big data and artificial intelligence that allows the company to operate its global logistics network in more than 220 countries and territories. UPS is able to process more than 200 million tracking requests on peak days and ran 2.3 billion delivery route optimizations in one year.</p>
+
+<h3 id="npt-network-planning-tools">NPT Network Planning Tools</h3>
+
+<p>UPS has built Network Planning Tools (NPT) that will bring multiple features, according to press coverage (see sources below):</p>
+
+<ul>
+<li>provide overview of activities at UPS facilities around the world</li>
+<li>provide overview of package volume and distribution across its pickup and delivery network</li>
+<li>provide details about packages in transit, including their weight, volume, and delivery deadlines</li>
+<li>route shipments to the facilities with the most capacity</li>
+<li>move volume to lower-cost transportation modes, if possible</li>
+<li>preemptively reroute packages to alternative lanes to minimize unexpected costs and delays in case of storms or similar events</li>
+<li>create forecasts about package volume and weight based on analysis of historical data.</li>
+</ul>
+
+<p>UPS states that machine-learning algorithms will analyze decisions the company’s engineers made and assess how they affected customer satisfaction and internal costs. It will help them efficiently route and reroute package flows using a series of &lsquo;sophisticated algorithms&rsquo;. They can reroute in-transit volume flowing to a hub that is already running at or near capacity to another hub with available capacity. They say that the key is their ability to act on real-time data. This will help no matter the time of year, as volume fluctuates.</p>
+
+<p>The beauty of NPT, however, is not just its algorithm; rather, it’s that the app empowers human engineers to make better decisions. When a package reroutes, the app notifies a UPS engineer in the new location city about the revised plan. The engineer then looks at various options, evaluates them, and takes action. The engineer might let the plan remain in place or reroute the package based on new information. This human-driven decision becomes an update in the app, which in turn helps it learn from human oversight and get smarter about routing plans. Just as important, NPT also serves as a check on the engineer’s choice to ensure that it had the desired result.</p>
+
+<p>NPT will optimize the flow of up to 60 million packages in their U.S. network each day, from customers’ loading docks, through UPS hubs and sorts, to their final destinations. NPT is designed to lower sort and transportation costs, it’s multimodal, and it should keep or improve service levels towards customer.</p>
+
+
+<link rel="stylesheet" href="https://joachimweise.github.io/css/hugo-easy-gallery.css" />
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2019-11-30-ups-npt2.jpg" alt="NPT screenshots, showing rerouting options"/>
+    </div>
+    <a href="/img/2019-11-30-ups-npt2.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>NPT screenshots, showing rerouting options</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+<p>After full deployment in 2020, UPS expects to generate nearly $100 million to $200 million in annual savings and cost avoidance. NPT is also closely linked to their Hub Automation strategy, since dynamic execution of any change to our network is a lot easier with automation.</p>
+
+<p>NPT is complementing two other tech initiatives at UPS, i.e. ORION (On-Road Integrated Optimization and Navigation) and EDGE (Enhanced Dynamic Global Execution).</p>
+
+<h3 id="orion">ORION</h3>
+
+<p>ORION is UPS&rsquo;s proprietary route-optimization software. It calculates a driver’s most efficient path for the shipping day, typically consisting of about 100 stops, based on a collection of data points including the day’s package deliveries, pickup times, and past route performance. For each route per driver, ORION analyzes more than 200,000 routing options. UPS created ORION as part of a broader effort to use data and predictive models to increase efficiency, thereby reducing both costs and environmental impacts. By charting more efficient routes, UPS is able to maximize the utilization of delivery vehicles and drivers, resulting in significant fuel savings—one of UPS’s largest costs.</p>
+
+<p>More detail on ORION is provided in a later <a href="/post/2019-11-30-ups-orion/">post</a>.</p>
+
+<h3 id="edge">EDGE</h3>
+
+<p>EDGE stands for Enhanced Dynamic Global Execution. EDGE is to  “inside operations” what ORION is to on-road operations. Implementation of EDGE projects started in 2015. In 2016, UPS began collecting data across its facilities. Today there are about 25 projects based on that data, grouped under the acronym EDGE.</p>
+
+<p>EDGE helps UPS share data across operations to improve real-time decision-making, use data to locate every operations asset instantly, utilize mobile tools in operations to provide real-time information to teams and optimize operating plans to reduce cost. The program has sparked changes in everything from how workers place packages inside delivery trucks in the morning to how the vast army of temporary hires that UPS recruits during the busy holiday season are trained. Eventually, data will even dictate when UPS vehicles get washed.</p>
+
+<p>EDGE is expected to be fully deployed by 2020. At that point, UPS plans to generate $200 million to $300 million in annual savings and cost avoidance.</p>
+
+<h3 id="sources">Sources</h3>
+
+<ul>
+<li><a href="https://pressroom.ups.com/pressroom/ContentDetailsViewer.page?ConceptType=Speeches&amp;id=1487952235463-428">Speech by UPS CIO (2017)</a></li>
+<li><a href="https://www.forbes.com/sites/bernardmarr/2018/06/15/the-brilliant-ways-ups-uses-artificial-intelligence-machine-learning-and-big-data/#dddabf25e6da">Forbes article (2018)</a></li>
+<li><a href="https://www.technologyreview.com/s/612445/how-ups-uses-ai-to-outsmart-bad-weather/">MIT Technology Review article (2018)</a>, and <a href="https://www.technologyreview.com/s/610183/how-ups-delivers-faster-using-8-headphones-and-code-that-decides-when-dirty-trucks-get/">another one</a></li>
+<li><a href="https://sloanreview.mit.edu/article/how-ai-is-helping-companies-break-silos/">MIT Sloan Management Review article (2019)</a></li>
+<li><a href="https://www.freightwaves.com/news/technology/ups-orion-defies-law-of-physics">FreightWaves article (2018)</a></li>
+</ul>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/ai_applications/">ai_applications</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/business/">business</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2019-11-30-ups-orion/">ORION: Route Optimization at UPS</a></li>
+                
+                    <li><a href="/post/2019-11-14-data-leader-days/">Data Leader Days 2019</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2019-11-22-ai-weekly-47-2019/" data-toggle="tooltip" data-placement="top" title="AI weekly (47/2019)">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://joachimweise.github.io/post/2019-11-30-ups-orion/" data-toggle="tooltip" data-placement="top" title="ORION: Route Optimization at UPS">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

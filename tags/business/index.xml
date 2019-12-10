@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>business on Joachim Weise</title>
+    <link>https://joachimweise.github.io/tags/business/</link>
+    <description>Recent content in business on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Sun, 24 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/tags/business/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ORION: Route Optimization at UPS</title>
+      <link>https://joachimweise.github.io/post/2019-11-30-ups-orion/</link>
+      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-30-ups-orion/</guid>
+      <description>&lt;p&gt;In a previous &lt;a href=&#34;https://joachimweise.github.io/post/2019-11-23-ups-npt/&#34;&gt;post&lt;/a&gt;, I have delved into how UPS uses Operations Research and Machine Learning in their Network Planning Tools (NPT), and have briefly mentioned their complementary initiatives ORION and EDGE. In this post we will dive deeper into ORION (On-Road Integrated Optimization and Navigation), by summarizing what can publicly be found on the development history as well as current roll-out status of the system.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>NPT: Network Planning at UPS</title>
+      <link>https://joachimweise.github.io/post/2019-11-23-ups-npt/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-23-ups-npt/</guid>
+      <description>&lt;p&gt;UPS aims to reroute packages away from snow and other trouble spots in its global network. An app called Network Planning Tools (NPT) is used to view all their facilities and divert their packages around the storms, or to move a particularly large shipment efficiently. It utilizes machine learning to handle the massive amounts of data required to move packages around the world and on time, regardless of the weather.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

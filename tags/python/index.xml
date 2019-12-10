@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Joachim Weise</title>
+    <link>https://joachimweise.github.io/tags/python/</link>
+    <description>Recent content in python on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Sun, 27 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Image Manipulation with Python Pillow</title>
+      <link>https://joachimweise.github.io/post/2019-10-27-python-pillow/</link>
+      <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-10-27-python-pillow/</guid>
+      <description>&lt;p&gt;Normally I use &lt;a href=&#34;https://www.gimp.org/&#34;&gt;GIMP&lt;/a&gt; when I need to resize, crop or retouch images in various ways. However, for my last &lt;a href=&#34;https://joachimweise.github.io/post/2019-10-19-first-post/&#34;&gt;post&lt;/a&gt; on the Berlin Festival of Light I would have had to manually resize and crop a whole bunch of images at a time. That&#39;s why I took a look how Python could help with this task, and found PIL, the Python Imaging Library, in newer versions known as &lt;a href=&#34;https://python-pillow.org/&#34;&gt;Pillow&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

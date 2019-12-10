@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Joachim Weise</title>
+    <link>https://joachimweise.github.io/</link>
+    <description>Recent content on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Tue, 03 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AI weekly (49/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-12-07-ai-weekly-49-2019/</link>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-12-07-ai-weekly-49-2019/</guid>
+      <description>&lt;p&gt;+++ AWS launches SageMaker Studio, a web-based IDE for machine learning +++ Hallo, ein Versuch!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (48/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/</guid>
+      <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ORION: Route Optimization at UPS</title>
+      <link>https://joachimweise.github.io/post/2019-11-30-ups-orion/</link>
+      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-30-ups-orion/</guid>
+      <description>&lt;p&gt;In a previous &lt;a href=&#34;https://joachimweise.github.io/post/2019-11-23-ups-npt/&#34;&gt;post&lt;/a&gt;, I have delved into how UPS uses Operations Research and Machine Learning in their Network Planning Tools (NPT), and have briefly mentioned their complementary initiatives ORION and EDGE. In this post we will dive deeper into ORION (On-Road Integrated Optimization and Navigation), by summarizing what can publicly be found on the development history as well as current roll-out status of the system.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>NPT: Network Planning at UPS</title>
+      <link>https://joachimweise.github.io/post/2019-11-23-ups-npt/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-23-ups-npt/</guid>
+      <description>&lt;p&gt;UPS aims to reroute packages away from snow and other trouble spots in its global network. An app called Network Planning Tools (NPT) is used to view all their facilities and divert their packages around the storms, or to move a particularly large shipment efficiently. It utilizes machine learning to handle the massive amounts of data required to move packages around the world and on time, regardless of the weather.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (47/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-11-22-ai-weekly-47-2019/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-22-ai-weekly-47-2019/</guid>
+      <description>&lt;p&gt;+++ AI will speed up the hunt for Nazca Lines in southern Peru +++ Increasing transparency with Google Cloud Explainable AI +++ RecSim: Configurable Simulation Platform for Recommender Systems +++ Safety Gym: Reinforcement Learning Agents That Respect Safety Constraints +++ Sony Accounces the Establishment of Sony AI +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (46/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-11-15-ai-weekly-46-2019/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-15-ai-weekly-46-2019/</guid>
+      <description>&lt;p&gt;+++ Microsoft’s Vision AI Developer Kit is now generally available +++ Intel unleashes three new chips for AI work, challenging Nvidia +++ Nasdaq is testing a deep learning system to monitor trading +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Data Leader Days 2019</title>
+      <link>https://joachimweise.github.io/post/2019-11-14-data-leader-days/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-14-data-leader-days/</guid>
+      <description>&lt;p&gt;Today I had the pleasure to present at &lt;a href=&#34;https://www.dataleaderdays.com/&#34;&gt;Data Leader Days&lt;/a&gt;, a two-day management forum for leaders in the data space. 2019 marked its 5th edition, hosting data practitioners from Retail, Telco, Industrial Goods and Finance. Focus was on practical data science applications, with excursions into more specific areas such as data catalogs or deep learning based image processing. The event was located in the &lt;a href=&#34;https://www.spreespeicher-events.de/locations/030eventloft/&#34;&gt;030 event loft&lt;/a&gt;, an unusual venue with direct access to river Spree near &lt;a href=&#34;https://de.wikipedia.org/wiki/Oberbaumbr%C3%BCcke&#34;&gt;Oberbaumbrücke&lt;/a&gt;. Here are some impressions:&lt;/p&gt;
+
+
+
+
+&lt;div class=&#34;gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
+	  
+  
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://joachimweise.github.io//img/2019-11-14-data-leader-days/Oberbaumbr%c3%bccke-thumb.jpg&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://joachimweise.github.io/img/2019-11-14-data-leader-days/Oberbaumbr%c3%bccke-thumb.jpg&#34; alt=&#34;Oberbaumbrücke&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://joachimweise.github.io/img/2019-11-14-data-leader-days/Oberbaumbr%c3%bccke.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Oberbaumbrücke&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+  
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://joachimweise.github.io//img/2019-11-14-data-leader-days/Joachim-thumb.jpg&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://joachimweise.github.io/img/2019-11-14-data-leader-days/Joachim-thumb.jpg&#34; alt=&#34;Presenting ...&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://joachimweise.github.io/img/2019-11-14-data-leader-days/Joachim.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Presenting ...&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+  
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://joachimweise.github.io//img/2019-11-14-data-leader-days/Spreespeicher-thumb.jpg&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://joachimweise.github.io/img/2019-11-14-data-leader-days/Spreespeicher-thumb.jpg&#34; alt=&#34;Location&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://joachimweise.github.io/img/2019-11-14-data-leader-days/Spreespeicher.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Location&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Image Manipulation with Python Pillow</title>
+      <link>https://joachimweise.github.io/post/2019-10-27-python-pillow/</link>
+      <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-10-27-python-pillow/</guid>
+      <description>&lt;p&gt;Normally I use &lt;a href=&#34;https://www.gimp.org/&#34;&gt;GIMP&lt;/a&gt; when I need to resize, crop or retouch images in various ways. However, for my last &lt;a href=&#34;https://joachimweise.github.io/post/2019-10-19-first-post/&#34;&gt;post&lt;/a&gt; on the Berlin Festival of Light I would have had to manually resize and crop a whole bunch of images at a time. That&#39;s why I took a look how Python could help with this task, and found PIL, the Python Imaging Library, in newer versions known as &lt;a href=&#34;https://python-pillow.org/&#34;&gt;Pillow&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Berlin Festival of Light 2019</title>
+      <link>https://joachimweise.github.io/post/2019-10-20-festival-of-light/</link>
+      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-10-20-festival-of-light/</guid>
+      <description>&lt;p&gt;Each year in October, Berlin turns into a city full of light art. National as well as international artists are presenting their light installations and transform the city into a huge stage.&lt;/p&gt;
+
+&lt;p&gt;Some impressions from this year&amp;rsquo;s edition at the Berlin Cathedral:&lt;/p&gt;
+
+
+
+
+&lt;div class=&#34;gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
+	  
+  
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://joachimweise.github.io//img/2019-10-20-festival-of-light/P1190547-thumb.JPG&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://joachimweise.github.io/img/2019-10-20-festival-of-light/P1190547-thumb.JPG&#34; alt=&#34;Berlin Cathedral&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://joachimweise.github.io/img/2019-10-20-festival-of-light/P1190547.JPG&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Berlin Cathedral&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+  
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://joachimweise.github.io//img/2019-10-20-festival-of-light/P1190554-thumb.JPG&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://joachimweise.github.io/img/2019-10-20-festival-of-light/P1190554-thumb.JPG&#34; alt=&#34;Berlin Cathedral&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://joachimweise.github.io/img/2019-10-20-festival-of-light/P1190554.JPG&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Berlin Cathedral&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+  
+
+&lt;div class=&#34;box&#34; &gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://joachimweise.github.io//img/2019-10-20-festival-of-light/P1190563-thumb.JPG&#39;);&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://joachimweise.github.io/img/2019-10-20-festival-of-light/P1190563-thumb.JPG&#34; alt=&#34;Berlin Cathedral&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://joachimweise.github.io/img/2019-10-20-festival-of-light/P1190563.JPG&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Berlin Cathedral&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>First post!</title>
+      <link>https://joachimweise.github.io/post/2019-10-19-first-post/</link>
+      <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-10-19-first-post/</guid>
+      <description>&lt;p&gt;Hello world, this is my first post!&lt;/p&gt;
+
+&lt;p&gt;Like many others, I start with some remarks on how this blog is set up. I&#39;m using the static site generator &lt;code&gt;hugo&lt;/code&gt; and the theme &lt;code&gt;beautifulhugo&lt;/code&gt;. Since installation was straightforward, as described on the &lt;code&gt;hugo&lt;/code&gt; website, I will only list a few remarks, as a memory aid, on how I tweaked details of the layout.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://joachimweise.github.io/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/page/about/</guid>
+      <description>No content yet &amp;hellip;
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>AI / ML</title>
+      <link>https://joachimweise.github.io/page/aiml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/page/aiml/</guid>
+      <description>No content yet &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Data Science 101</title>
+      <link>https://joachimweise.github.io/page/ds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/page/ds/</guid>
+      <description>No content yet &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>General Relativity</title>
+      <link>https://joachimweise.github.io/page/gr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/page/gr/</guid>
+      <description>No content yet &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Quantum Theory</title>
+      <link>https://joachimweise.github.io/page/qt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/page/qt/</guid>
+      <description>No content yet &amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

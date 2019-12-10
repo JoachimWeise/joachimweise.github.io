@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>ORION: Route Optimization at UPS - Joachim Weise</title>
+  <meta name="description" content="And Drivers Are Still Not Turning Left ...">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2019-11-30-ups-orion\/",
+          "name": "O r i o n route optimization at u p s"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "ORION: Route Optimization at UPS",
+  "description" : "In a previous post, I have delved into how UPS uses Operations Research and Machine Learning in their Network Planning Tools (NPT), and have briefly mentioned their complementary initiatives ORION and EDGE. In this post we will dive deeper into ORION (On-Road Integrated Optimization and Navigation), by summarizing what can publicly be found on the development history as well as current roll-out status of the system.\n",
+  "inLanguage" : "en",
+  "wordCount":  1097 ,
+  "datePublished" : "2019-11-24T00:00:00",
+  "dateModified" : "2019-11-24T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "ai_applications, business" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2019-11-30-ups-orion\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="ORION: Route Optimization at UPS" />
+<meta property="og:description" content="And Drivers Are Still Not Turning Left ...">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2019-11-30-ups-orion/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="ORION: Route Optimization at UPS" />
+  <meta name="twitter:description" content="And Drivers Are Still Not Turning Left ...">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/2019-11-30-UPS-ORION.jpg" 
+         
+         
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>ORION: Route Optimization at UPS</h1>
+                  
+                    
+                      <h2 class="post-subheading">And Drivers Are Still Not Turning Left ...</h2>
+                    
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Nov 24, 2019
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1097&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>ORION: Route Optimization at UPS</h1>
+              
+              
+                
+                  <h2 class="post-subheading">And Drivers Are Still Not Turning Left ...</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Nov 24, 2019
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1097&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>In a previous <a href="/post/2019-11-23-ups-npt/">post</a>, I have delved into how UPS uses Operations Research and Machine Learning in their Network Planning Tools (NPT), and have briefly mentioned their complementary initiatives ORION and EDGE. In this post we will dive deeper into ORION (On-Road Integrated Optimization and Navigation), by summarizing what can publicly be found on the development history as well as current roll-out status of the system.</p>
+
+<h3 id="what-is-orion">What is ORION?</h3>
+
+<p>ORION is UPS&rsquo;s proprietary route-optimization software. It calculates a driver’s most efficient path for the shipping day, typically consisting of about 100 stops, based on a collection of data points including the day’s package deliveries, pickup times, and past route performance. For each route per driver, ORION analyzes more than 200,000 routing options. UPS created ORION as part of a broader effort to use data and predictive models to increase efficiency, thereby reducing both costs and environmental impacts. By charting more efficient routes, UPS is able to maximize the utilization of delivery vehicles and drivers, resulting in significant fuel savings—one of UPS’s largest costs.</p>
+
+<h3 id="history">History</h3>
+
+<p>UPS started developing ORION in 2003, with the aim of layering predictive algorithms on top of UPS’s existing package and vehicle tracking systems. The development took place within the Operations Research and Advanced Analytics groups, starting with a small, diverse team: a PhD in operations research, an industrial engineer, a UPS business manager, and several software engineers.</p>
+
+<p>UPS started by combining well known software algorithms for optimizing routes with existing business rules (such as package delivery order), but initial results were frustratingly inconsistent and not easily implementable by UPS drivers. The ORION team challenged conventional wisdom and developed a set of new rules to guide their routes. Once ORION started to produce efficient results, UPS business leaders were invited to view ORION in action so they could witness first-hand the differences between a typical driver’s route and an ORION route.</p>
+
+<p>Once it was clear that ORION would work in a lab setting, the team tested the program for an entire operational location and showed that efficiency significantly improved. In fact, UPS tested the ORION algorithm at various sites from 2003 to 2009; prototyped it at eight sites between 2010 and 2011; and deployed it to six beta sites in 2012.  By then the team had expanded from five to approximately 30 people. The testing and validation at each stage enabled the buy-in and resources for further expansion.</p>
+
+<p>In the final stage of adoption, the key focus of the analysis shifted from “is there a benefit?” to “how do we scale?” The key challenge here was to inform and motivate UPS staff across the company to adopt this new system. Many people didn’t believe that a computer-generated algorithm could be an improvement over decades of driver experience. Making this case involved education, communication, and follow-up, but most importantly a change in how drivers and their managers measured success.</p>
+
+<p>UPS began rolling out ORION in 2012, after a decade of development. Today, ORION is operational across the company&rsquo;s entire US system with its 55,000 routes. It is in very limited testing internationally. The ORION team has grown from 50 people at the software-development stage to more than 700 people today—the majority of whom are in the field working on technology deployment.</p>
+
+<h3 id="current-status-and-benefits">Current Status and Benefits</h3>
+
+<p>So far, ORION, on average, has reduced the number of miles driven on the typical route by 6 to 8 miles per day. In all, the software helps UPS cut 100 million miles off driving distances each year. These translate into a major reduction of operating costs of about US$300 million to US$400 million a year.</p>
+
+<p>Sometime in 2019 or 2020, UPS is supposed to introduce its latest version of ORION, with a key feature being the ability to recalculate routes to adjust for factors like changes in traffic conditions. The upgraded version will also present updated route options that fit more efficiently with a driver’s remaining pick-up and delivery requests for the day.</p>
+
+<h3 id="implementation-lessons-learned">Implementation Lessons Learned</h3>
+
+<p>It was a long journey to develop and roll-out the software. Here are some of the key lessons learned:</p>
+
+<ul>
+<li><strong>New Ways of Running the Business:</strong> Developers initially tried to stick to the prescribed rules that the business had developed over time, but this resulted in an unworkable software algorithm that drivers couldn’t follow. Only when the developers took a broader perspective and re-examined driver best practices, they were able to develop a version that produced “drivable” results.</li>
+<li><strong>Invest in Implementation:</strong> Testing and deployment represented more than 75 percent of the total cost of the project. Part of that process was assessing whether they could easily train staff on the new system and see consistent improvements over time.</li>
+<li><strong>Lead with Business Case:</strong> What ensured internal support was the financial case, demonstrated through pilot testing.</li>
+<li><strong>Technology Must Be Easy to Explain:</strong> The UPS team paid special attention to having every aspect of the system be easily understandable by drivers. This ensured that the operations teams understood how the system worked and why it did what it did. As drivers have become more familiar with ORION and have learned to trust its recommendations, the team has been integrating even more sophisticated and efficient optimizations that are even less intuitive.</li>
+<li><strong>Assessment Metrics Must be Carefully Chosen:</strong> UPS developed leading indicators—like the percentage of time a driver follows an ORION route—to enable success measurement during deployment. Through iteration, UPS selected short-term metrics tied to longer-term indicators of success, such as cost reductions and performance over time.</li>
+<li><strong>Creative Prototyping:</strong> Using a rental car, R&amp;D staff, operations teams and decision makers took test drives, guided by prototype ORION software. This demonstrated the potential of the technology by allowing operations teams and drivers to witness how it worked and how it could improve on existing approaches.</li>
+<li><strong>More Sophisticated Software Systems Require Better Data:</strong> With software systems, the output is only as good as the data input. UPS found that available maps weren’t accurate enough to serve as a basis for ORION. As a result, part of any ORION deployment involves validating maps and other supporting data. UPS also conducts ongoing monitoring of data quality and has processes for addressing data inaccuracies.</li>
+<li><strong>Integrate With Existing Work Processes:</strong> To be successful, technology tools need to fit inside the processes that people already follow. This requires on-the-ground work, interviews with users, and lots of testing. Indeed, site managers and delivery drivers were integral parts of the ORION development team from the start, since they were able to provide feedback on what actually works in practice.</li>
+</ul>
+
+<h3 id="sources">Sources</h3>
+
+<ul>
+<li><a href="https://www.ups.com/us/en/services/knowledge-center/article.page?kid=aa3710c2">UPS press release (2016)</a><br /></li>
+<li><a href="https://www.bsr.org/en/our-insights/case-study-view/center-for-technology-and-sustainability-orion-technology-ups">BSR case study (2016)</a></li>
+</ul>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/ai_applications/">ai_applications</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/business/">business</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2019-11-23-ups-npt/">NPT: Network Planning at UPS</a></li>
+                
+                    <li><a href="/post/2019-11-14-data-leader-days/">Data Leader Days 2019</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2019-11-23-ups-npt/" data-toggle="tooltip" data-placement="top" title="NPT: Network Planning at UPS">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/" data-toggle="tooltip" data-placement="top" title="AI weekly (48/2019)">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

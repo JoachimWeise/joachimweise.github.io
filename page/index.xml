@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Joachim Weise</title>
+    <link>https://joachimweise.github.io/page/</link>
+    <description>Recent content in Pages on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    
+	<atom:link href="https://joachimweise.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About me</title>
+      <link>https://joachimweise.github.io/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/page/about/</guid>
+      <description>No content yet &amp;hellip;
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>AI / ML</title>
+      <link>https://joachimweise.github.io/page/aiml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/page/aiml/</guid>
+      <description>No content yet &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Data Science 101</title>
+      <link>https://joachimweise.github.io/page/ds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/page/ds/</guid>
+      <description>No content yet &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>General Relativity</title>
+      <link>https://joachimweise.github.io/page/gr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/page/gr/</guid>
+      <description>No content yet &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Quantum Theory</title>
+      <link>https://joachimweise.github.io/page/qt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/page/qt/</guid>
+      <description>No content yet &amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

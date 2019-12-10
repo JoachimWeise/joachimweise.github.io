@@ -1,0 +1,31 @@
+/* --- Code blocks --- */
+
+.chroma .ln {
+  margin-right: 0.8em; /* space between ln and code */
+  padding: 0.5em 0.5em 0.45em 0.5em; /* margin around ln */
+  background-color: #f3f3f3;
+  color: #b4b4b4;
+  -webkit-user-select: none;
+  -moz-user-select: none; 
+  -o-user-select: none;  
+}
+pre {
+  font-size: 14px;
+  line-height: 1.5em; /* should correspond to padding around ln */
+  margin: 1.5em 0em 1.5em 0em; /* margin around code box */
+}
+pre code {
+  white-space: pre;
+  overflow: auto;
+}
+pre.highlight, .highlight > pre, td.code pre {
+  background: #fdfdfd; /* white #ffffff*/  
+  border-left: 3px solid #d0d0d0; /* lightgray */
+  border-right: 1px solid #d0d0d0;
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+  border-radius: 5px;
+  padding: 0.3em 0 0.3em 0;
+}
+
+
