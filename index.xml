@@ -7,18 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Tue, 03 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>AI weekly (50/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-12-14-ai-weekly-50-2019/</link>
+      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-12-14-ai-weekly-50-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>AI weekly (49/2019)</title>
       <link>https://joachimweise.github.io/post/2019-12-07-ai-weekly-49-2019/</link>
-      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-12-07-ai-weekly-49-2019/</guid>
-      <description>&lt;p&gt;+++ AWS launches SageMaker Studio, a web-based IDE for machine learning +++ Hallo, ein Versuch!&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ AWS launches SageMaker Studio, a web-based IDE for machine learning +++ Alibaba: Dynamic Pricing with Deep RL +++&lt;/p&gt;</description>
     </item>
     
     <item>
