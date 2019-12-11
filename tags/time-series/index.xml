@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>time-series on Joachim Weise</title>
+    <link>https://joachimweise.github.io/tags/time-series/</link>
+    <description>Recent content in time-series on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AI weekly (48/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/</guid>
+      <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

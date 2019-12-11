@@ -9,22 +9,27 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/ai/</loc>
-    <lastmod>2019-12-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/post/2019-12-14-ai-weekly-50-2019/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/ai_news/</loc>
+    <loc>https://joachimweise.github.io/tags/ai-news/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/datascience/</loc>
+    <loc>https://joachimweise.github.io/tags/amazon/</loc>
+    <lastmod>2019-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/facebook/</loc>
+    <lastmod>2019-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/google/</loc>
     <lastmod>2019-12-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -44,12 +49,47 @@
   </url>
   
   <url>
+    <loc>https://joachimweise.github.io/tags/alibaba/</loc>
+    <lastmod>2019-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/aws/</loc>
+    <lastmod>2019-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/reinforcement-learning/</loc>
+    <lastmod>2019-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/ai_applications/</loc>
+    <loc>https://joachimweise.github.io/tags/ggplot2/</loc>
+    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/pytorch/</loc>
+    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/tensorflow/</loc>
+    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/time-series/</loc>
+    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/ai-applications/</loc>
     <lastmod>2019-11-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -64,8 +104,18 @@
   </url>
   
   <url>
+    <loc>https://joachimweise.github.io/tags/ups/</loc>
+    <lastmod>2019-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://joachimweise.github.io/post/2019-11-23-ups-npt/</loc>
     <lastmod>2019-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/ai/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -74,7 +124,22 @@
   </url>
   
   <url>
+    <loc>https://joachimweise.github.io/tags/datascience/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://joachimweise.github.io/post/2019-11-15-ai-weekly-46-2019/</loc>
+    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/intel/</loc>
+    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/microsoft/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
   </url>
   

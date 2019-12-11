@@ -7,37 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>AI weekly (50/2019)</title>
-      <link>https://joachimweise.github.io/post/2019-12-14-ai-weekly-50-2019/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/post/2019-12-14-ai-weekly-50-2019/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AI weekly (49/2019)</title>
-      <link>https://joachimweise.github.io/post/2019-12-07-ai-weekly-49-2019/</link>
-      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/post/2019-12-07-ai-weekly-49-2019/</guid>
-      <description>&lt;p&gt;+++ AWS launches SageMaker Studio, a web-based IDE for machine learning +++ Alibaba: Dynamic Pricing with Deep RL +++&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>AI weekly (48/2019)</title>
-      <link>https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/</link>
-      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/</guid>
-      <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>AI weekly (47/2019)</title>
@@ -46,15 +19,6 @@
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-11-22-ai-weekly-47-2019/</guid>
       <description>&lt;p&gt;+++ AI will speed up the hunt for Nazca Lines in southern Peru +++ Increasing transparency with Google Cloud Explainable AI +++ RecSim: Configurable Simulation Platform for Recommender Systems +++ Safety Gym: Reinforcement Learning Agents That Respect Safety Constraints +++ Sony Accounces the Establishment of Sony AI +++&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>AI weekly (46/2019)</title>
-      <link>https://joachimweise.github.io/post/2019-11-15-ai-weekly-46-2019/</link>
-      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/post/2019-11-15-ai-weekly-46-2019/</guid>
-      <description>&lt;p&gt;+++ Microsoft’s Vision AI Developer Kit is now generally available +++ Intel unleashes three new chips for AI work, challenging Nvidia +++ Nasdaq is testing a deep learning system to monitor trading +++&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -59,11 +59,11 @@
   "headline": "AI weekly (49\/2019)",
   "description" : "\x2b\x2b\x2b AWS launches SageMaker Studio, a web-based IDE for machine learning \x2b\x2b\x2b Alibaba: Dynamic Pricing with Deep RL \x2b\x2b\x2b\n",
   "inLanguage" : "en",
-  "wordCount":  338 ,
+  "wordCount":  502 ,
   "datePublished" : "2019-12-07T00:00:00",
   "dateModified" : "2019-12-07T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
-  "keywords" : [ "ai_news, ai, datascience\x22" ],
+  "keywords" : [ "ai-news, alibaba, aws, facebook, reinforcement-learning" ],
   "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2019-12-07-ai-weekly-49-2019\/",
   "publisher" : {
     "@type": "Organization",
@@ -262,10 +262,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Dec 7, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;338&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;502&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;2&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
   
   
   
@@ -300,10 +300,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Dec 7, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;338&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;502&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;2&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
   
   
   
@@ -330,7 +330,7 @@
 
 <h2 id="breakthrough-mdash-or-so-they-say">Breakthrough &mdash; Or So They Say</h2>
 
-<h2 id="tools-frameworks-code">Tools, Frameworks, Code</h2>
+<h2 id="tools-and-frameworks">Tools and Frameworks</h2>
 
 <p><strong>AWS launches SageMaker Studio, a web-based IDE for machine learning.</strong> AWS has <a href="https://aws.amazon.com/de/blogs/aws/amazon-sagemaker-studio-the-first-fully-integrated-development-environment-for-machine-learning/">announced the launch</a> of SageMaker Studio, a web-based IDE for building and training machine learning workflows. It includes everything a data scientist would need to get started, including ways to organize notebooks, data sets, code and models, for example. It essentially wants to be a one-stop shop for all the machine learning tools and results you need to get started. At the core of Studio is also the ability to share projects and folders with others who are working on the same project, including the ability to discuss notebooks and results. SageMaker Studio is integrated with AWS’s SageMaker machine learning service, which can automatically scale based on your needs. It now includes a debugger, a monitoring tool and Autopilot, which automatically creates the best models for you based on your data, with full visibility into how it decides to build your models. Related to this, AWS also launched SageMaker Notebooks, also integrated into Studio, as a managed service. Data scientists won’t have to provision instances for this as they will automatically provision them as necessary.</p>
 
@@ -338,18 +338,25 @@
 
 <h2 id="publications">Publications</h2>
 
-<p><strong>Dynamic Pricing On E-commerce Platform With Deep Reinforcement Learning</strong> <a href="https://arxiv.org/abs/1912.02572">(arXiv:1912.02572v1)</a>. A team from Alibaba Supply Chain Platform (Hangzhou) outlines a framework that represents the dynamic pricing problem as a Markov Decision Process (MDP). The agent periodically changes products prices as its action after observing the environment state. Each pricing episode ends when the product is out of stock. The model is pre-trained based on historical sales data and previous specialists’ pricing actions. The Alibaba team uses &lsquo;difference of revenue conversion rates&rsquo; as a reward function which is supposed to indicate if pricing actions had a positive impact on revenue conversion. The framework was tested offline and online and showed better performance than manual pricing by operations experts.</p>
+<p><strong>Dynamic Pricing On E-commerce Platform With Deep Reinforcement Learning</strong> <a href="https://arxiv.org/abs/1912.02572">(arXiv:1912.02572v1)</a>. A team from Alibaba Supply Chain Platform (Hangzhou) outlines a framework that represents dynamic pricing as a Markov Decision Process (MDP). The agent periodically changes product prices as its action after observing the environment state. Each pricing episode ends when the product is out of stock. The model is pre-trained based on historical sales data and previous specialists’ pricing actions. The Alibaba team uses &lsquo;difference of revenue conversion rates&rsquo; as a reward function which is supposed to indicate if pricing actions had a positive impact on revenue conversion. The framework was tested offline and online and showed better performance than manual pricing by operations experts.</p>
+
+<p><strong>Training multi-agent AI systems to solve complex tasks through cooperation</strong> <a href="https://arxiv.org/abs/1910.08809">(arXiv:1910.08809).</a> A novel approach to cooperative multi-agent reinforcement learning that assigns tasks to individual agents within a group, thereby improving the entire group’s ability to collaborate, is published by <a href="https://ai.facebook.com/blog/using-multi-agent-reinforcement-learning-to-improve-collaboration/">facebook AI</a> with <a href="https://github.com/TorchCraft/TorchCraftAI/tree/targeting">source code on github</a>. The approach focuses on multi-agent collaborative (MAC) problems where agents have to carry out multiple intermediate tasks in order to accomplish a larger one. As the number of agents and tasks in these kinds of MAC problems increases, the complexity grows exponentially, which prevents systems from learning directly from large-scale scenarios.
+Systems must instead generalize from smaller scenarios and tackle tasks that were not part of their RL-based trial-and-error training runs. Since RL-trained systems often struggle with this exact type of generalization, the approach breaks MAC policies down into high- and low-level policies. The high-level policies determine which agents should be assigned specific tasks. To encourage collaboration between agents, a quadratic cost function is employed that optimizes for long-term performance.</p>
 
 <h2 id="tutorials">Tutorials</h2>
 
         
           <div class="blog-tags">
             
-              <a href="https://joachimweise.github.io//tags/ai_news/">ai_news</a>&nbsp;
+              <a href="https://joachimweise.github.io//tags/ai-news/">ai-news</a>&nbsp;
             
-              <a href="https://joachimweise.github.io//tags/ai/">ai</a>&nbsp;
+              <a href="https://joachimweise.github.io//tags/alibaba/">alibaba</a>&nbsp;
             
-              <a href="https://joachimweise.github.io//tags/datascience/">datascience&#34;</a>&nbsp;
+              <a href="https://joachimweise.github.io//tags/aws/">aws</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/facebook/">facebook</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/reinforcement-learning/">reinforcement-learning</a>&nbsp;
             
           </div>
         
