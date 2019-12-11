@@ -61,7 +61,7 @@ Like many others, I start with some remarks on how this blog is set up. I&#39;m 
   "headline": "First post!",
   "description" : "Hello world, this is my first post!\nLike many others, I start with some remarks on how this blog is set up. I\x27m using the static site generator hugo and the theme beautifulhugo. Since installation was straightforward, as described on the hugo website, I will only list a few remarks, as a memory aid, on how I tweaked details of the layout.\n",
   "inLanguage" : "en",
-  "wordCount":  934 ,
+  "wordCount":  993 ,
   "datePublished" : "2019-10-19T00:00:00",
   "dateModified" : "2019-10-19T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
@@ -264,7 +264,7 @@ Like many others, I start with some remarks on how this blog is set up. I&#39;m 
   <i class="fas fa-calendar"></i> &nbsp;Oct 19, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;934&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;993&nbsp;words
   
   
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
@@ -298,7 +298,7 @@ Like many others, I start with some remarks on how this blog is set up. I&#39;m 
   <i class="fas fa-calendar"></i> &nbsp;Oct 19, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;934&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;993&nbsp;words
   
   
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
@@ -408,7 +408,7 @@ $ git checkout master
 $ git merge &lt;new-branch&gt;
 $ git push -u origin master</code></pre></div>
 
-<p>Hosting on GitHub is easy. Two repos are created on GitHub:</p>
+<p>Hosting on GitHub works as follows. Two repos are created on GitHub:</p>
 
 <ul>
 <li><code>website-github</code> contains Hugo's content and other source files</li>
@@ -417,33 +417,35 @@ $ git push -u origin master</code></pre></div>
 
 <p>A git submodule is created through <code>git submodule add -b master git@github.com:joachimweise/joachimweise.github.io.git public</code>. Now when I run the hugo command to build the site to public, the created public directory will have a different remote origin (i.e. hosted GitHub repository). By running the following script through <code>./deploy.sh</code> I can send changes to <code>joachimweise.github.io</code>:</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span><span class="cp">#!/bin/sh
-</span><span class="ln"> 2</span><span class="cp"></span>
-<span class="ln"> 3</span><span class="c1"># If a command fails then the deploy stops</span>
-<span class="ln"> 4</span><span class="nb">set</span> -e
-<span class="ln"> 5</span>
-<span class="ln"> 6</span><span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
-<span class="ln"> 7</span>
-<span class="ln"> 8</span><span class="c1"># Build the project.</span>
-<span class="ln"> 9</span>hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
-<span class="ln">10</span>
-<span class="ln">11</span><span class="c1"># Go To Public folder</span>
-<span class="ln">12</span><span class="nb">cd</span> public
-<span class="ln">13</span>
-<span class="ln">14</span><span class="c1"># Add changes to git.</span>
-<span class="ln">15</span>git add .
-<span class="ln">16</span>
-<span class="ln">17</span><span class="c1"># Commit changes.</span>
-<span class="ln">18</span><span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
-<span class="ln">19</span><span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-<span class="ln">20</span>	<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span>
-<span class="ln">21</span><span class="k">fi</span>
-<span class="ln">22</span>git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
-<span class="ln">23</span>
-<span class="ln">24</span><span class="c1"># Push source and build repos.</span>
-<span class="ln">25</span>git push origin master</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh
+</span><span class="cp"></span>
+<span class="c1"># If a command fails then the deploy stops</span>
+<span class="nb">set</span> -e
 
-<p>Hosting with Gitlab is also easy. A <code>.gitlab-ci.yml</code> file in the root directory of the Hugo site configures the GitLab CI on how to build the site:</p>
+<span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
+
+<span class="c1"># Build the project.</span>
+hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+
+<span class="c1"># Go To Public folder</span>
+<span class="nb">cd</span> public
+
+<span class="c1"># Add changes to git.</span>
+git add .
+
+<span class="c1"># Commit changes.</span>
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
+<span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+	<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+
+<span class="c1"># Push source and build repos.</span>
+git push origin master</code></pre></div>
+
+<p>I was facing issues with this setup when I accidentally deleted the content of the loca <code>/public</code> folder, which led to error messages like <code>fatal: in unpopulated submodule 'public'</code>. The following approach seems to help: delete references to the submodule in <code>.gitmodules</code>, <code>.git\config</code> and <code>.git\modules</code>. Then remove the <code>public</code> folder and execute <code>git rm -r public</code>, then add the submodule again as described above.</p>
+
+<p>Hosting with Gitlab seems to me more straightforward. A <code>.gitlab-ci.yml</code> file in the root directory of the Hugo site configures the GitLab CI on how to build the site:</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML">image<span class="p">:</span><span class="w"> </span>monachus/hugo<span class="w">
 </span><span class="w">
