@@ -18,7 +18,7 @@
       <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-12-21-ai-weekly-51-2019/</guid>
-      <description>&lt;p&gt;+++ Facebook has a neural network that can do advanced math +++ Google’s AI can identify wildlife from trap-camera footage with up to 98.6% accuracy +++ Intel acquires AI chip startup Habana Labs for $2 billion +++ eBay open-sources AI platform Krylov +++ AI experts urge machine learning researchers to tackle climate change +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Facebook has a neural network that can do advanced math +++ Google’s AI can identify wildlife from trap-camera footage with up to 98.6% accuracy +++ Intel acquires AI chip startup Habana Labs for $2 billion +++ eBay open-sources AI platform Krylov +++ AI experts urge machine learning researchers to tackle climate change +++ Top 10 Python libraries of 2019 +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-12-14-ai-weekly-50-2019/</guid>
-      <description></description>
+      <description>&lt;p&gt;+++ With Hanabi-playing bot, Facebook AI reaches a milestone in cooperative AI +++ Google launches E2 family of virtual machines for smaller workloads +++ AI Index 2019 assesses global AI research, investment, and impact +++ Turing Award winner Yoshua Bengio wants AI systems that can reason, plan, and imagine +++ Personalizing the Joke Skill of a Voice-Controlled Virtual Assistant +++ Why scientists need to be better at data visualization +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/</guid>
-      <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++ AR-Net: A simple Auto-Regressive Neural Network for time-series +++ Deep Learning with PyTorch +++ Cost-benefit analysis in R +++ How to apply machine/deep learning to audio analysis, with comet.ml +++ Collection of Jupyter notebooks for quantitative finance +++ Create a streetmap of your favorite city with ggplot2 +++ Tutorial on Graph Neural Networks for Computer Vision and Beyond (in 3 parts) +++&lt;/p&gt;</description>
     </item>
     
   </channel>

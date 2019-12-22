@@ -18,7 +18,7 @@
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/</guid>
-      <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++ AR-Net: A simple Auto-Regressive Neural Network for time-series +++ Deep Learning with PyTorch +++ Cost-benefit analysis in R +++ How to apply machine/deep learning to audio analysis, with comet.ml +++ Collection of Jupyter notebooks for quantitative finance +++ Create a streetmap of your favorite city with ggplot2 +++ Tutorial on Graph Neural Networks for Computer Vision and Beyond (in 3 parts) +++&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -67,6 +67,15 @@
     </item>
     
     <item>
+      <title>python</title>
+      <link>https://joachimweise.github.io/tags/python/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>amazon</title>
       <link>https://joachimweise.github.io/tags/amazon/</link>
       <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
@@ -229,20 +238,20 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>https://joachimweise.github.io/tags/python/</link>
-      <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>website</title>
       <link>https://joachimweise.github.io/tags/website/</link>
       <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql</title>
+      <link>https://joachimweise.github.io/tags/sql/</link>
+      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/sql/</guid>
       <description></description>
     </item>
     
