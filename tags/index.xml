@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Mon, 09 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,25 +15,34 @@
     <item>
       <title>ai-news</title>
       <link>https://joachimweise.github.io/tags/ai-news/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/ai-news/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>amazon</title>
-      <link>https://joachimweise.github.io/tags/amazon/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      <title>climate&#34;</title>
+      <link>https://joachimweise.github.io/tags/climate/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/amazon/</guid>
+      <guid>https://joachimweise.github.io/tags/climate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ebay</title>
+      <link>https://joachimweise.github.io/tags/ebay/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/ebay/</guid>
       <description></description>
     </item>
     
     <item>
       <title>facebook</title>
       <link>https://joachimweise.github.io/tags/facebook/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/facebook/</guid>
       <description></description>
@@ -42,9 +51,27 @@
     <item>
       <title>google</title>
       <link>https://joachimweise.github.io/tags/google/</link>
-      <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intel</title>
+      <link>https://joachimweise.github.io/tags/intel/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/intel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>amazon</title>
+      <link>https://joachimweise.github.io/tags/amazon/</link>
+      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/amazon/</guid>
       <description></description>
     </item>
     
@@ -72,6 +99,15 @@
       <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/reinforcement-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vaex</title>
+      <link>https://joachimweise.github.io/tags/vaex/</link>
+      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/vaex/</guid>
       <description></description>
     </item>
     
@@ -157,11 +193,11 @@
     </item>
     
     <item>
-      <title>intel</title>
-      <link>https://joachimweise.github.io/tags/intel/</link>
+      <title>gaussian-process</title>
+      <link>https://joachimweise.github.io/tags/gaussian-process/</link>
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/intel/</guid>
+      <guid>https://joachimweise.github.io/tags/gaussian-process/</guid>
       <description></description>
     </item>
     
@@ -175,7 +211,7 @@
     </item>
     
     <item>
-      <title>event&#34;</title>
+      <title>event</title>
       <link>https://joachimweise.github.io/tags/event/</link>
       <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>

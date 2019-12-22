@@ -57,13 +57,13 @@
     "name" : "Joachim Weise"
   },
   "headline": "AI weekly (49\/2019)",
-  "description" : "\x2b\x2b\x2b AWS launches SageMaker Studio, a web-based IDE for machine learning \x2b\x2b\x2b Alibaba: Dynamic Pricing with Deep RL \x2b\x2b\x2b\n",
+  "description" : "\x2b\x2b\x2b An Epidemic of AI Misinformation \x2b\x2b\x2b AWS launches SageMaker Studio, a web-based IDE for machine learning \x2b\x2b\x2b Deep Learning For Symbolic Mathematics \x2b\x2b\x2b Alibaba: Dynamic Pricing with Deep RL \x2b\x2b\x2b Training multi-agent AI systems to solve complex tasks through cooperation \x2b\x2b\x2b A Visual Guide to Using BERT for the First Time \x2b\x2b\x2b Vaex: How to analyse 100 GB of data on your laptop with Python \x2b\x2b\x2b\n",
   "inLanguage" : "en",
-  "wordCount":  502 ,
+  "wordCount":  942 ,
   "datePublished" : "2019-12-07T00:00:00",
   "dateModified" : "2019-12-07T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
-  "keywords" : [ "ai-news, alibaba, aws, facebook, reinforcement-learning" ],
+  "keywords" : [ "ai-news, alibaba, aws, facebook, reinforcement-learning, vaex" ],
   "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2019-12-07-ai-weekly-49-2019\/",
   "publisher" : {
     "@type": "Organization",
@@ -262,10 +262,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Dec 7, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;502&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;942&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
   
   
   
@@ -300,10 +300,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Dec 7, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;502&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;942&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
   
   
   
@@ -326,17 +326,23 @@
     
 
       <article role="main" class="blog-post">
-        <p>+++ AWS launches SageMaker Studio, a web-based IDE for machine learning +++ Alibaba: Dynamic Pricing with Deep RL +++</p>
+        <p>+++ An Epidemic of AI Misinformation +++ AWS launches SageMaker Studio, a web-based IDE for machine learning +++ Deep Learning For Symbolic Mathematics +++ Alibaba: Dynamic Pricing with Deep RL +++ Training multi-agent AI systems to solve complex tasks through cooperation +++ A Visual Guide to Using BERT for the First Time +++ Vaex: How to analyse 100 GB of data on your laptop with Python +++</p>
 
 <h2 id="breakthrough-mdash-or-so-they-say">Breakthrough &mdash; Or So They Say</h2>
+
+<p><strong>An Epidemic of AI Misinformation.</strong> An <a href="https://thegradient.pub/an-epidemic-of-ai-misinformation/">article by Gary Marcus</a> in <em>The Gradient</em> highlights the risk of overpromising current achievements in AI and draws connections to the historical &ldquo;AI winters&rdquo;. A similar, earlier article can be found <a href="http://nautil.us/issue/78/atmospheres/are-neural-networks-about-to-reinvent-physics">here</a>. Several examples of stark overpromising are given, e.g. from luminaries such as Hinton, Ng, LeCunn, or Sutskever. On the other hand, Gary Marcus also highlights contributions by <a href="https://youtu.be/0GsZ_LN9B24">Yoshua Bengio</a> and <a href="https://www.youtube.com/watch?v=ynCfj3LGjyM&amp;feature=youtu.be">Pieter Abdeel</a> which are much more balanced.</p>
 
 <h2 id="tools-and-frameworks">Tools and Frameworks</h2>
 
 <p><strong>AWS launches SageMaker Studio, a web-based IDE for machine learning.</strong> AWS has <a href="https://aws.amazon.com/de/blogs/aws/amazon-sagemaker-studio-the-first-fully-integrated-development-environment-for-machine-learning/">announced the launch</a> of SageMaker Studio, a web-based IDE for building and training machine learning workflows. It includes everything a data scientist would need to get started, including ways to organize notebooks, data sets, code and models, for example. It essentially wants to be a one-stop shop for all the machine learning tools and results you need to get started. At the core of Studio is also the ability to share projects and folders with others who are working on the same project, including the ability to discuss notebooks and results. SageMaker Studio is integrated with AWS’s SageMaker machine learning service, which can automatically scale based on your needs. It now includes a debugger, a monitoring tool and Autopilot, which automatically creates the best models for you based on your data, with full visibility into how it decides to build your models. Related to this, AWS also launched SageMaker Notebooks, also integrated into Studio, as a managed service. Data scientists won’t have to provision instances for this as they will automatically provision them as necessary.</p>
 
+<p><strong>Probability Distribution Explorer.</strong> <a href="http://bois.caltech.edu/distribution_explorer/?utm_campaign=Data_Elixir&amp;utm_source=Data_Elixir_263">This tool</a> by Justin Bois makes it easy to explore commonly used probability distributions, including information about the stories behind them, their probability mass/probability density functions, their moments, etc. Each distribution includes interactive vignettes and syntax for NumPy, SciPy, and Stan.</p>
+
 <h2 id="business-news-and-applications">Business News and Applications</h2>
 
 <h2 id="publications">Publications</h2>
+
+<p><strong>Deep Learning For Symbolic Mathematics</strong> <a href="https://arxiv.org/abs/1912.01412">(arXiv:1912.01412)</a>. Two researchers from Facebook AI Research claim they have developed neural nets that can solve complicated integrals and differential equations. Quote: &ldquo;Neural networks have a reputation for being better at solving statistical or approximate problems than at performing calculations or working with symbolic data. In this paper, we show that they can be surprisingly good at more elaborated tasks in mathematics, such as symbolic integration and solving differential equations. We propose a syntax for representing mathematical problems, and methods for generating large datasets that can be used to train sequence-to-sequence models. We achieve results that outperform commercial Computer Algebra Systems such as Matlab or Mathematica.&rdquo;</p>
 
 <p><strong>Dynamic Pricing On E-commerce Platform With Deep Reinforcement Learning</strong> <a href="https://arxiv.org/abs/1912.02572">(arXiv:1912.02572v1)</a>. A team from Alibaba Supply Chain Platform (Hangzhou) outlines a framework that represents dynamic pricing as a Markov Decision Process (MDP). The agent periodically changes product prices as its action after observing the environment state. Each pricing episode ends when the product is out of stock. The model is pre-trained based on historical sales data and previous specialists’ pricing actions. The Alibaba team uses &lsquo;difference of revenue conversion rates&rsquo; as a reward function which is supposed to indicate if pricing actions had a positive impact on revenue conversion. The framework was tested offline and online and showed better performance than manual pricing by operations experts.</p>
 
@@ -344,6 +350,11 @@
 Systems must instead generalize from smaller scenarios and tackle tasks that were not part of their RL-based trial-and-error training runs. Since RL-trained systems often struggle with this exact type of generalization, the approach breaks MAC policies down into high- and low-level policies. The high-level policies determine which agents should be assigned specific tasks. To encourage collaboration between agents, a quadratic cost function is employed that optimizes for long-term performance.</p>
 
 <h2 id="tutorials">Tutorials</h2>
+
+<p><strong>A Visual Guide to Using BERT for the First Time.</strong> Jay Alammar has a great blog under the motto &ldquo;Visualizing machine learning one concept at a time&rdquo;. <a href="https://jalammar.github.io/a-visual-guide-to-using-bert-for-the-first-time/?utm_campaign=Data_Elixir&amp;utm_source=Data_Elixir_262">His latest post</a> is a simple tutorial for how to use a variant of BERT to classify sentences. It is an example that is basic enough as a first intro, yet advanced enough to showcase some of the key concepts involved.</p>
+
+<p><strong>Vaex: How to analyse 100 GB of data on your laptop with Python.</strong> This <a href="https://towardsdatascience.com/how-to-analyse-100s-of-gbs-of-data-on-your-laptop-with-python-f83363dda94">article by
+Jovan Veljanoski</a> shows a fast,  secure, and convenient way to do data science using data of almost arbitrary size. <a href="https://github.com/vaexio/vaex">Vaex</a> is an open-source DataFrame library which enables the visualisation, exploration, analysis and even machine learning on tabular datasets that are as large as your hard-drive. To do this, Vaex employs concepts such as memory mapping, efficient out-of-core algorithms and lazy evaluations. All of this is wrapped in a familiar Pandas-like API, so anyone can get started right away.</p>
 
         
           <div class="blog-tags">
@@ -357,6 +368,8 @@ Systems must instead generalize from smaller scenarios and tackle tasks that wer
               <a href="https://joachimweise.github.io//tags/facebook/">facebook</a>&nbsp;
             
               <a href="https://joachimweise.github.io//tags/reinforcement-learning/">reinforcement-learning</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/vaex/">vaex</a>&nbsp;
             
           </div>
         
@@ -372,6 +385,8 @@ Systems must instead generalize from smaller scenarios and tackle tasks that wer
                   <h4 class="see-also">See also</h4>
                   <ul>
                 
+                
+                    <li><a href="/post/2019-12-21-ai-weekly-51-2019/">AI weekly (51/2019)</a></li>
                 
                     <li><a href="/post/2019-12-14-ai-weekly-50-2019/">AI weekly (50/2019)</a></li>
                 
