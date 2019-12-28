@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bayesian on Joachim Weise</title>
+    <link>https://joachimweise.github.io/tags/bayesian/</link>
+    <description>Recent content in bayesian on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/tags/bayesian/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AI weekly (47/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-11-22-ai-weekly-47-2019/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-22-ai-weekly-47-2019/</guid>
+      <description>&lt;p&gt;+++ AI will speed up the hunt for Nazca Lines in southern Peru +++ Increasing transparency with Google Cloud Explainable AI +++ RecSim: Configurable Simulation Platform for Recommender Systems +++ Safety Gym: Reinforcement Learning Agents That Respect Safety Constraints +++ Sony Accounces the Establishment of Sony AI +++ Complete Data Science Project Template with Mlflow for Non-Dummies +++ Summer school on Deep Bayesian methods +++&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

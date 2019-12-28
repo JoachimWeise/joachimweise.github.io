@@ -57,13 +57,13 @@
     "name" : "Joachim Weise"
   },
   "headline": "AI weekly (43\/2019)",
-  "description" : "\x2b\x2b\x2b The State of Machine Learning Frameworks in 2019 \x2b\x2b\x2b SQLZoo \x26ndash; A Great Interactive SQL Tutorial \x2b\x2b\x2b\n",
+  "description" : "\x2b\x2b\x2b Quantum Supremacy Using a Programmable Superconducting Processor \x2b\x2b\x2b Understanding searches better than ever before \x2b\x2b\x2b The State of Machine Learning Frameworks in 2019 \x2b\x2b\x2b Welcome to Streamlit \x2b\x2b\x2b SQLZoo \x26ndash; A Great Interactive SQL Tutorial \x2b\x2b\x2b\n",
   "inLanguage" : "en",
-  "wordCount":  215 ,
+  "wordCount":  519 ,
   "datePublished" : "2019-10-26T00:00:00",
   "dateModified" : "2019-10-26T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
-  "keywords" : [ "ai-news, pytorch, sql" ],
+  "keywords" : [ "ai-news, bert, google, pytorch, quantum-computing, sql, streamlit" ],
   "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2019-10-26-ai-weekly-43-2019\/",
   "publisher" : {
     "@type": "Organization",
@@ -262,10 +262,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Oct 26, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;215&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;519&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;2&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
   
   
   
@@ -300,10 +300,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Oct 26, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;215&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;519&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;2&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
   
   
   
@@ -326,13 +326,20 @@
     
 
       <article role="main" class="blog-post">
-        <p>+++ The State of Machine Learning Frameworks in 2019 +++ SQLZoo &ndash; A Great Interactive SQL Tutorial +++</p>
+        <p>+++ Quantum Supremacy Using a Programmable Superconducting Processor +++ Understanding searches better than ever before +++ The State of Machine Learning Frameworks in 2019 +++ Welcome to Streamlit +++ SQLZoo &ndash; A Great Interactive SQL Tutorial +++</p>
 
 <h2 id="breakthrough-mdash-or-so-they-say">Breakthrough &mdash; Or So They Say</h2>
+
+<p><strong>Quantum Supremacy Using a Programmable Superconducting Processor.</strong> Finally Google&rsquo;s paper has officially been published by Nature after having been leaked earlier this year. Expository article by Google and Nature can be found <a href="https://www.nature.com/articles/d41586-019-03213-z">here</a>, <a href="https://www.nature.com/articles/d41586-019-03173-4">here</a> and <a href="https://ai.googleblog.com/2019/10/quantum-supremacy-using-programmable.html">here</a>. The <a href="https://www.nature.com/articles/s41586-019-1666-5">full Nature article</a> can be freely downloaded from their website. Perspectives on this are provided e.g. by <a href="https://spectrum.ieee.org/tech-talk/computing/hardware/how-googles-quantum-supremacy-plays-into-quantum-computings-long-game">IEEE Spectrum</a>, <a href="https://www.quantamagazine.org/john-preskill-explains-quantum-supremacy-20191002/">John Preskill on Quanta Magazin</a> and by <a href="https://www.scottaaronson.com/blog/?p=4317&amp;utm_campaign=The%20Data%20Science%20Roundup&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">Scott Aaronson</a>.</p>
+
+<p><strong>Understanding searches better than ever before.</strong> Google doesn’t write about its work on the actual Search product that often. Now Pandu Nayak,
+Google Fellow and Vice President Search, has published a <a href="https://www.blog.google/products/search/search-language-understanding-bert">blog post</a> announcing one of the biggest updates to its search algorithm in recent years. By using BERT (&ldquo;Bidirectional Encoder Representations from Transformers”) to better understand the intentions behind queries, Google says it can now offer more relevant results for about one in 10 searches in the U.S. in English (with support for other languages and locales coming later). In the world of search updates, where algorithm changes are often far more subtle, an update that affects 10% of searches is a big deal. Google notes that this update will work best for longer, more conversational queries because it’s easier to interpret a full sentence than a sequence of keywords.</p>
 
 <h2 id="tools-and-frameworks">Tools and Frameworks</h2>
 
 <p><strong>The State of Machine Learning Frameworks in 2019.</strong> An article by Horace He in <a href="https://thegradient.pub/state-of-ml-frameworks-2019-pytorch-dominates-research-tensorflow-dominates-industry/">The Gradient</a> analyzes the relative popularity of machine learning (more precisely: deep learning) frameworks. In 2019, the war for DL frameworks has two remaining main contenders: PyTorch and TensorFlow. The analysis suggests that researchers are abandoning TensorFlow and flocking to PyTorch in droves, with research papers using PyTorch at least twice as often as Tensorflow. Likely reasons are its ease of use, pythonic style, good integration with the Python ecosystem.  Meanwhile in industry, Tensorflow is currently the platform of choice, but that may not be true for long. Potential advantages of Tensorflow mentioned are its graph format, the fact that  the execution engine natively has no need for Python, and the fact that TensorFlow Lite and TensorFlow Serving address mobile and serving considerations respectively.</p>
+
+<p><strong>Welcome to Streamlit.</strong> <a href="https://streamlit.io/docs/">Streamlit</a> is an open-source Python library that makes it easy to build beautiful apps for machine learning. Install Streamlit, import it, write some code, and run your script. Streamlit watches for changes on each save and updates automatically, visualizing your output while you’re coding. Code runs from top to bottom, always from a clean state, and with no need for callbacks. It’s a simple and powerful app model that lets you build rich UIs incredibly quickly.</p>
 
 <h2 id="business-news-and-applications">Business News and Applications</h2>
 
@@ -347,9 +354,17 @@
             
               <a href="https://joachimweise.github.io//tags/ai-news/">ai-news</a>&nbsp;
             
+              <a href="https://joachimweise.github.io//tags/bert/">bert</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/google/">google</a>&nbsp;
+            
               <a href="https://joachimweise.github.io//tags/pytorch/">pytorch</a>&nbsp;
             
+              <a href="https://joachimweise.github.io//tags/quantum-computing/">quantum-computing</a>&nbsp;
+            
               <a href="https://joachimweise.github.io//tags/sql/">sql</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/streamlit/">streamlit</a>&nbsp;
             
           </div>
         

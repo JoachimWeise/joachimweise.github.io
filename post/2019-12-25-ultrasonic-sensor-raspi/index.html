@@ -59,11 +59,11 @@
   "headline": "Ultrasonic Range Sensor on the Raspberry Pi",
   "description" : "In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot.\n",
   "inLanguage" : "en",
-  "wordCount":  623 ,
+  "wordCount":  670 ,
   "datePublished" : "2019-12-24T00:00:00",
   "dateModified" : "2019-12-24T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
-  "keywords" : [ "raspberry, robot" ],
+  "keywords" : [ "raspberry, robot, python" ],
   "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2019-12-25-ultrasonic-sensor-raspi\/",
   "publisher" : {
     "@type": "Organization",
@@ -258,10 +258,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Dec 24, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;623&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;670&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
   
   
   
@@ -292,10 +292,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Dec 24, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;623&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;670&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
   
   
   
@@ -320,11 +320,11 @@
       <article role="main" class="blog-post">
         <p>In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot.</p>
 
-<p>A basic ultrasonic sensor consists of one or more ultrasonic transmitters (basically speakers), a receiver, and a control circuit. The transmitters emit a high frequency ultrasonic sound, which bounce off any nearby solid objects. Some of that ultrasonic noise is reflected and detected by the receiver on the sensor. That return signal is then processed by the control circuit to calculate the time difference between the signal being transmitted and received. This time can subsequently be used to calculate the distance between the sensor and the reflecting object.</p>
+<p>A basic ultrasonic sensor consists of one or more ultrasonic transmitters (basically speakers), a receiver, and a control circuit. The transmitters emit a high frequency ultrasonic sound, which bounces off any nearby solid object. Some of that ultrasonic signal is reflected and detected by the receiver on the sensor. That return signal is then processed by the control circuit to calculate the time difference between the signal being transmitted and received. This time can subsequently be used to calculate the distance between the sensor and the reflecting object.</p>
 
-<p>The HC-SR04 ultrasonic module operates at 5 V with a consumption of 15 mA current and measures the distance effectively starting from 2 cm to 400 cm.  It has four pins: ground (GND), Echo Pulse Output (ECHO), Trigger Pulse Input (TRIG), and 5 V Supply (Vcc). We power the module using Vcc, ground it using GND, and use our Raspberry Pi to send an input signal to TRIG.</p>
+<p>The HC-SR04 ultrasonic module operates at 5 V with a current of some 15 mA and measures the distance effectively starting from 2 cm to 400 cm.  It has four pins: ground (GND), Echo Pulse Output (ECHO), Trigger Pulse Input (TRIG), and 5 V Supply (Vcc). We power the module using Vcc, ground it using GND, and use our Raspberry Pi to send an input signal to TRIG.</p>
 
-<p>The sensor is triggered with a short 10 uS pulse. Now the sensor starts the ranging, sending out an 8 cycle burst of ultrasound at 40 kHz. This 8 burst pattern hits the object and reflects back. Once the 8 burst pattern is sent, the Echo pin is set high (i.e 5 V ) and when the signal reflects and comeback the Echo pin is set  low (0 V). This time duration for which the Echo pin stays high is the time taken for ultrasonic wave to travel and come back (round trip). The distance can then be calculated using the speed of sound 343 m/s.</p>
+<p>The HC-SR04 sensor requires a short 10 uS pulse to trigger the module, which will cause the sensor to start the ranging program (8 ultrasound bursts at 40 kHz) in order to obtain an echo response. Once the 8 burst pattern is sent, the Echo pin is set high (i.e 5 V), and when the signal reflects and comes back the Echo pin is set low (0 V). This time duration for which the Echo pin stays high is the time taken for the ultrasonic wave to travel and come back (round trip). The distance can then be calculated using the speed of sound 343 m/s.</p>
 
 <p><center>
 
@@ -343,7 +343,7 @@
 
 </center></p>
 
-<p>Like mentioned above the operating voltage of the module is 5V.  The input pin on the Raspberry Pi GPIO is only 3.3V tolerant. Sending a 5V signal into 3.3V input port could damage the GPIO pins. We use a small voltage divider to solve this problem. A voltage divider consists of two resistors (R1 and R2) in series connected to an input voltage (Vin), which needs to be reduced to our output voltage (Vout). In our circuit, Vin will be ECHO, which needs to be decreased from 5V to our Vout of 3.3V.</p>
+<p>Like mentioned above the operating voltage of the module is 5V.  The input pin on the Raspberry Pi GPIO is only 3.3V tolerant. Sending a 5V signal into a 3.3V input port could damage the GPIO pins. We use a small voltage divider to solve this problem. A voltage divider consists of two resistors (R1 and R2) in series connected to an input voltage (Vin), which needs to be reduced to our output voltage (Vout). In our circuit, Vin will be ECHO, which needs to be decreased from 5V to our Vout of 3.3V.</p>
 
 <p><center>
 
@@ -434,7 +434,7 @@
 </div>
 
 
-<p>And finally the corresponding Python code:</p>
+<p>And finally the corresponding Python code. The <code>time.time()</code> function will record the latest timestamp for a given condition. For example, if a pin goes from low to high, and we’re recording the low condition using the <code>time.time()</code> function, the recorded timestamp will be the latest time at which that pin was low.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span><span class="c1"># GPIO example using an NC-SR04 ultrasonic rangefinder</span>
 <span class="ln"> 2</span>
@@ -488,6 +488,8 @@
             
               <a href="https://joachimweise.github.io//tags/robot/">robot</a>&nbsp;
             
+              <a href="https://joachimweise.github.io//tags/python/">python</a>&nbsp;
+            
           </div>
         
 
@@ -495,6 +497,19 @@
 
         
           
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2019-12-21-ai-weekly-51-2019/">AI weekly (51/2019)</a></li>
+                
+                    <li><a href="/post/2019-10-27-python-pillow/">Image Manipulation with Python Pillow</a></li>
+                
+              </ul>
 
           
         

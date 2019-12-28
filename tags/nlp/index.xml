@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nlp on Joachim Weise</title>
+    <link>https://joachimweise.github.io/tags/nlp/</link>
+    <description>Recent content in nlp on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Fri, 15 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AI weekly (46/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-11-15-ai-weekly-46-2019/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-15-ai-weekly-46-2019/</guid>
+      <description>&lt;p&gt;+++ Machine vision sees behind walls and in darkness +++ Deep Learning deciphers historical Japanese texts +++ The Deep Learning Revolution and Its Implications for Computer Architecture and Chip Design +++  Microsoft’s Vision AI Developer Kit is now generally available +++ Intel unleashes three new chips for AI work, challenging Nvidia +++ Looker seeks to go beyond business intelligence +++ Nasdaq is testing a deep learning system to monitor trading +++ Gaussian Processes, not quite for dummies +++ Self-training with Noisy Student improves ImageNet classification +++ Extensive list of NLP-Models implemented in Tensorflow +++ 74 Summaries of Machine Learning and NLP Research +++&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

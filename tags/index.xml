@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>python</title>
+      <link>https://joachimweise.github.io/tags/python/</link>
+      <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>raspberry</title>
       <link>https://joachimweise.github.io/tags/raspberry/</link>
       <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
@@ -85,15 +94,6 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>https://joachimweise.github.io/tags/python/</link>
-      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>amazon</title>
       <link>https://joachimweise.github.io/tags/amazon/</link>
       <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
@@ -121,7 +121,25 @@
     </item>
     
     <item>
-      <title>reinforcement-learning</title>
+      <title>prophet</title>
+      <link>https://joachimweise.github.io/tags/prophet/</link>
+      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/prophet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quantum-computing</title>
+      <link>https://joachimweise.github.io/tags/quantum-computing/</link>
+      <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/quantum-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reinforcement-learning&#34;</title>
       <link>https://joachimweise.github.io/tags/reinforcement-learning/</link>
       <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
@@ -211,11 +229,38 @@
     </item>
     
     <item>
-      <title>datascience&#34;</title>
+      <title>bayesian</title>
+      <link>https://joachimweise.github.io/tags/bayesian/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/bayesian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>datascience</title>
       <link>https://joachimweise.github.io/tags/datascience/</link>
       <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/datascience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mlflow</title>
+      <link>https://joachimweise.github.io/tags/mlflow/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/mlflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openai</title>
+      <link>https://joachimweise.github.io/tags/openai/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/openai/</guid>
       <description></description>
     </item>
     
@@ -234,6 +279,24 @@
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ml-hardware</title>
+      <link>https://joachimweise.github.io/tags/ml-hardware/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/ml-hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nlp</title>
+      <link>https://joachimweise.github.io/tags/nlp/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/nlp/</guid>
       <description></description>
     </item>
     
@@ -265,11 +328,29 @@
     </item>
     
     <item>
+      <title>bert</title>
+      <link>https://joachimweise.github.io/tags/bert/</link>
+      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/bert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>sql</title>
       <link>https://joachimweise.github.io/tags/sql/</link>
       <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>streamlit</title>
+      <link>https://joachimweise.github.io/tags/streamlit/</link>
+      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/streamlit/</guid>
       <description></description>
     </item>
     
