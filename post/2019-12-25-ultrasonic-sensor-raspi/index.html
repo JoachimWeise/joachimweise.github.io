@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Ultrasonic Range Sensor on the Raspberry Pi - Joachim Weise</title>
-  <meta name="description" content="In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot.">
+  <meta name="description" content="In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot. I use my oscilloscope to check whether the sensor is working as announced.">
   <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -57,13 +57,13 @@
     "name" : "Joachim Weise"
   },
   "headline": "Ultrasonic Range Sensor on the Raspberry Pi",
-  "description" : "In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot.\n",
+  "description" : "In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot. I use my oscilloscope to check whether the sensor is working as announced.\n",
   "inLanguage" : "en",
-  "wordCount":  670 ,
+  "wordCount":  997 ,
   "datePublished" : "2019-12-24T00:00:00",
   "dateModified" : "2019-12-24T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
-  "keywords" : [ "raspberry, robot, python" ],
+  "keywords" : [ "raspberry, electronics, robot, python" ],
   "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2019-12-25-ultrasonic-sensor-raspi\/",
   "publisher" : {
     "@type": "Organization",
@@ -79,14 +79,14 @@
 </script>
 
 <meta property="og:title" content="Ultrasonic Range Sensor on the Raspberry Pi" />
-<meta property="og:description" content="In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot.">
+<meta property="og:description" content="In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot. I use my oscilloscope to check whether the sensor is working as announced.">
 <meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
 <meta property="og:url" content="https://joachimweise.github.io/post/2019-12-25-ultrasonic-sensor-raspi/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Joachim Weise" />
 
   <meta name="twitter:title" content="Ultrasonic Range Sensor on the Raspberry Pi" />
-  <meta name="twitter:description" content="In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot.">
+  <meta name="twitter:description" content="In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot. I …">
   <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -258,10 +258,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Dec 24, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;670&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;997&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
   
   
   
@@ -292,10 +292,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Dec 24, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;670&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;997&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
   
   
   
@@ -318,32 +318,34 @@
     
 
       <article role="main" class="blog-post">
-        <p>In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot.</p>
+        <p>In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot. I use my oscilloscope to check whether the sensor is working as announced.</p>
+
+<hr />
 
 <p>A basic ultrasonic sensor consists of one or more ultrasonic transmitters (basically speakers), a receiver, and a control circuit. The transmitters emit a high frequency ultrasonic sound, which bounces off any nearby solid object. Some of that ultrasonic signal is reflected and detected by the receiver on the sensor. That return signal is then processed by the control circuit to calculate the time difference between the signal being transmitted and received. This time can subsequently be used to calculate the distance between the sensor and the reflecting object.</p>
 
-<p>The HC-SR04 ultrasonic module operates at 5 V with a current of some 15 mA and measures the distance effectively starting from 2 cm to 400 cm.  It has four pins: ground (GND), Echo Pulse Output (ECHO), Trigger Pulse Input (TRIG), and 5 V Supply (Vcc). We power the module using Vcc, ground it using GND, and use our Raspberry Pi to send an input signal to TRIG.</p>
+<p>The HC-SR04 ultrasonic module operates at 5V with a current of some 15mA and measures the distance effectively starting from 2cm to 400cm.  It has four pins: ground (<code>GND</code>), Echo Pulse Output (<code>ECHO</code>), Trigger Pulse Input (<code>TRIG</code>), and 5V Supply (<code>Vcc</code>). We power the module using <code>Vcc</code>, ground it using <code>GND</code>, and use our Raspberry Pi to send an input signal to <code>TRIG</code>.</p>
 
-<p>The HC-SR04 sensor requires a short 10 uS pulse to trigger the module, which will cause the sensor to start the ranging program (8 ultrasound bursts at 40 kHz) in order to obtain an echo response. Once the 8 burst pattern is sent, the Echo pin is set high (i.e 5 V), and when the signal reflects and comes back the Echo pin is set low (0 V). This time duration for which the Echo pin stays high is the time taken for the ultrasonic wave to travel and come back (round trip). The distance can then be calculated using the speed of sound 343 m/s.</p>
+<p>The HC-SR04 sensor requires a short 10-100us pulse to trigger the module, which will cause the sensor to start the ranging program (8 ultrasound bursts at 40kHz) in order to obtain an echo response. Once the 8 burst pattern is sent, the <code>ECHO</code> pin is set high (i.e 5V), and when the signal reflects and comes back the Echo pin is set low (0V). This time duration for which the <code>ECHO</code> pin stays high is the time taken for the ultrasonic wave to travel and come back (round trip). The distance can then be calculated using the speed of sound 343m/s.</p>
 
 <p><center>
 
 <link rel="stylesheet" href="https://joachimweise.github.io/css/hugo-easy-gallery.css" />
-<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:700px">
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
-      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/timing-diagram2.jpg" alt="Timing Diagram"/>
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/timing-diagram2.jpg" alt="Fig. 1: Timing Diagram"/>
     </div>
     <a href="/img/2019-12-25-ultrasonic-sensor-raspi/timing-diagram2.jpg" itemprop="contentUrl"></a>
       <figcaption>
-          <p>Timing Diagram</p>
+          <p>Fig. 1: Timing Diagram</p>
       </figcaption>
   </figure>
 </div>
 
 </center></p>
 
-<p>Like mentioned above the operating voltage of the module is 5V.  The input pin on the Raspberry Pi GPIO is only 3.3V tolerant. Sending a 5V signal into a 3.3V input port could damage the GPIO pins. We use a small voltage divider to solve this problem. A voltage divider consists of two resistors (R1 and R2) in series connected to an input voltage (Vin), which needs to be reduced to our output voltage (Vout). In our circuit, Vin will be ECHO, which needs to be decreased from 5V to our Vout of 3.3V.</p>
+<p>As mentioned above the operating voltage of the module is 5V.  The input pin on the Raspberry Pi GPIO is only 3.3V tolerant. Sending a 5V signal into a 3.3V input port could damage the GPIO pins. We use a  voltage divider to solve this problem. A voltage divider consists of two resistors (R1 = 1kOhm and R2 = 2kOhm) in series connected to an input voltage (<code>V_in</code>), which needs to be reduced to our output voltage (<code>V_out</code>). In our circuit, <code>V_in</code> will be <code>ECHO</code>, which needs to be decreased from 5V to our <code>V_out</code> of 3.3V.</p>
 
 <p><center>
 
@@ -351,37 +353,37 @@
 <div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:500px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
-      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/voltage-divider.jpg" alt="Voltage Divider"/>
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/voltage-divider.jpg" alt="Fig. 2: Voltage Divider"/>
     </div>
     <a href="/img/2019-12-25-ultrasonic-sensor-raspi/voltage-divider.jpg" itemprop="contentUrl"></a>
       <figcaption>
-          <p>Voltage Divider</p>
+          <p>Fig. 2: Voltage Divider</p>
       </figcaption>
   </figure>
 </div>
 
 </center></p>
 
-<p>Using the great software <a href="https://fritzing.org/home/">fritzing</a> we can draw a schematic of how it will look like in reality, when all pins are connected using a breadboard and jumper wires:</p>
+<p>I am a big fan of the software <a href="https://fritzing.org/home/">fritzing</a> which allows to draw neat schematics in next to no time. That&rsquo;s how it will look like when all pins are connected using a breadboard and jumper wires:</p>
 
 <p><center>
 
 
-<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:400px">
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:300px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
-      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/schematic3.jpg" alt="Schematic"/>
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/schematic3.jpg" alt="Fig. 3: Schematic"/>
     </div>
     <a href="/img/2019-12-25-ultrasonic-sensor-raspi/schematic3.jpg" itemprop="contentUrl"></a>
       <figcaption>
-          <p>Schematic</p>
+          <p>Fig. 3: Schematic</p>
       </figcaption>
   </figure>
 </div>
 
 </center></p>
 
-<p>Some pictures how it looks in reality. The distance is displayed in a single line in the shell which is constantly updated:</p>
+<p>Figures 4 and 5 show my cabling, as it looks in reality (slightly messy). Figure 6 shows a screenshot of how the distance is displayed in a single line in the shell that is constantly being updated:</p>
 
 
 
@@ -393,11 +395,11 @@
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img" style="background-image: url('https://joachimweise.github.io//img/2019-12-25-ultrasonic-sensor-raspi/pic1-thumb.jpg');">
-      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/pic1-thumb.jpg" alt="Overview"/>
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/pic1-thumb.jpg" alt="Fig. 4: Overview"/>
     </div>
     <a href="/img/2019-12-25-ultrasonic-sensor-raspi/pic1.jpg" itemprop="contentUrl"></a>
       <figcaption>
-          <p>Overview</p>
+          <p>Fig. 4: Overview</p>
       </figcaption>
   </figure>
 </div>
@@ -407,11 +409,11 @@
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img" style="background-image: url('https://joachimweise.github.io//img/2019-12-25-ultrasonic-sensor-raspi/pic2-thumb.jpg');">
-      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/pic2-thumb.jpg" alt="Closeup"/>
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/pic2-thumb.jpg" alt="Fig. 5: Closeup"/>
     </div>
     <a href="/img/2019-12-25-ultrasonic-sensor-raspi/pic2.jpg" itemprop="contentUrl"></a>
       <figcaption>
-          <p>Closeup</p>
+          <p>Fig. 5: Closeup</p>
       </figcaption>
   </figure>
 </div>
@@ -421,11 +423,11 @@
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img" style="background-image: url('https://joachimweise.github.io//img/2019-12-25-ultrasonic-sensor-raspi/pic3.jpg');">
-      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/pic3.jpg" alt="Ouput in shell"/>
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/pic3.jpg" alt="Fig. 6: Ouput in shell"/>
     </div>
     <a href="/img/2019-12-25-ultrasonic-sensor-raspi/pic3.jpg" itemprop="contentUrl"></a>
       <figcaption>
-          <p>Ouput in shell</p>
+          <p>Fig. 6: Ouput in shell</p>
       </figcaption>
   </figure>
 </div>
@@ -434,9 +436,9 @@
 </div>
 
 
-<p>And finally the corresponding Python code. The <code>time.time()</code> function will record the latest timestamp for a given condition. For example, if a pin goes from low to high, and we’re recording the low condition using the <code>time.time()</code> function, the recorded timestamp will be the latest time at which that pin was low.</p>
+<p>The Python code to trigger and read out the sensor can be kept quite simple. The <code>RPi.GPIO</code>  library allows to easily configure and read-write the input/output pins on the Pi’s GPIO interface within a Python script. It is installed by default on recent versions of Raspbian Linux. The <code>time.time()</code> function will record the latest timestamp for a given condition. For example, if a pin goes from low to high, and we’re recording the low condition using the <code>time.time()</code> function, the recorded timestamp will be the latest time at which that pin was low.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span><span class="c1"># GPIO example using an NC-SR04 ultrasonic rangefinder</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span><span class="c1"># GPIO example using an HC-SR04 ultrasonic rangefinder</span>
 <span class="ln"> 2</span>
 <span class="ln"> 3</span><span class="c1"># import the GPIO and time libraries</span>
 <span class="ln"> 4</span>import RPi.GPIO as GPIO
@@ -481,10 +483,137 @@
 <span class="ln">43</span>    <span class="c1"># Display the results. end = &#39;\r&#39; forces the output to the same line</span>
 <span class="ln">44</span>    print<span class="o">(</span><span class="s2">&#34;Distance: &#34;</span> + str<span class="o">(</span>distance<span class="o">)</span> + <span class="s2">&#34;cm             &#34;</span>, <span class="nv">end</span> <span class="o">=</span> <span class="s1">&#39;\r&#39;</span><span class="o">)</span></code></pre></div>
 
+<p>Next I use my Tektronix 2465 oscilloscope to check whether the sensor really works as desribed above. Let&rsquo;s first see if the distance conversion, using the speed of sound in air, works as promised. I connect the scope to <code>GND</code> (black) and <code>ECHO</code> (red/orange), as shown in Figures 7 and 8. After a short fight with the trigger, the scope shows that <code>ECHO</code> is high for some 23ms. Multiplying this with the speed of sound of 343m/s and dividing by 2 (round trip) yields a distance of some 3.9m which is in line with what was display. Nice!</p>
+
+
+
+
+<div class="gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+	  
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2019-12-25-ultrasonic-sensor-raspi/osci01-thumb.jpg');">
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/osci01-thumb.jpg" alt="Fig. 7: Connecting the scope"/>
+    </div>
+    <a href="/img/2019-12-25-ultrasonic-sensor-raspi/osci01.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 7: Connecting the scope</p>
+      </figcaption>
+  </figure>
+</div>
+
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2019-12-25-ultrasonic-sensor-raspi/osci02-thumb.jpg');">
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/osci02-thumb.jpg" alt="Fig. 8: Connecting the scope"/>
+    </div>
+    <a href="/img/2019-12-25-ultrasonic-sensor-raspi/osci02.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 8: Connecting the scope</p>
+      </figcaption>
+  </figure>
+</div>
+
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2019-12-25-ultrasonic-sensor-raspi/osci03.jpg');">
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/osci03.jpg" alt="Fig. 9: ECHO set high for 23ms"/>
+    </div>
+    <a href="/img/2019-12-25-ultrasonic-sensor-raspi/osci03.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 9: ECHO set high for 23ms</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+</div>
+
+
+<p>As a last step I try to take a look at the &ldquo;8 burst pattern&rdquo; that the sensor is supposed to send out after being triggered by the Raspberry. The letters &rsquo;T&rsquo; and &lsquo;R&rsquo; on the front of the sensor board seem to indicate that the transmitter sits left and the receiver right. I use a probe head to connect to one of the contacts of the transmitter, as shown in Figures 10 and 11. The scope shows in fact 8 peaks in a time span of some 210us. The peaks thus come at a frequency of 38kHz. The description didn&rsquo;t lie!</p>
+
+
+
+
+<div class="gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+	  
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2019-12-25-ultrasonic-sensor-raspi/osci04-thumb.jpg');">
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/osci04-thumb.jpg" alt="Fig. 10: Probe head on sensor board"/>
+    </div>
+    <a href="/img/2019-12-25-ultrasonic-sensor-raspi/osci04.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 10: Probe head on sensor board</p>
+      </figcaption>
+  </figure>
+</div>
+
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2019-12-25-ultrasonic-sensor-raspi/osci05-thumb.jpg');">
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/osci05-thumb.jpg" alt="Fig. 11: Probe head on sensor board"/>
+    </div>
+    <a href="/img/2019-12-25-ultrasonic-sensor-raspi/osci05.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 11: Probe head on sensor board</p>
+      </figcaption>
+  </figure>
+</div>
+
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2019-12-25-ultrasonic-sensor-raspi/osci06.jpg');">
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/osci06.jpg" alt="Fig. 12: Eight burst at 38kHz"/>
+    </div>
+    <a href="/img/2019-12-25-ultrasonic-sensor-raspi/osci06.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 12: Eight burst at 38kHz</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+</div>
+
+
+<p>And, in the end, a fun GIF:</p>
+
+<p><center>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:500px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2019-12-25-ultrasonic-sensor-raspi/osci4.gif" alt="Schematic"/>
+    </div>
+    <a href="/img/2019-12-25-ultrasonic-sensor-raspi/osci4.gif" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Schematic</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
         
           <div class="blog-tags">
             
               <a href="https://joachimweise.github.io//tags/raspberry/">raspberry</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/electronics/">electronics</a>&nbsp;
             
               <a href="https://joachimweise.github.io//tags/robot/">robot</a>&nbsp;
             
