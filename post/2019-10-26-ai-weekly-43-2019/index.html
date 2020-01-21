@@ -57,13 +57,13 @@
     "name" : "Joachim Weise"
   },
   "headline": "AI weekly (43\/2019)",
-  "description" : "\x2b\x2b\x2b Quantum Supremacy Using a Programmable Superconducting Processor \x2b\x2b\x2b Understanding searches better than ever before \x2b\x2b\x2b The State of Machine Learning Frameworks in 2019 \x2b\x2b\x2b Welcome to Streamlit \x2b\x2b\x2b SQLZoo \x26ndash; A Great Interactive SQL Tutorial \x2b\x2b\x2b\n",
+  "description" : "\x2b\x2b\x2b Quantum Supremacy Using a Programmable Superconducting Processor \x2b\x2b\x2b Understanding searches better than ever before \x2b\x2b\x2b The State of Machine Learning Frameworks in 2019 \x2b\x2b\x2b Welcome to Streamlit \x2b\x2b\x2b bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond) \x2b\x2b\x2b Deep Q-Network for Angry Birds \x2b\x2b\x2b Machines Beat Humans on a Reading Test. But Do They Understand? \x2b\x2b\x2b SQLZoo \x26ndash; A Great Interactive SQL Tutorial \x2b\x2b\x2b An overview of time series forecasting models \x2b\x2b\x2b Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame \x2b\x2b\x2b\n",
   "inLanguage" : "en",
-  "wordCount":  519 ,
+  "wordCount":  1451 ,
   "datePublished" : "2019-10-26T00:00:00",
   "dateModified" : "2019-10-26T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
-  "keywords" : [ "ai-news, bert, google, pytorch, quantum-computing, sql, streamlit" ],
+  "keywords" : [ "ai-news, bert, google, koalas, pandas, pytorch, quantum-computing, spark, sql, streamlit, time-series" ],
   "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2019-10-26-ai-weekly-43-2019\/",
   "publisher" : {
     "@type": "Organization",
@@ -262,10 +262,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Oct 26, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;519&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1451&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;7&nbsp;minutes
   
   
   
@@ -300,10 +300,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Oct 26, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;519&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1451&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;7&nbsp;minutes
   
   
   
@@ -326,7 +326,7 @@
     
 
       <article role="main" class="blog-post">
-        <p>+++ Quantum Supremacy Using a Programmable Superconducting Processor +++ Understanding searches better than ever before +++ The State of Machine Learning Frameworks in 2019 +++ Welcome to Streamlit +++ SQLZoo &ndash; A Great Interactive SQL Tutorial +++</p>
+        <p>+++ Quantum Supremacy Using a Programmable Superconducting Processor +++ Understanding searches better than ever before +++ The State of Machine Learning Frameworks in 2019 +++ Welcome to Streamlit +++ bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond) +++ Deep Q-Network for Angry Birds +++ Machines Beat Humans on a Reading Test. But Do They Understand? +++ SQLZoo &ndash; A Great Interactive SQL Tutorial +++ An overview of time series forecasting models +++ Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame +++</p>
 
 <h2 id="breakthrough-mdash-or-so-they-say">Breakthrough &mdash; Or So They Say</h2>
 
@@ -345,9 +345,24 @@ Google Fellow and Vice President Search, has published a <a href="https://www.bl
 
 <h2 id="publications">Publications</h2>
 
+<p><strong>bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond)</strong> <a href="https://arxiv.org/abs/1909.11784">(arXiv:1909.11784)</a>. The R package <code>bamlss</code> is introduced for Bayesian additive models for location, scale, and shape (and beyond). At the core of the package are algorithms for highly-efficient Bayesian estimation and inference that can be applied to generalized additive models (GAMs) or generalized additive models for location, scale, and shape (GAMLSS), also known as distributional regression. However, its building blocks are designed as &ldquo;Lego bricks&rdquo; encompassing various distributions (exponential family, Cox, joint models, &hellip;), regression terms (linear, splines, random effects, tensor products, spatial fields, &hellip;), and estimators (MCMC, backfitting, gradient boosting, lasso, &hellip;). It is demonstrated how these can be easily recombined to make classical models more flexible or create new custom models for specific modeling challenges.</p>
+
+<p><strong>Deep Q-Network for Angry Birds</strong> <a href="https://arxiv.org/abs/1910.01806">(arXiv:1910.01806)</a>. Researchers at Charles University in Prague detail an AI system&mdash;DQ-Birds&mdash;trained using Deep Q-learning, a technique pioneered by Alphabet’s DeepMind that instructs an agent which action to take under what circumstances using a random sample of prior actions. Quote: &ldquo;Angry Birds is a popular video game in which the player is provided with a sequence of birds to shoot from a slingshot. The task of the game is to destroy all green pigs with maximum possible score. Angry Birds appears to be a difficult task to solve for artificially intelligent agents due to the sequential decision-making, non-deterministic game environment, enormous state and action spaces and requirement to differentiate between multiple birds, their abilities and optimum tapping times. We describe the application of Deep Reinforcement learning by implementing Double Dueling Deep Q-network to play Angry Birds game. One of our main goals was to build an agent that is able to compete with previous participants and humans on the first 21 levels. In order to do so, we have collected a dataset of game frames that we used to train our agent on. We present different approaches and settings for DQN agent. We evaluate our agent using results of the previous participants of AIBirds competition, results of volunteer human players and present the results of AIBirds 2018 competition.&rdquo;</p>
+
+<p><strong>Benchmarking simple machine learning models with feature extraction against modern black-box methods.</strong> A <a href="https://towardsdatascience.com/benchmarking-simple-machine-learning-models-with-feature-extraction-against-modern-black-box-80af734b31cc">blog post by Martin Dittgen</a> based on his <a href="https://ora.ox.ac.uk/objects/uuid:470caa81-e106-4c87-af02-1aeaf6380269/download_file?file_format=pdf&amp;safe_filename=Empirical%2Bbenchmark%2Bof%2Bsimple%2Bvs%2Bmodern%2BML%2Bmethods.pdf&amp;type_of_work=Thesis">MSc thesis</a> at the University of Oxford. Quote: &ldquo;Our results show that, for classification problems, the simple methods perform
+almost as well as the more complex methods. This is true for both binary classification, regarding the metric area under the ROC curve, and for multiclass classification with regards to the weighted F1 Score metric. In our regression problems, the modern methods outperform the simpler methods and seem superior to the more interpretable methods in terms of their respective R-squared or explained variance.&rdquo;</p>
+
+<p><strong>Machines Beat Humans on a Reading Test. But Do They Understand?</strong> In the fall of 2017, Sam Bowman, a computational linguist at New York University, figured that computers still weren’t very good at understanding the written word. In an <a href="https://arxiv.org/abs/1804.07461">April 2018 paper</a> coauthored with collaborators from the University of Washington and DeepMind Bowman introduced a battery of nine reading-comprehension tasks for computers called GLUE (General Language Understanding Evaluation). The machines bombed. Even state-of-the-art neural networks scored no higher than 69 out of 100 across all nine tasks: a D-plus, in letter grade terms. But then, in October of 2018, Google introduced a new method nicknamed BERT (Bidirectional Encoder Representations from Transformers). It produced a GLUE score of 80.5. On this brand-new benchmark designed to measure machines’ real understanding of natural language — or to expose their lack thereof — the machines had jumped from a D-plus to a B-minus in just six months. But is AI actually starting to understand our language — or is it just getting better at gaming our systems? Bowman points out that it’s hard to know how we would ever be fully convinced that a neural network achieves anything like real understanding. More background in an <a href="https://www.quantamagazine.org/machines-beat-humans-on-a-reading-test-but-do-they-understand-20191017/#comments">article on Quanta Magazine</a> von John Pavlus.</p>
+
 <h2 id="tutorials">Tutorials</h2>
 
 <p><strong>SQLZoo &mdash; A Great Interactive SQL Tutorial.</strong> <a href="https://sqlzoo.net/wiki/SQL_Tutorial">SQLZoo</a> is a free, &ldquo;learning-by-doing&rdquo; SQL course that has you punching out queries and wracking your brain for the solutions from the very beginning. It&rsquo;s fun (if you like puzzles), but definitely also teaches business-relevant SQL skills.</p>
+
+<p><strong>An overview of time series forecasting models.</strong> An <a href="https://towardsdatascience.com/an-overview-of-time-series-forecasting-models-a2fa7a358fcb">article by David Burbas</a> on towards data science gives a compact overview of time series forecasting models, describing 10 forecasting models and how to apply them to predict the evolution of an industrial production index.</p>
+
+<p><strong>bamlss: A Lego Toolbox for Flexible Bayesian Regression.</strong> A <a href="https://www.r-bloggers.com/bamlss-a-lego-toolbox-for-flexible-bayesian-regression/">tutorial on R-bloggers</a> on the preprint <a href="https://arxiv.org/abs/1909.11784">arXiv:1909.11784</a> (see above). Modular R tools for Bayesian regression are provided by bamlss: From classic MCMC-based GLMs and GAMs to distributional models using the lasso or gradient boosting.</p>
+
+<p><strong>Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame.</strong> One of the major limitations of Pandas is that it was designed for small datasets that can be handled on a single machine and thus it does not scale well to big data. On the contrary, Apache Spark was designed for big data, but it has a very different API and also lacks many of the easy-to-use functionality in Pandas for data wrangling and visualization. Recently a new open source framework Koalas was announced that bridges the gap between Pandas DataFrame and Spark DataFrame by augmenting PySpark’s DataFrame API to make it compatible with pandas DataFrame API. <a href="https://towardsdatascience.com/python-data-preprocessing-using-pandas-dataframe-spark-dataframe-and-koalas-dataframe-e44c42258a8f">In this post</a>, a public dataset is used to evaluate and compare the basic functionality of Pandas, Spark, and Koalas DataFrames in typical data preprocessing steps for machine learning.</p>
 
         
           <div class="blog-tags">
@@ -358,13 +373,21 @@ Google Fellow and Vice President Search, has published a <a href="https://www.bl
             
               <a href="https://joachimweise.github.io//tags/google/">google</a>&nbsp;
             
+              <a href="https://joachimweise.github.io//tags/koalas/">koalas</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/pandas/">pandas</a>&nbsp;
+            
               <a href="https://joachimweise.github.io//tags/pytorch/">pytorch</a>&nbsp;
             
               <a href="https://joachimweise.github.io//tags/quantum-computing/">quantum-computing</a>&nbsp;
             
+              <a href="https://joachimweise.github.io//tags/spark/">spark</a>&nbsp;
+            
               <a href="https://joachimweise.github.io//tags/sql/">sql</a>&nbsp;
             
               <a href="https://joachimweise.github.io//tags/streamlit/">streamlit</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/time-series/">time-series</a>&nbsp;
             
           </div>
         
@@ -381,15 +404,15 @@ Google Fellow and Vice President Search, has published a <a href="https://www.bl
                   <ul>
                 
                 
+                    <li><a href="/post/2020-01-18-ai-weekly-03-2020/">AI weekly (03/2020)</a></li>
+                
+                    <li><a href="/post/2020-01-11-ai-weekly-02-2020/">AI weekly (02/2020)</a></li>
+                
+                    <li><a href="/post/2020-01-04-ai-weekly-01-2020/">AI weekly (01/2020)</a></li>
+                
                     <li><a href="/post/2019-12-21-ai-weekly-51-2019/">AI weekly (51/2019)</a></li>
                 
                     <li><a href="/post/2019-12-14-ai-weekly-50-2019/">AI weekly (50/2019)</a></li>
-                
-                    <li><a href="/post/2019-12-07-ai-weekly-49-2019/">AI weekly (49/2019)</a></li>
-                
-                    <li><a href="/post/2019-11-29-ai-weekly-48-2019/">AI weekly (48/2019)</a></li>
-                
-                    <li><a href="/post/2019-11-22-ai-weekly-47-2019/">AI weekly (47/2019)</a></li>
                 
               </ul>
 
@@ -480,7 +503,7 @@ Google Fellow and Vice President Search, has published a <a href="https://www.bl
 
           &nbsp;&bull;&nbsp;&copy;
           
-            2019
+            2020
           
 
           

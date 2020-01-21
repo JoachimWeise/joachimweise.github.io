@@ -21,5 +21,14 @@
       <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++ AR-Net: A simple Auto-Regressive Neural Network for time-series +++ Deep Learning with PyTorch +++ Cost-benefit analysis in R +++ How to apply machine/deep learning to audio analysis, with comet.ml +++ Collection of Jupyter notebooks for quantitative finance +++ Create a streetmap of your favorite city with ggplot2 +++ Tutorial on Graph Neural Networks for Computer Vision and Beyond (in 3 parts) +++&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>AI weekly (43/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-10-26-ai-weekly-43-2019/</link>
+      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-10-26-ai-weekly-43-2019/</guid>
+      <description>&lt;p&gt;+++ Quantum Supremacy Using a Programmable Superconducting Processor +++ Understanding searches better than ever before +++ The State of Machine Learning Frameworks in 2019 +++ Welcome to Streamlit +++ bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond) +++ Deep Q-Network for Angry Birds +++ Machines Beat Humans on a Reading Test. But Do They Understand? +++ SQLZoo &amp;ndash; A Great Interactive SQL Tutorial +++ An overview of time series forecasting models +++ Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame +++&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

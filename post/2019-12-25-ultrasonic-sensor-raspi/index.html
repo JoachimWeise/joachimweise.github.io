@@ -59,11 +59,11 @@
   "headline": "Ultrasonic Range Sensor on the Raspberry Pi",
   "description" : "In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot. I use my oscilloscope to check whether the sensor is working as announced.\n",
   "inLanguage" : "en",
-  "wordCount":  997 ,
-  "datePublished" : "2019-12-24T00:00:00",
-  "dateModified" : "2019-12-24T00:00:00",
+  "wordCount":  1006 ,
+  "datePublished" : "2019-12-28T00:00:00",
+  "dateModified" : "2019-12-28T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
-  "keywords" : [ "raspberry, electronics, robot, python" ],
+  "keywords" : [ "raspberry, electronics, robot, python, code" ],
   "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2019-12-25-ultrasonic-sensor-raspi\/",
   "publisher" : {
     "@type": "Organization",
@@ -235,9 +235,9 @@
     <div id="header-big-imgs" data-num-img=1 
       
          
-          data-img-src-1="/img/2019-12-21-AI-weekly-51-2019.jpg" 
+          data-img-src-1="/img/2019-12-25-ultrasonic-sensor-raspi/background.jpg" 
          
-         data-img-desc-1="Sunset (2017)"
+         data-img-desc-1="8 ultrasound bursts at 40kHz"
       ></div>
   
 
@@ -255,10 +255,10 @@
                     <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i> &nbsp;Dec 24, 2019
+  <i class="fas fa-calendar"></i> &nbsp;Dec 28, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;997&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1006&nbsp;words
   
   
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
@@ -289,10 +289,10 @@
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i> &nbsp;Dec 24, 2019
+  <i class="fas fa-calendar"></i> &nbsp;Dec 28, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;997&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1006&nbsp;words
   
   
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
@@ -326,7 +326,7 @@
 
 <p>The HC-SR04 ultrasonic module operates at 5V with a current of some 15mA and measures the distance effectively starting from 2cm to 400cm.  It has four pins: ground (<code>GND</code>), Echo Pulse Output (<code>ECHO</code>), Trigger Pulse Input (<code>TRIG</code>), and 5V Supply (<code>Vcc</code>). We power the module using <code>Vcc</code>, ground it using <code>GND</code>, and use our Raspberry Pi to send an input signal to <code>TRIG</code>.</p>
 
-<p>The HC-SR04 sensor requires a short 10-100us pulse to trigger the module, which will cause the sensor to start the ranging program (8 ultrasound bursts at 40kHz) in order to obtain an echo response. Once the 8 burst pattern is sent, the <code>ECHO</code> pin is set high (i.e 5V), and when the signal reflects and comes back the Echo pin is set low (0V). This time duration for which the <code>ECHO</code> pin stays high is the time taken for the ultrasonic wave to travel and come back (round trip). The distance can then be calculated using the speed of sound 343m/s.</p>
+<p>The HC-SR04 sensor requires a short 10-100us pulse to trigger the module, which will cause the sensor to start the ranging program (8 ultrasound bursts at 40kHz) in order to obtain an echo response. Once the 8 burst pattern is sent, the <code>ECHO</code> pin is set high (i.e 5V), and when the signal reflects and comes back the <code>ECHO</code> pin is set low (0V). This time duration for which the <code>ECHO</code> pin stays high is the time taken for the ultrasonic wave to travel and come back (round trip). The distance can then be calculated using the speed of sound 343m/s.</p>
 
 <p><center>
 
@@ -483,7 +483,7 @@
 <span class="ln">43</span>    <span class="c1"># Display the results. end = &#39;\r&#39; forces the output to the same line</span>
 <span class="ln">44</span>    print<span class="o">(</span><span class="s2">&#34;Distance: &#34;</span> + str<span class="o">(</span>distance<span class="o">)</span> + <span class="s2">&#34;cm             &#34;</span>, <span class="nv">end</span> <span class="o">=</span> <span class="s1">&#39;\r&#39;</span><span class="o">)</span></code></pre></div>
 
-<p>Next I use my Tektronix 2465 oscilloscope to check whether the sensor really works as desribed above. Let&rsquo;s first see if the distance conversion, using the speed of sound in air, works as promised. I connect the scope to <code>GND</code> (black) and <code>ECHO</code> (red/orange), as shown in Figures 7 and 8. After a short fight with the trigger, the scope shows that <code>ECHO</code> is high for some 23ms. Multiplying this with the speed of sound of 343m/s and dividing by 2 (round trip) yields a distance of some 3.9m which is in line with what was display. Nice!</p>
+<p>Next I use my Tektronix 2465 oscilloscope to check whether the sensor really works as desribed above. Let&rsquo;s first see if the distance conversion, using the speed of sound in air, works as promised. I connect the scope to <code>GND</code> (black) and <code>ECHO</code> (red/orange), as shown in Figures 7 and 8. After a short fight with the trigger, the scope shows that <code>ECHO</code> is high for some 23ms. Multiplying this with the speed of sound of 343m/s and dividing by 2 (round trip) yields a distance of some 3.9m which is in line with what was displayed. Nice!</p>
 
 
 
@@ -536,7 +536,7 @@
 </div>
 
 
-<p>As a last step I try to take a look at the &ldquo;8 burst pattern&rdquo; that the sensor is supposed to send out after being triggered by the Raspberry. The letters &rsquo;T&rsquo; and &lsquo;R&rsquo; on the front of the sensor board seem to indicate that the transmitter sits left and the receiver right. I use a probe head to connect to one of the contacts of the transmitter, as shown in Figures 10 and 11. The scope shows in fact 8 peaks in a time span of some 210us. The peaks thus come at a frequency of 38kHz. The description didn&rsquo;t lie!</p>
+<p>As a last step I try to take a look at the &ldquo;8 burst pattern&rdquo; that the sensor is supposed to send out after being triggered by the Raspberry. The letters &rsquo;T&rsquo; and &lsquo;R&rsquo; on the front of the sensor board seem to indicate that the transmitter sits left and the receiver right. I use a probe head to connect to one of the contacts of the transmitter on the backside of the circuit board, as shown in Figures 10 and 11. The scope shows in fact 8 peaks in a time span of some 210us. The peaks thus come at a frequency of 38kHz. The description didn&rsquo;t lie!</p>
 
 
 
@@ -589,7 +589,7 @@
 </div>
 
 
-<p>And, in the end, a fun GIF:</p>
+<p>A fun GIF as a farewell from this experiment:</p>
 
 <p><center>
 
@@ -619,6 +619,8 @@
             
               <a href="https://joachimweise.github.io//tags/python/">python</a>&nbsp;
             
+              <a href="https://joachimweise.github.io//tags/code/">code</a>&nbsp;
+            
           </div>
         
 
@@ -636,7 +638,11 @@
                 
                     <li><a href="/post/2019-12-21-ai-weekly-51-2019/">AI weekly (51/2019)</a></li>
                 
+                    <li><a href="/post/2019-11-16-python-environments/">Python virtual environments</a></li>
+                
                     <li><a href="/post/2019-10-27-python-pillow/">Image Manipulation with Python Pillow</a></li>
+                
+                    <li><a href="/post/2019-10-19-first-post/">First post!</a></li>
                 
               </ul>
 
@@ -651,6 +657,10 @@
               <a href="https://joachimweise.github.io/post/2019-12-21-ai-weekly-51-2019/" data-toggle="tooltip" data-placement="top" title="AI weekly (51/2019)">&larr; Previous Post</a>
             </li>
           
+          
+            <li class="next">
+              <a href="https://joachimweise.github.io/post/2020-01-04-ai-weekly-01-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (01/2020)">Next Post &rarr;</a>
+            </li>
           
         </ul>
       
@@ -723,7 +733,7 @@
 
           &nbsp;&bull;&nbsp;&copy;
           
-            2019
+            2020
           
 
           

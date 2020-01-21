@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>autonomous-driving on Joachim Weise</title>
+    <link>https://joachimweise.github.io/tags/autonomous-driving/</link>
+    <description>Recent content in autonomous-driving on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Fri, 01 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/tags/autonomous-driving/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AI weekly (44/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-11-01-ai-weekly-44-2019/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-01-ai-weekly-44-2019/</guid>
+      <description>&lt;p&gt;+++ AI is helping scholars restore ancient Greek texts on stone tablets +++ Open Sourcing Amundsen: A Data Discovery And Metadata Platform +++ AI May Not Kill Your Job—Just Change It +++ A Survey of Deep Learning Techniques for Autonomous Driving +++ The State of Modeling, Simulation, and Data Utilization within Industry. An Autonomous Vehicles Perspective+++ Microsoft AI School and Microsoft Learn  +++ Kepler.GL &amp;amp; Jupyter Notebooks: Geospatial Data Visualization with Uber’s opensource Kepler.GL +++&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

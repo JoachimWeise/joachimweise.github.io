@@ -7,15 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Tue, 24 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>AI weekly (03/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-01-18-ai-weekly-03-2020/</link>
+      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-01-18-ai-weekly-03-2020/</guid>
+      <description>&lt;p&gt;+++  +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (02/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-01-11-ai-weekly-02-2020/</link>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-01-11-ai-weekly-02-2020/</guid>
+      <description>&lt;p&gt;+++  +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (01/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-01-04-ai-weekly-01-2020/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-01-04-ai-weekly-01-2020/</guid>
+      <description>&lt;p&gt;+++  +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Ultrasonic Range Sensor on the Raspberry Pi</title>
       <link>https://joachimweise.github.io/post/2019-12-25-ultrasonic-sensor-raspi/</link>
-      <pubDate>Tue, 24 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-12-25-ultrasonic-sensor-raspi/</guid>
       <description>&lt;p&gt;In this project I am interfacing the HC-SR04 ultrasonic sensor module to a Raspberry Pi to measure distance. Later on the Raspberry as well as the sensor will be part of an obstacle avoiding robot. I use my oscilloscope to check whether the sensor is working as announced.&lt;/p&gt;</description>
@@ -81,7 +108,7 @@
       <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-11-22-ai-weekly-47-2019/</guid>
-      <description>&lt;p&gt;+++ AI will speed up the hunt for Nazca Lines in southern Peru +++ Increasing transparency with Google Cloud Explainable AI +++ RecSim: Configurable Simulation Platform for Recommender Systems +++ Safety Gym: Reinforcement Learning Agents That Respect Safety Constraints +++ Sony Accounces the Establishment of Sony AI +++ Complete Data Science Project Template with Mlflow for Non-Dummies +++ Summer school on Deep Bayesian methods +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ AI will speed up the hunt for Nazca Lines in southern Peru +++ Increasing transparency with Google Cloud Explainable AI +++ RecSim: Configurable Simulation Platform for Recommender Systems +++ Safety Gym: Reinforcement Learning Agents That Respect Safety Constraints +++ Sony Accounces the Establishment of Sony AI +++ Complete Data Science Project Template with Mlflow for Non-Dummies +++ Summer school on Deep Bayesian methods +++ How to apply machine learning and deep learning methods to audio analysis +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -91,6 +118,15 @@
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-11-15-ai-weekly-46-2019/</guid>
       <description>&lt;p&gt;+++ Machine vision sees behind walls and in darkness +++ Deep Learning deciphers historical Japanese texts +++ The Deep Learning Revolution and Its Implications for Computer Architecture and Chip Design +++  Microsoft’s Vision AI Developer Kit is now generally available +++ Intel unleashes three new chips for AI work, challenging Nvidia +++ Looker seeks to go beyond business intelligence +++ Nasdaq is testing a deep learning system to monitor trading +++ Gaussian Processes, not quite for dummies +++ Self-training with Noisy Student improves ImageNet classification +++ Extensive list of NLP-Models implemented in Tensorflow +++ 74 Summaries of Machine Learning and NLP Research +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python virtual environments</title>
+      <link>https://joachimweise.github.io/post/2019-11-16-python-environments/</link>
+      <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-11-16-python-environments/</guid>
+      <description>&lt;p&gt;Anyone who works on Python projects and uses various packages will sooner or later have to deal with different versions of packages across different branches and projects. Because each project has its own set of dependencies, it’s a good practice to avoid mixing them. If all the dependencies are installed together in a single Python environment, then it will be difficult to discern where each one came from. In the worst cases, two different projects may depend on two different versions of a package, but with Python you can only have one version of a package installed at one time. What a mess! Virtual environments address this issue. A virtual environment, put simply, is an isolated working copy of Python which allows you to work on a specific project without worry of affecting other projects.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -158,7 +194,7 @@
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-11-08-ai-weekly-45-2019/</guid>
-      <description>&lt;p&gt;+++ Deep learning has a size problem +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ How to train artificial intelligence that won’t destroy the environment +++ Deep learning has a size problem +++ Quantifying the Carbon Emissions of Machine Learning +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -167,7 +203,7 @@
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-11-01-ai-weekly-44-2019/</guid>
-      <description>&lt;p&gt;+++ Microsoft AI School and Microsoft Learn  +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ AI is helping scholars restore ancient Greek texts on stone tablets +++ Open Sourcing Amundsen: A Data Discovery And Metadata Platform +++ AI May Not Kill Your Job—Just Change It +++ A Survey of Deep Learning Techniques for Autonomous Driving +++ The State of Modeling, Simulation, and Data Utilization within Industry. An Autonomous Vehicles Perspective+++ Microsoft AI School and Microsoft Learn  +++ Kepler.GL &amp;amp; Jupyter Notebooks: Geospatial Data Visualization with Uber’s opensource Kepler.GL +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -185,7 +221,7 @@
       <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-10-26-ai-weekly-43-2019/</guid>
-      <description>&lt;p&gt;+++ Quantum Supremacy Using a Programmable Superconducting Processor +++ Understanding searches better than ever before +++ The State of Machine Learning Frameworks in 2019 +++ Welcome to Streamlit +++ SQLZoo &amp;ndash; A Great Interactive SQL Tutorial +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Quantum Supremacy Using a Programmable Superconducting Processor +++ Understanding searches better than ever before +++ The State of Machine Learning Frameworks in 2019 +++ Welcome to Streamlit +++ bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond) +++ Deep Q-Network for Angry Birds +++ Machines Beat Humans on a Reading Test. But Do They Understand? +++ SQLZoo &amp;ndash; A Great Interactive SQL Tutorial +++ An overview of time series forecasting models +++ Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame +++&lt;/p&gt;</description>
     </item>
     
     <item>
