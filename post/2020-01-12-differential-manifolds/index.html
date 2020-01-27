@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Differentiable Manifolds - Joachim Weise</title>
+  <meta name="description" content="This is the first post in short series that I write on the basics of differential or  Riemannian geometry. Differential geometry is a key mathematical foundation of general relativity, and the terminology presented here is a prerequisite for reading some of the more advanced textbooks, such as the ones by Carroll, MTW, Wald, Straumann or Hawking/Ellis. Here I start with differentiable manifolds. The second post will cover tangent spaces and tensors, the third one coveriant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2020-01-12-differential-manifolds\/",
+          "name": "Differentiable manifolds"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "Differentiable Manifolds",
+  "description" : "This is the first post in short series that I write on the basics of differential or Riemannian geometry. Differential geometry is a key mathematical foundation of general relativity, and the terminology presented here is a prerequisite for reading some of the more advanced textbooks, such as the ones by Carroll, MTW, Wald, Straumann or Hawking\/Ellis. Here I start with differentiable manifolds. The second post will cover tangent spaces and tensors, the third one coveriant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.\n",
+  "inLanguage" : "en",
+  "wordCount":  2691 ,
+  "datePublished" : "2020-01-19T00:00:00",
+  "dateModified" : "2020-01-19T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "geometry, relativity, mathematics, physics" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-01-12-differential-manifolds\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Differentiable Manifolds" />
+<meta property="og:description" content="This is the first post in short series that I write on the basics of differential or  Riemannian geometry. Differential geometry is a key mathematical foundation of general relativity, and the terminology presented here is a prerequisite for reading some of the more advanced textbooks, such as the ones by Carroll, MTW, Wald, Straumann or Hawking/Ellis. Here I start with differentiable manifolds. The second post will cover tangent spaces and tensors, the third one coveriant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2020-01-12-differential-manifolds/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="Differentiable Manifolds" />
+  <meta name="twitter:description" content="This is the first post in short series that I write on the basics of differential or  Riemannian geometry. Differential geometry is a key mathematical foundation of general relativity, and the …">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/2020-01-12-differentiable-manifolds/venedig.jpg" 
+         
+         data-img-desc-1="Venice, heading for a thunder storm (June 2019)"
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>Differentiable Manifolds</h1>
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Jan 19, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;2691&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;13&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Differentiable Manifolds</h1>
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Jan 19, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;2691&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;13&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>This is the first post in short series that I write on the basics of differential or  Riemannian geometry. Differential geometry is a key mathematical foundation of general relativity, and the terminology presented here is a prerequisite for reading some of the more advanced textbooks, such as the ones by Carroll, MTW, Wald, Straumann or Hawking/Ellis. Here I start with differentiable manifolds. The second post will cover tangent spaces and tensors, the third one coveriant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.</p>
+
+<h3 id="differentiable-manifolds">Differentiable Manifolds</h3>
+
+<p>In non-relativistic physics as well as in special relativity, space and time can be
+considered as vector spaces <em>per se</em>, i.e., the points of spacetime are in one-to-one correspondence with certain position vectors. However, in the theory of general relativity, in which the spacetime becomes a curved dynamic object, this concept fails. In general relativity the spacetime is represented by a so-called <strong>manifold</strong> <span  class="math">\(\mathcal{M}\)</span>&mdash;a set of points which locally still looks like a Minkowski vector space but which may possess nontrivial curvature over extended regions and does not have a vector space structure globally, meaning that the points on the manifold can no longer be described by vectors. However, on short distances the spacetime still looks like a planar vector space, and vectors can therefore be used to specify directions in space-time.</p>
+
+<p>Manifolds (or differentiable manifolds) are one of the most fundamental concepts
+in mathematics and physics. In many situations such a manifold is embedded in a higher-dimensional flat vector space such as e.g. the two-dimensional spherical surface is embedded in <span  class="math">\(\mathbb{R}^3\)</span>. A space is called flat if it does not have any curvature. Vector spaces are by definition flat. It turns out that there are abstract manifolds that cannot be embedded into a higher dimensional vector space. The 4-dimensional curved spacetime of general relativity is such an abstract manifold that can not be embedded in a
+superordinate 5-dimensional (flat) vector space.</p>
+
+<p>Modern differential geometry thus searches for an intrinsic description of the curved space, without resorting to a surrounding embedding space. A very important idea is to imagine that there are “flat” observers living entirely within the surface <span  class="math">\(\mathcal{M}\)</span>. These observers cannot see the larger space and describe the surface <span  class="math">\(\mathcal{M}\)</span> exclusively through the relationships between the points of <span  class="math">\(\mathcal{M}\)</span>, without referring to any embedding into a larger space. Another argument in favor of the intrinsic description is that according to General Relativity, we are observers living in a four-dimensional curved manifold (the spacetime), and we do not directly see any higher-dimensional space in which our spacetime is embedded as a “hypersurface.” Therefore, we need a way to describe the properties of our spacetime in terms of intrinsic measurements, i.e. measurements performed entirely within the spacetime.</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>The informal idea of a manifold <span  class="math">\(\mathcal{M}\)</span> with dimension <span  class="math">\(n\)</span> is that of a space consisting of patches that look locally like the Euclidean space <span  class="math">\(\mathbb{R}^n\)</span>, and are smoothly sewn together.</p>
+</div></div>
+
+<p>In other words, somewhat terse and technical:</p>
+
+<ul>
+<li><p>The manifold <span  class="math">\(\mathcal{M}\)</span> can be covered by a countable set of open subsets <span  class="math">\(U_1, U_2 \ldots\subset \mathcal{M}\)</span> such that every point <span  class="math">\(x \in \mathcal{M}\)</span> is contained in at least one <span  class="math">\(U_\alpha\)</span>.</p></li>
+
+<li><p>For every subset <span  class="math">\(U_\alpha\)</span> there is a homeomorphism <span  class="math">\(\phi_\alpha\)</span> (i.e. a mapping which is invertible and continuous in either direction) which maps <span  class="math">\(U_\alpha\)</span> into an open neighborhood of the image <span  class="math">\(x = \phi_\alpha(p)\)</span> in a copy of <span  class="math">\(\mathbb{R}^n\)</span> , viz. <span  class="math">\(\phi_\alpha: U_\alpha \to \phi(U_\alpha)\)</span>, <span  class="math">\(U_\alpha \subset \mathcal{M}\)</span> and <span  class="math">\(\phi_\alpha(U_\alpha) \subset \mathbb{R}^n\)</span>.</p></li>
+
+<li><p>The original point on <span  class="math">\(\mathcal{M}\)</span> is denoted by <span  class="math">\(p\)</span>. Its image in <span  class="math">\(\mathbb{R}^n\)</span> is denoted by <span  class="math">\(x\)</span>.</p></li>
+
+<li><p>This construction yields an atlas of charts, or local coordinate systems.</p></li>
+
+<li><p>Any two charts overlap smoothly, that is to say, every transition mapping <span  class="math">\((\phi_\beta \circ \phi_\alpha^{-1})\)</span> is a diffeomorphism, which, by definition, links the image <span  class="math">\(\phi_\alpha(U_\alpha)\)</span> in the <span  class="math">\(\alpha\)</span>-th copy of <span  class="math">\(\mathbb{R}^n\)</span> with the image <span  class="math">\(\phi_\beta(U_\beta)\)</span> in the <span  class="math">\(\beta\)</span>-th copy of <span  class="math">\(\mathbb{R}^n\)</span>. Recall that a diffeomorphism is an invertible mapping which is smooth (<span  class="math">\(C^\infty\)</span>) and whose inverse is also smooth.</p></li>
+
+<li><p>As a further assumption, let every chart that has smooth overlap with all other charts be contained in the atlas.</p></li>
+
+<li><p>This defines a differentiable structure <span  class="math">\((\mathcal{M}, \mathcal{A})\)</span> consisting of a manifold and a maximal atlas.</p></li>
+</ul>
+
+<p>This was quite dense. Let's walk through these points again, in more detail, and add remarks and pictures.</p>
+
+<p>As we set out to define differentiable manifolds and remove any reference to an ambient Euclidean space, we would still like close points on the manifolds to have close coordinates. But that requires some notion of nearness in <span  class="math">\(\mathcal{M}\)</span>, which can be given by the definition of a distance between points of <span  class="math">\(\mathcal{M}\)</span> or, more generally, by assigning a topology to <span  class="math">\(\mathcal{M}\)</span>. Not every topological space can fit the bill of usefulness for differential geometry, so we require some additional properties of what types of topological spaces we will consider. We first impose the requirement of having a cover of open sets, each of which is homeomorphic to an open set in a Euclidean space.</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>An <span  class="math">\(n\)</span>-dimensional <strong>topological manifold</strong> <span  class="math">\(\mathcal{M}\)</span> is a Hausdorff topological space with a countable base that is locally homeomorphic to <span  class="math">\(\mathbb{R}^n\)</span>.</p>
+
+<p>This means that for all <span  class="math">\(p \in \mathcal{M}\)</span>, there exists an open neighborhood <span  class="math">\(U\)</span> of <span  class="math">\(p\)</span> that is homeomorphic to an open set of <span  class="math">\(\mathbb{R}^n\)</span>.</p>
+
+<p>In other words, for every point <span  class="math">\(p \in \mathcal{M}\)</span> there is an open neighborhood <span  class="math">\(U\)</span> of <span  class="math">\(p\)</span> and a homeomorphism <span  class="math">\(\phi: U \to V\)</span> wich maps <span  class="math">\(U\)</span> onto an open set <span  class="math">\(V \in \mathbb{R}^n\)</span>.</p>
+</div></div>
+
+<p>The condition that <span  class="math">\(\mathcal{M}\)</span> be Hausdorff is there basically to express our intuition of space as “infinitely divisible”, so that we can separate points with disjoint open sets. Hausdorff topologies coincide with our intuition that points are isolated objects; other sorts of topologies are generally considered to be pathological (at least by non-topologists). The condition that the cover be countable is there for a technical reason having to do with extending locally defined quantities to globally defined ones.</p>
+
+<p>In the definition of a topological manifold, a given homeomorphism <span  class="math">\(\phi\)</span> of a neighborhood <span  class="math">\(U\)</span> of <span  class="math">\(\mathcal{M}\)</span> with a subset <span  class="math">\(V\)</span> of <span  class="math">\(\mathbb{R}^n\)</span> provides a local coordinate system or coordinate patch. As one moves around on the manifold, one passes from one coordinate patch to another. This is summarized in the following definition:</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>If <span  class="math">\(\mathcal{M}\)</span> is a topological manifold and <span  class="math">\(\phi : U \to V\)</span> is a homeomorphism which maps an open subset <span  class="math">\(U \subset \mathcal{M}\)</span> onto an open subset <span  class="math">\(V \subset \mathbb{R}^n\)</span>, then <span  class="math">\(\phi\)</span> is a <strong>chart</strong> or <strong>coordinate system</strong> or <span  class="math">\(\mathcal{M}\)</span>.</p>
+
+<p><span  class="math">\(U\)</span> is called the <strong>domain</strong> or <strong>coordinate neighborhood</strong> of the chart. <span  class="math">\(V=\phi(U)\)</span> is the <strong>image</strong> of <span  class="math">\(\phi\)</span>.</p>
+
+<p>The inverse map <span  class="math">\(\phi^{-1}\)</span> is called <strong>parameterization</strong>.</p>
+
+<p>The coordinates <span  class="math">\((x^1, \dots , x^n)\)</span> of the image <span  class="math">\(\phi(p) \in \mathbb{R}^n\)</span> of a point <span  class="math">\(p \in U\)</span>  are called the <strong>coordinates</strong> of <span  class="math">\(p\)</span> in the chart (see remark below).</p>
+</div></div>
+
+<p>Let's pause and add a few remarks:</p>
+
+<ul>
+<li><p>We have required <span  class="math">\(\phi\)</span> to be one-to-one. Since any map is onto its image, the map <span  class="math">\(\phi : U \to \phi(U)\)</span> is onto. Therefore, since <span  class="math">\(\phi\)</span> is both <em>one-to-one</em> and <em>onto</em>, it is also <em>invertible</em>.</p></li>
+
+<li><p>Despite the fact that technically a chart is a function <span  class="math">\(\phi : U \to \mathbb{R}^n\)</span>, where <span  class="math">\(U\)</span> is an open subset of the manifold <span  class="math">\(\mathcal{M}\)</span>, one sometimes refers to the chart <span  class="math">\((U, \phi)\)</span> to emphasize the letter to be used for the domain of <span  class="math">\(\phi\)</span>.</p></li>
+
+<li><p>Let <span  class="math">\((U, \phi)\)</span> be a coordinate chart with <span  class="math">\(p \in U\)</span> and suppose that <span  class="math">\(\phi(p) = q\)</span>. If <span  class="math">\(x^1, \dots , x^n\)</span> are the standard coordinate functions on <span  class="math">\(\mathbb{R}^n\)</span> then <span  class="math">\(q\)</span> has coordinates <span  class="math">\((x^1(q), \dots , x^n(q))\)</span> on <span  class="math">\(V=\phi(U)\)</span>. It is convenient and common to view the <span  class="math">\(x^{i}\)</span> as coordinate functions on <span  class="math">\(U\)</span> instead of <span  class="math">\(V\)</span> and to write <span  class="math">\(\phi(p) = (x^1(p), \dots , x^n(p))\)</span>. However, as <span  class="math">\(U\)</span> generally does not live in Euclidean space, this is an abuse of notation and makes only sense if it is interpreted to mean <span  class="math">\(\phi(p) = (x^1(q), \dots , x^n(q))\)</span>.</p></li>
+</ul>
+
+<p>The charts must be sewn together smoothly. More precisely, if <span  class="math">\(\phi_\alpha\)</span> and <span  class="math">\(\phi_\beta\)</span> are two charts, then both define homeomorphisms on the intersection of their domains <span  class="math">\(U_{\alpha\beta} := U_\alpha \cap U_\beta\)</span>. One thus obtains a homeomorphisms between two open sets in <span  class="math">\(\mathbb{R}^n\)</span>, as shown in Figure~\ref{change-of-coordinates}. The homeomorphism <span  class="math">\(\phi_{\alpha\beta} := \phi_\alpha \circ \phi_\beta^{-1}\)</span> takes points in <span  class="math">\(\phi_\beta(U_\alpha \cap U_\beta) \subset \mathbb{R}^n\)</span> onto an open set <span  class="math">\(\phi_\alpha(U_\alpha \cap U_\beta) \subset \mathbb{R}^n\)</span>.</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>Any pair of charts <span  class="math">\(\phi_\alpha\)</span> and <span  class="math">\(\phi_\beta\)</span> is <strong>compatible</strong> of class <span  class="math">\(C^k\)</span> or <strong><span  class="math">\(C^k\)</span>-related</strong>  if either <span  class="math">\(U_\alpha \cap U_\beta = \emptyset\)</span>, or <span  class="math">\(U_\alpha \cap U_\beta \neq \emptyset\)</span> and the <strong>transition functions</strong> <span  class="math">\(\phi_{\alpha\beta}\)</span> and <span  class="math">\(\phi_{\beta\alpha}\)</span>, with
+<span  class="math">\(\phi_{\alpha\beta} := \phi_\alpha \circ \phi_\beta^{-1} : 
+\phi_\beta(U_\alpha \cap U_\beta) \to \phi_\alpha(U_\alpha \cap U_\beta) \; ,\)</span>
+are functions of class <span  class="math">\(C^k\)</span> between open subsets of <span  class="math">\(\mathbb{R}^n\)</span>. They are also called <strong>change of coordinate</strong> or <strong>coordinate transformation</strong>.</p>
+</div></div>
+
+<p><center>
+
+<link rel="stylesheet" href="https://joachimweise.github.io/css/hugo-easy-gallery.css" />
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/change-of-coordinates.jpg" alt="Change of coordinates"/>
+    </div>
+    <a href="/img/2020-01-12-differentiable-manifolds/change-of-coordinates.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Change of coordinates</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
+<p>For simplicity, we shall from now on always assume smooth mappings, i.e. differentiable mappings of class <span  class="math">\(C^\infty\)</span> on <span  class="math">\(\mathbb{R}^n\)</span> (the derivatives of all orders exist and are continuous).</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>A set of charts <span  class="math">\(\left\lbrace \phi_\alpha | \alpha \in I \right\rbrace\)</span>, with some indexing set <span  class="math">\(I\)</span> and domains <span  class="math">\(U_\alpha\)</span>, is called an <strong>atlas</strong> of <span  class="math">\(\mathcal{M}\)</span>, if the <span  class="math">\(U_\alpha\)</span> constitute an open covering of <span  class="math">\(\mathcal{M}\)</span>, i.e. <span  class="math">\(\bigcup_{\alpha \in I} U_\alpha = \mathcal{M}\)</span>.</p>
+
+<p>A chart is <strong>admissible</strong> to an atlas if it is <span  class="math">\(C^\infty\)</span>-related to every chart in the atlas.</p>
+
+<p>An atlas is called <strong>maximal</strong> if it contains every chart that is admissible to it.</p>
+</div></div>
+
+<p>Again, some remarks:</p>
+
+<ul>
+<li><p>An atlas is, in other words, a collection <span  class="math">\(\mathcal{A} = \left\lbrace (U_\alpha, \phi_\alpha) \right\rbrace\)</span> of pairwise compatible charts whose domains <span  class="math">\(U_\alpha\)</span> cover the manifold <span  class="math">\(\mathcal{M}\)</span>.</p></li>
+
+<li><p>Atlases give us the possibility to map an <span  class="math">\(n\)</span>-dimensional manifold onto subsets of <span  class="math">\(\mathbb{R}^n\)</span> and then to represent objects such as points in the usual way.</p></li>
+
+<li><p>Atlases are not unique because there are infinitely many possible projections and partitions. So, if we want to compute an abstract property of a manifold with the help of maps, the result must be independent of the chosen representation, that is, it has to coincide for all possible atlases.</p></li>
+
+<li><p>A chart is compatible with an atlas if adding the chart to the atlas yields again an atlas.</p></li>
+
+<li><p>Two atlases are compatible if their union is again an atlas.</p></li>
+</ul>
+
+<p>We are now able to complete our definitions:</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>An atlas <span  class="math">\(\left\lbrace (U_\alpha, \phi_\alpha) \right\rbrace\)</span> is called <strong>differentiable atlas</strong> if all chart transitions <span  class="math">\(\phi_{\alpha\beta}\)</span> are differentiable of class <span  class="math">\(C^\infty\)</span>.</p>
+
+<p>A maximal differentiable atlas is called a <strong>differentiable structure</strong>.</p>
+
+<p>A <strong>differentiable</strong> (or <strong>smooth</strong>) <strong>manifold</strong> is a topological manifold with a differentiable structure.</p>
+</div></div>
+
+<h3 id="functions-and-curves-on-manifolds">Functions and Curves on Manifolds</h3>
+
+<p>Next, let us introduce various geometrical objects that are defined on smooth manifolds. There are many examples: functions such as the Lagrangian and Hamiltonian functions, curves on manifolds such as solution curves of equations of motion, vector fields such as the velocity field of a given dynamical system, forms such as the volume form that appears in Liouville’s theorem, and many more.</p>
+
+<p>We start with a rather general notion: mappings <span  class="math">\(f: (\mathcal{M},\mathcal{A}) \to (\mathcal{N},\mathcal{B})\)</span> from a smooth manifold <span  class="math">\(\mathcal{M}\)</span> with atlas <span  class="math">\(\mathcal{A}\)</span> onto another manifold <span  class="math">\(\mathcal{N}\)</span> with atlas <span  class="math">\(\mathcal{B}\)</span> (where <span  class="math">\(\mathcal{N}\)</span> may be identical with <span  class="math">\(\mathcal{M}\)</span>). The point <span  class="math">\(p\)</span>, which is contained in an open subset <span  class="math">\(U\)</span> of <span  class="math">\(\mathcal{M}\)</span>, is mapped onto the point <span  class="math">\(f(p)\)</span> in <span  class="math">\(N\)</span>, which, of course, is contained in the image <span  class="math">\(f(U)\)</span> of <span  class="math">\(U\)</span>. Let's investigate what it means for such a function <span  class="math">\(f\)</span> to be differentiable (see Figure~\ref{smooth-mapping}):</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>Let <span  class="math">\(\mathcal{M}\)</span> and <span  class="math">\(\mathcal{N}\)</span> be smooth manifolds of dimensions <span  class="math">\(m\)</span> and <span  class="math">\(n\)</span>, respectively.</p>
+
+<p>Let <span  class="math">\(f: (\mathcal{M},\mathcal{A}) \to (\mathcal{N},\mathcal{B})\)</span> be a map. Assume that <span  class="math">\((\phi, U)\)</span> is a chart from the atlas <span  class="math">\(\mathcal{A}\)</span>, and <span  class="math">\((\psi, V)\)</span> a chart from <span  class="math">\(\mathcal{B}\)</span> such that <span  class="math">\(f(U)\)</span> is contained in <span  class="math">\(V\)</span>.</p>
+
+<p>The following composition is then a mapping between the Euclidean spaces
+<span  class="math">\(\mathbb{R}^m\)</span> and <span  class="math">\(\mathbb{R}^n\)</span>, called the <strong>coordinate expression</strong> for <span  class="math">\(f\)</span>:</p>
+
+<p><span  class="math">\[\psi \circ f \circ \phi^{-1}: \phi(U) \subset \mathbb{R}^m \to \psi(V) \subset \mathbb{R}^n \, .\]</span></p>
+
+<p>The mapping <span  class="math">\(f\)</span> is said to be <strong>smooth</strong> or <strong>differentiable</strong> if the coordinate expression has this property for every point <span  class="math">\(p \in U\)</span>, every chart <span  class="math">\((\phi, U) \in \mathcal{A}\)</span>, and every chart <span  class="math">\((\psi, V) \in \mathcal{B}\)</span>, the image <span  class="math">\(f(U)\)</span> being contained in <span  class="math">\(V\)</span>.</p>
+</div></div>
+
+<p><center>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/smooth-mapping.jpg" alt="Differentiability of a Mapping"/>
+    </div>
+    <a href="/img/2020-01-12-differentiable-manifolds/smooth-mapping.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Differentiability of a Mapping</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
+<p>Note that from the definition it follows that a function between two manifolds cannot have a stronger differentiability property than do the manifolds themselves.</p>
+
+<p>In linear algebra, where one studies the category vector spaces, one does not study properties of any kind of function between two vector spaces. Instead, we restrict the attention to linear transformations since they “preserve the structure” of vector spaces. Furthermore, from the perspective of linear algebra, two vector spaces <span  class="math">\(V\)</span> and <span  class="math">\(W\)</span> are considered the same (isomorphic) if there exists a bijective linear transformation between the two.</p>
+
+<p>In the same way, in the category of differential manifolds, one is primarily interested in differentiable maps between these manifolds. The following definition is the equivalent notion of an isomorphism but for manifolds.</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>Let <span  class="math">\(\mathcal{M}\)</span> and <span  class="math">\(\mathcal{N}\)</span> be two differentiable manifolds. A <strong>diffeomorphism</strong> between <span  class="math">\(\mathcal{M}\)</span> and <span  class="math">\(\mathcal{N}\)</span> is a bijective function <span  class="math">\(f : \mathcal{M} \to \mathcal{N}\)</span> such that <span  class="math">\(f\)</span> is differentiable and <span  class="math">\(f^{-1}\)</span> is differentiable. If a diffeomorphism exists between <span  class="math">\(\mathcal{M}\)</span> and <span  class="math">\(\mathcal{N}\)</span>, we say that <span  class="math">\(\mathcal{M}\)</span> and <span  class="math">\(\mathcal{N}\)</span> are <strong>diffeomorphic</strong>.</p>
+</div></div>
+
+<p>In a sense, diffeomorphisms are to differentiable manifolds what homeomorphisms are to topological spaces, and what isomorphisms are to vector spaces. Let's now look at concrete examples which are relevant to the world of physics.</p>
+
+<p>If the manifold <span  class="math">\(\mathcal{N}\)</span> to which <span  class="math">\(f\)</span> leads is <span  class="math">\(\mathbb{R}\)</span>, then the chart mapping <span  class="math">\(\psi\)</span> is the identity. In this case <span  class="math">\(f\)</span> is a smooth <em>function</em> on <span  class="math">\(\mathcal{M}\)</span> (see Figure~\ref{smooth-function}).</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>A <strong>smooth function</strong> on a manifold <span  class="math">\(\mathcal{M}\)</span> is a mapping from <span  class="math">\(\mathcal{M}\)</span> to the real numbers,</p>
+
+<p><span  class="math">\[f : \mathcal{M} \to \mathbb{R} : p \in \mathcal{M} \mapsto f(p) \in \mathbb{R} \; , \]</span></p>
+
+<p>for which <span  class="math">\(f \circ \phi_\alpha^{-1}\)</span> is a smooth function on the open neighborhood <span  class="math">\(\phi_\alpha (U_\alpha) \subset \mathbb{R}^n\)</span> for all <span  class="math">\(U_\alpha\)</span>.</p>
+</div></div>
+
+<p><center>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/smooth-function.jpg" alt="Smooth function on a manifold"/>
+    </div>
+    <a href="/img/2020-01-12-differentiable-manifolds/smooth-function.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Smooth function on a manifold</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
+<p>An example is provided by the Hamiltonian function <span  class="math">\(H\)</span>, which assigns a real
+number to each point of phase space <span  class="math">\(\mathbb{P}\)</span>, assuming <span  class="math">\(H\)</span> to be independent of time.
+If <span  class="math">\(H\)</span> has an explicit time dependence, it assigns a real number to each point of
+<span  class="math">\(\mathbb{P} \times \mathbb{R}_t\)</span>, the direct product of phase space and time axis.</p>
+
+<p>Considered as a mapping, a \textit{curve} might be thought of as going the opposite way as compared to a function (see Figure~\ref{curve-on-manifold}). Let's look at the example of the orbit of a particle in space and time. A real parameter measuring, say, proper time <span  class="math">\(\tau \in \mathbb{R}_\tau\)</span> determines the point <span  class="math">\(x(\tau)\)</span> on <span  class="math">\(\mathcal{M}\)</span> where the particle is found at
+time <span  class="math">\(\tau\)</span>. As <span  class="math">\(\tau\)</span> runs along the real axis or an open interval <span  class="math">\(I \subset \mathbb{R}_\tau\)</span> the time axis, the particle moves along its one-dimensional orbit in spacetime <span  class="math">\(\mathcal{M}\)</span>.</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>A <strong>curve</strong> is a map</p>
+
+<p><span  class="math">\[\gamma : I \subset \mathbb{R} \to \mathcal{M} : \tau \in I \mapsto \gamma(\tau) \in \mathcal{M}\; ,\]</span></p>
+
+<p>which assigns a point on <span  class="math">\(\mathcal{M}\)</span> to every real number <span  class="math">\(\tau\)</span> in the open interval <span  class="math">\(I\)</span> on the real axis, <span  class="math">\(\tau \in I\)</span>.</p>
+
+<p>The curve <span  class="math">\(\gamma\)</span> is said to be <strong>smooth</strong> if its image in <span  class="math">\(\mathbb{R}^n\)</span> has the property</p>
+
+<p><span  class="math">\[
+(\phi_\alpha \circ \gamma) : I \subset \mathbb{R} \to \phi_\alpha (U_\alpha) \subset \mathbb{R}^n \; .
+\]</span></p>
+</div></div>
+
+<p><center>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/curve-on-manifold.jpg" alt="Smooth curve on a manifold"/>
+    </div>
+    <a href="/img/2020-01-12-differentiable-manifolds/curve-on-manifold.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Smooth curve on a manifold</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
+<p>Let's briefly wrap up this section:</p>
+
+<ul>
+<li><p>We have defined smooth functions <span  class="math">\(f\)</span> and smooth curves <span  class="math">\(\gamma\)</span> as structures on a manifold <span  class="math">\(\mathcal{M}\)</span> in an <em>intrinsic</em> way, using local charts.</p></li>
+
+<li><p>Smoothness can be defined as smoothness of restrictions to patches of <span  class="math">\(\mathbb{R}^n\)</span>.</p></li>
+
+<li><p>A function <span  class="math">\(f : \mathcal{M} \to \mathbb{R}\)</span> is smooth if its restriction <span  class="math">\(f : \mathbb{R}^n \to \mathbb{R}\)</span> to every chart is smooth.</p></li>
+
+<li><p>A curve <span  class="math">\(\gamma : \mathbb{R} \to \mathcal{M}\)</span> is smooth if its restriction <span  class="math">\(\gamma : \mathbb{R} \to \mathbb{R}^n\)</span> to every chart is smooth.</p></li>
+
+<li><p>What happens at the intersection of charts? The definition of a smooth manifold contained the requirement that all charts are compatible of class <span  class="math">\(C^\infty\)</span>, i.e. all chart transitions <span  class="math">\(\phi_{\alpha\beta}\)</span> are smooth. Therefore, all charts will agree about the smoothness or otherwise of a function <span  class="math">\(f : \mathcal{M} \to \mathbb{R}\)</span> or a curve <span  class="math">\(\gamma : \mathbb{R} \to \mathcal{M}\)</span>.</p></li>
+</ul>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/geometry/">geometry</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/relativity/">relativity</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/mathematics/">mathematics</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/physics/">physics</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2020-01-18-ai-weekly-03-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (03/2020)">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (04/2020)">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

@@ -4,8 +4,88 @@
   
   <url>
     <loc>https://joachimweise.github.io/</loc>
-    <lastmod>2020-01-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/ai-news/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/bert/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/google/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/kubernetes/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/microsoft/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/onnx/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/sound-analysis/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/spark/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/</loc>
+    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-01-12-differential-manifolds/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/geometry/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/mathematics/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/physics/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/relativity/</loc>
+    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -14,17 +94,12 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/ai-news/</loc>
+    <loc>https://joachimweise.github.io/tags/apple/</loc>
     <lastmod>2020-01-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/post/</loc>
-    <lastmod>2020-01-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/</loc>
+    <loc>https://joachimweise.github.io/tags/neural-architecture-search/</loc>
     <lastmod>2020-01-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -85,11 +160,6 @@
   
   <url>
     <loc>https://joachimweise.github.io/tags/facebook/</loc>
-    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/google/</loc>
     <lastmod>2019-12-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -234,11 +304,6 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/microsoft/</loc>
-    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/tags/ml-hardware/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
   </url>
@@ -294,22 +359,12 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/bert/</loc>
-    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/tags/koalas/</loc>
     <lastmod>2019-10-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://joachimweise.github.io/tags/pandas/</loc>
-    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/spark/</loc>
     <lastmod>2019-10-26T00:00:00+00:00</lastmod>
   </url>
   

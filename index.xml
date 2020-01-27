@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sat, 18 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI weekly (04/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</guid>
+      <description>&lt;p&gt;+++  Microsoft open sources BERT optimizations in ONNX runtime +++ Why Google thinks we need to regulate AI +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Differentiable Manifolds</title>
+      <link>https://joachimweise.github.io/post/2020-01-12-differential-manifolds/</link>
+      <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-01-12-differential-manifolds/</guid>
+      <description>&lt;p&gt;This is the first post in short series that I write on the basics of differential or  Riemannian geometry. Differential geometry is a key mathematical foundation of general relativity, and the terminology presented here is a prerequisite for reading some of the more advanced textbooks, such as the ones by Carroll, MTW, Wald, Straumann or Hawking/Ellis. Here I start with differentiable manifolds. The second post will cover tangent spaces and tensors, the third one coveriant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>AI weekly (03/2020)</title>
@@ -18,7 +36,7 @@
       <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-18-ai-weekly-03-2020/</guid>
-      <description>&lt;p&gt;+++  +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Apple has quietly acquired low-power AI startup Xnor.ai for about $200M +++ Up to two billion times acceleration of scientific simulations with deep neural architecture search +++ Researchers propose system that taps AI to see hidden objects around corners +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,7 +45,7 @@
       <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-11-ai-weekly-02-2020/</guid>
-      <description>&lt;p&gt;+++  +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Google Research: Looking Back at 2019, and Forward to 2020 and Beyond +++&lt;/p&gt;</description>
     </item>
     
     <item>

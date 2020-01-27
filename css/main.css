@@ -883,3 +883,121 @@ aside.toc {
   padding-left: 1.5em;
 }
 
+
+
+/* --- Notice Boxes --- */
+
+div.notices {
+    margin: 2rem 0;
+    position: relative;
+}
+div.notices p {
+    padding: 15px;
+    display: block;
+    font-size: 18px;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    color: #404040;
+}
+div.notices p:first-child:before {
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f06a";
+    left: 10px;
+}
+div.notices p:first-child:after {
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    left: 4rem;
+}
+div.notices.info p {
+    border-top: 30px solid #cccccc;
+    background: #f8f8f8;
+}
+div.notices.info p:first-child:after {
+    content: 'Info';
+}
+div.notices.warning p {
+    border-top: 30px solid #ff4c4c;
+    background: #FAE2E2;
+}
+div.notices.warning p:first-child:after {
+    content: 'Warning';
+}
+div.notices.note p {
+    border-top: 30px solid #6AB0DE;
+    background: #E7F2FA;
+}
+div.notices.note p:first-child:after {
+    content: 'Note';
+}
+div.notices.tip p {
+    border-top: 30px solid rgba(92, 184, 92, 0.8);
+    background: #E6F9E6;
+}
+div.notices.tip p:first-child:after {
+    content: 'Tip';
+}
+
+
+
+
+
+/* --- Panel Boxes --- */
+
+.panel {
+  background-color: #FFF;
+  margin: 1em 0em 1em 0em;
+}
+
+.panel-body {
+  color: #323232; 
+  margin: -0.7em 0em -0.7em 0.3em;
+}
+
+.panel-primary {
+  border-color: #87b5dd;
+}
+
+.panel-primary > .panel-heading, .panel-primary > .panel-footer {
+  background-color: #a3c6e5;
+  border-color: #87b5dd;
+  color: rgba(84, 118, 148, 0.9925); }
+
+
+.panel-info {
+  border-color: #c2e5f6 !important; }
+
+.panel-info > .panel-heading, .panel-info > .panel-footer {
+  background-color: #d7eef9;
+  border-color: #c2e5f6;
+  color: rgba(72, 130, 159, 0.9925); }
+
+
+.panel-note {
+  border-left: 5px solid #008AFF;
+  border-radius: 3px;
+  background-color: #E7F2FA; }
+
+.panel-note > .panel-heading, .panel-info > .panel-footer {
+  background-color: #E7F2FA;
+  border-color: #6AB0DE;
+  color: #fff; }
+
+
+.panel-danger {
+  border-left: 5px solid #ff4c4c;
+  border-right: 1px solid #FAE2E2;
+  border-top: 1px solid #FAE2E2;
+  border-bottom: 1px solid #FAE2E2;
+  border-radius: 3px;
+  background-color: #FAE2E2; }
+
+.panel-danger > .panel-heading, .panel-info > .panel-footer {
+  background-color: #FAE2E2;
+  border-color: #6AB0DE;
+  color: #fff; }
