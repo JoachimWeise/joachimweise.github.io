@@ -129,12 +129,22 @@
   </url>
   
   <url>
+    <loc>https://joachimweise.github.io/tags/nlp/</loc>
+    <lastmod>2020-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://joachimweise.github.io/post/2020-01-11-ai-weekly-02-2020/</loc>
     <lastmod>2020-01-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://joachimweise.github.io/post/2020-01-04-ai-weekly-01-2020/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/deep-learning/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -315,11 +325,6 @@
   
   <url>
     <loc>https://joachimweise.github.io/tags/ml-hardware/</loc>
-    <lastmod>2019-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/nlp/</loc>
     <lastmod>2019-11-15T00:00:00+00:00</lastmod>
   </url>
   

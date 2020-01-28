@@ -57,13 +57,13 @@
     "name" : "Joachim Weise"
   },
   "headline": "AI weekly (03\/2020)",
-  "description" : "\x2b\x2b\x2b Apple has quietly acquired low-power AI startup Xnor.ai for about $200M \x2b\x2b\x2b Up to two billion times acceleration of scientific simulations with deep neural architecture search \x2b\x2b\x2b Researchers propose system that taps AI to see hidden objects around corners \x2b\x2b\x2b\n",
+  "description" : "\x2b\x2b\x2b Google’s AI language model Reformer can process the entirety of novels \x2b\x2b\x2b World Economic Forum launches toolkit to help corporate boards build AI-first companies \x2b\x2b\x2b Apple has quietly acquired low-power AI startup Xnor.ai for about $200M \x2b\x2b\x2b Up to two billion times acceleration of scientific simulations with deep neural architecture search \x2b\x2b\x2b Researchers propose system that taps AI to see hidden objects around corners \x2b\x2b\x2b\n",
   "inLanguage" : "en",
-  "wordCount":  569 ,
+  "wordCount":  847 ,
   "datePublished" : "2020-01-18T00:00:00",
   "dateModified" : "2020-01-18T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
-  "keywords" : [ "ai-news, apple, neural-architecture-search" ],
+  "keywords" : [ "ai-news, apple, google, neural-architecture-search, nlp" ],
   "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-01-18-ai-weekly-03-2020\/",
   "publisher" : {
     "@type": "Organization",
@@ -262,10 +262,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Jan 18, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;569&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;847&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
   
   
   
@@ -300,10 +300,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Jan 18, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;569&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;847&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
   
   
   
@@ -326,13 +326,18 @@
     
 
       <article role="main" class="blog-post">
-        <p>+++ Apple has quietly acquired low-power AI startup Xnor.ai for about $200M +++ Up to two billion times acceleration of scientific simulations with deep neural architecture search +++ Researchers propose system that taps AI to see hidden objects around corners +++</p>
+        <p>+++ Google’s AI language model Reformer can process the entirety of novels +++ World Economic Forum launches toolkit to help corporate boards build AI-first companies +++ Apple has quietly acquired low-power AI startup Xnor.ai for about $200M +++ Up to two billion times acceleration of scientific simulations with deep neural architecture search +++ Researchers propose system that taps AI to see hidden objects around corners +++</p>
 
 <h2 id="breakthrough-mdash-or-so-they-say">Breakthrough &mdash; Or So They Say</h2>
+
+<p><strong>Google’s AI language model Reformer can process the entirety of novels.</strong> One of the prime challenges of a language-based AI model is to understand the context of the surrounding content.
+To solve this problem, Google has introduced <a href="https://ai.googleblog.com/2020/01/reformer-efficient-transformer.html">a new model called Reformer</a>, which understands the context of 1 million lines using just 16GB space. The company built this to solve problems of its old model Transformer. The power of <em>Transformer</em> comes from so-called <em>attention</em>, the process by which it considers all possible pairs of words within the context window to understand the connections between them. So, in the case of a text of 100K words, this would require assessment of 100K x 100K word pairs, or 10 billion pairs for each step, which is impractical.  <em>Reformer</em> combines two crucial techniques to solve the problems of attention and memory allocation that limit Transformer’s application to long context windows. Reformer uses locality-sensitive-hashing (LSH) to reduce the complexity of attending over long sequences and reversible residual layers to more efficiently use the memory available. The code and examples are available on <a href="https://github.com/google/trax/tree/master/trax/models/reformer">github</a>.</p>
 
 <h2 id="tools-and-frameworks">Tools and Frameworks</h2>
 
 <h2 id="business-news-and-applications">Business News and Applications</h2>
+
+<p><strong>World Economic Forum launches toolkit to help corporate boards build AI-first companies.</strong> This resource for boards of directors consists of: an introduction; 12 modules intended to align with traditional board committees, working groups and oversight concerns; and a glossary of artificial intelligence (AI) terms. Topics covered range from competitive and brand strategy, through cybersecurity and technology strategy, to operational implementation and change/leadership aspects. The <a href="https://spark.adobe.com/page/RsXNkZANwMLEf/">toolkit</a> was co-created by the WEF, Accenture, IBM and others.</p>
 
 <p><strong>Apple has quietly acquired low-power AI startup Xnor.ai for about $200M.</strong> According to several sources <a href="https://www.geekwire.com/2020/exclusive-apple-acquires-xnor-ai-edge-ai-spin-paul-allens-ai2-price-200m-range/">cited by GeekWire</a> and featured on <a href="https://siliconangle.com/2020/01/15/report-apple-quietly-acquired-low-power-ai-startup-xnor-ai-200m/">SiliconANGLE</a>, Apple has acquired Xnor.ai, a Seattle startup specializing in low-power, edge-based artificial intelligence tools, which began its life as a spinout from the Allen Institute for Artificial Intelligence. The Allen Institute is a nonprofit research center based in Seattle that operates an in-house startup incubator. It launched 2014 with a $125 million grant from late Microsoft Corp. co-founder Paul Allen. Xnor.ai has developed a software platform that reduces the amount of power it takes to run machine learning models. It works by converting the mathematical calculations an AI algorithm uses to process data into binary operations, the simplest type of operation a processor can perform. Xnor.ai’s binary-based representation of a given mathematical problem thus takes fewer steps to execute than if it were described in standard code, which has the end result of improving power efficiently. The company notched several notable advances in 2019, including the development of a standalone AI chip capable of running for years on solar power or a coin-sized battery, the debut of an AI-enabled gizmo that can autonomously monitor grocery shelves. There are many ways Apple could put Xnor.ai’s technology and know-how to use. One obvious application is improving the power efficiency of the system-on-chips inside the iPhone and iPad, which have machine learning accelerators to boost application performance.</p>
 
@@ -353,7 +358,11 @@ inherently provides emulator uncertainty estimation, adding further confidence i
             
               <a href="https://joachimweise.github.io//tags/apple/">apple</a>&nbsp;
             
+              <a href="https://joachimweise.github.io//tags/google/">google</a>&nbsp;
+            
               <a href="https://joachimweise.github.io//tags/neural-architecture-search/">neural-architecture-search</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/nlp/">nlp</a>&nbsp;
             
           </div>
         

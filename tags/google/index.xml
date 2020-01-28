@@ -22,12 +22,30 @@
     </item>
     
     <item>
+      <title>AI weekly (03/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-01-18-ai-weekly-03-2020/</link>
+      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-01-18-ai-weekly-03-2020/</guid>
+      <description>&lt;p&gt;+++ Google’s AI language model Reformer can process the entirety of novels +++ World Economic Forum launches toolkit to help corporate boards build AI-first companies +++ Apple has quietly acquired low-power AI startup Xnor.ai for about $200M +++ Up to two billion times acceleration of scientific simulations with deep neural architecture search +++ Researchers propose system that taps AI to see hidden objects around corners +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>AI weekly (02/2020)</title>
       <link>https://joachimweise.github.io/post/2020-01-11-ai-weekly-02-2020/</link>
       <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-11-ai-weekly-02-2020/</guid>
-      <description>&lt;p&gt;+++ Google Research: Looking Back at 2019, and Forward to 2020 and Beyond +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Lyft releases Flyte, a platform for maintaining AI workflows +++ Google Research: Looking Back at 2019, and Forward to 2020 and Beyond +++ An Idea From Physics Helps AI See in Higher Dimensions +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (01/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-01-04-ai-weekly-01-2020/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-01-04-ai-weekly-01-2020/</guid>
+      <description>&lt;p&gt;+++ The Decade of Deep Learning +++ Using Machine Learning to “Nowcast” Precipitation in High Resolution +++ Catalog of Variable Transformations To Make Your Model Work Better +++&lt;/p&gt;</description>
     </item>
     
     <item>
