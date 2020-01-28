@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Mobile Robot - Joachim Weise</title>
+  <meta name="description" content="Basic setup using Arduino and Raspberry Pi">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2020-01-26-robot\/",
+          "name": "Mobile robot"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "Mobile Robot",
+  "description" : "For a quite some time I had planned to build my own small mobile robot. During the last weeks I had gathered the components and played a little bit with an Arduino and ultrasonic distance sensors (as described in an earlier post). Now I have finally found the time to put the basic setup in place and go for a first test drive.\n",
+  "inLanguage" : "en",
+  "wordCount":  628 ,
+  "datePublished" : "2020-01-26T00:00:00",
+  "dateModified" : "2020-01-26T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "arduino, electronics, raspberry, robot" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-01-26-robot\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Mobile Robot" />
+<meta property="og:description" content="Basic setup using Arduino and Raspberry Pi">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2020-01-26-robot/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="Mobile Robot" />
+  <meta name="twitter:description" content="Basic setup using Arduino and Raspberry Pi">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/2020-01-26-robot/background.jpg" 
+         
+         data-img-desc-1="Arduino with motor shield"
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>Mobile Robot</h1>
+                  
+                    
+                      <h2 class="post-subheading">Basic setup using Arduino and Raspberry Pi</h2>
+                    
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Jan 26, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;628&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Mobile Robot</h1>
+              
+              
+                
+                  <h2 class="post-subheading">Basic setup using Arduino and Raspberry Pi</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Jan 26, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;628&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>For a quite some time I had planned to build my own small mobile robot. During the last weeks I had gathered the components and played a little bit with an Arduino and ultrasonic distance sensors (as described in an <a href="/post/2019-12-25-ultrasonic-sensor-raspi/">earlier post</a>). Now I have finally found the time to put the basic setup in place and go for a first test drive.</p>
+
+<hr />
+
+<p>Before getting lost in potentially boring details, here&rsquo;s a video of the first test drive (turning on the spot). Note that the Raspberry is acting as video streaming server (see <a href="https://picamera.readthedocs.io/en/release-1.13/recipes2.html#web-streaming">here</a> for documentation) so that the live transmission of this noteworthy event can be seen on the notebook in the back:</p>
+
+<p><center>
+
+<link rel="stylesheet" href="https://joachimweise.github.io/css/hugo-easy-gallery.css" />
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:500px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-01-26-robot/robot4.gif" alt="Bot in action"/>
+    </div>
+    <a href="/img/2020-01-26-robot/robot4.gif" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Bot in action</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center>.</p>
+
+<p>Now for some more background on the why and how of this activity. Back in the last century I had studied industrial engineering, with a focus on semiconductor physics and electronics. More than 20 years later I again wanted to do something practical that also nicely relates to the topic of AI. Thus came the idea to build a mobile robot as a simple AI system that (one day in the future) will be able to sense its environments, to reason, to pursue a plan, to act upon its environment, and to learn.</p>
+
+<p>I selected the <a href="https://www.dfrobot.com/product-97.html">Pirate-4WD Mobile Platform</a> as a chassis which is both inexpensive (at some 40 USD) and rock-solid thanks to its aluminum alloy body. Included in the set are 4 drive motors, 4 wheels, a battery holder and additional mounting hardware. I decided to control the DC motors with an <a href="https://store.arduino.cc/arduino-uno-rev3">Arduino Uno Rev3</a>, a microcontroller that is specifically designed to interact with sensors, motors and all kinds of devices, in combination with an <a href="https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/overview">Adafruit Motor Shield V2</a>. The motor shield is powered by a set of 5 NiMh rechargeable batteries which find their place in a battery holder in between the 4 motors.</p>
+
+
+
+
+<div class="gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+	  
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2020-01-26-robot/pic1-thumb.jpg');">
+      <img itemprop="thumbnail" src="/img/2020-01-26-robot/pic1-thumb.jpg" alt="Fig. 1: Chassis"/>
+    </div>
+    <a href="/img/2020-01-26-robot/pic1.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 1: Chassis</p>
+      </figcaption>
+  </figure>
+</div>
+
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2020-01-26-robot/pic2-thumb.jpg');">
+      <img itemprop="thumbnail" src="/img/2020-01-26-robot/pic2-thumb.jpg" alt="Fig. 2: Motorshield"/>
+    </div>
+    <a href="/img/2020-01-26-robot/pic2.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 2: Motorshield</p>
+      </figcaption>
+  </figure>
+</div>
+
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2020-01-26-robot/pic3.jpg');">
+      <img itemprop="thumbnail" src="/img/2020-01-26-robot/pic3.jpg" alt="Fig. 3: DC motors"/>
+    </div>
+    <a href="/img/2020-01-26-robot/pic3.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 3: DC motors</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+</div>
+
+
+<p>The brain of the mobile bot currently is not the Arduino, but an older <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a> that I had lying around. The Raspberry Pi is a single board computer that is about the size of a credit card. Despite its small size, it is a very capable device. The Pi runs versions of Linux that are customized to work on the ARM processor that drives it. This puts a lot of functionality into a small device that is easy to embed into things like robots. I have equipped the Pi 2 with a Wifi dongle so that I can wirelessly SSH into it.</p>
+
+<p>A USB cable connects Raspberry and Arduino (the massive blue cable which I will replace with a shorter one as quickly as possible), serving both as a power supply to the Arduino (but not the motor shield) and allowing to upload <a href="https://www.arduino.cc/reference/en/">Arduino sketches</a> (i.e., C/C++ like programs) from the Raspberry Pi to the Arduino. The Raspberry Pi is powered through another USB cable from a powerbank that I again had lying around.</p>
+
+<p>In order to mount the powerbank and fix sensors I produced several parts from acrylic glass. Three ultrasonic sensors watch out for obstacles in front of the car, complemented by a Raspberry <a href="https://picamera.readthedocs.io/en/release-1.13/index.html">PiCamera</a>. Since the HC-SR04 circuit boards sport about the smallest drill holes I have ever seen, thereby rendering them useless for any practical purposes, I had to fix the sensor with elastic straps, which is certainly not elegant but does the job. I will connect them to the Raspberry Pi through voltage dividers (<a href="/post/2019-12-25-ultrasonic-sensor-raspi/">see earlier post</a>) on the breadboard next to Pi on one of the upcoming weekends.</p>
+
+
+
+
+<div class="gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+	  
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2020-01-26-robot/pic5-thumb.jpg');">
+      <img itemprop="thumbnail" src="/img/2020-01-26-robot/pic5-thumb.jpg" alt="Fig. 4: Sensor fixtures"/>
+    </div>
+    <a href="/img/2020-01-26-robot/pic5.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 4: Sensor fixtures</p>
+      </figcaption>
+  </figure>
+</div>
+
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2020-01-26-robot/pic4-thumb.jpg');">
+      <img itemprop="thumbnail" src="/img/2020-01-26-robot/pic4-thumb.jpg" alt="Fig. 5: Powerbank"/>
+    </div>
+    <a href="/img/2020-01-26-robot/pic4.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 5: Powerbank</p>
+      </figcaption>
+  </figure>
+</div>
+
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2020-01-26-robot/pic6-thumb.jpg');">
+      <img itemprop="thumbnail" src="/img/2020-01-26-robot/pic6-thumb.jpg" alt="Fig. 6: Front view"/>
+    </div>
+    <a href="/img/2020-01-26-robot/pic6.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 6: Front view</p>
+      </figcaption>
+  </figure>
+</div>
+
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2020-01-26-robot/pic7-thumb.jpg');">
+      <img itemprop="thumbnail" src="/img/2020-01-26-robot/pic7-thumb.jpg" alt="Fig. 7: Front view"/>
+    </div>
+    <a href="/img/2020-01-26-robot/pic7.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 7: Front view</p>
+      </figcaption>
+  </figure>
+</div>
+
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2020-01-26-robot/pic8-thumb.jpg');">
+      <img itemprop="thumbnail" src="/img/2020-01-26-robot/pic8-thumb.jpg" alt="Fig. 8: Side view"/>
+    </div>
+    <a href="/img/2020-01-26-robot/pic8.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 8: Side view</p>
+      </figcaption>
+  </figure>
+</div>
+
+  
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img" style="background-image: url('https://joachimweise.github.io//img/2020-01-26-robot/pic9.jpg');">
+      <img itemprop="thumbnail" src="/img/2020-01-26-robot/pic9.jpg" alt="Fig. 9: Living on 4 floors"/>
+    </div>
+    <a href="/img/2020-01-26-robot/pic9.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Fig. 9: Living on 4 floors</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+</div>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/arduino/">arduino</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/electronics/">electronics</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/raspberry/">raspberry</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/robot/">robot</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2019-12-25-ultrasonic-sensor-raspi/">Ultrasonic Range Sensor on the Raspberry Pi</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (04/2020)">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>arduino</title>
+      <link>https://joachimweise.github.io/tags/arduino/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/arduino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>electronics</title>
+      <link>https://joachimweise.github.io/tags/electronics/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/electronics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberry</title>
+      <link>https://joachimweise.github.io/tags/raspberry/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/raspberry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>robot</title>
+      <link>https://joachimweise.github.io/tags/robot/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/robot/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ai-news</title>
@@ -148,38 +184,11 @@
     </item>
     
     <item>
-      <title>electronics</title>
-      <link>https://joachimweise.github.io/tags/electronics/</link>
-      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/electronics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>python</title>
       <link>https://joachimweise.github.io/tags/python/</link>
       <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>raspberry</title>
-      <link>https://joachimweise.github.io/tags/raspberry/</link>
-      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/raspberry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>robot</title>
-      <link>https://joachimweise.github.io/tags/robot/</link>
-      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/robot/</guid>
       <description></description>
     </item>
     
@@ -418,7 +427,7 @@
     </item>
     
     <item>
-      <title>event&#34;</title>
+      <title>event</title>
       <link>https://joachimweise.github.io/tags/event/</link>
       <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>

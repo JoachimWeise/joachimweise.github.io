@@ -59,7 +59,7 @@
   "headline": "Differentiable Manifolds",
   "description" : "This is the first post in short series that I write on the basics of differential or Riemannian geometry. Differential geometry is a key mathematical foundation of general relativity, and the terminology presented here is a prerequisite for reading some of the more advanced textbooks, such as the ones by Carroll, MTW, Wald, Straumann or Hawking\/Ellis. Here I start with differentiable manifolds. The second post will cover tangent spaces and tensors, the third one coveriant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.\n",
   "inLanguage" : "en",
-  "wordCount":  2691 ,
+  "wordCount":  2750 ,
   "datePublished" : "2020-01-19T00:00:00",
   "dateModified" : "2020-01-19T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
@@ -237,7 +237,7 @@
          
           data-img-src-1="/img/2020-01-12-differentiable-manifolds/venedig.jpg" 
          
-         data-img-desc-1="Venice, heading for a thunder storm (June 2019)"
+         data-img-desc-1="Venice, heading for a thunder storm (July 2019)"
       ></div>
   
 
@@ -258,7 +258,7 @@
   <i class="fas fa-calendar"></i> &nbsp;Jan 19, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;2691&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;2750&nbsp;words
   
   
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;13&nbsp;minutes
@@ -292,7 +292,7 @@
   <i class="fas fa-calendar"></i> &nbsp;Jan 19, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;2691&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;2750&nbsp;words
   
   
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;13&nbsp;minutes
@@ -392,7 +392,7 @@ superordinate 5-dimensional (flat) vector space.</p>
 <p>The charts must be sewn together smoothly. More precisely, if <span  class="math">\(\phi_\alpha\)</span> and <span  class="math">\(\phi_\beta\)</span> are two charts, then both define homeomorphisms on the intersection of their domains <span  class="math">\(U_{\alpha\beta} := U_\alpha \cap U_\beta\)</span>. One thus obtains a homeomorphisms between two open sets in <span  class="math">\(\mathbb{R}^n\)</span>, as shown in Figure~\ref{change-of-coordinates}. The homeomorphism <span  class="math">\(\phi_{\alpha\beta} := \phi_\alpha \circ \phi_\beta^{-1}\)</span> takes points in <span  class="math">\(\phi_\beta(U_\alpha \cap U_\beta) \subset \mathbb{R}^n\)</span> onto an open set <span  class="math">\(\phi_\alpha(U_\alpha \cap U_\beta) \subset \mathbb{R}^n\)</span>.</p>
 
 
-<div class="panel panel-note"><div class="panel-body"><p>Any pair of charts <span  class="math">\(\phi_\alpha\)</span> and <span  class="math">\(\phi_\beta\)</span> is <strong>compatible</strong> of class <span  class="math">\(C^k\)</span> or <strong><span  class="math">\(C^k\)</span>-related</strong>  if either <span  class="math">\(U_\alpha \cap U_\beta = \emptyset\)</span>, or <span  class="math">\(U_\alpha \cap U_\beta \neq \emptyset\)</span> and the <strong>transition functions</strong> <span  class="math">\(\phi_{\alpha\beta}\)</span> and <span  class="math">\(\phi_{\beta\alpha}\)</span>, with
+<div class="panel panel-note"><div class="panel-body"><p>Any pair of charts <span  class="math">\(\phi_\alpha\)</span> and <span  class="math">\(\phi_\beta\)</span> is <strong>compatible</strong> of class <span  class="math">\(C^k\)</span> or <strong><span  class="math">\(C^k\)</span>-related</strong>  if either <span  class="math">\(U_\alpha \cap U_\beta = \emptyset\)</span>, or <span  class="math">\(U_\alpha \cap U_\beta =\not\, \emptyset\)</span> and the <strong>transition functions</strong> <span  class="math">\(\phi_{\alpha\beta}\)</span> and <span  class="math">\(\phi_{\beta\alpha}\)</span>, with
 <span  class="math">\(\phi_{\alpha\beta} := \phi_\alpha \circ \phi_\beta^{-1} : 
 \phi_\beta(U_\alpha \cap U_\beta) \to \phi_\alpha(U_\alpha \cap U_\beta) \; ,\)</span>
 are functions of class <span  class="math">\(C^k\)</span> between open subsets of <span  class="math">\(\mathbb{R}^n\)</span>. They are also called <strong>change of coordinate</strong> or <strong>coordinate transformation</strong>.</p>
@@ -404,11 +404,11 @@ are functions of class <span  class="math">\(C^k\)</span> between open subsets o
 <div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
-      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/change-of-coordinates.jpg" alt="Change of coordinates"/>
+      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/change-of-coordinates.jpg" alt="Figure 1: Change of coordinates"/>
     </div>
     <a href="/img/2020-01-12-differentiable-manifolds/change-of-coordinates.jpg" itemprop="contentUrl"></a>
       <figcaption>
-          <p>Change of coordinates</p>
+          <p>Figure 1: Change of coordinates</p>
       </figcaption>
   </figure>
 </div>
@@ -453,7 +453,7 @@ are functions of class <span  class="math">\(C^k\)</span> between open subsets o
 
 <p>Next, let us introduce various geometrical objects that are defined on smooth manifolds. There are many examples: functions such as the Lagrangian and Hamiltonian functions, curves on manifolds such as solution curves of equations of motion, vector fields such as the velocity field of a given dynamical system, forms such as the volume form that appears in Liouville’s theorem, and many more.</p>
 
-<p>We start with a rather general notion: mappings <span  class="math">\(f: (\mathcal{M},\mathcal{A}) \to (\mathcal{N},\mathcal{B})\)</span> from a smooth manifold <span  class="math">\(\mathcal{M}\)</span> with atlas <span  class="math">\(\mathcal{A}\)</span> onto another manifold <span  class="math">\(\mathcal{N}\)</span> with atlas <span  class="math">\(\mathcal{B}\)</span> (where <span  class="math">\(\mathcal{N}\)</span> may be identical with <span  class="math">\(\mathcal{M}\)</span>). The point <span  class="math">\(p\)</span>, which is contained in an open subset <span  class="math">\(U\)</span> of <span  class="math">\(\mathcal{M}\)</span>, is mapped onto the point <span  class="math">\(f(p)\)</span> in <span  class="math">\(N\)</span>, which, of course, is contained in the image <span  class="math">\(f(U)\)</span> of <span  class="math">\(U\)</span>. Let's investigate what it means for such a function <span  class="math">\(f\)</span> to be differentiable (see Figure~\ref{smooth-mapping}):</p>
+<p>We start with a rather general notion: mappings <span  class="math">\(f: (\mathcal{M},\mathcal{A}) \to (\mathcal{N},\mathcal{B})\)</span> from a smooth manifold <span  class="math">\(\mathcal{M}\)</span> with atlas <span  class="math">\(\mathcal{A}\)</span> onto another manifold <span  class="math">\(\mathcal{N}\)</span> with atlas <span  class="math">\(\mathcal{B}\)</span> (where <span  class="math">\(\mathcal{N}\)</span> may be identical with <span  class="math">\(\mathcal{M}\)</span>). The point <span  class="math">\(p\)</span>, which is contained in an open subset <span  class="math">\(U\)</span> of <span  class="math">\(\mathcal{M}\)</span>, is mapped onto the point <span  class="math">\(f(p)\)</span> in <span  class="math">\(N\)</span>, which, of course, is contained in the image <span  class="math">\(f(U)\)</span> of <span  class="math">\(U\)</span>. Let's investigate what it means for such a function <span  class="math">\(f\)</span> to be differentiable (see Figure 2):</p>
 
 
 <div class="panel panel-note"><div class="panel-body"><p>Let <span  class="math">\(\mathcal{M}\)</span> and <span  class="math">\(\mathcal{N}\)</span> be smooth manifolds of dimensions <span  class="math">\(m\)</span> and <span  class="math">\(n\)</span>, respectively.</p>
@@ -474,11 +474,11 @@ are functions of class <span  class="math">\(C^k\)</span> between open subsets o
 <div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
-      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/smooth-mapping.jpg" alt="Differentiability of a Mapping"/>
+      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/smooth-mapping.jpg" alt="Figure 2: Differentiability of a Mapping"/>
     </div>
     <a href="/img/2020-01-12-differentiable-manifolds/smooth-mapping.jpg" itemprop="contentUrl"></a>
       <figcaption>
-          <p>Differentiability of a Mapping</p>
+          <p>Figure 2: Differentiability of a Mapping</p>
       </figcaption>
   </figure>
 </div>
@@ -497,7 +497,7 @@ are functions of class <span  class="math">\(C^k\)</span> between open subsets o
 
 <p>In a sense, diffeomorphisms are to differentiable manifolds what homeomorphisms are to topological spaces, and what isomorphisms are to vector spaces. Let's now look at concrete examples which are relevant to the world of physics.</p>
 
-<p>If the manifold <span  class="math">\(\mathcal{N}\)</span> to which <span  class="math">\(f\)</span> leads is <span  class="math">\(\mathbb{R}\)</span>, then the chart mapping <span  class="math">\(\psi\)</span> is the identity. In this case <span  class="math">\(f\)</span> is a smooth <em>function</em> on <span  class="math">\(\mathcal{M}\)</span> (see Figure~\ref{smooth-function}).</p>
+<p>If the manifold <span  class="math">\(\mathcal{N}\)</span> to which <span  class="math">\(f\)</span> leads is <span  class="math">\(\mathbb{R}\)</span>, then the chart mapping <span  class="math">\(\psi\)</span> is the identity. In this case <span  class="math">\(f\)</span> is a smooth <em>function</em> on <span  class="math">\(\mathcal{M}\)</span> (see Figure 3).</p>
 
 
 <div class="panel panel-note"><div class="panel-body"><p>A <strong>smooth function</strong> on a manifold <span  class="math">\(\mathcal{M}\)</span> is a mapping from <span  class="math">\(\mathcal{M}\)</span> to the real numbers,</p>
@@ -513,11 +513,11 @@ are functions of class <span  class="math">\(C^k\)</span> between open subsets o
 <div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
-      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/smooth-function.jpg" alt="Smooth function on a manifold"/>
+      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/smooth-function.jpg" alt="Figure 3: Smooth function on a manifold"/>
     </div>
     <a href="/img/2020-01-12-differentiable-manifolds/smooth-function.jpg" itemprop="contentUrl"></a>
       <figcaption>
-          <p>Smooth function on a manifold</p>
+          <p>Figure 3: Smooth function on a manifold</p>
       </figcaption>
   </figure>
 </div>
@@ -529,7 +529,7 @@ number to each point of phase space <span  class="math">\(\mathbb{P}\)</span>, a
 If <span  class="math">\(H\)</span> has an explicit time dependence, it assigns a real number to each point of
 <span  class="math">\(\mathbb{P} \times \mathbb{R}_t\)</span>, the direct product of phase space and time axis.</p>
 
-<p>Considered as a mapping, a \textit{curve} might be thought of as going the opposite way as compared to a function (see Figure~\ref{curve-on-manifold}). Let's look at the example of the orbit of a particle in space and time. A real parameter measuring, say, proper time <span  class="math">\(\tau \in \mathbb{R}_\tau\)</span> determines the point <span  class="math">\(x(\tau)\)</span> on <span  class="math">\(\mathcal{M}\)</span> where the particle is found at
+<p>Considered as a mapping, a <em>curve</em> might be thought of as going the opposite way as compared to a function (see Figure 4). Let's look at the example of the orbit of a particle in space and time. A real parameter measuring, say, proper time <span  class="math">\(\tau \in \mathbb{R}_\tau\)</span> determines the point <span  class="math">\(x(\tau)\)</span> on <span  class="math">\(\mathcal{M}\)</span> where the particle is found at
 time <span  class="math">\(\tau\)</span>. As <span  class="math">\(\tau\)</span> runs along the real axis or an open interval <span  class="math">\(I \subset \mathbb{R}_\tau\)</span> the time axis, the particle moves along its one-dimensional orbit in spacetime <span  class="math">\(\mathcal{M}\)</span>.</p>
 
 
@@ -552,11 +552,11 @@ time <span  class="math">\(\tau\)</span>. As <span  class="math">\(\tau\)</span>
 <div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
-      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/curve-on-manifold.jpg" alt="Smooth curve on a manifold"/>
+      <img itemprop="thumbnail" src="/img/2020-01-12-differentiable-manifolds/curve-on-manifold.jpg" alt="Figure 4: Smooth curve on a manifold"/>
     </div>
     <a href="/img/2020-01-12-differentiable-manifolds/curve-on-manifold.jpg" itemprop="contentUrl"></a>
       <figcaption>
-          <p>Smooth curve on a manifold</p>
+          <p>Figure 4: Smooth curve on a manifold</p>
       </figcaption>
   </figure>
 </div>
@@ -576,6 +576,10 @@ time <span  class="math">\(\tau\)</span>. As <span  class="math">\(\tau\)</span>
 
 <li><p>What happens at the intersection of charts? The definition of a smooth manifold contained the requirement that all charts are compatible of class <span  class="math">\(C^\infty\)</span>, i.e. all chart transitions <span  class="math">\(\phi_{\alpha\beta}\)</span> are smooth. Therefore, all charts will agree about the smoothness or otherwise of a function <span  class="math">\(f : \mathcal{M} \to \mathbb{R}\)</span> or a curve <span  class="math">\(\gamma : \mathbb{R} \to \mathcal{M}\)</span>.</p></li>
 </ul>
+
+<h3 id="literature">Literature</h3>
+
+<p>The main sources for this post are the relativity books by <a href="https://www.springer.com/de/book/9783662555774">Scheck</a>, <a href="https://www.springer.com/de/book/9789400754096">Straumann</a>, <a href="https://www.preposterousuniverse.com/spacetimeandgeometry/">Carroll</a>, and <a href="https://www.press.uchicago.edu/ucp/books/book/chicago/G/bo5952261.html">Wald</a>. I also enjoy the lecture notes by <a href="https://sites.google.com/site/winitzki/index/topics-in-general-relativity">Sergei Winitzki</a>, <a href="https://heiup.uni-heidelberg.de/catalog/book/534">Matthias Bartelmann</a>, <a href="https://gr.hayehinrichsen.de/">Haye Hinrichsen</a>, and <a href="http://www.math.uni-leipzig.de/~hellmund/gr.html">Meik Hellmund</a>. Among the mathematical literature, the books by <a href="https://bookstore.ams.org/stml-77">Wolfgang Kühnel</a> and <a href="https://www.crcpress.com/Differential-Geometry-of-Manifolds/Lovett/p/book/9781568814575">Stephen Lovett</a> are very readable.</p>
 
         
           <div class="blog-tags">
