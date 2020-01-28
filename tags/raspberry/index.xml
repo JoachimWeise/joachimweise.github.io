@@ -18,7 +18,24 @@
       <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-26-robot/</guid>
-      <description>&lt;p&gt;For a quite some time I had planned to build my own small mobile robot. During the last weeks I  ordered the components and played a little bit with an Arduino and ultrasonic distance sensors (as described in an &lt;a href=&#34;https://joachimweise.github.io/post/2019-12-25-ultrasonic-sensor-raspi/&#34;&gt;earlier post&lt;/a&gt;). Now I have finally found the time to put the basic setup in place and go for a first test drive.&lt;/p&gt;</description>
+      <description>&lt;p&gt;For a quite some time I had planned to build my own small mobile robot. During the last weeks I  ordered the components and played a little bit with an Arduino and ultrasonic distance sensors (as described in an &lt;a href=&#34;https://joachimweise.github.io/post/2019-12-25-ultrasonic-sensor-raspi/&#34;&gt;earlier post&lt;/a&gt;). Now I have finally found the time to put the basic setup in place and go for a first test drive. Before getting lost in potentially boring details, let&amp;rsquo;s look at a video of the first test drive (turning on the spot). Note that the Raspberry is acting as video streaming server (see &lt;a href=&#34;https://picamera.readthedocs.io/en/release-1.13/recipes2.html#web-streaming&#34;&gt;here&lt;/a&gt; for documentation) so that the live transmission of this noteworthy event can be seen on the notebook in the back:&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+
+
+&lt;div class=&#34;box fancy-figure caption-position-bottom caption-effect-fade&#34; style=&#34;max-width:500px&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://joachimweise.github.io/img/2020-01-26-robot/robot4.gif&#34; alt=&#34;Bot in action&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://joachimweise.github.io/img/2020-01-26-robot/robot4.gif&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Bot in action&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;/center&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
