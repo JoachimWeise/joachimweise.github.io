@@ -7,10 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ai-news</title>
+      <link>https://joachimweise.github.io/tags/ai-news/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/ai-news/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>autonomous-driving</title>
+      <link>https://joachimweise.github.io/tags/autonomous-driving/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/autonomous-driving/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chatbot</title>
+      <link>https://joachimweise.github.io/tags/chatbot/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/chatbot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>facebook</title>
+      <link>https://joachimweise.github.io/tags/facebook/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/facebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google</title>
+      <link>https://joachimweise.github.io/tags/google/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nlp</title>
+      <link>https://joachimweise.github.io/tags/nlp/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/nlp/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>arduino</title>
@@ -49,11 +103,11 @@
     </item>
     
     <item>
-      <title>ai-news</title>
-      <link>https://joachimweise.github.io/tags/ai-news/</link>
+      <title>baidu</title>
+      <link>https://joachimweise.github.io/tags/baidu/</link>
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/ai-news/</guid>
+      <guid>https://joachimweise.github.io/tags/baidu/</guid>
       <description></description>
     </item>
     
@@ -63,15 +117,6 @@
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/bert/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>google</title>
-      <link>https://joachimweise.github.io/tags/google/</link>
-      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/google/</guid>
       <description></description>
     </item>
     
@@ -175,15 +220,6 @@
     </item>
     
     <item>
-      <title>nlp</title>
-      <link>https://joachimweise.github.io/tags/nlp/</link>
-      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/nlp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>deep-learning</title>
       <link>https://joachimweise.github.io/tags/deep-learning/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
@@ -225,15 +261,6 @@
       <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/ebay/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>facebook</title>
-      <link>https://joachimweise.github.io/tags/facebook/</link>
-      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/facebook/</guid>
       <description></description>
     </item>
     
@@ -373,29 +400,11 @@
     </item>
     
     <item>
-      <title>ai</title>
-      <link>https://joachimweise.github.io/tags/ai/</link>
-      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/ai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>bayesian</title>
       <link>https://joachimweise.github.io/tags/bayesian/</link>
       <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/bayesian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>datascience</title>
-      <link>https://joachimweise.github.io/tags/datascience/</link>
-      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/datascience/</guid>
       <description></description>
     </item>
     
@@ -441,15 +450,6 @@
       <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/event/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>autonomous-driving</title>
-      <link>https://joachimweise.github.io/tags/autonomous-driving/</link>
-      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/autonomous-driving/</guid>
       <description></description>
     </item>
     

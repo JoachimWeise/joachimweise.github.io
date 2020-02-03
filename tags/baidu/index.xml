@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>baidu on Joachim Weise</title>
+    <link>https://joachimweise.github.io/tags/baidu/</link>
+    <description>Recent content in baidu on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/tags/baidu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AI weekly (04/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</guid>
+      <description>&lt;p&gt;+++  Microsoft open sources BERT optimizations in ONNX runtime +++ Why Google thinks we need to regulate AI +++ A Look Back on Baidu’s AI Innovations in 2019 +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (50/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-12-14-ai-weekly-50-2019/</link>
+      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-12-14-ai-weekly-50-2019/</guid>
+      <description>&lt;p&gt;+++ With Hanabi-playing bot, Facebook AI reaches a milestone in cooperative AI +++ Baidu is Training an AI to Move Like a Human +++ Google launches E2 family of virtual machines for smaller workloads +++ AI Index 2019 assesses global AI research, investment, and impact +++ Turing Award winner Yoshua Bengio wants AI systems that can reason, plan, and imagine +++ Personalizing the Joke Skill of a Voice-Controlled Virtual Assistant +++ Why scientists need to be better at data visualization +++&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

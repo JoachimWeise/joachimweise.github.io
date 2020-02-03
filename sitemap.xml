@@ -4,8 +4,53 @@
   
   <url>
     <loc>https://joachimweise.github.io/</loc>
-    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-02-01-ai-weekly-05-2020/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/ai-news/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/autonomous-driving/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/chatbot/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/facebook/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/google/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/nlp/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/</loc>
+    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -24,11 +69,6 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/post/</loc>
-    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/tags/raspberry/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
@@ -39,27 +79,17 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/</loc>
-    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/ai-news/</loc>
+    <loc>https://joachimweise.github.io/tags/baidu/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://joachimweise.github.io/tags/bert/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/google/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -129,11 +159,6 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/nlp/</loc>
-    <lastmod>2020-01-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/post/2020-01-11-ai-weekly-02-2020/</loc>
     <lastmod>2020-01-11T00:00:00+00:00</lastmod>
   </url>
@@ -175,11 +200,6 @@
   
   <url>
     <loc>https://joachimweise.github.io/tags/ebay/</loc>
-    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/facebook/</loc>
     <lastmod>2019-12-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -284,22 +304,12 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/ai/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/post/2019-11-22-ai-weekly-47-2019/</loc>
     <lastmod>2019-11-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://joachimweise.github.io/tags/bayesian/</loc>
-    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/datascience/</loc>
     <lastmod>2019-11-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -350,11 +360,6 @@
   
   <url>
     <loc>https://joachimweise.github.io/post/2019-11-01-ai-weekly-44-2019/</loc>
-    <lastmod>2019-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/autonomous-driving/</loc>
     <lastmod>2019-11-01T00:00:00+00:00</lastmod>
   </url>
   

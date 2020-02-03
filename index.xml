@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI weekly (05/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-02-01-ai-weekly-05-2020/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-02-01-ai-weekly-05-2020/</guid>
+      <description>&lt;p&gt;+++ Google says its new chatbot Meena is the best in the world +++ Facebook is Open-sourcing Polygames, a new framework for training AI bots through self-play  +++ Meena: Towards a Conversational Agent that Can Chat About Anything +++ Survey of Deep Reinforcement Learning for Motion Planning of Autonomous Vehicles +++ A Survey of Deep Learning Techniques for Autonomous Driving +++&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Mobile Robot</title>
@@ -44,7 +53,7 @@
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</guid>
-      <description>&lt;p&gt;+++  Microsoft open sources BERT optimizations in ONNX runtime +++ Why Google thinks we need to regulate AI +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++  Microsoft open sources BERT optimizations in ONNX runtime +++ Why Google thinks we need to regulate AI +++ A Look Back on Baidu’s AI Innovations in 2019 +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -71,7 +80,7 @@
       <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-11-ai-weekly-02-2020/</guid>
-      <description>&lt;p&gt;+++ Lyft releases Flyte, a platform for maintaining AI workflows +++ Google Research: Looking Back at 2019, and Forward to 2020 and Beyond +++ An Idea From Physics Helps AI See in Higher Dimensions +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Uber is Open Sourcing Manifold, a Visual Debugging Tool for Machine Learning +++ Lyft releases Flyte, a platform for maintaining AI workflows +++ Google Research: Looking Back at 2019, and Forward to 2020 and Beyond +++ Facebook AI year in review: 2019 +++ An Idea From Physics Helps AI See in Higher Dimensions +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -80,7 +89,7 @@
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-04-ai-weekly-01-2020/</guid>
-      <description>&lt;p&gt;+++ The Decade of Deep Learning +++ Using Machine Learning to “Nowcast” Precipitation in High Resolution +++ Catalog of Variable Transformations To Make Your Model Work Better +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Google’s AI breast cancer screening tool is learning to generalize across countries +++ The Decade of Deep Learning +++ Using Machine Learning to “Nowcast” Precipitation in High Resolution +++ Catalog of Variable Transformations To Make Your Model Work Better +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -107,7 +116,7 @@
       <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-12-14-ai-weekly-50-2019/</guid>
-      <description>&lt;p&gt;+++ With Hanabi-playing bot, Facebook AI reaches a milestone in cooperative AI +++ Google launches E2 family of virtual machines for smaller workloads +++ AI Index 2019 assesses global AI research, investment, and impact +++ Turing Award winner Yoshua Bengio wants AI systems that can reason, plan, and imagine +++ Personalizing the Joke Skill of a Voice-Controlled Virtual Assistant +++ Why scientists need to be better at data visualization +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ With Hanabi-playing bot, Facebook AI reaches a milestone in cooperative AI +++ Baidu is Training an AI to Move Like a Human +++ Google launches E2 family of virtual machines for smaller workloads +++ AI Index 2019 assesses global AI research, investment, and impact +++ Turing Award winner Yoshua Bengio wants AI systems that can reason, plan, and imagine +++ Personalizing the Joke Skill of a Voice-Controlled Virtual Assistant +++ Why scientists need to be better at data visualization +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -116,7 +125,7 @@
       <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-12-07-ai-weekly-49-2019/</guid>
-      <description>&lt;p&gt;+++ An Epidemic of AI Misinformation +++ AWS launches SageMaker Studio, a web-based IDE for machine learning +++ Netflix open-sources Metaflow framework +++ Deep Learning For Symbolic Mathematics +++ Alibaba: Dynamic Pricing with Deep RL +++ Training multi-agent AI systems to solve complex tasks through cooperation +++ A Visual Guide to Using BERT for the First Time +++ Vaex: How to analyse 100 GB of data on your laptop with Python +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ An Epidemic of AI Misinformation +++ AWS launches SageMaker Studio, a web-based IDE for machine learning +++ Netflix open-sources Metaflow framework +++ ‘Short window’ to stop AI taking control of society, warns ex-Google employee +++ Deep Learning For Symbolic Mathematics +++ Alibaba: Dynamic Pricing with Deep RL +++ Training multi-agent AI systems to solve complex tasks through cooperation +++ A Visual Guide to Using BERT for the First Time +++ Vaex: How to analyse 100 GB of data on your laptop with Python +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -161,7 +170,7 @@
       <pubDate>Fri, 15 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-11-15-ai-weekly-46-2019/</guid>
-      <description>&lt;p&gt;+++ Machine vision sees behind walls and in darkness +++ Deep Learning deciphers historical Japanese texts +++ The Deep Learning Revolution and Its Implications for Computer Architecture and Chip Design +++  Microsoft’s Vision AI Developer Kit is now generally available +++ Intel unleashes three new chips for AI work, challenging Nvidia +++ Looker seeks to go beyond business intelligence +++ Nasdaq is testing a deep learning system to monitor trading +++ Gaussian Processes, not quite for dummies +++ Self-training with Noisy Student improves ImageNet classification +++ Extensive list of NLP-Models implemented in Tensorflow +++ 74 Summaries of Machine Learning and NLP Research +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Machine vision sees behind walls and in darkness +++ Deep Learning deciphers historical Japanese texts +++  Microsoft’s Vision AI Developer Kit is now generally available +++ Intel unleashes three new chips for AI work, challenging Nvidia +++ Looker seeks to go beyond business intelligence +++ Nasdaq is testing a deep learning system to monitor trading +++ The Deep Learning Revolution and Its Implications for Computer Architecture and Chip Design +++ Gaussian Processes, not quite for dummies +++ Self-training with Noisy Student improves ImageNet classification +++ Extensive list of NLP-Models implemented in Tensorflow +++ 74 Summaries of Machine Learning and NLP Research +++&lt;/p&gt;</description>
     </item>
     
     <item>

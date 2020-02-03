@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/facebook/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI weekly (05/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-02-01-ai-weekly-05-2020/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-02-01-ai-weekly-05-2020/</guid>
+      <description>&lt;p&gt;+++ Google says its new chatbot Meena is the best in the world +++ Facebook is Open-sourcing Polygames, a new framework for training AI bots through self-play  +++ Meena: Towards a Conversational Agent that Can Chat About Anything +++ Survey of Deep Reinforcement Learning for Motion Planning of Autonomous Vehicles +++ A Survey of Deep Learning Techniques for Autonomous Driving +++&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>AI weekly (51/2019)</title>
@@ -27,7 +36,7 @@
       <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-12-14-ai-weekly-50-2019/</guid>
-      <description>&lt;p&gt;+++ With Hanabi-playing bot, Facebook AI reaches a milestone in cooperative AI +++ Google launches E2 family of virtual machines for smaller workloads +++ AI Index 2019 assesses global AI research, investment, and impact +++ Turing Award winner Yoshua Bengio wants AI systems that can reason, plan, and imagine +++ Personalizing the Joke Skill of a Voice-Controlled Virtual Assistant +++ Why scientists need to be better at data visualization +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ With Hanabi-playing bot, Facebook AI reaches a milestone in cooperative AI +++ Baidu is Training an AI to Move Like a Human +++ Google launches E2 family of virtual machines for smaller workloads +++ AI Index 2019 assesses global AI research, investment, and impact +++ Turing Award winner Yoshua Bengio wants AI systems that can reason, plan, and imagine +++ Personalizing the Joke Skill of a Voice-Controlled Virtual Assistant +++ Why scientists need to be better at data visualization +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,7 +45,7 @@
       <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-12-07-ai-weekly-49-2019/</guid>
-      <description>&lt;p&gt;+++ An Epidemic of AI Misinformation +++ AWS launches SageMaker Studio, a web-based IDE for machine learning +++ Netflix open-sources Metaflow framework +++ Deep Learning For Symbolic Mathematics +++ Alibaba: Dynamic Pricing with Deep RL +++ Training multi-agent AI systems to solve complex tasks through cooperation +++ A Visual Guide to Using BERT for the First Time +++ Vaex: How to analyse 100 GB of data on your laptop with Python +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ An Epidemic of AI Misinformation +++ AWS launches SageMaker Studio, a web-based IDE for machine learning +++ Netflix open-sources Metaflow framework +++ ‘Short window’ to stop AI taking control of society, warns ex-Google employee +++ Deep Learning For Symbolic Mathematics +++ Alibaba: Dynamic Pricing with Deep RL +++ Training multi-agent AI systems to solve complex tasks through cooperation +++ A Visual Guide to Using BERT for the First Time +++ Vaex: How to analyse 100 GB of data on your laptop with Python +++&lt;/p&gt;</description>
     </item>
     
     <item>
