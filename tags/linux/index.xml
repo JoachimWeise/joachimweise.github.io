@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Joachim Weise</title>
+    <link>https://joachimweise.github.io/tags/linux/</link>
+    <description>Recent content in linux on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting Started with WSL</title>
+      <link>https://joachimweise.github.io/post/2020-02-18-wsl-basics/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-02-18-wsl-basics/</guid>
+      <description>&lt;p&gt;The Windows Subsystem for Linux (WSL) is a great solution for developers to natively work within Linux right on their Windows 10 version desktop. WSL lets developers run a GNU/Linux environment &amp;ndash; including most command-line tools, utilities, and applications &amp;ndash; directly on Windows, unmodified, without the overhead of a virtual machine. After some surprisingly super-easy setup, this gives you a truly native POSIX / Unix-like environment directly integrated into your Windows PC, essentially negating a vast majority of issues people had previously with workarounds like dual booting, VMing or terminal wrappers like CYGWIN or Git Bash. According to &lt;a href=&#34;https://docs.microsoft.com/en-us/windows/wsl/faq&#34;&gt;Microsoft&lt;/a&gt;, WSL requires fewer resources (CPU, memory, and storage) than a full virtual machine while also allowing users to use Windows apps and Linux tools on the same set of files. In this article I&amp;rsquo;m covering some background on WSL and show how to get started.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

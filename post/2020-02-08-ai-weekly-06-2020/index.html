@@ -57,13 +57,13 @@
     "name" : "Joachim Weise"
   },
   "headline": "AI weekly (06\/2020)",
-  "description" : "\x2b\x2b\x2b Google’s ML-fairness-gym: A Tool for Exploring Long-Term Impacts of Machine Learning Systems \x2b\x2b\x2b White House reportedly aims to double AI research budget to $2B \x2b\x2b\x2b Facebook has acquired Scape Technologies, a London-based computer vision startup \x2b\x2b\x2b Avigilon\x26rsquo;s Appearance Search Can Tell Schools Where Students Are And Where They’ve Been \x2b\x2b\x2b RGISTools: Downloading, Customizing, and Processing Time-Series of Remote Sensing Data in R \x2b\x2b\x2b\n",
+  "description" : "\x2b\x2b\x2b Near-perfect point-goal navigation from 2.5 billion frames of experience \x2b\x2b\x2b Google’s ML-fairness-gym: A Tool for Exploring Long-Term Impacts of Machine Learning Systems \x2b\x2b\x2b Facebook launches PyTorch3D, a 3D deep learning library \x2b\x2b\x2b White House reportedly aims to double AI research budget to $2B \x2b\x2b\x2b Facebook has acquired Scape Technologies, a London-based computer vision startup \x2b\x2b\x2b Avigilon\x26rsquo;s Appearance Search Can Tell Schools Where Students Are And Where They’ve Been \x2b\x2b\x2b Google, YouTube, Facebook, LinkedIn, Twitter demand Clearview stop scraping images for facial recognition \x2b\x2b\x2b Quantifying Independently Reproducible Machine Learning \x2b\x2b\x2b RGISTools: Downloading, Customizing, and Processing Time-Series of Remote Sensing Data in R \x2b\x2b\x2b Ignite the Spark: Running Apache Spark on Kubernetes using PySpark \x2b\x2b\x2b\n",
   "inLanguage" : "en",
-  "wordCount":  714 ,
+  "wordCount":  1612 ,
   "datePublished" : "2020-02-08T00:00:00",
   "dateModified" : "2020-02-08T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
-  "keywords" : [ "ai-news" ],
+  "keywords" : [ "ai-news, facebook, google, kubernetes, pytorch, spark" ],
   "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-02-08-ai-weekly-06-2020\/",
   "publisher" : {
     "@type": "Organization",
@@ -262,10 +262,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Feb 8, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;714&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1612&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;8&nbsp;minutes
   
   
   
@@ -300,10 +300,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Feb 8, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;714&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1612&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;8&nbsp;minutes
   
   
   
@@ -326,13 +326,17 @@
     
 
       <article role="main" class="blog-post">
-        <p>+++ Google’s ML-fairness-gym: A Tool for Exploring Long-Term Impacts of Machine Learning Systems +++ White House reportedly aims to double AI research budget to $2B +++ Facebook has acquired Scape Technologies, a London-based computer vision startup +++ Avigilon&rsquo;s Appearance Search Can Tell Schools Where Students Are And Where They’ve Been +++ RGISTools: Downloading, Customizing, and Processing Time-Series of Remote Sensing Data in R +++</p>
+        <p>+++ Near-perfect point-goal navigation from 2.5 billion frames of experience +++ Google’s ML-fairness-gym: A Tool for Exploring Long-Term Impacts of Machine Learning Systems +++ Facebook launches PyTorch3D, a 3D deep learning library +++ White House reportedly aims to double AI research budget to $2B +++ Facebook has acquired Scape Technologies, a London-based computer vision startup +++ Avigilon&rsquo;s Appearance Search Can Tell Schools Where Students Are And Where They’ve Been +++ Google, YouTube, Facebook, LinkedIn, Twitter demand Clearview stop scraping images for facial recognition +++ Quantifying Independently Reproducible Machine Learning +++ RGISTools: Downloading, Customizing, and Processing Time-Series of Remote Sensing Data in R +++ Ignite the Spark: Running Apache Spark on Kubernetes using PySpark +++</p>
 
 <h2 id="breakthrough-mdash-or-so-they-say">Breakthrough &mdash; Or So They Say</h2>
+
+<p><strong>Near-perfect point-goal navigation from 2.5 billion frames of experience.</strong> A team at <a href="https://ai.facebook.com/blog/near-perfect-point-goal-navigation-from-25-billion-frames-of-experience/">Facebook AI is announcing</a> that it has created a new large-scale distributed reinforcement learning (RL) algorithm called DD-PPO, which has effectively solved the task of point-goal navigation using only an RGB-D camera, GPS, and compass data. Agents trained with DD-PPO (which stands for decentralized distributed proximal policy optimization) achieve nearly 100 percent success in a variety of virtual environments, such as houses and office buildings. The RL-algorithm lets a robot find its way in an unfamiliar environment without using a map. The algorithm gets a robot to its goal 99.9% of the time along a route that is very close to the shortest possible path, which means no wrong turns, no backtracking, and no exploration. They believe that the agent learns to exploit the statistical regularities in the floor plans of real indoor environments (apartments, houses, and offices) that are also present in their data sets. This breakthrough is partly attributed to <a href="https://aihabitat.org/">Habitat</a>, Facebook&rsquo;s own open-sourced simulation platform for training embodied AI agents (virtual robots and egocentric assistants) in a highly photorealistic &amp; efficient 3D simulator. The model was also successfully tested with tasks in real-world physical settings using a <a href="http://www.locobot.org/">LoCoBot</a> and Facebook AI’s <a href="https://ai.facebook.com/blog/open-sourcing-pyrobot-to-accelerate-ai-robotics-research/">PyRobot platform</a>. Facebook trained bots for three days inside AI Habitat&rsquo;s photorealistic virtual mock-up of the interior of a building, with rooms and corridors and furniture. In that time they took 2.5 billion steps—the equivalent of 80 years of human experience. This represented more than six months of GPU-time training, but they completed it in less than three days of wall-clock time with 64 GPUs. The approach is documented in the preprint <a href="https://arxiv.org/abs/1911.00357">arXiv:1911.00357</a>.</p>
 
 <h2 id="tools-and-frameworks">Tools and Frameworks</h2>
 
 <p><strong>Google’s ML-fairness-gym: A Tool for Exploring Long-Term Impacts of Machine Learning Systems.</strong>  As machine learning becomes increasingly incorporated within high impact decision ecosystems, there is a growing need to understand the long-term behaviors of deployed ML-based decision systems and their potential consequences. Most approaches to understanding or improving the fairness of these systems have focused on static settings without considering long-term dynamics. To address this structural difficulty in the field, <a href="https://ai.googleblog.com/2020/02/ml-fairness-gym-tool-for-exploring-long.html">Google advocates</a> for the use of simulation as a key tool in studying the fairness of algorithms. Their new framework <a href="https://github.com/google/ml-fairness-gym/blob/master/papers/acm_fat_2020_fairness_is_not_static.pdf">ML-fairness-gym</a> has now been released on <a href="https://github.com/google/ml-fairness-gym/">github</a>. The ML-fairness-gym simulates sequential decision making using <a href="https://gym.openai.com/">Open AI’s Gym</a> framework. In this framework, agents interact with simulated environments in a loop. At each step, an agent chooses an action that then affects the environment’s state. The environment then reveals an observation that the agent uses to inform its subsequent actions. In this framework, environments model the system and dynamics of the problem and observations serve as data to the agent, which can be encoded as a machine learning system.</p>
+
+<p><strong>Facebook launches PyTorch3D, a 3D deep learning library.</strong> One of the reasons 3D understanding with deep learning is relatively underexplored compared with 2D understanding is because 3D data inputs are more complex with more memory and computation requirements, whereas 2D images can be represented by simple tensors. PyTorch3D, just <a href="https://github.com/facebookresearch/pytorch3d">released on github</a>, now provides efficient, reusable components for 3D Computer Vision research with PyTorch, such data structures for storing and manipulating triangle meshes, efficient operations on triangle meshes (projective transformations, graph convolution, sampling, loss functions), and a differentiable mesh renderer.</p>
 
 <h2 id="business-news-and-applications">Business News and Applications</h2>
 
@@ -343,16 +347,34 @@
 
 <p><strong>Avigilon&rsquo;s Appearance Search Can Tell Schools Where Students Are And Where They’ve Been.</strong> As mass shootings at US schools increase in frequency, more school administrators across the US are turning to artificially intelligent surveillance tools in an attempt to beef up school safety. <a href="https://www.vox.com/recode/2020/1/25/21080749/surveillance-school-artificial-intelligence-facial-recognition">Recode</a> takes a closer look at one such solution, the AI-based software <a href="https://www.avigilon.com/products/ai-video-analytics/appearance-search">Appearance Search by Avigilon</a>. Appearance Search allows school administrators to review where a person has traveled throughout campus — anywhere there’s a camera — using data the system collects about that person’s clothing, shape, size, and potentially their facial characteristics, among other factors. It also allows security officials to search through camera feeds using certain physical descriptions, like a person’s age, gender, and hair color. So while the tool can’t say who the person is, it can find where else they’ve likely been. For some, this raises big concerns &hellip;</p>
 
+<p><strong>Google, YouTube, Facebook, LinkedIn, Twitter demand Clearview stop scraping images for facial recognition.</strong> According to recent news coverage (see e.g. <a href="https://www.theverge.com/2020/2/5/21124172/youtube-clearview-ai-cease-and-desist">here</a>, <a href="https://siliconangle.com/2020/02/05/google-demands-startup-clearview-ai-stop-scraping-photos/">here</a>, <a href="https://www.cbsnews.com/news/clearview-ai-google-youtube-send-cease-and-desist-letter-to-facial-recognition-app/">here</a>, and <a href="https://www.theverge.com/2020/2/6/21126063/facebook-clearview-ai-image-scraping-facial-recognition-database-terms-of-service-twitter-youtube">here</a>) most of the companies went so far as to send cease-and-desist letters to Clearview AI, telling the startup that it can no longer scrape videos from its platform. Clearview AI came under scrutiny this year after reports that it had been scraping videos of people on social media platforms and then adding faces to its database. Its facial recognition technology can use an image of a person and then find more links where that face has appeared. The company has claimed that it has more than 3 billion images in that database, images that were scraped from Facebook, YouTube, Twitter and other websites. Clearview’s technology has so far been used by local police departments in the U.S. as well as the FBI and the Department of Homeland Security. A comprehensive <a href="https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html">feature in The New York Times</a> in January had brought Clearview to general attention.</p>
+
 <h2 id="publications">Publications</h2>
+
+<p><strong>Quantifying Independently Reproducible Machine Learning.</strong> An <a href="https://thegradient.pub/independently-reproducible-machine-learning/">article in the Gradient</a> by Edward Raff where he summarizes his earlier NeurIPS 2019 paper <a href="https://arxiv.org/abs/1909.06674">(arXiv:1909.06674)</a>. Raff attempted to re-implement 255 papers published from 1984 until 2017, recording features of each paper, and performing statistical analysis of the results. For each paper, he did not look at the authors code, if released, in order to prevent bias toward discrepancies between code and paper. Some of this findings: (1) theory-oriented papers, with many derivations and equations, don&rsquo;t lead to better reproducibility; (2) open sourcing of code is at best a weak indicator of reproducibility; (3) surprisingly, having detailed pseudo code is just as reproducible as having no pseudo code; (4) also surprisingly, creating simplified example problems do not appear to help with reproducibility.</p>
+
+<p><strong>Understanding Data Scientists’ Use of Interpretability Tools for Machine Learning.</strong> A lot of research is currently being performed on the interpretability of machine learning models. Interpretability tools such as SHAP have been designed to help data scientists and machine learning practitioners better understand how ML models work. However, there has been little evaluation of the extent to which these tools achieve this goal. A <a href="http://www.jennwv.com/papers/interp-ds.pdf">conference</a> <a href="http://www-personal.umich.edu/~harmank/Papers/CHI2020_Interpretability.pdf">paper</a> is now stating research findings that indicate that data scientists often over-trust and misuse interpretability tools. Furthermore, few of the study&rsquo;s participants were able to accurately describe the visual output by these tools.</p>
 
 <h2 id="tutorials">Tutorials</h2>
 
 <p><strong>RGISTools: Downloading, Customizing, and Processing Time-Series of Remote Sensing Data in R</strong> <a href="https://arxiv.org/abs/2002.01859">(arXiv:2002.01859)</a>. There is a large number of data archives and web services offering free access to multispectral satellite imagery. Archives and web services differ in their protocols, formats, and data standards, which are barriers to combine datasets. This article presents RGISTools, an R package to create time-series of multispectral satellite images from multiple platforms in a harmonized and standardized way. The package functionalities are described and then applied in an extended case study.</p>
 
+<p><strong>Ignite the Spark: Running Apache Spark on Kubernetes using PySpark.</strong> In this primer, published on <a href="https://towardsdatascience.com/ignite-the-spark-68f3f988f642">Towards Data Science</a>, you are first going to learn a little about how Apache Spark’s cluster manager works and then how you can run PySpark within a Jupyter notebook interactively on an existing Kubernetes (k8s) cluster. After completing this article, you should be able to develop Spark applications on any Kubernetes cluster with confidence as well as have a deeper understanding of how the two are wired together.</p>
+
         
           <div class="blog-tags">
             
               <a href="https://joachimweise.github.io//tags/ai-news/">ai-news</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/facebook/">facebook</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/google/">google</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/kubernetes/">kubernetes</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/pytorch/">pytorch</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/spark/">spark</a>&nbsp;
             
           </div>
         
@@ -369,15 +391,15 @@
                   <ul>
                 
                 
+                    <li><a href="/post/2020-03-07-ai-weekly-10-2020/">AI weekly (10/2020)</a></li>
+                
+                    <li><a href="/post/2020-02-29-ai-weekly-09-2020/">AI weekly (09/2020)</a></li>
+                
+                    <li><a href="/post/2020-02-22-ai-weekly-08-2020/">AI weekly (08/2020)</a></li>
+                
+                    <li><a href="/post/2020-02-15-ai-weekly-07-2020/">AI weekly (07/2020)</a></li>
+                
                     <li><a href="/post/2020-02-01-ai-weekly-05-2020/">AI weekly (05/2020)</a></li>
-                
-                    <li><a href="/post/2020-01-25-ai-weekly-04-2020/">AI weekly (04/2020)</a></li>
-                
-                    <li><a href="/post/2020-01-18-ai-weekly-03-2020/">AI weekly (03/2020)</a></li>
-                
-                    <li><a href="/post/2020-01-11-ai-weekly-02-2020/">AI weekly (02/2020)</a></li>
-                
-                    <li><a href="/post/2020-01-04-ai-weekly-01-2020/">AI weekly (01/2020)</a></li>
                 
               </ul>
 
@@ -392,6 +414,10 @@
               <a href="https://joachimweise.github.io/post/2020-02-01-ai-weekly-05-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (05/2020)">&larr; Previous Post</a>
             </li>
           
+          
+            <li class="next">
+              <a href="https://joachimweise.github.io/post/2020-02-15-ai-weekly-07-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (07/2020)">Next Post &rarr;</a>
+            </li>
           
         </ul>
       

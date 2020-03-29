@@ -4,8 +4,113 @@
   
   <url>
     <loc>https://joachimweise.github.io/</loc>
-    <lastmod>2020-02-08T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-03-07-ai-weekly-10-2020/</loc>
+    <lastmod>2020-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/ai-news/</loc>
+    <lastmod>2020-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/</loc>
+    <lastmod>2020-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/</loc>
+    <lastmod>2020-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/geometry/</loc>
+    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/mathematics/</loc>
+    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/physics/</loc>
+    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/relativity/</loc>
+    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-03-01-tangent-space/</loc>
+    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-02-29-ai-weekly-09-2020/</loc>
+    <lastmod>2020-02-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/computer-vision/</loc>
+    <lastmod>2020-02-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/yolo/</loc>
+    <lastmod>2020-02-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-02-22-ai-weekly-08-2020/</loc>
+    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-02-18-wsl-basics/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/linux/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-02-15-ai-weekly-07-2020/</loc>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/data-engineering/</loc>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/deepmind/</loc>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/nlp/</loc>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/time-series/</loc>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/uber/</loc>
+    <lastmod>2020-02-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -14,17 +119,27 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/ai-news/</loc>
+    <loc>https://joachimweise.github.io/tags/facebook/</loc>
     <lastmod>2020-02-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/post/</loc>
+    <loc>https://joachimweise.github.io/tags/google/</loc>
     <lastmod>2020-02-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/</loc>
+    <loc>https://joachimweise.github.io/tags/kubernetes/</loc>
+    <lastmod>2020-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/pytorch/</loc>
+    <lastmod>2020-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/spark/</loc>
     <lastmod>2020-02-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -44,17 +159,7 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/facebook/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/google/</loc>
-    <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/nlp/</loc>
+    <loc>https://joachimweise.github.io/tags/finance/</loc>
     <lastmod>2020-02-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -99,11 +204,6 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/kubernetes/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/tags/microsoft/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
   </url>
@@ -119,32 +219,7 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/spark/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/post/2020-01-12-differential-manifolds/</loc>
-    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/geometry/</loc>
-    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/mathematics/</loc>
-    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/physics/</loc>
-    <lastmod>2020-01-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/relativity/</loc>
     <lastmod>2020-01-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -269,17 +344,7 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/pytorch/</loc>
-    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/tags/tensorflow/</loc>
-    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/time-series/</loc>
     <lastmod>2019-11-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -389,6 +454,11 @@
   </url>
   
   <url>
+    <loc>https://joachimweise.github.io/tags/object-detection/</loc>
+    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://joachimweise.github.io/tags/pandas/</loc>
     <lastmod>2019-10-26T00:00:00+00:00</lastmod>
   </url>
@@ -400,6 +470,11 @@
   
   <url>
     <loc>https://joachimweise.github.io/tags/streamlit/</loc>
+    <lastmod>2019-10-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/visualization/</loc>
     <lastmod>2019-10-26T00:00:00+00:00</lastmod>
   </url>
   

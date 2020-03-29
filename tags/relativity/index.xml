@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sun, 19 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/relativity/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tangent Spaces</title>
+      <link>https://joachimweise.github.io/post/2020-03-01-tangent-space/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-03-01-tangent-space/</guid>
+      <description>&lt;p&gt;This is a follow-on from a previous post on &lt;a href=&#34;https://joachimweise.github.io/post/2020-01-12-differential-manifolds/&#34;&gt;differentiable manifolds&lt;/a&gt;. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary background for reading some of the more advanced textbooks on general relativity. The following posts will cover tensors, covariant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Differentiable Manifolds</title>
@@ -18,7 +27,7 @@
       <pubDate>Sun, 19 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-12-differential-manifolds/</guid>
-      <description>&lt;p&gt;This is the first post in short series that I write on the basics of differential or  Riemannian geometry. Differential geometry is a key mathematical foundation of general relativity, and the terminology presented here is a prerequisite for reading some of the more advanced textbooks, such as the ones by Carroll, MTW, Wald, Straumann or Hawking/Ellis. Here I start with differentiable manifolds. The second post will cover tangent spaces and tensors, the third one coveriant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is the first post in short series that I write on the basics of differential or  Riemannian geometry. Differential geometry is a key mathematical foundation of general relativity, and the terminology presented here is a prerequisite for reading some of the more advanced textbooks, such as the ones by Carroll, MTW, Wald, Straumann or Hawking/Ellis. Here I start with differentiable manifolds. The following posts will cover &lt;a href=&#34;https://joachimweise.github.io/post/2020-03-01-tangent-space/&#34;&gt;tangent spaces&lt;/a&gt;, tensors, covariant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.&lt;/p&gt;</description>
     </item>
     
   </channel>

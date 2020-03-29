@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>uber on Joachim Weise</title>
+    <link>https://joachimweise.github.io/tags/uber/</link>
+    <description>Recent content in uber on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Sat, 15 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/tags/uber/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AI weekly (07/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-02-15-ai-weekly-07-2020/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-02-15-ai-weekly-07-2020/</guid>
+      <description>&lt;p&gt;+++ Five Interesting Data Engineering Projects +++ A new model and dataset for long-range memory +++ Building a Backtesting Service to Measure Model Performance at Uber-scale +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (43/2019)</title>
+      <link>https://joachimweise.github.io/post/2019-10-26-ai-weekly-43-2019/</link>
+      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2019-10-26-ai-weekly-43-2019/</guid>
+      <description>&lt;p&gt;+++ Quantum Supremacy Using a Programmable Superconducting Processor +++ Understanding searches better than ever before +++ The State of Machine Learning Frameworks in 2019 +++ Detectron2: A PyTorch-based modular object detection library +++ Welcome to Streamlit +++ bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond) +++ Deep Q-Network for Angry Birds +++ Machines Beat Humans on a Reading Test. But Do They Understand? +++ Kepler.GL &amp;amp; Jupyter Notebooks: Geospatial Data Visualization with Uber’s opensource Kepler.GL +++ SQLZoo &amp;ndash; A Great Interactive SQL Tutorial +++ An overview of time series forecasting models +++ Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame +++&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,10 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sat, 08 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/ai-news/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI weekly (10/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-03-07-ai-weekly-10-2020/</link>
+      <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-03-07-ai-weekly-10-2020/</guid>
+      <description>&lt;p&gt;+++ SciPy 1.0: fundamental algorithms for scientific
+computing in Python +++ GitLab Handbook +++ Largest gift in Berkeley’s history will create a ‘hub’ for advancing data science +++ Pattern Recognition &amp;amp; Machine Learning algorithms +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (09/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-02-29-ai-weekly-09-2020/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-02-29-ai-weekly-09-2020/</guid>
+      <description>&lt;p&gt;+++ Powered by AI: Turning any 2D photo into 3D using convolutional neural nets +++ When AI Can’t Replace a Worker, It Watches Them Instead +++ Co-creator of YOLO has turned his back on computer vision over ethical issues +++ Fastai: A Layered API for Deep Learning +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (08/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-02-22-ai-weekly-08-2020/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-02-22-ai-weekly-08-2020/</guid>
+      <description>&lt;p&gt;+++ LinkedIn is open sourcing its metadata search and discovery platform DataHub +++ Google Brain and DeepMind researchers attack reinforcement learning efficiency +++ The Next Decade in AI: Four Steps Towards Robust Artificial Intelligence +++ Scaling Knowledge at Airbnb +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (07/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-02-15-ai-weekly-07-2020/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-02-15-ai-weekly-07-2020/</guid>
+      <description>&lt;p&gt;+++ Five Interesting Data Engineering Projects +++ A new model and dataset for long-range memory +++ Building a Backtesting Service to Measure Model Performance at Uber-scale +++&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>AI weekly (06/2020)</title>
@@ -18,7 +55,7 @@
       <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-02-08-ai-weekly-06-2020/</guid>
-      <description>&lt;p&gt;+++ Google’s ML-fairness-gym: A Tool for Exploring Long-Term Impacts of Machine Learning Systems +++ White House reportedly aims to double AI research budget to $2B +++ Facebook has acquired Scape Technologies, a London-based computer vision startup +++ Avigilon&amp;rsquo;s Appearance Search Can Tell Schools Where Students Are And Where They’ve Been +++ RGISTools: Downloading, Customizing, and Processing Time-Series of Remote Sensing Data in R +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Near-perfect point-goal navigation from 2.5 billion frames of experience +++ Google’s ML-fairness-gym: A Tool for Exploring Long-Term Impacts of Machine Learning Systems +++ Facebook launches PyTorch3D, a 3D deep learning library +++ White House reportedly aims to double AI research budget to $2B +++ Facebook has acquired Scape Technologies, a London-based computer vision startup +++ Avigilon&amp;rsquo;s Appearance Search Can Tell Schools Where Students Are And Where They’ve Been +++ Google, YouTube, Facebook, LinkedIn, Twitter demand Clearview stop scraping images for facial recognition +++ Quantifying Independently Reproducible Machine Learning +++ RGISTools: Downloading, Customizing, and Processing Time-Series of Remote Sensing Data in R +++ Ignite the Spark: Running Apache Spark on Kubernetes using PySpark +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,7 +64,7 @@
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-02-01-ai-weekly-05-2020/</guid>
-      <description>&lt;p&gt;+++ Google says its new chatbot Meena is the best in the world +++ Facebook is Open-sourcing Polygames, a new framework for training AI bots through self-play  +++ Meena: Towards a Conversational Agent that Can Chat About Anything +++ Survey of Deep Reinforcement Learning for Motion Planning of Autonomous Vehicles +++ A Survey of Deep Learning Techniques for Autonomous Driving +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Google says its new chatbot Meena is the best in the world +++ Facebook is Open-sourcing Polygames, a new framework for training AI bots through self-play +++ An AI Epidemiologist Sent the First Warnings of the Wuhan Virus +++ Europe wants single data market to break U.S. tech giants&amp;rsquo; dominance +++ Meena: Towards a Conversational Agent that Can Chat About Anything +++ Survey of Deep Reinforcement Learning for Motion Planning of Autonomous Vehicles +++ A Survey of Deep Learning Techniques for Autonomous Driving +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,7 +73,7 @@
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</guid>
-      <description>&lt;p&gt;+++  Microsoft open sources BERT optimizations in ONNX runtime +++ Why Google thinks we need to regulate AI +++ A Look Back on Baidu’s AI Innovations in 2019 +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Improved protein structure prediction using potentials from deep learning +++ Microsoft open sources BERT optimizations in ONNX runtime +++ Why Google thinks we need to regulate AI +++ A Look Back on Baidu’s AI Innovations in 2019 +++ Kernel-Based Ensemble Learning in Python +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -63,7 +100,7 @@
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-04-ai-weekly-01-2020/</guid>
-      <description>&lt;p&gt;+++ An artificial intelligence predicts the future +++ Google’s AI breast cancer screening tool is learning to generalize across countries +++ The Decade of Deep Learning +++ Using Machine Learning to “Nowcast” Precipitation in High Resolution +++ Catalog of Variable Transformations To Make Your Model Work Better +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ An artificial intelligence predicts the future +++ Google’s AI breast cancer screening tool is learning to generalize across countries +++ The Decade of Deep Learning +++ Using Machine Learning to “Nowcast” Precipitation in High Resolution +++ A Decade in Review in Tech +++ Catalog of Variable Transformations To Make Your Model Work Better +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -99,7 +136,7 @@
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/</guid>
-      <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++ AR-Net: A simple Auto-Regressive Neural Network for time-series +++ Deep Learning with PyTorch +++ Cost-benefit analysis in R +++ How to apply machine/deep learning to audio analysis, with comet.ml +++ Collection of Jupyter notebooks for quantitative finance +++ Create a streetmap of your favorite city with ggplot2 +++ Tutorial on Graph Neural Networks for Computer Vision and Beyond (in 3 parts) +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++ AR-Net: A simple Auto-Regressive Neural Network for time-series +++ China&amp;rsquo;s billion-dollar ed-tech companies are planning to export their vision overseas +++ Deep Learning with PyTorch +++ **Corpus Wide Argument Mining - a Working Solution +++ Cost-benefit analysis in R +++ How to apply machine/deep learning to audio analysis, with comet.ml +++ Collection of Jupyter notebooks for quantitative finance +++ Create a streetmap of your favorite city with ggplot2 +++ Tutorial on Graph Neural Networks for Computer Vision and Beyond (in 3 parts) +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -126,7 +163,7 @@
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-11-08-ai-weekly-45-2019/</guid>
-      <description>&lt;p&gt;+++ How to train artificial intelligence that won’t destroy the environment +++ Deep learning has a size problem +++ Quantifying the Carbon Emissions of Machine Learning +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Experience a live debate between the first AI system to debate humans on complex topics, Project Debater, and a top human debater +++ How Google, Microsoft, and Big Tech Are Automating the Climate Crisis +++ How to train artificial intelligence that won’t destroy the environment +++ Deep learning has a size problem +++ Quantifying the Carbon Emissions of Machine Learning +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -144,7 +181,7 @@
       <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-10-26-ai-weekly-43-2019/</guid>
-      <description>&lt;p&gt;+++ Quantum Supremacy Using a Programmable Superconducting Processor +++ Understanding searches better than ever before +++ The State of Machine Learning Frameworks in 2019 +++ Welcome to Streamlit +++ bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond) +++ Deep Q-Network for Angry Birds +++ Machines Beat Humans on a Reading Test. But Do They Understand? +++ SQLZoo &amp;ndash; A Great Interactive SQL Tutorial +++ An overview of time series forecasting models +++ Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Quantum Supremacy Using a Programmable Superconducting Processor +++ Understanding searches better than ever before +++ The State of Machine Learning Frameworks in 2019 +++ Detectron2: A PyTorch-based modular object detection library +++ Welcome to Streamlit +++ bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond) +++ Deep Q-Network for Angry Birds +++ Machines Beat Humans on a Reading Test. But Do They Understand? +++ Kepler.GL &amp;amp; Jupyter Notebooks: Geospatial Data Visualization with Uber’s opensource Kepler.GL +++ SQLZoo &amp;ndash; A Great Interactive SQL Tutorial +++ An overview of time series forecasting models +++ Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame +++&lt;/p&gt;</description>
     </item>
     
   </channel>

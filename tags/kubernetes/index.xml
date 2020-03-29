@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI weekly (06/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-02-08-ai-weekly-06-2020/</link>
+      <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-02-08-ai-weekly-06-2020/</guid>
+      <description>&lt;p&gt;+++ Near-perfect point-goal navigation from 2.5 billion frames of experience +++ Google’s ML-fairness-gym: A Tool for Exploring Long-Term Impacts of Machine Learning Systems +++ Facebook launches PyTorch3D, a 3D deep learning library +++ White House reportedly aims to double AI research budget to $2B +++ Facebook has acquired Scape Technologies, a London-based computer vision startup +++ Avigilon&amp;rsquo;s Appearance Search Can Tell Schools Where Students Are And Where They’ve Been +++ Google, YouTube, Facebook, LinkedIn, Twitter demand Clearview stop scraping images for facial recognition +++ Quantifying Independently Reproducible Machine Learning +++ RGISTools: Downloading, Customizing, and Processing Time-Series of Remote Sensing Data in R +++ Ignite the Spark: Running Apache Spark on Kubernetes using PySpark +++&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>AI weekly (04/2020)</title>
@@ -18,7 +27,7 @@
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</guid>
-      <description>&lt;p&gt;+++  Microsoft open sources BERT optimizations in ONNX runtime +++ Why Google thinks we need to regulate AI +++ A Look Back on Baidu’s AI Innovations in 2019 +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Improved protein structure prediction using potentials from deep learning +++ Microsoft open sources BERT optimizations in ONNX runtime +++ Why Google thinks we need to regulate AI +++ A Look Back on Baidu’s AI Innovations in 2019 +++ Kernel-Based Ensemble Learning in Python +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++&lt;/p&gt;</description>
     </item>
     
   </channel>

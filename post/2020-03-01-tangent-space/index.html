@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Tangent Spaces - Joachim Weise</title>
+  <meta name="description" content="This is a follow-on from a previous post on differentiable manifolds. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary background for reading some of the more advanced textbooks on general relativity. The following posts will cover tensors, covariant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2020-03-01-tangent-space\/",
+          "name": "Tangent spaces"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "Tangent Spaces",
+  "description" : "This is a follow-on from a previous post on differentiable manifolds. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary background for reading some of the more advanced textbooks on general relativity. The following posts will cover tensors, covariant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.\n",
+  "inLanguage" : "en",
+  "wordCount":  4101 ,
+  "datePublished" : "2020-03-01T00:00:00",
+  "dateModified" : "2020-03-01T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "geometry, relativity, mathematics, physics" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-03-01-tangent-space\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Tangent Spaces" />
+<meta property="og:description" content="This is a follow-on from a previous post on differentiable manifolds. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary background for reading some of the more advanced textbooks on general relativity. The following posts will cover tensors, covariant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2020-03-01-tangent-space/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="Tangent Spaces" />
+  <meta name="twitter:description" content="This is a follow-on from a previous post on differentiable manifolds. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary …">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/2020-01-12-differentiable-manifolds/venedig.jpg" 
+         
+         data-img-desc-1="Venice, heading for a thunder storm (July 2019)"
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>Tangent Spaces</h1>
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Mar 1, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;4101&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;20&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Tangent Spaces</h1>
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Mar 1, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;4101&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;20&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>This is a follow-on from a previous post on <a href="/post/2020-01-12-differential-manifolds/">differentiable manifolds</a>. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary background for reading some of the more advanced textbooks on general relativity. The following posts will cover tensors, covariant derivatives and parallel transport. The presentation will be informal, focusing mostly on motivation, definitions and key facts, not on mathematical proofs.</p>
+
+<p>Many laws of physics are stated through vectorial equations, which suggests that also on abstract manifolds it should be desirable to be able to define and manipulate vectors. In ordinary physics, vectors are used to specify 'directed magnitudes', such as velocities and forces. Therefore, it is important to develop the concept of a 'directed magnitude' in a curved space.</p>
+
+<p>In the local theory of regular surfaces <span  class="math">\(S \subset \mathbb{R}^3\)</span>, an immediate example of a 'directed magnitude' comes from considering the velocity of a moving point. Let us imagine a point that moves along a curve <span  class="math">\(\gamma(\tau)\)</span> within <span  class="math">\(S\)</span>, where <span  class="math">\(\gamma\)</span> is a map <span  class="math">\(I \subset \mathbb{R} \rightarrow S\)</span>. The velocity of the moving point is a vector (in the larger space <span  class="math">\(\mathbb{R}^3\)</span>) that is always tangent to the surface <span  class="math">\(S\)</span>. Due to this picture, 'directed magnitudes' defined within a curved surface or manifold are also called <strong>tangent vectors</strong> or simply <strong>vectors</strong>.</p>
+
+<p>At every point <span  class="math">\(p\)</span> of the surface or manifold there is a tangent plane, which is a vector subspace of <span  class="math">\(\mathbb{R}^{3}\)</span>. In the local theory of regular surfaces <span  class="math">\(S \subset \mathbb{R}^3\)</span>, the tangent plane plays a particularly important role. The first fundamental form on the tangent plane is defined as the restriction of the dot product in <span  class="math">\(\mathbb{R}^3\)</span> to the tangent. From the coefficients of the first fundamental form, one obtains all the concepts of intrinsic geometry, which include angles between curves, areas of regions, Gaussian curvature, geodesics, etc.</p>
+
+<p>In order to make sense of calculus on <em>abstract</em> manifolds, we need to introduce the <em>tangent space to a manifold at a point</em>, which we can think of as a sort of 'linear model' for the manifold near the point. Because of the abstractness of the definition of a smooth manifold, this can become quite an intricate procedure in the mathematical literature. There one can find several different, but equivalent ways to define tangent vectors to a smooth manifold:</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>Different ways to define <strong>tangent vectors to a manifold</strong> <span  class="math">\(\mathcal{M}\)</span>:</p>
+
+<ul>
+<li><p><strong>Algebraic definition</strong>: Tangent vectors as derivations of the space of germs. Briefly: <em>Tangent vectors are derivations acting on scalar functions.</em></p></li>
+
+<li><p><strong>Geometric definition</strong>: Tangent vectors as equivalence classes of differentiable curves. Briefly: <em>Tangent vectors are tangents to curves lying on the manifold.</em></p></li>
+
+<li><p><strong>Physicist's definition</strong>: Tangent vectors as equivalence classes of coordinate <span  class="math">\(n\)</span>-tuples. Briefly: <em>Tangent vectors are elements of</em> <span  class="math">\(\mathbb{R}^n\)</span> with a particular transformation behavior. Or stated differently: <em>An object is a vector if it transforms like a vector.</em></p></li>
+</ul>
+</div></div>
+
+<p>It is a matter of individual taste which of the various characterizations of <span  class="math">\(T_p \mathcal{M}\)</span> one chooses to take as the definition. The algebraic definition, however abstract it may seem at first, has several advantages: it is relatively concrete (tangent
+vectors are actual derivations of <span  class="math">\(C^\infty(\mathcal{M})\)</span>, with no equivalence classes involved); it makes the vector space structure on <span  class="math">\(T_p \mathcal{M}\)</span> obvious; and it leads to straightforward coordinate-independent definitions of differentials, velocities, and many of the other geometric objects.</p>
+
+<p>In the following paragraphs, we follow more or less the algebraic track, but in simple practical steps. The task is to construct the tangent space at a point <span  class="math">\(p\)</span> in a manifold <span  class="math">\(\mathcal{M}\)</span>, without an embedding in a higher-dimensional space, using only things that are intrinsic to <span  class="math">\(\mathcal{M}\)</span>. Two relevant concepts we had introduced previously are curves <span  class="math">\(\gamma: I \subset \mathbb{R} \to \mathcal{M}\)</span> and functions <span  class="math">\(f: \mathcal{M} \to \mathbb{R}\)</span>.</p>
+
+<p>One first guess might be to use our intuition that there are objects called 'tangent vectors to curves' which belong in the tangent space.  We might therefore consider the set of all parameterized curves through <span  class="math">\(p\)</span>, that is, the space of all (nondegenerate) maps <span  class="math">\(\gamma: I \subset \mathbb{R} \to \mathcal{M}\)</span> such that <span  class="math">\(p\)</span> is in the image of <span  class="math">\(\gamma\)</span>.  The temptation is to define the tangent space as simply the space of all tangent vectors to these curves at the point <span  class="math">\(p\)</span>.  But this is obviously cheating; the tangent space <span  class="math">\(T_p\)</span> is supposed to be the space of vectors at <span  class="math">\(p\)</span>, and before we have defined this we don't have an independent notion of what 'the tangent vector to a curve' is supposed to mean.</p>
+
+<p>We could try to define a tangent vectors as the 'directed velocities' <span  class="math">\(d\gamma/d\tau\)</span> of the curves <span  class="math">\(\gamma(\tau)\)</span> going through <span  class="math">\(p\)</span>. However, we cannot directly differentiate <span  class="math">\(\gamma(\tau)\)</span> with respect to <span  class="math">\(\tau\)</span> without an embedding because the expression <span  class="math">\(\gamma(\tau+\delta)-\gamma(\tau)\)</span> is undefined: we cannot 'subtract' one point from another.  To circumvent this difficulty, we must take a step in the direction of abstraction. We will focus not on points but on <em>functions</em> of points.</p>
+
+<p>The strategy is to define a tangent vector as a directional derivative at a point <span  class="math">\(p\)</span> of a real-valued function on a manifold <span  class="math">\(\mathcal{M}\)</span>. Furthermore, since we cannot use vectors in an ambient Euclidean space to provide the notion of direction, we simply talk about curves on <span  class="math">\(\mathcal{M}\)</span> through <span  class="math">\(p\)</span> as providing a notion of direction. The following construction makes this precise.</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p><strong>Definition.</strong></p>
+
+<p>Let <span  class="math">\(\mathcal{M}\)</span> be a differentiable manifold, <span  class="math">\(p\)</span> be a point on <span  class="math">\(\mathcal{M}\)</span>,
+and let <span  class="math">\(U\)</span> be an open neighborhood of <span  class="math">\(\mathcal{M}\)</span>. Let <span  class="math">\(\epsilon > 0\)</span>, and let <span  class="math">\(\gamma : (-\epsilon, \epsilon) \to U\)</span> be a differentiable curve on <span  class="math">\(\mathcal{M}\)</span> such that <span  class="math">\(\gamma(0) = p\)</span>. For any differentiable function <span  class="math">\(f : U \subset \mathcal{M} \to R\)</span>, we define the <strong>directional derivative of <span  class="math">\(f\)</span> along <span  class="math">\(\gamma\)</span></strong> to be the number</p>
+
+<p><span  class="math">\[\textrm{D}_{\gamma}f(p) = \left.\frac{d}{d\tau}\right|_{\tau=0}f(\gamma(\tau)) \;.\]</span></p>
+
+<p>This derivative is interpreted as the instantaneous rate of change of the function <span  class="math">\(f\)</span> at point <span  class="math">\(p\)</span>, as one moves along the curve <span  class="math">\(\gamma\)</span> passing through <span  class="math">\(p\)</span>. The operator <span  class="math">\(\textrm{D}_{\gamma}\)</span> is called the <strong>tangent vector</strong> to <span  class="math">\(\gamma\)</span> at <span  class="math">\(p\)</span>.</p>
+</div></div>
+
+<p>Some remarks are in order:</p>
+
+<ul>
+<li><p>The above definition does not explicitly refer to any particular chart on <span  class="math">\(U\)</span>.</p></li>
+
+<li><p>The function <span  class="math">\(f\)</span> is merely a test function. We could choose any other function to test how things change with movement along <span  class="math">\(\gamma\)</span>. What is important is not which function we choose, but how the curve <span  class="math">\(\gamma\)</span> causes it to change with movement along <span  class="math">\(\gamma\)</span> away from <span  class="math">\(p\)</span>.</p></li>
+
+<li><p>Also the curve <span  class="math">\(\gamma\)</span> plays only an auxiliary role, there is no preferred choice. In fact, there are infinitely many curves that have the same tangent at <span  class="math">\(\tau = 0\)</span> and give the same directional derivative.</p></li>
+
+<li><p>The function <span  class="math">\(f\circ\gamma\)</span> maps <span  class="math">\((-\epsilon, \epsilon) \to U\)</span>, so the derivative is taken as a usual real function.</p></li>
+
+<li><p>If <span  class="math">\(\gamma_1\)</span> and <span  class="math">\(\gamma_2\)</span> are two curves, then we set <span  class="math">\(\textrm{D}_{\gamma_1} = \textrm{D}_{\gamma_2}\)</span> if these operators have the same value at <span  class="math">\(p\)</span> for all differentiable functions <span  class="math">\(f : U \to R\)</span>.</p></li>
+
+<li><p>In the words of MTW, it is 'preposterous' that vectors have morphed from a geometrical concept into a derivative operator (or <em>derivation</em>), represented by the mnemonic</p></li>
+</ul>
+
+<p><span  class="math">\[\textrm{D}_\gamma = \mathbf{v} = \partial_\mathbf{v} =\left.\frac{d}{d\tau}\right|_\text{along curve} \ .\]</span></p>
+
+<ul>
+<li><p>We will preferably denote vectors by boldface letters such as <span  class="math">\(\mathbf{v}\)</span> or even plain letters such as <span  class="math">\(v\)</span> rather than operators <span  class="math">\(\textrm{D}_\gamma\)</span>.</p></li>
+
+<li><p>Common notations for the action of <span  class="math">\(\mathbf{v}\)</span> on <span  class="math">\(f\)</span> are <span  class="math">\(\mathbf{v}(f)\)</span>, or <span  class="math">\(\mathbf{v} \circ f\)</span>, or simply <span  class="math">\(\mathbf{v} f\)</span>. Note again that <span  class="math">\(\mathbf{v}(f)\)</span> is a real number. Sometimes you can also find the notation <span  class="math">\(\textrm{D}_\gamma f = \dot{\gamma} \circ f\)</span>, where <span  class="math">\(\dot{\gamma}\)</span> means the tangent vector to the curve <span  class="math">\(\gamma\)</span>.</p></li>
+</ul>
+
+<p>Let's try to get a better intuition and check whether we are on the right way to defining the tangent space as the 'space of all possible directional derivatives.'</p>
+
+<p>For that purpose, we introduce a local coordinate chart <span  class="math">\(x^\mu\)</span> around the point <span  class="math">\(p\)</span>. There is an obvious set of <span  class="math">\(n\)</span> directional derivatives at <span  class="math">\(p\)</span>, namely the partial derivatives <span  class="math">\(\partial_\mu\)</span> at <span  class="math">\(p\)</span>. Note that this is really the <em>definition</em> of the partial derivatives with respect to <span  class="math">\(x^\mu\)</span>: the directional derivative along a curve defined by <span  class="math">\(x^\nu\)</span> = constant for all <span  class="math">\(\nu =\not\, \mu\)</span>, parameterized by <span  class="math">\(x^\nu\)</span> itself.</p>
+
+<p>We are now going to claim that the partial derivative operators <span  class="math">\(\partial_\mu\)</span> at <span  class="math">\(p\)</span> form a basis for the tangent space <span  class="math">\(T_p\)</span>. To see this we will show that any directional derivative can be decomposed into a sum of real numbers times partial derivatives.</p>
+
+<p>It's nice to see it from the big-machinery approach.  Consider an <span  class="math">\(n\)</span>-manifold <span  class="math">\(\mathcal{M}\)</span>, a coordinate chart <span  class="math">\(\phi:\mathcal{M}\rightarrow \mathbb{R}^n\)</span>, a curve
+<span  class="math">\(\gamma:\mathbb{R}\rightarrow \mathcal{M}\)</span>, and a function <span  class="math">\(f:\mathcal{M}\rightarrow\mathbb{R}\)</span>; see the figure below:</p>
+
+<p><center>
+
+<link rel="stylesheet" href="https://joachimweise.github.io/css/hugo-easy-gallery.css" />
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-03-01-tangent-space/huhu.jpg" alt="Decomposing the tangent vector to a curve in terms of partial derivatives with respect to coordinates"/>
+    </div>
+    <a href="/img/2020-03-01-tangent-space/huhu.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Decomposing the tangent vector to a curve in terms of partial derivatives with respect to coordinates</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
+<p>If <span  class="math">\(\tau\)</span> is the parameter along <span  class="math">\(\gamma\)</span>, we want to expand the operator <span  class="math">\(d/d\tau\)</span> in terms of the partials <span  class="math">\(\partial_\mu\)</span>. Using the chain rule we have</p>
+
+<p><span  class="math">\[
+\begin{aligned}
+\frac{d}{d\tau} f(p) &=  \frac{d}{d\tau}(f\circ\gamma)\Big|_{\tau=0}  \\[0.5em]
+&= \frac{d}{d\tau} \big((f\circ\phi^{-1})\circ(\phi\circ\gamma)\big)\Big|_{\tau=0} \\[0.5em]
+&= \frac{d(\phi\circ\gamma)^\mu}{d\tau}\Big|_{\tau=0} \ \frac{\partial(f\circ\phi^{-1})}{\partial x^\mu}\Big|_{\phi(p)} \\[0.5em]
+&=  \frac{dx^\mu}{d\tau} \Big|_{\tau=0} \ \frac{\partial}{\partial x^\mu} \Big|_{p} \ f \; . 
+\end{aligned}
+\]</span></p>
+
+<p>The first line simply takes the informal expression on the left hand side and rewrites it as an honest derivative of the function <span  class="math">\((f\circ\gamma):\mathbb{R} \rightarrow \mathbb{R}\)</span>.  The second line just comes from the definition of the inverse map <span  class="math">\(\phi^{-1}\)</span> (and associativity of the operation of composition).  The third line is the formal chain rule, and the last line is a return to the informal notation of the start. Since the function <span  class="math">\(f\)</span> was arbitrary, we have</p>
+
+<p><span  class="math">\[
+\begin{aligned}
+\frac{d}{d\tau} &= \frac{dx^\mu}{d\tau} \ \partial_\mu \ , \quad \text{or} \\[0.7em]
+\mathbf{v} \; &= \ \ v^\mu \ \ \partial_\mu \ .
+\end{aligned}
+\]</span></p>
+
+<p>We see that directional derivatives <span  class="math">\(d/d\tau\)</span> are described by a set of coefficients <span  class="math">\(d x^\mu/d\tau\)</span> multiplying a fixed set of differential operators <span  class="math">\(\partial_\mu\)</span>. The coefficients <span  class="math">\(d x^\mu/d\tau\)</span> depend on the curve <span  class="math">\(\gamma\)</span>, while the operators <span  class="math">\(\partial_\mu\)</span> do not. Therefore, it is natural to regard <span  class="math">\(\partial_\mu\)</span> as the basis in the vector space of directional derivatives and <span  class="math">\(d x^\mu/d\tau\)</span> as the components of <span  class="math">\(d/d\tau\)</span> in that basis.</p>
+
+<p>The vector represented by <span  class="math">\( \mathbf{v} = d/d\tau\)</span> is the tangent vector to the curve <span  class="math">\(\gamma\)</span> with parameter <span  class="math">\(\tau\)</span> on an arbitrary manifold, where we have specified our basis vectors to be <span  class="math">\( \hat{e}_{(\mu)}=\partial_\mu\)</span>. This particular basis is known as a <strong>coordinate basis</strong> for <span  class="math">\(T_p\)</span>; it is the formalization of the notion of setting up the basis vectors to point along the coordinate axes. There is no reason why we are limited to coordinate bases when we consider tangent vectors; it is sometimes more convenient, for example, to use orthonormal bases of some sort.  However, the
+coordinate basis is very simple and natural, and is used almost exclusively throughout the literature.</p>
+
+<p>As suggested by the name 'tangent vector' and by the split of directional derivatives into basis vectors and components indicated above,  the set of all tangent vectors forms a vector space, a fact that we want to show now. In the first place, it is fairly easy to see that the collection of tangent vectors <span  class="math">\(\textrm{D}_\gamma\)</span> at <span  class="math">\(p\)</span> has the structure of a vector space under addition and scalar multiplication.</p>
+
+<p>Let's start with <strong>scalar multiplication</strong> first. Let <span  class="math">\(\gamma: (-\epsilon,\epsilon) \to \mathcal{M}\)</span> be a differentiable curve with <span  class="math">\(\gamma(0) = p\)</span>. If we define <span  class="math">\(\gamma_1(\tau) = \gamma(a\tau)\)</span>, where <span  class="math">\(a\)</span> is some real number, then using the usual chain rule for any differentiable function <span  class="math">\(f \in C^1(U, \mathbb{R})\)</span>, we have</p>
+
+<p><span  class="math">\[
+\textrm{D}_{\gamma_1}f(p) = \frac{d}{d\tau} f \big(\gamma(a\tau)\big) \Big|_{\tau=0} = a \frac{d}{d\tau} f \big(\gamma(\tau)\big) \Big|_{\tau=0} = a\, \textrm{D}_{\gamma}f(p) \ .
+\]</span></p>
+
+<p>This shows that the set of tangent vectors is closed under scalar multiplication. In order to prove that the set of tangent vectors is closed under <strong>addition</strong>, we make reference to a coordinate chart <span  class="math">\(\phi:U\to\mathbb{R}^n\)</span>. As shown above, we have</p>
+
+<p><span  class="math">\[
+\textrm{D}_{\gamma}f(p) = \frac{\partial(f\circ\phi^{-1})}{\partial x^\mu}\Big|_{\phi(p)} \ \frac{d(\phi\circ\gamma)^\mu}{d\tau}\Big|_{\tau=0} \ .
+\]</span></p>
+
+<p>Now let <span  class="math">\(\phi:U\to\mathbb{R}^n\)</span> be a coordinate chart of a neighborhood of <span  class="math">\(p\)</span> on
+<span  class="math">\(\mathcal{M}\)</span> such that <span  class="math">\(\phi(p) = (0,\cdots,0)\)</span>. Let <span  class="math">\(\alpha\)</span> and <span  class="math">\(\beta\)</span> be two differentiable curves on <span  class="math">\(\mathcal{M}\)</span> such that <span  class="math">\(\alpha(0) = \beta(0) = p\)</span>. Over the intersection of the domains of <span  class="math">\(\alpha\)</span> and <span  class="math">\(\beta\)</span>, define the curve <span  class="math">\(\gamma\)</span> by</p>
+
+<p><span  class="math">\[\gamma(\tau) = \phi^{-1} \big(\phi\circ\alpha(\tau) + \phi\circ\beta(\tau) \big) \ .\]</span></p>
+
+<p>Then for any function <span  class="math">\(f:U\to\mathbb{R}\)</span>, we have</p>
+
+<p><span  class="math">\[
+\begin{aligned}
+\textrm{D}_\alpha&(f) + \textrm{D}_\beta(f) = \\[0.5em]
+&= \frac{\partial(f\circ\phi^{-1})}{\partial x^\mu}\Big|_{\phi(p)} 
+\frac{d(\phi\circ\alpha)^\mu}{d\tau}\Big|_{\tau=0} + 
+\frac{\partial(f\circ\phi^{-1})}{\partial x^\mu}\Big|_{\phi(p)} 
+\frac{d(\phi\circ\beta)^\mu}{d\tau}\Big|_{\tau=0} \\[0.5em]
+&= \frac{\partial(f\circ\phi^{-1})}{\partial x^\mu}\Big|_{\phi(p)} 
+\left(\frac{d(\phi\circ\alpha)^\mu}{d\tau}\Big|_{\tau=0} + 
+\frac{d(\phi\circ\beta)^\mu}{d\tau}\Big|_{\tau=0} \right) \\[0.5em]
+&= \frac{\partial(f\circ\phi^{-1})}{\partial x^\mu}\Big|_{\phi(p)} 
+\frac{d}{d\tau}\Big|_{\tau=0} \big(\phi\circ\alpha(\tau) +  
+\phi\circ\beta(\tau) \big)^\mu \\[0.5em]
+&= \textrm{D}_\gamma(f) \ .
+\end{aligned}
+\]</span></p>
+
+<p>Let's pause for a moment and wrap up what we have done so far, before we become even more formal and outline the connection to initially stated algebraic definition, according to which a vector is a derivation of the space of germs.</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p><strong>Summary of what happened so far, for orientation.</strong></p>
+
+<p>We strive to establish the concept of a (tangent) vector to a manifolds as a <em>local</em> concept, without reference to a higher-dimensional embedding, through a <em>limiting</em> process.</p>
+
+<p>A limiting process requires the notion of 'closeness'. Such a notion requires the concept of <em>distance</em>, which is not essential for a general manifold, but could be provided by introducing a metric. However, the concept of a vector is too general to require such an elaborate structure as a metric.</p>
+
+<p>We had previously defined two concepts for manifolds, more basic than the concept of a metric, that together can help us define a vector as a limit: (real-valued) functions <span  class="math">\(f\)</span> and and curves <span  class="math">\(\gamma\)</span> can be combined to a real-value function on <span  class="math">\(\mathbb{R}\)</span>, the composition <span  class="math">\(f\circ\gamma : \mathbb{R}\to\mathbb{R}\)</span>.</p>
+
+<p>The derivative <span  class="math">\(\textrm{D}_\gamma(f) = d(f\circ\gamma)/d\tau\)</span> is the usual derivative of an ordinary function of one variable.  The function <span  class="math">\(f\)</span> is merely a test function, what is important is how the curve <span  class="math">\(\gamma\)</span> causes the function to change with movement along <span  class="math">\(\gamma\)</span> away from the point <span  class="math">\(p\)</span>. This change is determined by the directional derivative along <span  class="math">\(\gamma\)</span> at <span  class="math">\(p\)</span>.</p>
+
+<p>Since the function <span  class="math">\(f\)</span> is merely a test function, we can now view the derivation <span  class="math">\(\textrm{D}_\gamma = d/d\tau\)</span> as the tangent vector <span  class="math">\(\mathbf{v}\)</span> to the curve. The process
+of taking directional derivatives gives a natural one-to-one correspondence between
+geometric tangent vectors and <em>derivations</em>, i.e. linear maps from smooth functions to <span  class="math">\(\mathbb{R}\)</span> satisfying the product rule.</p>
+
+<p>With this as motivation, we then define a tangent vector <span  class="math">\(\mathbf{v}\)</span> on a smooth manifold as a derivation. As such, it is <span  class="math">\(\mathbb{R}\)</span>-linear and fulfills the Leibniz product rule, precisely because the partial derivatives <span  class="math">\(\partial_\mu\)</span> have these properties:</p>
+
+<ul>
+<li><span  class="math">\(\mathbf{v} (af+bg) = a\mathbf{v}(f) + b\mathbf{v}(g) \quad\)</span> for all <span  class="math">\(f,g \in C^\infty(\mathcal{M}); a,b \in \mathbb{R};\)</span></li>
+<li><span  class="math">\(\mathbf{v}_p(fg) = f(p) \mathbf{v}_p(g) + \mathbf{v}_p(f) g(p)\)</span>.</li>
+</ul>
+
+<p>The set of tangent vectors at <span  class="math">\(p\)</span> has the structure of a vector space under addition and scalar multiplication:</p>
+
+<ul>
+<li><span  class="math">\((\mathbf{v_1}+\mathbf{v_2})(f) = \mathbf{v_1}(f) + \mathbf{v_2}(f)\)</span>;<br></li>
+<li><span  class="math">\((a\mathbf{v})(f) = a\mathbf{v}(f)\)</span>.</li>
+</ul>
+</div></div>
+
+<p>After these more or less down-to-earth considerations, we now lift off for some mathematical terminology, the formal definition of an (algebraic) tangent vector, and a theorem. Not much concrete insight will be gained here, but collecting this stuff in one place may help in future when thumbing through relevant mathematical monographs.</p>
+
+<p>A <strong>relation</strong> on a set <span  class="math">\(S\)</span> is a subset <span  class="math">\(R\)</span> of <span  class="math">\(S \times S\)</span>. Given <span  class="math">\(x,y\)</span> in <span  class="math">\(S\)</span>, we write <span  class="math">\(x \sim y\)</span> iff <span  class="math">\((x,y) \in R\)</span>. The relation <span  class="math">\(R\)</span> is an <strong>equivalence relation</strong> if it satisfies the following three properties for all <span  class="math">\((x,y,z) \in S\)</span>:</p>
+
+<ul>
+<li><span  class="math">\(x \sim x\)</span> (reflexivity),</li>
+<li>if <span  class="math">\(x \sim y\)</span>, then <span  class="math">\(y \sim x\)</span> (symmetry),</li>
+<li>if <span  class="math">\(x \sim y\)</span> and <span  class="math">\(y \sim z\)</span>, then <span  class="math">\(x \sim z\)</span> (transitivity).</li>
+</ul>
+
+<p>As long as two functions agree on some neighborhood of a point <span  class="math">\(p\)</span>, they will have the same directional derivatives at <span  class="math">\(p\)</span>. This suggests that we introduce an equivalence
+relation on the <span  class="math">\(C^\infty\)</span> functions defined in some neighborhood of <span  class="math">\(p\)</span>. Consider the set of all pairs <span  class="math">\((f,U)\)</span>, where <span  class="math">\(U\)</span> is a neighborhood of <span  class="math">\(p\)</span> and <span  class="math">\(f : U \to R\)</span> is a <span  class="math">\(C^\infty\)</span> function. We say that <span  class="math">\((f,U)\)</span> is equivalent to <span  class="math">\((g,V)\)</span>, or <span  class="math">\((f,U) \sim (g,V)\)</span>, if there is an open set <span  class="math">\(W\subset U \cap V\)</span> containing <span  class="math">\(p\)</span> such that <span  class="math">\(f=g\)</span> when restricted to <span  class="math">\(W\)</span>. In other words, <span  class="math">\(f\)</span> and <span  class="math">\(g\)</span> are equivalent if they 'conincide' on some neighborhood <span  class="math">\(W\)</span> of <span  class="math">\(p\)</span>.  This is clearly an equivalence relation because it is reflexive, symmetric, and transitive.</p>
+
+<p>The equivalence class of <span  class="math">\((f,U)\)</span> is called the <strong>germ</strong> of <span  class="math">\(f\)</span> at <span  class="math">\(p\)</span>, sometimes denoted by <span  class="math">\([(f,U)]\)</span> or <span  class="math">\([f]_p\)</span>. Another notation indicates a germ by an overline, <span  class="math">\(\overline{f}\)</span>, to distinguish the function <span  class="math">\(f\)</span> from the germ <span  class="math">\(\overline{f}\)</span> it is representing. Most texts, however, skip this notational finesse for the following reason: while a function <span  class="math">\(f\)</span>, defined on a neighborhood <span  class="math">\(U\)</span> of <span  class="math">\(p\in\mathcal{M}\)</span>, contains more information than the germ <span  class="math">\(\overline{f}\)</span> at <span  class="math">\(p\)</span>, the germ is sufficient for all operations which only require <em>any</em> neighborhood around <span  class="math">\(p\)</span>, irrespective of its size.</p>
+
+<p>The <strong>set of all germs of functions</strong> at a point <span  class="math">\(p\in\mathcal{M}\)</span> is denoted by <span  class="math">\(C^\infty_p(\mathcal{M})\)</span>, or simply <span  class="math">\(C^\infty_p\)</span>, or <span  class="math">\(\mathcal{F}_p\mathcal{M}\)</span>, or simply <span  class="math">\(\mathcal{F}_p\)</span>. It has the structure of a real algebra, provided the operations addition and multiplication are defined naturally via the corresponding operations on representatives (i.e. the functions <span  class="math">\(f,g,\dots\)</span>).</p>
+
+<p>An <strong>algebra</strong> over a field <span  class="math">\(K\)</span> is a vector space <span  class="math">\(A\)</span> over <span  class="math">\(K\)</span> with a multiplication map <span  class="math">\(\mu : A \times A \to A\)</span>, usually written <span  class="math">\(\mu(a,b) = a \cdot b\)</span>, such that for all <span  class="math">\(a,b,c \in A\)</span> and <span  class="math">\(r \in K\)</span>,</p>
+
+<ul>
+<li><span  class="math">\((a \cdot b) \cdot c = a \cdot (b \cdot c) \quad \)</span> (associativity),</li>
+<li><span  class="math">\((a+b) \cdot c= a\cdot c+b\cdot c \; \text{and} \; a \cdot (b+c) = a\cdot b+a\cdot c \quad\)</span> (distributivity),</li>
+<li><span  class="math">\(r(a\cdot b) = (ra)\cdot b = a\cdot(rb) \quad\)</span> (homogeneity).</li>
+</ul>
+
+<p>Thus, an algebra has three operations: the addition and multiplication of a ring and the scalar multiplication of a vector space. Usually we omit the multiplication sign and write <span  class="math">\(ab\)</span> instead of <span  class="math">\(a\cdot b\)</span>. The addition and multiplication of functions induce corresponding operations on <span  class="math">\(\mathcal{F}_p\)</span>, making it into an algebra over <span  class="math">\(\mathbb{R}\)</span>.</p>
+
+<p>A <strong>linear map</strong> or <strong>linear operator</strong> is a map <span  class="math">\(L:V \to W\)</span> between vector spaces over a field <span  class="math">\(K\)</span> if, for any <span  class="math">\(r \in K\)</span> and <span  class="math">\(u,v \in V\)</span>,</p>
+
+<ul>
+<li><span  class="math">\(L(u+v) = L(u) + L(v)\)</span>,</li>
+<li><span  class="math">\(L(rv) = rL(v)\)</span>.</li>
+</ul>
+
+<p>To emphasize the fact that the scalars are in the field <span  class="math">\(K\)</span>, such a map is also said to be
+K-linear. If <span  class="math">\(A\)</span> and <span  class="math">\(A'\)</span> are algebras over a field <span  class="math">\(K\)</span>, then an <strong>algebra homomorphism</strong> is a linear map <span  class="math">\(L: A \to A'\)</span> that preserves the algebra multiplication: <span  class="math">\(L(ab) = L(a)L(b)\)</span> for all <span  class="math">\(a,b \in A\)</span>.</p>
+
+<p>A <strong>derivation of <span  class="math">\(\mathcal{F}(p)\)</span></strong> is a linear map <span  class="math">\(\mathbf{v} : \mathcal{F}(p) \to \mathbb{R}\)</span> which satisfies the Leibniz (product) rule <span  class="math">\(\mathbf{v}_p(fg) = f(p) \mathbf{v}_p(g) + \mathbf{v}_p(f) g(p)\)</span>.</p>
+
+<p>That being said, we can now precisely define tangent space and tangent vectors, 'the algebraic way':</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p>The <strong>tangent space</strong> <span  class="math">\(T_p\mathcal{M}\)</span> of a differentiable manifold <span  class="math">\(\mathcal{M}\)</span> at a point <span  class="math">\(p\)</span> is the set of derivations defined on the set of germs of functions <span  class="math">\(\mathcal{F}_p \mathcal{M}\)</span>, in other words the set of operators <span  class="math">\(\mathbf{v}_p : \mathcal{F}_p\mathcal{M} \to \mathbb{R}\)</span> that are <span  class="math">\(\mathbb{R}\)</span>-linear and satisfy the Leibniz-property</p>
+
+<ul>
+<li><span  class="math">\(\mathbf{v}_p (af+bg) = a\mathbf{v}_p(f) + b\mathbf{v}_p(g)\)</span>,</li>
+<li><span  class="math">\(\mathbf{v}_p(fg) = f(p) \mathbf{v}_p(g) + \mathbf{v}_p(f) g(p)\)</span>,</li>
+</ul>
+
+<p>for all <span  class="math">\(f,g \in \mathcal{F}_p\mathcal{M}, a,b \in \mathbb{R}\)</span>.
+The vector space operations in <span  class="math">\(T_p\mathcal{M}\)</span> are defined by</p>
+
+<ul>
+<li><span  class="math">\((\mathbf{v}_p+\mathbf{w}_p)(f) = \mathbf{v}_p(f) + \mathbf{w}_p(f)\)</span>,<br></li>
+<li><span  class="math">\((a\mathbf{v}_p)(f) = a\mathbf{v}_p(f)\)</span>.</li>
+</ul>
+
+<p>A <strong>tangent vector</strong> to <span  class="math">\(\mathcal{M}\)</span> at <span  class="math">\(p\)</span> is any <span  class="math">\(\mathbf{v}_p \in T_p\mathcal{M}\)</span>.</p>
+</div></div>
+
+<p>Next we can prove two properties of derivations.</p>
+
+<p><strong>Lemma:</strong> Let <span  class="math">\(\mathbf{v}\)</span> be a tangent vector to <span  class="math">\(\mathcal{M}\)</span> at <span  class="math">\(p\)</span>. If <span  class="math">\(f \in \mathcal{F}\mathcal{M}\)</span> is constant in some neighborhood of <span  class="math">\(p\)</span>, then <span  class="math">\(\mathbf{v}(f) = 0\)</span>.</p>
+
+<p><strong>Proof:</strong> First consider the function <span  class="math">\(\mathit{1}\)</span> that takes the value <span  class="math">\(1\)</span> everywhere on <span  class="math">\(\mathcal{M}\)</span>. Then, according to the Leibniz-property, <span  class="math">\(\mathbf{v}(\mathit{1}) = \mathbf{v}(\mathit{1} \cdot \mathit{1}) = 1 \cdot \mathbf{v} (\mathit{1}) + 1 \cdot \mathbf{v} (\mathit{1}) = 2 \cdot \mathbf{v} (\mathit{1})\)</span>, so that <span  class="math">\(\mathbf{v} (\mathit{1}) = 0\)</span>. But then for every constant function <span  class="math">\(f = c \cdot \mathit{1}\)</span> <span  class="math">\((c \in \mathbb{R})\)</span>, according to linearity, <span  class="math">\(\mathbf{v}(f) = \mathbf{v} (c \cdot \mathit{1}) = c \cdot \mathbf{v} (\mathit{1}) = 0.  \)</span></p>
+
+<p><strong>Lemma:</strong> Let <span  class="math">\(\mathbf{v}\)</span> be a tangent vector to <span  class="math">\(\mathcal{M}\)</span> at <span  class="math">\(p\)</span> and suppose that <span  class="math">\(f\)</span> and <span  class="math">\(g\)</span> are elements of <span  class="math">\(\mathcal{FM}\)</span> that agree on some neighborhood of <span  class="math">\(p\)</span> in <span  class="math">\(\mathcal{M}\)</span>. Then <span  class="math">\(\mathbf{v}(f) = \mathbf{v}(g)\)</span>.</p>
+
+<p><strong>Proof:</strong> Let <span  class="math">\(h := f-g\)</span> in a neighborhood <span  class="math">\(U \in \mathcal{M}\)</span> of <span  class="math">\(p\)</span>. We may select a bump function <span  class="math">\(\sigma \in \mathcal{FM}\)</span> with <span  class="math">\(\sigma(p)=1\)</span> on <span  class="math">\(U\)</span> and <span  class="math">\(\sigma=0\)</span> outside <span  class="math">\(U\)</span>. Then <span  class="math">\(\sigma h = 0\)</span> on all of <span  class="math">\(\mathcal{M}\)</span> and, by the product rule,
+<span  class="math">\(
+0 = \mathbf{v}(\sigma h) = \sigma(p) \mathbf{v}(h) + h(p) \mathbf{v}(\sigma) = \mathbf{v}(h) \ ,
+\)</span>
+since <span  class="math">\(\sigma(p)=1\)</span> and <span  class="math">\(h(p)=0\)</span>. But then
+<span  class="math">\(
+0 = \mathbf{v}(h) = \mathbf{v}(f-g) = \mathbf{v}(f) - \mathbf{v}(g)
+\)</span>
+and thus <span  class="math">\(\mathbf{v}(f) = \mathbf{v}(g)\)</span>.</p>
+
+<p>This second Lemma implies that the value of <span  class="math">\(\mathbf{v}(f)\)</span> only depends on the behavior of <span  class="math">\(f\)</span> on arbitrarily small neighborhoods of <span  class="math">\(p\)</span>. It is therefore sufficient to base the definition of tangent vectors just on <span  class="math">\(\mathcal{F}_p\mathcal{M}\)</span> instead of <span  class="math">\(\mathcal{FM}\)</span>.</p>
+
+<p>With this preparation we can prove the following theorem.</p>
+
+<p>
+<div class="panel panel-note"><div class="panel-body"><p>Let <span  class="math">\(\mathcal{M}\)</span> be a differentiable manifold and <span  class="math">\(p \in \mathcal{M}\)</span>. If <span  class="math">\((U,\phi)\)</span> is a chart at <span  class="math">\(p\)</span> with coordinate functions <span  class="math">\(x^1,\ldots,x^n\)</span>, then</p>
+
+<p><span  class="math">\[
+\frac{\partial}{\partial x^1}\Big|_p, \ldots, \frac{\partial}{\partial x^n}\Big|_p
+\]</span></p>
+
+<p>is a <strong>basis for the tangent space</strong> <span  class="math">\(T_p\mathcal{M}\)</span>. Moreover, for each vector <span  class="math">\(\mathbf{v} \in T_p\mathcal{M}\)</span>,</p>
+
+<p><span  class="math">\[
+\mathbf{v} = \sum_{i=1}^{n} \mathbf{v}(x^i) \frac{\partial}{\partial x^i}\Big|_p 
+= \sum_{i=1}^{n} v^i \frac{\partial}{\partial x^i}\Big|_p 
+\overset{\text{s.c.}}{=} v^i \frac{\partial}{\partial x^i}\Big|_p \ .
+\]</span></p>
+</div></div>
+Looking at the last equation (where I employed again the summation convention), we see that the components <span  class="math">\(v^i\)</span> of a tangent vector <span  class="math">\(\mathbf{v}\)</span> in the so-called Ricci calculus are nothing but the <span  class="math">\(\mathbf{v}(x^i)\)</span>,
+that is, the directional derivatives of the coordinate functions <span  class="math">\(x^i = \mathcal{P}^i \circ \phi\)</span> in the direction of <span  class="math">\(\mathbf{v}\)</span>.</p>
+
+<p><strong>Proof:</strong></p>
+
+<p>(i) Without loss of generality, we may assume that
+<span  class="math">\(\phi(p) = (x^1(p), \ldots, x^n(p)) = (0, \ldots, 0) \ ,\)</span>
+and that <span  class="math">\(\phi(U)\)</span> is the open <span  class="math">\(r\)</span>-ball <span  class="math">\(B_r(0)\)</span> about <span  class="math">\(0 \in \mathbb{R}^n\)</span> (see Naber, p. 248).</p>
+
+<p>(ii) The vectors <span  class="math">\(\partial x^1|_p, \ldots, \partial x^n|_p\)</span> are linearly independent. To see this, we apply <span  class="math">\(0 = \sum_{i=1}^{n} a^i \partial_i |_p\)</span>, with <span  class="math">\(a^1, \ldots, a^n \in \mathbb{R}\)</span>, to the coordinate function <span  class="math">\(x^k\)</span>:</p>
+
+<p><span  class="math">\[
+0    = \left( \sum_{i=1}^{n} a^i \partial_i |_p \right) x^k
+= \sum_{i=1}^{n} a^i \frac{\partial x^k}{\partial x^i} \Big|_p
+= \sum_{i=1}^{n} a^i \delta_i^k = a^k \ .
+\]</span></p>
+
+<p>(iii) Next we need a preliminary result from calculus. Let <span  class="math">\(g\)</span> be a real-valued smooth function on the open ball <span  class="math">\(B_r(\mathbf{0})\)</span> about <span  class="math">\(\mathbf{0}\)</span> in <span  class="math">\(\mathbb{R}^n\)</span>. We show that, for <span  class="math">\(\mathbf{x} \in B_r(\mathbf{0})\)</span>, <span  class="math">\(g\)</span> can be written <span  class="math">\(g(\mathbf{x}) = g(\mathbf{0}) + x^i g_i(\mathbf{x})\)</span> (summation convention!), where <span  class="math">\(x^i\)</span> are the standard coordinates in <span  class="math">\(\mathbb{R}^n\)</span> and each <span  class="math">\(g_i(\mathbf{x})\)</span> is smooth. To prove this note first that, for each <span  class="math">\(\mathbf{x} \in B_r(\mathbf{0})\)</span> and each <span  class="math">\(t \in [0,1]\)</span>, <span  class="math">\(t\mathbf{x}\)</span> is in <span  class="math">\(B_r(\mathbf{0})\)</span>. Further note that <span  class="math">\(d_t \, g(t\mathbf{x}) = \partial_i \, g(t\mathbf{x}) x^i dt\)</span>, so the Fundamental Theorem of Calculus gives</p>
+
+<p><span  class="math">\[
+g(\mathbf{x}) - g(\mathbf{0}) = \int_0^1 \partial_i \, g(t\mathbf{x}) x^i dt
+= x^i \int_0^1 \partial_i \, g(t\mathbf{x}) dt \ = x^i g_i(\mathbf{x}) \ , 
+\]</span></p>
+
+<p>if we let <span  class="math">\(g_i(\mathbf{x}) = \int_0^1 \partial_i \, g(t\mathbf{x}) dt\)</span>. One can show (see Naber p. 248)
+that the <span  class="math">\(g_i(\mathbf{x})\)</span> are smooth.</p>
+
+<p>(iv) Now, let's use the following set-up: a function <span  class="math">\(f:\mathcal{M} \to \mathbb{R}\)</span>, a chart <span  class="math">\(\phi: U \to V\)</span>, with <span  class="math">\(B_r(0) \subset V=\phi(U)\)</span>, and a smooth coordinate expression for <span  class="math">\(f\)</span>, which we name <span  class="math">\(g\)</span>, with <span  class="math">\(g=f\circ\phi^{-1}:B_r(0)\to\mathbb{R}\)</span>. We have</p>
+
+<p><span  class="math">\[
+\begin{aligned}
+f(p)&=(f\circ\phi^{-1})\circ(\phi(p))=g\circ(\phi(p)) \\[0.5em]
+&=g(\phi(p))=g(\mathbf{0}) \quad  \text{and} \\[0.5em]
+f(q)&=g(\phi(q))=g(\mathbf{x}) \quad \text{for an arbitary point } q\in U .
+\end{aligned}
+\]</span></p>
+
+<p>Corresponding to <span  class="math">\(f=g\circ\phi\)</span> we define component functions <span  class="math">\(f_i=g_i\circ\phi \in \mathcal{F}_p\)</span>. With the preparation from paragraph (iii) we have</p>
+
+<p><span  class="math">\[
+\begin{aligned}
+f_i(p)&=g_i(\mathbf{0})=\int_0^1 \partial_i \, g(t\mathbf{0}) dt 
+= \int_0^1 \partial_i \, g(\mathbf{0}) dt \\[0.5em]
+&= \partial_i \, g(\mathbf{0}) =  \partial_i (f\circ\phi^{-1})(\mathbf{0})
+= \frac{\partial f}{\partial x^i} \Big|_p \ .
+\end{aligned}
+\]</span></p>
+
+<p>(v) We now show the identity <span  class="math">\(\mathbf{v} = \sum_{i=1}^n \mathbf{v}(x^i) \partial_i = v^i \partial_i\)</span> for any vector <span  class="math">\(\mathbf{v} \in T_p\mathcal{M}\)</span>, or</p>
+
+<p><span  class="math">\[ 
+\mathbf{v}f = \sum_{i=1}^{n} v^i \frac{\partial f}{\partial x^i} \Big|_p \quad \text{for all} \quad f \in \mathcal{F}_p \mathcal{M} \ .
+\]</span></p>
+
+<p>Using</p>
+
+<p><span  class="math">\[
+\begin{aligned}
+f(q)&=g(\phi(q))=g(\mathbf{x})= g(\mathbf{0}) + x^i g_i(\mathbf{x}) \\[0.5em]
+&=f(p) + x^i g_i(\mathbf{x}) =f(p) + x^i f_i(q)
+\end{aligned}
+\]</span></p>
+
+<p>we have, since <span  class="math">\(f(p)\)</span> and <span  class="math">\(f_i(q)\)</span> are constant functions,</p>
+
+<p><span  class="math">\[
+\begin{aligned}
+\mathbf{v}f(q) &= \mathbf{v}\big(f(p) + x^i f_i(q)\big)  \\[0.5em]
+&= \mathbf{v}\big(f(p)\big) + x^i \, \mathbf{v}\big(f_i(q)\big) + f_i(q)
+\mathbf{v}(x^i) \\[0.5em]
+&= 0 + 0 + v^i f_i(q) \\[0.5em]
+&= v^i \frac{\partial f}{\partial x^i}\Big|_q \ .
+\end{aligned}
+\]</span></p>
+
+<p>Since both <span  class="math">\(f \in \mathcal{F}_p\)</span> and <span  class="math">\(q \in U\)</span> were arbitrary, the theorem holds.</p>
+
+<h3 id="literature">Literature</h3>
+
+<p>The main sources for the first half of this post are the books by <a href="https://www.preposterousuniverse.com/spacetimeandgeometry/">Sean Carroll</a> and  <a href="https://www.crcpress.com/Differential-Geometry-of-Manifolds/Lovett/p/book/9781568814575">Stephen Lovett</a>, and the lecture notes by <a href="https://sites.google.com/site/winitzki/index/topics-in-general-relativity">Sergei Winitzki</a>. The more mathematical second half draws heavily on the books by <a href="https://www.springer.com/gp/book/9781441972538">Gregory Naber</a> and <a href="https://www.springer.com/de/book/9783658004750">Fischer/Kaul</a>, but I also consulted books by <a href="https://www.springer.com/de/book/9781441999818">John Lee</a>, <a href="https://www.springer.com/de/book/9783540237419">Klaus Jänich</a>, and <a href="https://www.springer.com/de/book/9789400754096">Norbert Straumann</a>.</p>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/geometry/">geometry</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/relativity/">relativity</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/mathematics/">mathematics</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/physics/">physics</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2020-01-12-differential-manifolds/">Differentiable Manifolds</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2020-02-29-ai-weekly-09-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (09/2020)">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://joachimweise.github.io/post/2020-03-07-ai-weekly-10-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (10/2020)">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

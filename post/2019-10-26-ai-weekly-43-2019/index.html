@@ -57,13 +57,13 @@
     "name" : "Joachim Weise"
   },
   "headline": "AI weekly (43\/2019)",
-  "description" : "\x2b\x2b\x2b Quantum Supremacy Using a Programmable Superconducting Processor \x2b\x2b\x2b Understanding searches better than ever before \x2b\x2b\x2b The State of Machine Learning Frameworks in 2019 \x2b\x2b\x2b Welcome to Streamlit \x2b\x2b\x2b bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond) \x2b\x2b\x2b Deep Q-Network for Angry Birds \x2b\x2b\x2b Machines Beat Humans on a Reading Test. But Do They Understand? \x2b\x2b\x2b SQLZoo \x26ndash; A Great Interactive SQL Tutorial \x2b\x2b\x2b An overview of time series forecasting models \x2b\x2b\x2b Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame \x2b\x2b\x2b\n",
+  "description" : "\x2b\x2b\x2b Quantum Supremacy Using a Programmable Superconducting Processor \x2b\x2b\x2b Understanding searches better than ever before \x2b\x2b\x2b The State of Machine Learning Frameworks in 2019 \x2b\x2b\x2b Detectron2: A PyTorch-based modular object detection library \x2b\x2b\x2b Welcome to Streamlit \x2b\x2b\x2b bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond) \x2b\x2b\x2b Deep Q-Network for Angry Birds \x2b\x2b\x2b Machines Beat Humans on a Reading Test. But Do They Understand? \x2b\x2b\x2b Kepler.GL \x26amp; Jupyter Notebooks: Geospatial Data Visualization with Uber’s opensource Kepler.GL \x2b\x2b\x2b SQLZoo \x26ndash; A Great Interactive SQL Tutorial \x2b\x2b\x2b An overview of time series forecasting models \x2b\x2b\x2b Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame \x2b\x2b\x2b\n",
   "inLanguage" : "en",
-  "wordCount":  1451 ,
+  "wordCount":  1701 ,
   "datePublished" : "2019-10-26T00:00:00",
   "dateModified" : "2019-10-26T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
-  "keywords" : [ "ai-news, bert, google, koalas, pandas, pytorch, quantum-computing, spark, sql, streamlit, time-series" ],
+  "keywords" : [ "ai-news, bert, google, koalas, pandas, object-detection, pytorch, quantum-computing, spark, sql, streamlit, time-series, uber, visualization" ],
   "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2019-10-26-ai-weekly-43-2019\/",
   "publisher" : {
     "@type": "Organization",
@@ -262,10 +262,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Oct 26, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1451&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1701&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;7&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;8&nbsp;minutes
   
   
   
@@ -300,10 +300,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Oct 26, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1451&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1701&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;7&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;8&nbsp;minutes
   
   
   
@@ -326,7 +326,7 @@
     
 
       <article role="main" class="blog-post">
-        <p>+++ Quantum Supremacy Using a Programmable Superconducting Processor +++ Understanding searches better than ever before +++ The State of Machine Learning Frameworks in 2019 +++ Welcome to Streamlit +++ bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond) +++ Deep Q-Network for Angry Birds +++ Machines Beat Humans on a Reading Test. But Do They Understand? +++ SQLZoo &ndash; A Great Interactive SQL Tutorial +++ An overview of time series forecasting models +++ Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame +++</p>
+        <p>+++ Quantum Supremacy Using a Programmable Superconducting Processor +++ Understanding searches better than ever before +++ The State of Machine Learning Frameworks in 2019 +++ Detectron2: A PyTorch-based modular object detection library +++ Welcome to Streamlit +++ bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond) +++ Deep Q-Network for Angry Birds +++ Machines Beat Humans on a Reading Test. But Do They Understand? +++ Kepler.GL &amp; Jupyter Notebooks: Geospatial Data Visualization with Uber’s opensource Kepler.GL +++ SQLZoo &ndash; A Great Interactive SQL Tutorial +++ An overview of time series forecasting models +++ Python Data Preprocessing Using Pandas DataFrame, Spark DataFrame, and Koalas DataFrame +++</p>
 
 <h2 id="breakthrough-mdash-or-so-they-say">Breakthrough &mdash; Or So They Say</h2>
 
@@ -338,6 +338,8 @@ Google Fellow and Vice President Search, has published a <a href="https://www.bl
 <h2 id="tools-and-frameworks">Tools and Frameworks</h2>
 
 <p><strong>The State of Machine Learning Frameworks in 2019.</strong> An article by Horace He in <a href="https://thegradient.pub/state-of-ml-frameworks-2019-pytorch-dominates-research-tensorflow-dominates-industry/">The Gradient</a> analyzes the relative popularity of machine learning (more precisely: deep learning) frameworks. In 2019, the war for DL frameworks has two remaining main contenders: PyTorch and TensorFlow. The analysis suggests that researchers are abandoning TensorFlow and flocking to PyTorch in droves, with research papers using PyTorch at least twice as often as Tensorflow. Likely reasons are its ease of use, pythonic style, good integration with the Python ecosystem.  Meanwhile in industry, Tensorflow is currently the platform of choice, but that may not be true for long. Potential advantages of Tensorflow mentioned are its graph format, the fact that  the execution engine natively has no need for Python, and the fact that TensorFlow Lite and TensorFlow Serving address mobile and serving considerations respectively.</p>
+
+<p><strong>Detectron2: A PyTorch-based modular object detection library.</strong> Since its release in 2018, the <a href="https://research.fb.com/blog/2018/01/facebook-open-sources-detectron/">Detectron</a> object detection platform has become one of Facebook AI Research (FAIR)’s most widely adopted open source projects. To build on and advance this project, they are now sharing the second generation of the library. The platform is now no longer implemented in Caffe2, but in PyTorch. With a new, more modular design, Detectron2 is flexible and extensible, and able to provide fast training on single or multiple GPU servers. Detectron2 includes high-quality implementations of state-of-the-art object detection algorithms, including DensePose, panoptic feature pyramid networks, and numerous variants of the pioneering Mask R-CNN model family also developed by Facebook AI Research.</p>
 
 <p><strong>Welcome to Streamlit.</strong> <a href="https://streamlit.io/docs/">Streamlit</a> is an open-source Python library that makes it easy to build beautiful apps for machine learning. Install Streamlit, import it, write some code, and run your script. Streamlit watches for changes on each save and updates automatically, visualizing your output while you’re coding. Code runs from top to bottom, always from a clean state, and with no need for callbacks. It’s a simple and powerful app model that lets you build rich UIs incredibly quickly.</p>
 
@@ -355,6 +357,8 @@ almost as well as the more complex methods. This is true for both binary classif
 <p><strong>Machines Beat Humans on a Reading Test. But Do They Understand?</strong> In the fall of 2017, Sam Bowman, a computational linguist at New York University, figured that computers still weren’t very good at understanding the written word. In an <a href="https://arxiv.org/abs/1804.07461">April 2018 paper</a> coauthored with collaborators from the University of Washington and DeepMind Bowman introduced a battery of nine reading-comprehension tasks for computers called GLUE (General Language Understanding Evaluation). The machines bombed. Even state-of-the-art neural networks scored no higher than 69 out of 100 across all nine tasks: a D-plus, in letter grade terms. But then, in October of 2018, Google introduced a new method nicknamed BERT (Bidirectional Encoder Representations from Transformers). It produced a GLUE score of 80.5. On this brand-new benchmark designed to measure machines’ real understanding of natural language — or to expose their lack thereof — the machines had jumped from a D-plus to a B-minus in just six months. But is AI actually starting to understand our language — or is it just getting better at gaming our systems? Bowman points out that it’s hard to know how we would ever be fully convinced that a neural network achieves anything like real understanding. More background in an <a href="https://www.quantamagazine.org/machines-beat-humans-on-a-reading-test-but-do-they-understand-20191017/#comments">article on Quanta Magazine</a> von John Pavlus.</p>
 
 <h2 id="tutorials">Tutorials</h2>
+
+<p><strong>Kepler.GL &amp; Jupyter Notebooks: Geospatial Data Visualization with Uber’s opensource Kepler.GL</strong> kepler.gl is a web-based visualisation tool for large Geospatial datasets built on top of deck.gl. Uber open-sourced it last year, and its functionality is impressive. Now, thanks to Uber&rsquo;s visualization team, kepler.gl can be integrated into Jupyter as a Widget. It loads kepler.gl inside a notebook cell, allowing users to quickly plot maps with simple python commands and interact with the UI to customize the visualization (Figure 1). It provides a seamless analysis workflow, combining data querying, transformation, analysis, and visualization — all inside Jupyter Notebook. This blog <a href="https://towardsdatascience.com/kepler-gl-jupyter-notebooks-geospatial-data-visualization-with-ubers-opensource-kepler-gl-b1c2423d066f">post on Towards DataScience</a> provides a nice tutorial, more details can be found in the <a href="https://github.com/keplergl/kepler.gl/blob/master/docs/keplergl-jupyter/user-guide.md">user guide</a>.</p>
 
 <p><strong>SQLZoo &mdash; A Great Interactive SQL Tutorial.</strong> <a href="https://sqlzoo.net/wiki/SQL_Tutorial">SQLZoo</a> is a free, &ldquo;learning-by-doing&rdquo; SQL course that has you punching out queries and wracking your brain for the solutions from the very beginning. It&rsquo;s fun (if you like puzzles), but definitely also teaches business-relevant SQL skills.</p>
 
@@ -377,6 +381,8 @@ almost as well as the more complex methods. This is true for both binary classif
             
               <a href="https://joachimweise.github.io//tags/pandas/">pandas</a>&nbsp;
             
+              <a href="https://joachimweise.github.io//tags/object-detection/">object-detection</a>&nbsp;
+            
               <a href="https://joachimweise.github.io//tags/pytorch/">pytorch</a>&nbsp;
             
               <a href="https://joachimweise.github.io//tags/quantum-computing/">quantum-computing</a>&nbsp;
@@ -388,6 +394,10 @@ almost as well as the more complex methods. This is true for both binary classif
               <a href="https://joachimweise.github.io//tags/streamlit/">streamlit</a>&nbsp;
             
               <a href="https://joachimweise.github.io//tags/time-series/">time-series</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/uber/">uber</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/visualization/">visualization</a>&nbsp;
             
           </div>
         
@@ -404,15 +414,15 @@ almost as well as the more complex methods. This is true for both binary classif
                   <ul>
                 
                 
+                    <li><a href="/post/2020-03-07-ai-weekly-10-2020/">AI weekly (10/2020)</a></li>
+                
+                    <li><a href="/post/2020-02-29-ai-weekly-09-2020/">AI weekly (09/2020)</a></li>
+                
+                    <li><a href="/post/2020-02-22-ai-weekly-08-2020/">AI weekly (08/2020)</a></li>
+                
+                    <li><a href="/post/2020-02-15-ai-weekly-07-2020/">AI weekly (07/2020)</a></li>
+                
                     <li><a href="/post/2020-02-08-ai-weekly-06-2020/">AI weekly (06/2020)</a></li>
-                
-                    <li><a href="/post/2020-02-01-ai-weekly-05-2020/">AI weekly (05/2020)</a></li>
-                
-                    <li><a href="/post/2020-01-25-ai-weekly-04-2020/">AI weekly (04/2020)</a></li>
-                
-                    <li><a href="/post/2020-01-18-ai-weekly-03-2020/">AI weekly (03/2020)</a></li>
-                
-                    <li><a href="/post/2020-01-11-ai-weekly-02-2020/">AI weekly (02/2020)</a></li>
                 
               </ul>
 

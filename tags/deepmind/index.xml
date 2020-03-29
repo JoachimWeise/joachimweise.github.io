@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deepmind on Joachim Weise</title>
+    <link>https://joachimweise.github.io/tags/deepmind/</link>
+    <description>Recent content in deepmind on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Sat, 15 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/tags/deepmind/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AI weekly (07/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-02-15-ai-weekly-07-2020/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-02-15-ai-weekly-07-2020/</guid>
+      <description>&lt;p&gt;+++ Five Interesting Data Engineering Projects +++ A new model and dataset for long-range memory +++ Building a Backtesting Service to Measure Model Performance at Uber-scale +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (04/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</guid>
+      <description>&lt;p&gt;+++ Improved protein structure prediction using potentials from deep learning +++ Microsoft open sources BERT optimizations in ONNX runtime +++ Why Google thinks we need to regulate AI +++ A Look Back on Baidu’s AI Innovations in 2019 +++ Kernel-Based Ensemble Learning in Python +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

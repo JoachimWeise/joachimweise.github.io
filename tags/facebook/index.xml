@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/facebook/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI weekly (06/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-02-08-ai-weekly-06-2020/</link>
+      <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-02-08-ai-weekly-06-2020/</guid>
+      <description>&lt;p&gt;+++ Near-perfect point-goal navigation from 2.5 billion frames of experience +++ Google’s ML-fairness-gym: A Tool for Exploring Long-Term Impacts of Machine Learning Systems +++ Facebook launches PyTorch3D, a 3D deep learning library +++ White House reportedly aims to double AI research budget to $2B +++ Facebook has acquired Scape Technologies, a London-based computer vision startup +++ Avigilon&amp;rsquo;s Appearance Search Can Tell Schools Where Students Are And Where They’ve Been +++ Google, YouTube, Facebook, LinkedIn, Twitter demand Clearview stop scraping images for facial recognition +++ Quantifying Independently Reproducible Machine Learning +++ RGISTools: Downloading, Customizing, and Processing Time-Series of Remote Sensing Data in R +++ Ignite the Spark: Running Apache Spark on Kubernetes using PySpark +++&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>AI weekly (05/2020)</title>
@@ -18,7 +27,7 @@
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-02-01-ai-weekly-05-2020/</guid>
-      <description>&lt;p&gt;+++ Google says its new chatbot Meena is the best in the world +++ Facebook is Open-sourcing Polygames, a new framework for training AI bots through self-play  +++ Meena: Towards a Conversational Agent that Can Chat About Anything +++ Survey of Deep Reinforcement Learning for Motion Planning of Autonomous Vehicles +++ A Survey of Deep Learning Techniques for Autonomous Driving +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Google says its new chatbot Meena is the best in the world +++ Facebook is Open-sourcing Polygames, a new framework for training AI bots through self-play +++ An AI Epidemiologist Sent the First Warnings of the Wuhan Virus +++ Europe wants single data market to break U.S. tech giants&amp;rsquo; dominance +++ Meena: Towards a Conversational Agent that Can Chat About Anything +++ Survey of Deep Reinforcement Learning for Motion Planning of Autonomous Vehicles +++ A Survey of Deep Learning Techniques for Autonomous Driving +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -54,7 +63,7 @@
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2019-11-29-ai-weekly-48-2019/</guid>
-      <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++ AR-Net: A simple Auto-Regressive Neural Network for time-series +++ Deep Learning with PyTorch +++ Cost-benefit analysis in R +++ How to apply machine/deep learning to audio analysis, with comet.ml +++ Collection of Jupyter notebooks for quantitative finance +++ Create a streetmap of your favorite city with ggplot2 +++ Tutorial on Graph Neural Networks for Computer Vision and Beyond (in 3 parts) +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Introducing TF-GAN: A lightweight GAN library for TensorFlow 2.0 +++ Global AI Survey: AI proves its worth, but few scale impact +++ AR-Net: A simple Auto-Regressive Neural Network for time-series +++ China&amp;rsquo;s billion-dollar ed-tech companies are planning to export their vision overseas +++ Deep Learning with PyTorch +++ **Corpus Wide Argument Mining - a Working Solution +++ Cost-benefit analysis in R +++ How to apply machine/deep learning to audio analysis, with comet.ml +++ Collection of Jupyter notebooks for quantitative finance +++ Create a streetmap of your favorite city with ggplot2 +++ Tutorial on Graph Neural Networks for Computer Vision and Beyond (in 3 parts) +++&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Getting Started with WSL - Joachim Weise</title>
+  <meta name="description" content="Windows Subsystem for Linux">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2020-02-18-wsl-basics\/",
+          "name": "Getting started with w s l"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "Getting Started with WSL",
+  "description" : "The Windows Subsystem for Linux (WSL) is a great solution for developers to natively work within Linux right on their Windows 10 version desktop. WSL lets developers run a GNU\/Linux environment \x26ndash; including most command-line tools, utilities, and applications \x26ndash; directly on Windows, unmodified, without the overhead of a virtual machine. After some surprisingly super-easy setup, this gives you a truly native POSIX \/ Unix-like environment directly integrated into your Windows PC, essentially negating a vast majority of issues people had previously with workarounds like dual booting, VMing or terminal wrappers like CYGWIN or Git Bash. According to Microsoft, WSL requires fewer resources (CPU, memory, and storage) than a full virtual machine while also allowing users to use Windows apps and Linux tools on the same set of files. In this article I\x26rsquo;m covering some background on WSL and show how to get started.\n",
+  "inLanguage" : "en",
+  "wordCount":  857 ,
+  "datePublished" : "2020-02-18T00:00:00",
+  "dateModified" : "2020-02-18T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "linux" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-02-18-wsl-basics\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Getting Started with WSL" />
+<meta property="og:description" content="Windows Subsystem for Linux">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2020-02-18-wsl-basics/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="Getting Started with WSL" />
+  <meta name="twitter:description" content="Windows Subsystem for Linux">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/2020-02-18-wsl-getting-started.jpg" 
+         
+         data-img-desc-1="Leipzig Museum der Bildenden Künste (2019)"
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>Getting Started with WSL</h1>
+                  
+                    
+                      <h2 class="post-subheading">Windows Subsystem for Linux</h2>
+                    
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Feb 18, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;857&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Getting Started with WSL</h1>
+              
+              
+                
+                  <h2 class="post-subheading">Windows Subsystem for Linux</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Feb 18, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;857&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>The Windows Subsystem for Linux (WSL) is a great solution for developers to natively work within Linux right on their Windows 10 version desktop. WSL lets developers run a GNU/Linux environment &ndash; including most command-line tools, utilities, and applications &ndash; directly on Windows, unmodified, without the overhead of a virtual machine. After some surprisingly super-easy setup, this gives you a truly native POSIX / Unix-like environment directly integrated into your Windows PC, essentially negating a vast majority of issues people had previously with workarounds like dual booting, VMing or terminal wrappers like CYGWIN or Git Bash. According to <a href="https://docs.microsoft.com/en-us/windows/wsl/faq">Microsoft</a>, WSL requires fewer resources (CPU, memory, and storage) than a full virtual machine while also allowing users to use Windows apps and Linux tools on the same set of files. In this article I&rsquo;m covering some background on WSL and show how to get started.</p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a>, the Portable Operating System Interface, is a family of standards specified by the IEEE Computer Society for maintaining compatibility between operating systems. POSIX defines the application programming interface (API), along with command line shells and utility interfaces, for software compatibility with variants of Unix and other operating systems. Mac and Linux are considered to be POSIX, but Windows is not, and this makes it difficult for some developers, especially webdevs, to develop on Windows as they need access to a POSIX environment.</p>
+
+<p>The Windows Subsystem for Linux overcomes this limitation by allowing developers to access a fully integrated, native Linux environment that is directly mounted to their Windows OS. This means Developers no longer have to Dual boot or use console wrappers like CYGWIN or Git Bash. They have a Linux Subsystem that is fully capable of running Linux Shell commands and POSIX Software on their Windows files.</p>
+
+<p>As documented by <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux#Development">Wikipedia</a>,   Microsoft&rsquo;s first foray into achieving Unix-like compatibility on Windows began with the Microsoft POSIX Subsystem, superseded by Windows Services for UNIX via MKS/Interix, which was eventually deprecated with the release of Windows 8.1. The technology behind Windows Subsystem for Linux originated in the unreleased Project Astoria, which enabled some Android applications to run on Windows 10 Mobile.</p>
+
+<h2 id="wsl-1">WSL 1</h2>
+
+<p>Whereas Microsoft&rsquo;s previous projects had focused on creating their own unique Unix-like environments based on the POSIX standard, WSL aims for native Linux compatibility. Instead of wrapping non-native functionality into Win32 system calls as these prior systems utilized, WSL&rsquo;s initial design (WSL 1) leveraged the NT kernel executive to serve Linux programs as special, isolated minimal processes (known as &ldquo;pico processes&rdquo;) attached to kernel mode &ldquo;pico providers&rdquo; as dedicated system call and exception handlers distinct from that of a vanilla NT process, opting to reutilize existing NT implementations wherever possible.</p>
+
+<p>Since its inception, Microsoft Windows NT was designed to allow environment subsystems like Win32 to present a programmatic interface to applications without being tied to implementation details inside the kernel. This enabled the NT kernel to support POSIX, OS/2 and Win32 subsystems at its initial release. While, over time, the initial subsystems were retired, the ability of the Windows NT Kernel to allow new subsystem environments <a href="https://blogs.msdn.microsoft.com/wsl/2016/04/22/windows-subsystem-for-linux-overview/">provided Microsoft with the opportunity</a> to re-use the initial investments made in this area and broaden them to develop the Windows Subsystem for Linux.</p>
+
+<p>WSL 1 executes unmodified Linux ELF64 binaries by virtualizing a Linux kernel interface on top of the Windows NT kernel.  One of the kernel interfaces that it exposes are system calls (syscalls). A system call is the programmatic way in which a computer program requests a service from the kernel of the operating system it is executed on. This may include hardware-related services (for example, accessing a hard disk drive), creation and execution of new processes, and communication with integral kernel services such as process scheduling. System calls provide an essential interface between a process and the operating system. Both the Linux kernel and Windows NT kernel expose several hundred syscalls to user mode, but they have different semantics and are generally not directly compatible. For example, the Linux kernel includes things like fork, open, and kill while the Windows NT kernel has the comparable NtCreateProcess, NtOpenFile, and NtTerminateProcess.</p>
+
+<p>WSL 1 features no hardware emulation/virtualization and makes direct use of the host file system and some parts of the hardware, such as the network. Web servers for example, can be accessed through the same interfaces and IP addresses configured on the host, which guarantees interoperability. There are certain locations (such as system folders) and configurations whose access/modification is restricted, even when running as root, with <code>sudo</code> from the shell. Microsoft states that WSL 1 was primarily designed for the development of applications, although in benchmarks the performance of WSL 1 is often near native Linux Ubuntu or Debian.</p>
+
+<h2 id="wsl-2">WSL 2</h2>
+
+<h2 id="installing-wsl-1">Installing WSL 1</h2>
+
+<h2 id="desktop-environment">Desktop Environment</h2>
+
+<h2 id="windows-terminal">Windows Terminal</h2>
+
+<h2 id="sources">Sources:</h2>
+
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/windows/wsl/about">WSL documentation</a> by Microsoft</li>
+<li>Windows Subsystem for Linux <a href="https://blogs.msdn.microsoft.com/wsl/2016/04/22/windows-subsystem-for-linux-overview/">Overview</a></li>
+<li><a href="https://docs.microsoft.com/en-us/learn/modules/get-started-with-windows-subsystem-for-linux/">Get started</a> with the Windows Subsystem for Linux</li>
+<li><a href="https://github.com/michaeltreat/Windows-Subsystem-For-Linux-Setup-Guide">Windows Subsystem for Linux Setup</a></li>
+<li>Windows Subsystem for Linux (WSL): <a href="https://adamtheautomator.com/windows-subsystem-for-linux/">The Ultimate Guide</a></li>
+<li>Run <a href="https://www.tenforums.com/tutorials/139405-run-hyper-v-virtualbox-vmware-same-computer.html">Hyper-V</a>, VirtualBox and VMware on same Computer</li>
+<li>Linux on Windows: WSL with <a href="https://dev.to/darksmile92/linux-on-windows-wsl-with-desktop-environment-via-rdp-522g">Desktop Environment</a> via RDP</li>
+<li>Windows Subsystem for Linux - Add <a href="https://www.tenforums.com/tutorials/144208-windows-subsystem-linux-add-desktop-experience-ubuntu.html">desktop experience</a> to Ubuntu</li>
+<li>Microsoft <a href="https://github.com/microsoft/terminal">Terminal</a> repo on github</li>
+</ul>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/linux/">linux</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2020-02-15-ai-weekly-07-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (07/2020)">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://joachimweise.github.io/post/2020-02-22-ai-weekly-08-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (08/2020)">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
