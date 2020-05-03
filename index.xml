@@ -67,6 +67,15 @@
     </item>
     
     <item>
+      <title>Converting LaTeX to Markdown,</title>
+      <link>https://joachimweise.github.io/post/2020-03-25-regex/</link>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-03-25-regex/</guid>
+      <description>&lt;p&gt;I&#39;m usually writing my notes on physics and mathematics, e.g. the ongoing series of posts on Riemannian geometry, in &lt;span  class=&#34;math&#34;&gt;\(\LaTeX\)&lt;/span&gt; documents, as probably most people do. For the purpose of this blog I regularly need to convert parts of these documents into markdown that Hugo can understand. Since I haven&#39;t found any better solution yet I decided to develop a set of regular expressions in Python that do the job pretty well. I normally run the code in a Jupyter notebook that allows me to check the quality of conversion immediately and do some minor tweaking if required.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>AI weekly (12/2020)</title>
       <link>https://joachimweise.github.io/post/2020-03-21-ai-weekly-12-2020/</link>
       <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>

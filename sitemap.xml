@@ -84,6 +84,21 @@
   </url>
   
   <url>
+    <loc>https://joachimweise.github.io/post/2020-03-25-regex/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/python/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/website/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://joachimweise.github.io/post/2020-03-21-ai-weekly-12-2020/</loc>
     <lastmod>2020-03-21T00:00:00+00:00</lastmod>
   </url>
@@ -299,11 +314,6 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/python/</loc>
-    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/post/2019-12-25-ultrasonic-sensor-raspi/</loc>
     <lastmod>2019-12-28T00:00:00+00:00</lastmod>
   </url>
@@ -475,11 +485,6 @@
   
   <url>
     <loc>https://joachimweise.github.io/post/2019-10-27-python-pillow/</loc>
-    <lastmod>2019-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/website/</loc>
     <lastmod>2019-10-27T00:00:00+00:00</lastmod>
   </url>
   
