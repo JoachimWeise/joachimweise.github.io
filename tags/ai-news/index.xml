@@ -7,10 +7,73 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sat, 07 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/ai-news/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI weekly (17/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-04-25-ai-weekly-17-2020/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-04-25-ai-weekly-17-2020/</guid>
+      <description>&lt;p&gt;+++ The Surge of Sensationalist COVID-19 AI Research +++ Model-Based Machine Learning +++ &amp;lsquo;Super Duper NLP Repo&amp;rsquo; and &amp;lsquo;Big Bad NLP Database&amp;rsquo; +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (16/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-04-18-ai-weekly-16-2020/</link>
+      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-04-18-ai-weekly-16-2020/</guid>
+      <description>&lt;p&gt;+++ Forecasting Best Practices, from Microsoft +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (15/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-04-11-ai-weekly-15-2020/</link>
+      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-04-11-ai-weekly-15-2020/</guid>
+      <description>&lt;p&gt;+++   +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (14/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-04-04-ai-weekly-14-2020/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-04-04-ai-weekly-14-2020/</guid>
+      <description>&lt;p&gt;+++   +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (13/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-03-28-ai-weekly-13-2020-/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-03-28-ai-weekly-13-2020-/</guid>
+      <description>&lt;p&gt;+++ Uber details Fiber, a framework for distributed AI model training +++ Google open-sources framework that helps massively scale RL workloads +++ Rightsizing Neural Nets +++ Generating music in the waveform domain +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (12/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-03-21-ai-weekly-12-2020/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-03-21-ai-weekly-12-2020/</guid>
+      <description>&lt;p&gt;+++ Microsoft, Google and Other Tech Companies Work on AI Ethics +++ Introducing Dreamer: Scalable Reinforcement Learning Using World Models +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (11/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-03-14-ai-weekly-11-2020/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-03-14-ai-weekly-11-2020/</guid>
+      <description>&lt;p&gt;+++ Satellites and AI Monitor Chinese Economy’s Reaction to Coronavirus +++&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>AI weekly (10/2020)</title>
@@ -18,8 +81,7 @@
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-03-07-ai-weekly-10-2020/</guid>
-      <description>&lt;p&gt;+++ SciPy 1.0: fundamental algorithms for scientific
-computing in Python +++ GitLab Handbook +++ Largest gift in Berkeley’s history will create a ‘hub’ for advancing data science +++ Pattern Recognition &amp;amp; Machine Learning algorithms +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Kubeflow 1.0 Brings a Production-Ready Machine Learning Toolset to Kubernetes +++ SciPy 1.0: fundamental algorithms for scientific computing in Python +++ GitLab Handbook +++ Largest gift in Berkeley’s history will create a ‘hub’ for advancing data science +++ Pattern Recognition &amp;amp; Machine Learning algorithms +++&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,7 +135,7 @@ computing in Python +++ GitLab Handbook +++ Largest gift in Berkeley’s history
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/post/2020-01-25-ai-weekly-04-2020/</guid>
-      <description>&lt;p&gt;+++ Improved protein structure prediction using potentials from deep learning +++ Microsoft open sources BERT optimizations in ONNX runtime +++ Why Google thinks we need to regulate AI +++ A Look Back on Baidu’s AI Innovations in 2019 +++ Kernel-Based Ensemble Learning in Python +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++&lt;/p&gt;</description>
+      <description>&lt;p&gt;+++ Improved protein structure prediction using potentials from deep learning +++ Microsoft open sources BERT optimizations in ONNX runtime +++ Introducing the Hopsworks Feature Store – the Data Warehouse for Machine Learning +++ Why Google thinks we need to regulate AI +++ A Look Back on Baidu’s AI Innovations in 2019 +++ Kernel-Based Ensemble Learning in Python +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++&lt;/p&gt;</description>
     </item>
     
     <item>

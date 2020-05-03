@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/geometry/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Derivative (or Tangent Map)</title>
+      <link>https://joachimweise.github.io/post/2020-05-01-derivative/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-05-01-derivative/</guid>
+      <description>&lt;p&gt;This is a follow-on from a previous post on &lt;a href=&#34;https://joachimweise.github.io/post/2020-03-12-tangent-space/&#34;&gt;tangent spaces&lt;/a&gt;. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary background for reading some of the more advanced textbooks on general relativity. I will introduce the derivative of a smooth map between manifolds and work a little bit with the definition(s) to become familiar with the thicket of mathematical notation. Then I narrow in on the special case where &lt;span  class=&#34;math&#34;&gt;\(f\)&lt;/span&gt; is a real-valued function, introduce the notions of dual space and covectors, and finally show the connection to the differential known from basic calculus.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Tangent Spaces</title>

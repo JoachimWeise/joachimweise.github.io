@@ -48,7 +48,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/page/gr/</guid>
       <description>Mathematics of Curved Spacetime Differentiable Manifolds: Defining an abstract manifold as a space consisting of patches that look locally like the Euclidean space and are smoothly sewn together. Introducing functions and curves on manifolds.
-Tangent Spaces: Defining tangent vectors as derivations, or directional derivative operators acting on functions along curves. The set of tangent vectors a point \(p\) of a manifold has the structure of a vector space under addition and scalar multiplication.</description>
+Tangent Spaces: Defining tangent vectors as derivations, or directional derivative operators acting on functions along curves. The set of tangent vectors at a point \(p\) of a manifold has the structure of a vector space under addition and scalar multiplication.</description>
     </item>
     
     <item>

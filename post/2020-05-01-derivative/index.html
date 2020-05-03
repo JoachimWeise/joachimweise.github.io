@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Derivative (or Tangent Map) - Joachim Weise</title>
+  <meta name="description" content="This is a follow-on from a previous post on tangent spaces. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary background for reading some of the more advanced textbooks on general relativity. I will introduce the derivative of a smooth map between manifolds and work a little bit with the definition(s) to become familiar with the thicket of mathematical notation. Then I narrow in on the special case where \(f\) is a real-valued function, introduce the notions of dual space and covectors, and finally show the connection to the differential known from basic calculus.">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2020-05-01-derivative\/",
+          "name": "Derivative (or tangent map)"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "Derivative (or Tangent Map)",
+  "description" : "This is a follow-on from a previous post on tangent spaces. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary background for reading some of the more advanced textbooks on general relativity. I will introduce the derivative of a smooth map between manifolds and work a little bit with the definition(s) to become familiar with the thicket of mathematical notation. Then I narrow in on the special case where \\(f\\) is a real-valued function, introduce the notions of dual space and covectors, and finally show the connection to the differential known from basic calculus.\n",
+  "inLanguage" : "en",
+  "wordCount":  1625 ,
+  "datePublished" : "2020-05-01T00:00:00",
+  "dateModified" : "2020-05-01T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "geometry, relativity, mathematics, physics" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-05-01-derivative\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Derivative (or Tangent Map)" />
+<meta property="og:description" content="This is a follow-on from a previous post on tangent spaces. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary background for reading some of the more advanced textbooks on general relativity. I will introduce the derivative of a smooth map between manifolds and work a little bit with the definition(s) to become familiar with the thicket of mathematical notation. Then I narrow in on the special case where \(f\) is a real-valued function, introduce the notions of dual space and covectors, and finally show the connection to the differential known from basic calculus.">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2020-05-01-derivative/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="Derivative (or Tangent Map)" />
+  <meta name="twitter:description" content="This is a follow-on from a previous post on tangent spaces. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary background for …">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/2020-01-12-differentiable-manifolds/venedig.jpg" 
+         
+         data-img-desc-1="Venice, heading for a thunder storm (July 2019)"
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>Derivative (or Tangent Map)</h1>
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;May 1, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1625&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;8&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Derivative (or Tangent Map)</h1>
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;May 1, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1625&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;8&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>This is a follow-on from a previous post on <a href="/post/2020-03-12-tangent-space/">tangent spaces</a>. It is part of a series of posts that I write on the basics of differential or Riemannian geometry, providing the necessary background for reading some of the more advanced textbooks on general relativity. I will introduce the derivative of a smooth map between manifolds and work a little bit with the definition(s) to become familiar with the thicket of mathematical notation. Then I narrow in on the special case where <span  class="math">\(f\)</span> is a real-valued function, introduce the notions of dual space and covectors, and finally show the connection to the differential known from basic calculus.</p>
+
+<h3 id="defining-the-derivative">Defining the Derivative</h3>
+
+<p>Having established tangent spaces and smooth maps between manifolds, we are now in a position to define the derivative of a smooth map <span  class="math">\(f\)</span> between manifolds. In some sense, this is where analysis on manifolds begins. The map <span  class="math">\(f\)</span> induces a linear transformation between the tangent spaces of the manifolds and is therefore also called <em>tangent map</em>. We offer two independent definitions and show that they give the same result.</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p><strong>Definition: Derivative (Differential, Tangent Map, Jacobian)</strong></p>
+
+<p>Let <span  class="math">\(\mathcal{M}\)</span> and <span  class="math">\(\mathcal{N}\)</span> be two differentiable manifolds, and let <span  class="math">\(f : \mathcal{M} \to \mathcal{N}\)</span> be a smooth map.</p>
+
+<p>At each <span  class="math">\(p \in \mathcal{M}\)</span> the map <span  class="math">\(f\)</span> induces a linear transformation between the tangent spaces,</p>
+
+<p><span  class="math">\[ 
+\begin{aligned}
+(f_*)_p : T_p \mathcal{M} &\to T_{f(p)} \mathcal{N} \ ,  \\[0.3em]
+\textrm{D}_\gamma &\mapsto \textrm{D}_{f\circ\gamma} \ ,
+\end{aligned}
+\]</span></p>
+
+<p>which is called the <strong>derivative</strong> of <span  class="math">\(f\)</span> at <span  class="math">\(p\)</span> and intended to serve as ''linear approximation to <span  class="math">\(f\)</span> near <span  class="math">\(p\)</span>.'' The derivative is also called differential, tangent map, or Jacobian and alternatively denoted by <span  class="math">\((f_*)_p\)</span>, <span  class="math">\((df)_p\)</span>, <span  class="math">\(Df\)</span>, or <span  class="math">\(f'\)</span>. The term 'differential' and the notation <span  class="math">\((df)_p\)</span> are often reserved for the case <span  class="math">\(\mathcal{N}=\mathbb{R}\)</span>.</p>
+
+<p>The following definitions are equivalent:</p>
+
+<ol>
+<li>For <span  class="math">\(\mathbf{v}_p \in T_p \mathcal{M}\)</span>, we define <span  class="math">\((f_*)_p\)</span> to be the derivation on <span  class="math">\(\mathcal{F}_{f(p)} \mathcal{N}\)</span> which is for all <span  class="math">\(g \in \mathcal{F}_{f(p)} \mathcal{N}\)</span> defined by</li>
+</ol>
+
+<p><span  class="math">\[\big((f_*)_p(\mathbf{v}_p)\big)(g) = \mathbf{v}_p(g \circ f) \ .\]</span></p>
+
+<ol start="2">
+<li><p>For <span  class="math">\(\mathbf{v}_p \in T_p \mathcal{M}\)</span> we select a smooth curve <span  class="math">\(\gamma\)</span> in <span  class="math">\(\mathcal{M}\)</span> with <span  class="math">\(\gamma(0) = p\)</span> and <span  class="math">\(d_\tau \gamma|_{\tau=0} = \dot{\gamma}(0) = \mathbf{v}_p\)</span>. Then <span  class="math">\(f\circ\gamma\)</span> is a smooth curve in <span  class="math">\(\mathcal{N}\)</span> through <span  class="math">\(f(p)\)</span> at <span  class="math">\(t=0\)</span> and we define</p>
+
+<p><span  class="math">\[(f_*)_p(\mathbf{v}_p) = \frac{d}{d\tau} (f \circ \gamma) \Big|_{\tau=0} = (f \circ \gamma)'(0)  \ .\]</span></p></li>
+</ol>
+
+<p>Sometimes <span  class="math">\(f_*(\mathbf{v})\)</span> is also called the (pointwise) <strong>pushforward</strong> of <span  class="math">\(\mathbf{v}\)</span> by <span  class="math">\(f\)</span> because it ``pushes'' tangent vectors forward from the domain manifold to the codomain. You can also define a (global) pushforward between tangent bundles of the corresponding manifolds.</p>
+</div></div>
+
+<p>The following Figure may help untangle the notation. Observe that in the first definition, <span  class="math">\((f_*)_p\)</span> is well-defined and obviously a linear transformation, but not obviously a tangent vector at <span  class="math">\(f(p)\)</span>, whereas, in the second definition, <span  class="math">\((f_*)_p\)</span> is clearly a tangent vector, but not obviously independent of the choice of <span  class="math">\(\gamma\)</span>.</p>
+
+<p><center>
+
+<link rel="stylesheet" href="https://joachimweise.github.io/css/hugo-easy-gallery.css" />
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-05-01-derivative/derivative.jpg" alt="Derivative of a differentiable map"/>
+    </div>
+    <a href="/img/2020-05-01-derivative/derivative.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Derivative of a differentiable map</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
+<p>Let's play a little bit with these definitions!</p>
+
+<p>How can one prove directly, using the first definition, that <span  class="math">\((f_*)_p(\mathbf{v}_p)\)</span> is a derivation (or tangent vector) at <span  class="math">\(f(p)\)</span>, i.e., <span  class="math">\((f_*)_p(\mathbf{v}_p) \in T_{f(p)}(\mathcal{N})\)</span>? We need to show for <span  class="math">\((f_*)_p(\mathbf{v}_p)\)</span> that the linearity properties and the product rule hold. Let's illustrate the product rule. The key step happens in the third line where we rely on the fact that <span  class="math">\(\mathbf{v}_p\)</span> is a derivation at <span  class="math">\(p\)</span> and the product rule for <span  class="math">\(\mathbf{v}_p\)</span> thus holds:</p>
+
+<p><span  class="math">\[ 
+\begin{aligned}
+\big((f_*)_p(\mathbf{v}_p)\big)[g_1 \cdot g_2] 
+&= \mathbf{v}_p [(g_1 \cdot g_2) \circ f] \\[0.5em]
+&= \mathbf{v}_p [(g_1 \circ f) \cdot (g_2 \circ f)] \\[0.5em]
+&= (g_1 \circ f)(p) \;\mathbf{v}_p [g_2 \circ f] + (g_2 \circ f)(p) \;\mathbf{v}_p [g_1 \circ f] \\[0.5em] &= g_1(f(p)) \big((f_*)_p(\mathbf{v}_p)\big)[g_2] + g_2(f(p)) \big((f_*)_p(\mathbf{v}_p)\big)[g_1] \ .
+\end{aligned}
+\]</span></p>
+
+<p>We can also show easily that <span  class="math">\((f_*)_p(\mathbf{v}_p)\)</span> is linear:</p>
+
+<p><span  class="math">\[ 
+\begin{aligned}
+(f_*)_p(a\mathbf{v}_p + b\mathbf{w}_p)(g) 
+&= a\mathbf{v}_p(g \circ f) + b\mathbf{w}_p(g \circ f) \\[0.5em]
+&= a (f_*)_p (\mathbf{v}_p)(g) + b (f_*)_p (\mathbf{w}_p)(g) \ .
+\end{aligned}
+\]</span></p>
+
+<p>How does one get from definition #2 to definition #1? We need to show that, at each <span  class="math">\(p \in \mathcal{M}\)</span>, the function <span  class="math">\(f_*\)</span> satisfies <span  class="math">\((f_*)_p(\mathbf{v}_p)(g) = \mathbf{v}_p (g\circ f)\)</span> for every vector <span  class="math">\(\mathbf{v}_p \in T_p\mathcal{M}\)</span> and every function <span  class="math">\(g\)</span> from <span  class="math">\(\mathcal{N}\)</span> into <span  class="math">\(\mathbb{R}\)</span>, defined in a neighborhood of <span  class="math">\(f(p)\)</span>. We have</p>
+
+<p><span  class="math">\[ 
+\begin{aligned}
+(f_*)_p(\mathbf{v}_p)(g) &= (f_*)_p (\textrm{D}_{\gamma})(g) = \textrm{D}_{f\circ\gamma}(g) \\[0.5em]
+&= \frac{d}{d\tau} (g \circ f \circ \gamma)(\tau) \Big|_{\tau=0} \\[0.5em]
+&= \textrm{D}_{\gamma}(g \circ f) = \mathbf{v}_p (g\circ f) \ .
+\end{aligned}
+\]</span></p>
+
+<p>Everything done so far was independent of any coordinate system near <span  class="math">\(p\)</span> or <span  class="math">\(f(p)\)</span>. For the following considerations, however, we introduce charts <span  class="math">\((U,\phi)\)</span> around <span  class="math">\(p\)</span> on <span  class="math">\(\mathcal{M}\)</span> with coordinates <span  class="math">\(\left\lbrace x^i \right\rbrace_{i=1}^m\)</span> and <span  class="math">\((V,\psi)\)</span> around <span  class="math">\(f(p)\)</span> on <span  class="math">\(\mathcal{N}\)</span> with coordinates <span  class="math">\(\left\lbrace y^j \right\rbrace_{j=1}^n\)</span>, in order to show two things:</p>
+
+<ol>
+<li>The definition <span  class="math">\((f_*)_p(\mathbf{v}_p) = (f \circ \gamma)'(0)\)</span> does not depend on the choice of the curve <span  class="math">\(\gamma\)</span>.</li>
+<li>By working in coordinate charts we can define a matrix that represents <span  class="math">\((f_*)_p\)</span>, called the Jacobian.</li>
+</ol>
+
+<p>Again, the above Figure may help to stay oriented in the thicket of mathematical notation. The curve <span  class="math">\(\gamma\)</span> is given by</p>
+
+<p><span  class="math">\[ 
+\gamma(\tau) = (\phi\circ\gamma)(\tau) = \big(x^1(\tau), \dots , x^m(\tau)\big) \ ,
+\]</span></p>
+
+<p>and the curve</p>
+
+<p><span  class="math">\[
+f\circ\gamma : (-\epsilon,\epsilon) \to \mathcal{N}
+\]</span></p>
+
+<p>is given by</p>
+
+<p><span  class="math">\[  
+\begin{aligned}
+(f\circ\gamma)(\tau) 
+&= \big(\psi\circ f\circ \phi^{-1}\big)\big(x^1(\tau), \dots , x^m(\tau) \big) \\[0.5em]
+&= \big( y^1(x(\tau)), \dots , y^n(x(\tau)) \big) \\[0.5em]
+&\overset{\text{s.c.}}{=} y^j\big(x(\tau)\big) \, \frac{\partial}{\partial y^j}\Big|_{f(p)}   \ ,
+\end{aligned}
+\]</span></p>
+
+<p>where, in the last step, we have used the summation convention to write the vector as a sum of components multiplying differential operators that serve as basis vectors. Then <span  class="math">\((f\circ\gamma)'(0)\)</span> is the tangent vector in <span  class="math">\(T_{f(p)}\mathcal{N}\)</span> given by</p>
+
+<p><span  class="math">\[  
+\begin{aligned}
+(f\circ\gamma)'(0) &= \frac{d}{d\tau} (f \circ \gamma) \Big|_{\tau=0} \\[0.5em]
+&= \Bigg( \frac{d x^i}{d\tau}\Big|_{\tau=0} \frac{\partial y^j}{\partial x^i}\Big|_{x(0)} \Bigg) \frac{\partial}{\partial y^j}\Big|_{f(p)} \\[0.5em]
+&= \Bigg( v^i \ \frac{\partial y^j}{\partial x^i}\Big|_{x(0)} \Bigg) 
+\frac{\partial}{\partial y^j}\Big|_{f(p)} \\[0.5em]
+&= \, w^j \, \frac{\partial}{\partial y^j}\Big|_{f(p)}  \ ,
+\end{aligned}
+\]</span></p>
+
+<p>where the <span  class="math">\(v^i\)</span> are the components of <span  class="math">\(\mathbf{v}_p\)</span> in the basis associated to <span  class="math">\((U,\phi)\)</span>. Hence, <span  class="math">\(\mathbf{w}_{f(p)} = (f_*)_p(\mathbf{v}_p) = (f\circ\gamma)'(0)\)</span> does not depend on the choice of <span  class="math">\(\gamma\)</span>, as long as <span  class="math">\(\gamma'(0) = \mathbf{v}_p\)</span>.</p>
+
+<p>The components of <span  class="math">\(\mathbf{w}_{f(p)} = (f_*)_p(\mathbf{v}_p)\)</span> in the basis associated to <span  class="math">\((V,\psi)\)</span> are</p>
+
+<p><span  class="math">\[ 
+w^j = \Bigg[ \frac{\partial y^j}{\partial x^i} \Bigg] v^i \ ,
+\]</span></p>
+
+<p>where <span  class="math">\([\partial y^j / \partial x^i]\)</span> is an <span  class="math">\(m\times n\)</span> matrix, the Jacobian matrix of the local representation of <span  class="math">\(f\)</span> at <span  class="math">\(\phi(p)\)</span>.</p>
+
+<h3 id="differential-and-dual-space">Differential and Dual Space</h3>
+
+<p>Let's look at the special case <span  class="math">\(\mathcal{N}=\mathbb{R}\)</span> where we are dealing with a real-valued function <span  class="math">\(f \in \mathcal{F}_p \mathcal{M}\)</span>, or <span  class="math">\(f : \mathcal{M} \to \mathbb{R}\)</span>. Then <span  class="math">\((f_*)_p : T_p\mathcal{M} \to T_{f(p)}\mathbb{R}\)</span>. But <span  class="math">\(T_{f(p)}\mathbb{R}\)</span> is spanned by the single coordinate vector <span  class="math">\(\frac{d}{d y}\big|_{f(p)}\)</span>, so every <span  class="math">\((f_*)_p(\mathbf{v}_p) \in T_{f(p)}\mathbb{R}\)</span> is a multiple of <span  class="math">\(\frac{d}{d y}\big|_{f(p)}\)</span>,</p>
+
+<p><span  class="math">\[ 
+(f_*)_p(\mathbf{v}_p) = w \,\frac{d}{d y}\Big|_{f(p)} \ .
+\]</span></p>
+
+<p>We choose an arbitrary function <span  class="math">\(g:\mathbb{R}\to\mathbb{R}\)</span> to determine the coefficient <span  class="math">\(w\)</span>:</p>
+
+<p><span  class="math">\[ 
+(f_*)_p(\mathbf{v}_p)(g) = \mathbf{v}_p(g \circ f) = w \,\frac{dg}{d y}\Big|_{f(p)} \ .
+\]</span></p>
+
+<p>Specfically, we may choose <span  class="math">\(g(y)=y\)</span>, i.e., the identify function, with <span  class="math">\(dg/dy=1\)</span>:</p>
+
+<p><span  class="math">\[  
+\begin{aligned}
+(f_*)_p(\mathbf{v}_p)(g) 
+&= \mathbf{v}_p(g \circ f) \: = w \,\frac{dg}{d y}\Big|_{f(p)} \\[0.3em]
+&= \mathbf{v}_p(\mathrm{id} \circ f) = w \cdot 1 \\[0.8em]
+&= \mathbf{v}_p(f) = w \ .
+\end{aligned}
+\]</span></p>
+
+<p>Thus, <span  class="math">\(\mathbf{v}(f)\)</span> completely determines <span  class="math">\((f_*)(\mathbf{v})\)</span> for all <span  class="math">\(\mathbf{v} \in T_p\mathcal{M}\)</span>:</p>
+
+<p><span  class="math">\[ 
+(f_*)_p(\mathbf{v}) = \mathbf{v}(f) \,\frac{d}{d y}\Big|_{f(p)} \ .
+\]</span></p>
+
+<p>Since <span  class="math">\(T_{f(p)}\mathbb{R}\)</span> is a flat one-dimensional vector space, all vectors are the same up to scaling and there is no need to write <span  class="math">\((d/dy)|_{f(p)}\)</span>. Now, for this case <span  class="math">\(f : \mathcal{M} \to \mathbb{R}\)</span>, we preferably use the term <strong>differential</strong> of <span  class="math">\(f\)</span> at <span  class="math">\(p\)</span>, which is the operator <span  class="math">\((df)_p:T_p\mathcal{M}\to\mathbb{R}\)</span> defined for any <span  class="math">\(\mathbf{v}\in T_p\mathcal{M}\)</span> by</p>
+
+<p><span  class="math">\[ 
+(df)_p(\mathbf{v}) = \mathbf{v}(f) \ .
+\]</span></p>
+
+<p>The differential is a linear, real-valued function of vectors, i.e., a linear machine that takes in a vector and puts out a number. As such, it is an element of the <strong>dual space</strong> <span  class="math">\(T_p^*\mathcal{M}\)</span>, also called the <strong>cotangent space</strong> of <span  class="math">\(\mathcal{M}\)</span> at <span  class="math">\(p\)</span>. The elements of <span  class="math">\(T_p^*\mathcal{M}\)</span> are called <strong>covectors</strong> or <strong>one-forms</strong>. In the physics literature, elements of <span  class="math">\(T_p^*\mathcal{M}\)</span> are often called <strong>covariant vectors</strong>, while those of <span  class="math">\(T_p\mathcal{M}\)</span> are called <strong>contravariant vectors</strong>.</p>
+
+<p>Let's pick a chart <span  class="math">\((U,\phi)\)</span> at <span  class="math">\(p\)</span> with coordinate functions <span  class="math">\(x_1, \dots ,x_m\)</span>. Then, as we had shown previously, <span  class="math">\(\lbrace \partial_1|_p, \dots , \partial_m|_p \rbrace\)</span> is the coordinate basis for the tangent space <span  class="math">\(T_p\mathcal{M}\)</span>, and each vector <span  class="math">\(\mathbf{v}\in T_p\mathcal{M}\)</span> can be represented by its components in this basis according to <span  class="math">\(\mathbf{v}=\mathbf{v}(x^i)\partial_i|_p\)</span>. If we now look at the differential <span  class="math">\((df)_p\)</span> and choose <span  class="math">\(f\)</span> to be the coordinate function <span  class="math">\(x^i\)</span>, then, according to</p>
+
+<p><span  class="math">\[ 
+(dx^i)_p(\mathbf{v}) = \mathbf{v}(x^i) 
+\]</span></p>
+
+<p>we can see that the differential <span  class="math">\((dx^i)\)</span> just picks out the <span  class="math">\(i^{\mathrm{th}}\)</span> component of <span  class="math">\(\mathbf{v}\)</span> relative to the coordinate basis for <span  class="math">\(T_p\mathcal{M}\)</span>. This shows:
+
+<div class="panel panel-note"><div class="panel-body"><p><strong>Dual Basis</strong></p>
+
+<p><span  class="math">\(\lbrace d x^1|_p, \dots , d x^m|_p \rbrace\)</span> is the basis for <span  class="math">\(T_p^*\mathcal{M}\)</span> dual to the coordinate basis <span  class="math">\(\lbrace \partial_1|_p, \dots , \partial_m|_p \rbrace\)</span> for <span  class="math">\(T_p\mathcal{M}\)</span>, due to the fact that</p>
+
+<p><span  class="math">\[ 
+d x^i|_p \,\bigg( \frac{\partial}{\partial x^j}\Big|_p \bigg) = \delta_j^i \ .
+\]</span></p>
+</div></div></p>
+
+<h3 id="connection-to-basic-calculus">Connection to Basic Calculus</h3>
+
+<p>As a final illustration we want to express <span  class="math">\((df)_p\)</span> in coordinates, with a real-valued function <span  class="math">\(f:\mathcal{M}\to\mathbb{R}\)</span> on <span  class="math">\(\mathcal{M}\)</span> and coordinates <span  class="math">\(x^i\)</span> at <span  class="math">\(p\)</span>:</p>
+
+<p><span  class="math">\[ 
+\begin{aligned}
+df(\mathbf{v})
+&= \mathbf{v}(f) \\[0.5em]
+&= \Big( \mathbf{v}(x^i)\,\partial_i \Big) \, (f) \\[0.5em]
+&= \Big( (dx^i)(\mathbf{v}) \,\partial_i \Big) \, (f) \\[0.5em]
+&= (\partial_i f) \Big( (dx^i)(\mathbf{v}) \Big)\\[0.5em]
+&= \Big( (\partial_i f) (dx^i) \Big)(\mathbf{v}) \ .
+\end{aligned}
+\]</span></p>
+
+<p>Since this is true for all <span  class="math">\(\mathbf{v}\)</span>, we get the classical formula for the differential of a function <span  class="math">\(f\)</span>, this time with an explicit summation sign to resemble the appearance in basic calculus textbooks:</p>
+
+<p><span  class="math">\[ 
+df = \sum_{i=1}^m \frac{\partial f}{\partial x^i} dx^i \ .
+\]</span></p>
+
+<h3 id="literature">Literature</h3>
+
+<p>The main books I consulted for preparing this post were the ones by <a href="https://www.springer.com/gp/book/9781441972538">Gregory Naber</a>, <a href="https://www.springer.com/de/book/9781461477310">Andrew McInerney</a> and <a href="https://www.springer.com/de/book/9783319011943">Sadri Hassani</a>. Also helpful were the books by <a href="https://www.springer.com/de/book/9783319086651">Godinho and Natário</a> and <a href="https://www.crcpress.com/Differential-Geometry-of-Manifolds/Lovett/p/book/9781568814575">Stephen Lovett</a>. Only after finishing this post I saw that <a href="https://www.springer.com/de/book/9781441999818">John Lee</a> also extensively covers the topic.</p>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/geometry/">geometry</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/relativity/">relativity</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/mathematics/">mathematics</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/physics/">physics</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2020-03-01-tangent-space/">Tangent Spaces</a></li>
+                
+                    <li><a href="/post/2020-01-12-differential-manifolds/">Differentiable Manifolds</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2020-04-25-ai-weekly-17-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (17/2020)">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

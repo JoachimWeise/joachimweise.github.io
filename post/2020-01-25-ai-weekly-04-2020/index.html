@@ -57,9 +57,9 @@
     "name" : "Joachim Weise"
   },
   "headline": "AI weekly (04\/2020)",
-  "description" : "\x2b\x2b\x2b Improved protein structure prediction using potentials from deep learning \x2b\x2b\x2b Microsoft open sources BERT optimizations in ONNX runtime \x2b\x2b\x2b Why Google thinks we need to regulate AI \x2b\x2b\x2b A Look Back on Baidu’s AI Innovations in 2019 \x2b\x2b\x2b Kernel-Based Ensemble Learning in Python \x2b\x2b\x2b An introduction to audio data analysis using Python \x2b\x2b\x2b Spark in Docker in Kubernetes: A practical approach for scalable NLP \x2b\x2b\x2b\n",
+  "description" : "\x2b\x2b\x2b Improved protein structure prediction using potentials from deep learning \x2b\x2b\x2b Microsoft open sources BERT optimizations in ONNX runtime \x2b\x2b\x2b Introducing the Hopsworks Feature Store – the Data Warehouse for Machine Learning \x2b\x2b\x2b Why Google thinks we need to regulate AI \x2b\x2b\x2b A Look Back on Baidu’s AI Innovations in 2019 \x2b\x2b\x2b Kernel-Based Ensemble Learning in Python \x2b\x2b\x2b An introduction to audio data analysis using Python \x2b\x2b\x2b Spark in Docker in Kubernetes: A practical approach for scalable NLP \x2b\x2b\x2b\n",
   "inLanguage" : "en",
-  "wordCount":  1048 ,
+  "wordCount":  1219 ,
   "datePublished" : "2020-01-25T00:00:00",
   "dateModified" : "2020-01-25T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
@@ -262,10 +262,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Jan 25, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1048&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1219&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
   
   
   
@@ -300,10 +300,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Jan 25, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1048&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1219&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
   
   
   
@@ -326,7 +326,7 @@
     
 
       <article role="main" class="blog-post">
-        <p>+++ Improved protein structure prediction using potentials from deep learning +++ Microsoft open sources BERT optimizations in ONNX runtime +++ Why Google thinks we need to regulate AI +++ A Look Back on Baidu’s AI Innovations in 2019 +++ Kernel-Based Ensemble Learning in Python +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++</p>
+        <p>+++ Improved protein structure prediction using potentials from deep learning +++ Microsoft open sources BERT optimizations in ONNX runtime +++ Introducing the Hopsworks Feature Store – the Data Warehouse for Machine Learning +++ Why Google thinks we need to regulate AI +++ A Look Back on Baidu’s AI Innovations in 2019 +++ Kernel-Based Ensemble Learning in Python +++ An introduction to audio data analysis using Python +++ Spark in Docker in Kubernetes: A practical approach for scalable NLP +++</p>
 
 <h2 id="breakthrough-mdash-or-so-they-say">Breakthrough &mdash; Or So They Say</h2>
 
@@ -335,6 +335,8 @@
 <h2 id="tools-and-frameworks">Tools and Frameworks</h2>
 
 <p><strong>Microsoft open sources BERT optimizations in ONNX runtime.</strong> Microsoft has announced in a <a href="https://cloudblogs.microsoft.com/opensource/2020/01/21/microsoft-onnx-open-source-optimizations-transformer-inference-gpu-cpu/">blog post</a> this week that it has integrated an optimized implementation of BERT (Bidirectional Encoder Representations from Transformers) with the open source ONNX Runtime. Developers can take advantage of this implementation for scalable inferencing of BERT at an affordable cost. In 2018, Google had <a href="https://ai.googleblog.com/2018/11/open-sourcing-bert-state-of-art-pre.html">open sourced BERT</a> as a new technique for pre-training NLP models, revolutionizing the conversational user experience domain by empowering developers to train their own state-of-the-art question answering system and a variety of other natural language-based models. Recently, <a href="https://azure.microsoft.com/en-us/blog/bing-delivers-its-largest-improvement-in-search-experience-using-azure-gpus/">Microsoft has shared</a> how Bing has improved BERT inference on GPU for its real-time service needs, serving more than one million BERT inferences per second within Bing’s latency limits. An enhanced versions, working on both GPU and CPU, was now open sourced into the <a href="https://github.com/microsoft/onnxruntime/releases/tag/v1.1.1">ONNX Runtime on github</a>. The Open Neural Network Exchange (ONNX) is an open standard format for representing machine learning models, making it possible to exchange models between frameworks such as <a href="https://github.com/tensorflow/tensorflow">Tensorflow</a>, <a href="https://github.com/pytorch/pytorch">PyTorch</a> or <a href="https://github.com/apache/incubator-mxnet">MXNet</a>. It lives on <a href="https://github.com/onnx/onnx">github</a> and comes with <a href="https://github.com/onnx/tutorials">tutorials</a> and a <a href="https://github.com/onnx/models">model zoo</a>.</p>
+
+<p><strong>Introducing the Hopsworks Feature Store – the Data Warehouse for Machine Learning.</strong> Logical Clocks AB are <a href="https://www.logicalclocks.com/news/introducing-the-feature-store-the-data-warehouse-for-machine-learning">announcing</a> the release of a Feature Store as part of Hopsworks version 0.8.0. The <a href="https://uploads-ssl.webflow.com/5e6f7cd3ee7f51d539a4da0b/5e6f7cd3ee7f519fdfa4dadb_feature%20store%20whitepaper%201-0.pdf">Feature Store</a> is a central vault for documented, curated, and access-controlled features. In-house Feature Stores are already successfully in production at companies such as Uber, LinkedIn, Airbnb, and Comcast. Now, for the first time, a Feature Store is available, as open-source, in an Enterprise Data platform, Hopsworks. The Feature Store solves the data access and feature management problem for Data Science by removing the need for Data Scientists to constantly re-implement feature pipelines for collecting and transforming data to feed their machine learning models. Instead, Data Scientists can select features from the Feature Store to generate clean training data that can then be consumed directly by machine learning models. <a href="https://hopsworks.readthedocs.io/en/latest/featurestore/guides/featurestore.html">Hopsworks’ Feature Store</a>. builds on Apache Spark and Apache Hive to enable it to scale to massive data volumes.</p>
 
 <h2 id="business-news-and-applications">Business News and Applications</h2>
 
@@ -390,15 +392,15 @@
                   <ul>
                 
                 
-                    <li><a href="/post/2020-03-07-ai-weekly-10-2020/">AI weekly (10/2020)</a></li>
+                    <li><a href="/post/2020-04-25-ai-weekly-17-2020/">AI weekly (17/2020)</a></li>
                 
-                    <li><a href="/post/2020-02-29-ai-weekly-09-2020/">AI weekly (09/2020)</a></li>
+                    <li><a href="/post/2020-04-18-ai-weekly-16-2020/">AI weekly (16/2020)</a></li>
                 
-                    <li><a href="/post/2020-02-22-ai-weekly-08-2020/">AI weekly (08/2020)</a></li>
+                    <li><a href="/post/2020-04-11-ai-weekly-15-2020/">AI weekly (15/2020)</a></li>
                 
-                    <li><a href="/post/2020-02-15-ai-weekly-07-2020/">AI weekly (07/2020)</a></li>
+                    <li><a href="/post/2020-04-04-ai-weekly-14-2020/">AI weekly (14/2020)</a></li>
                 
-                    <li><a href="/post/2020-02-08-ai-weekly-06-2020/">AI weekly (06/2020)</a></li>
+                    <li><a href="/post/2020-03-28-ai-weekly-13-2020-/">AI weekly (13/2020)</a></li>
                 
               </ul>
 

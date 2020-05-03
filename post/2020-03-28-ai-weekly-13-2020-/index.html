@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>AI weekly (13/2020) - Joachim Weise</title>
+  <meta name="description" content="My selection of news on AI/ML and Data Science">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2020-03-28-ai-weekly-13-2020-\/",
+          "name": "A i weekly (13\/2020)"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "AI weekly (13\/2020)",
+  "description" : "\x2b\x2b\x2b Uber details Fiber, a framework for distributed AI model training \x2b\x2b\x2b Google open-sources framework that helps massively scale RL workloads \x2b\x2b\x2b Rightsizing Neural Nets \x2b\x2b\x2b Generating music in the waveform domain \x2b\x2b\x2b\n",
+  "inLanguage" : "en",
+  "wordCount":  706 ,
+  "datePublished" : "2020-03-28T00:00:00",
+  "dateModified" : "2020-03-28T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "ai-news" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-03-28-ai-weekly-13-2020-\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="AI weekly (13/2020)" />
+<meta property="og:description" content="My selection of news on AI/ML and Data Science">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2020-03-28-ai-weekly-13-2020-/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="AI weekly (13/2020)" />
+  <meta name="twitter:description" content="My selection of news on AI/ML and Data Science">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/2020-03-07-ai-weekly-10-2020.jpg" 
+         
+         data-img-desc-1="Vienna (2018)"
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>AI weekly (13/2020)</h1>
+                  
+                    
+                      <h2 class="post-subheading">My selection of news on AI/ML and Data Science</h2>
+                    
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Mar 28, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;706&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>AI weekly (13/2020)</h1>
+              
+              
+                
+                  <h2 class="post-subheading">My selection of news on AI/ML and Data Science</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Mar 28, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;706&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>+++ Uber details Fiber, a framework for distributed AI model training +++ Google open-sources framework that helps massively scale RL workloads +++ Rightsizing Neural Nets +++ Generating music in the waveform domain +++</p>
+
+<h2 id="breakthrough-mdash-or-so-they-say">Breakthrough &mdash; Or So They Say</h2>
+
+<h2 id="tools-and-frameworks">Tools and Frameworks</h2>
+
+<p><strong>Uber details Fiber, a framework for distributed AI model training.</strong> Increasing computation underlies many recent advances in machine learning.  In classic use cases such as supervised learning, distributed training is often straightforward to set up thanks to established machine learning frameworks (e.g. TensorFlow or PyTorch). But reinforcement and population-based methods pose challenges for reliability, efficiency, and flexibility that some frameworks fall short of satisfying. Fiber addresses these challenges with a lightweight strategy to handle task scheduling. It leverages cluster management software for job scheduling and tracking, doesn’t require preallocating resources, and can dynamically scale up and down on the fly, allowing users to migrate from one machine to multiple machines seamlessly. It supports Linux systems running Python 3.6 and up and Kubernetes running on public cloud environments like Google Cloud, and the research team says that it can scale to hundreds or even thousands of machines. More details can be found on the <a href="https://uber.github.io/fiber/introduction/">GitHub site</a> and the preprint <a href="https://arxiv.org/abs/2003.11164">arXiv:2003.11164</a>.</p>
+
+<p><strong>Google open-sources framework that helps massively scale RL workloads.</strong> Addressing the same problem as Uber&rsquo;s Fiber (see above), Google AI has now open-sourced SEED RL, an RL agent that scales to thousands of machines, which enables training at millions of frames per second, and significantly improves computational efficiency. This is achieved with a novel architecture that takes advantage of accelerators (GPUs or TPUs) at scale by centralizing model inference and introducing a fast communication layer. The architecture of an RL agent is usually separated into actors and learners: The actors typically run on CPUs and iterate between taking steps in the environment and running inference on the model to predict the next action, the learner trains the model on GPUs using input from distributed inference on hundreds of machines. In contrast to that, the SEED RL architecture executes inference  by the learner centrally on specialized hardware (GPUs or TPUs), enabling accelerated inference and avoiding data transfer bottlenecks by ensuring that the model parameters and state are kept local. While observations are sent to the learner at every environment step, latency is kept low due to a very efficient network library based on the gRPC framework with asynchronous streaming RPCs. This makes it possible to achieve up to a million queries per second on a single machine. The learner can be scaled to thousands of cores. More details can be found in the related <a href="https://ai.googleblog.com/2020/03/massively-scaling-reinforcement.html">blog post</a> and preprint <a href="https://arxiv.org/abs/1910.06591">arXiv:1910.06591</a>, the code is published on <a href="https://github.com/google-research/seed_rl">github</a>.</p>
+
+<h2 id="business-news-and-applications">Business News and Applications</h2>
+
+<h2 id="publications">Publications</h2>
+
+<p><strong>Rightsizing Neural Nets &mdash; A Constructive Prediction Of The
+generalization Error Across Scales.</strong> With the success and heightened adoption of neural networks for real world tasks, some questions remain poorly answered. For a given task and model architecture, how much data would one require to reach a prescribed performance level? How big a model would be needed? New research estimates the impact of dataset and model sizes on neural network performance. Researchers from MIT, York University, Harvard and other institutions have introduced an equation — a so-called <a href="https://openreview.net/pdf?id=ryenvpEKDr">error landscape</a> — that predicts how much data and how large a model it takes to generalize well. The researchers trained various state-of-the-art vision and language models on a number of benchmark datasets. Considering 30 combinations of architecture and dataset, they observed three effects when varying data and model size: (1) For a fixed amount of data, increasing model size initially boosted performance on novel data, though effect leveled off. (2) The researchers observed a similar trend as they increased the amount of training data. (3) The effect of boosting both model and dataset size was approximately the same as the combined impact of changing each one individually. An equation captures these observations. It describes the error as a function of model and data size, forming a 3D surface or error landscape.</p>
+
+<h2 id="tutorials">Tutorials</h2>
+
+<p><strong>Generating music in the waveform domain.</strong> Sander Dielman is research scientist at DeepMind. His <a href="https://benanne.github.io/2020/03/24/audio-generation.html">blog post</a> is a broad introduction to music generation in the waveform domain, contain links to lots of related papers and code.</p>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/ai-news/">ai-news</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2020-04-25-ai-weekly-17-2020/">AI weekly (17/2020)</a></li>
+                
+                    <li><a href="/post/2020-04-18-ai-weekly-16-2020/">AI weekly (16/2020)</a></li>
+                
+                    <li><a href="/post/2020-04-11-ai-weekly-15-2020/">AI weekly (15/2020)</a></li>
+                
+                    <li><a href="/post/2020-04-04-ai-weekly-14-2020/">AI weekly (14/2020)</a></li>
+                
+                    <li><a href="/post/2020-03-21-ai-weekly-12-2020/">AI weekly (12/2020)</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2020-03-21-ai-weekly-12-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (12/2020)">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://joachimweise.github.io/post/2020-04-04-ai-weekly-14-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (14/2020)">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
