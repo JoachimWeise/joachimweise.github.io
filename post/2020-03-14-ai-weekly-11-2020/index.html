@@ -57,13 +57,13 @@
     "name" : "Joachim Weise"
   },
   "headline": "AI weekly (11\/2020)",
-  "description" : "\x2b\x2b\x2b Satellites and AI Monitor Chinese Economy’s Reaction to Coronavirus \x2b\x2b\x2b\n",
+  "description" : "\x2b\x2b\x2b Creators and Core Contributors Talk About 6 High-Level APIs in the PyTorch Ecosystem \x2b\x2b\x2b Satellites and AI Monitor Chinese Economy’s Reaction to Coronavirus \x2b\x2b\x2b Best Practices for Managing and Engineering ML Projects \x2b\x2b\x2b AlphaGo - The Movie \x2b\x2b\x2b\n",
   "inLanguage" : "en",
-  "wordCount":  252 ,
+  "wordCount":  638 ,
   "datePublished" : "2020-03-14T00:00:00",
   "dateModified" : "2020-03-14T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
-  "keywords" : [ "ai-news" ],
+  "keywords" : [ "ai-news, pytorch" ],
   "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-03-14-ai-weekly-11-2020\/",
   "publisher" : {
     "@type": "Organization",
@@ -235,9 +235,9 @@
     <div id="header-big-imgs" data-num-img=1 
       
          
-          data-img-src-1="/img/2020-03-07-ai-weekly-10-2020.jpg" 
+          data-img-src-1="/img/2020-03-14-ai-weekly-11-2020.jpg" 
          
-         data-img-desc-1="Vienna (2018)"
+         data-img-desc-1="NGC 2818 (Hubble Heritage)"
       ></div>
   
 
@@ -262,10 +262,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Mar 14, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;252&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;638&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;2&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
   
   
   
@@ -300,10 +300,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Mar 14, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;252&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;638&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;2&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
   
   
   
@@ -326,17 +326,21 @@
     
 
       <article role="main" class="blog-post">
-        <p>+++ Satellites and AI Monitor Chinese Economy’s Reaction to Coronavirus +++</p>
+        <p>+++ Creators and Core Contributors Talk About 6 High-Level APIs in the PyTorch Ecosystem +++ Satellites and AI Monitor Chinese Economy’s Reaction to Coronavirus +++ Best Practices for Managing and Engineering ML Projects +++ AlphaGo - The Movie +++</p>
 
 <h2 id="breakthrough-mdash-or-so-they-say">Breakthrough &mdash; Or So They Say</h2>
 
 <h2 id="tools-and-frameworks">Tools and Frameworks</h2>
+
+<p><strong>Creators and Core Contributors Talk About 6 High-Level APIs in the PyTorch Ecosystem.</strong> Jakub Czakon reports in <a href="https://neptune.ai/blog/model-training-libraries-pytorch-ecosystem">this article</a> that already in 2018 he liked the Pythonic feel and flexibility of PyTorch but missed a Keras-like high-level interface. Fast-forward to 2020, and we have 6 high-level training APIs in the PyTorch Ecosystem: Skorch, Catalyst, Fastai, PyTorch Ignite, PyTorch Lightning, and Torchbearer. Jakub interviewed many of the creators and core contributors of these frameworks on aspects of API structure, features, extension cabilities, learning curve, etc. His conclusions, in a nutshell, are the following: <strong>Skorch</strong> has a sklearn-like API and is well tested and documented with focus on production applications. <strong>Fastai</strong> lets you build state-of-the-art models in 10 lines of almost magical code but also lets you access lower-level APIs and create customer building blocks. Regarding <strong>PyTorch Lightning</strong> he highlights that it enables reproducibility by making deep learning research implementations readable. It is really easy to follow the logic inside of the LightningModule where the training step (among other things) is not abstracted away. It is getting very popular very quickly has absorbed core developers of Torchbearer which is no longer actively developed. Finally, <strong>Catalyst</strong> is reported to be flexible and supporting reproducibility and production model serving out-of-the-box.</p>
 
 <h2 id="business-news-and-applications">Business News and Applications</h2>
 
 <p><strong>Satellites and AI Monitor Chinese Economy’s Reaction to Coronavirus.</strong> As reported in <a href="https://spectrum.ieee.org/view-from-the-valley/artificial-intelligence/machine-learning/satellites-and-ai-monitor-chinese-economys-reaction-to-coronavirus">IEEE spectrum</a>, researchers at WeBank mine satellite, GPS, and social media data to conclude that the Chinese economy is well on the way to recovering from COVID-19. <a href="https://www.webank.com/">WeBank</a>,  China&rsquo;s 1st digital bank initiated by Tencent, offers wealth management and financing services through different online platforms. WeBank’s AI Moonshot Team has taken the deep learning system SolarNet developed to <a href="https://arxiv.org/abs/1912.03685">detect solar panel installations</a> from satellite imagery and repurposed it to track China’s economic recovery from the novel coronavirus outbreak. They looked at heat signatures from steel mills and correlated the results with steel output. In late January, at the height of the outbreak, China’s steel production had dropped to 30 percent of capacity, they found. By February 9, it had recovered to 76 percent. Using other models they looked at GPS signals from commuters and social media posts on home office work.</p>
 
 <h2 id="publications">Publications</h2>
+
+<p><strong>Best Practices for Managing and Engineering ML Projects.</strong> This is actually not a single publications, but three related ones. In <a href="https://d1.awsstatic.com/whitepapers/aws-managing-ml-projects.pdf"><em>&ldquo;Managing Machine Learning Projects&rdquo;</em></a>, <a href="http://www.veronikamegler.com/">Veronika Megler</a> of AWS provides us with her perspective on how to optimally run ML projects. The emphasis is mostly on the project management dimension, but also some hints at more technical aspects are given. In contrast to that, <a href="https://www.linkedin.com/in/martin-zinkevich-55583540/">Martin Zinkevich</a>, a research scientist at Google, comes up with 43 <a href="http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf"><em>&ldquo;Rules of Machine Learning&rdquo;</em></a> which are more technical in nature and focus especially on modeling aspects. Lastly, <a href="https://pair.withgoogle.com/">PAIR</a>, the multidisciplinary People + AI Research team at Google that explores the human side of AI, has developed a <a href="https://pair.withgoogle.com/guidebook/">People + AI Guidebook</a>, featuring six chapters that follow the product development flow. Again, the focus is different from the other two publications, in that aspects such as user need identification, mental models, explainability, user experience and communication are heavily stressed.</p>
 
 <h2 id="tutorials">Tutorials</h2>
 
@@ -346,6 +350,8 @@
           <div class="blog-tags">
             
               <a href="https://joachimweise.github.io//tags/ai-news/">ai-news</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/pytorch/">pytorch</a>&nbsp;
             
           </div>
         

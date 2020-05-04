@@ -57,9 +57,9 @@
     "name" : "Joachim Weise"
   },
   "headline": "AI weekly (14\/2020)",
-  "description" : "\x2b\x2b\x2b \x2b\x2b\x2b\n",
+  "description" : "\x2b\x2b\x2b So You Want Git for Data? \x2b\x2b\x2b All models are wrong, but some are completely wrong \x2b\x2b\x2b\n",
   "inLanguage" : "en",
-  "wordCount":  17 ,
+  "wordCount":  535 ,
   "datePublished" : "2020-04-04T00:00:00",
   "dateModified" : "2020-04-04T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
@@ -235,9 +235,9 @@
     <div id="header-big-imgs" data-num-img=1 
       
          
-          data-img-src-1="/img/2020-03-07-ai-weekly-10-2020.jpg" 
+          data-img-src-1="/img/2020-04-04-ai-weekly-14-2020.jpg" 
          
-         data-img-desc-1="Vienna (2018)"
+         data-img-desc-1="Carina Nebula (Hubble Heritage)"
       ></div>
   
 
@@ -262,10 +262,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Apr 4, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;17&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;535&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;1&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
   
   
   
@@ -300,10 +300,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Apr 4, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;17&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;535&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;1&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
   
   
   
@@ -326,13 +326,17 @@
     
 
       <article role="main" class="blog-post">
-        <p>+++   +++</p>
+        <p>+++ So You Want Git for Data? +++ All models are wrong, but some are completely wrong +++</p>
 
 <h2 id="breakthrough-mdash-or-so-they-say">Breakthrough &mdash; Or So They Say</h2>
 
 <h2 id="tools-and-frameworks">Tools and Frameworks</h2>
 
+<p><strong>So You Want Git for Data?</strong> Tim Sehn, of <a href="https://www.liquidata.co/">Liquidata</a> and <a href="https://www.dolthub.com/">Dolthub</a>, has published an <a href="https://www.dolthub.com/blog/2020-03-06-so-you-want-git-for-data/">article</a> on their blog that supposedly analyzes what &ldquo;git for data&rdquo; would actually mean. However, instead of coming up with a clear definition and a list of features, he compares current frameworks and finally concludes that their product <a href="https://github.com/liquidata-inc/dolt">Dolt</a> is actually the only product that fits the label. What is Dolt? Dolt is a relational database, i.e. it has tables, and you can execute SQL queries against those tables. It also has version control primitives that operate at the level of table cell. Dolt implements the Git command line and associated operations on table rows instead of files. Data and schema are modified in the working set using SQL. When you want to permanently store a version of the working set, you make a commit. Dolt produces cell-wise diffs and merges, making data debugging between versions tractible. Thus Dolt is a database that supports fine grained value-wise version control, where all changes to data and schema are stored in commit log.  It is inspired by RDBMS and Git, and attempts to blend concepts about both in a manner that allows users to better manage, distribute, and collaborate on, data. At least as interesting as the commercial for their own tool is the fact that Tim Sehn is full of praise for <a href="https://github.com/pachyderm/pachyderm">Pachyderm</a>, a data versioning tool that is more geared towards large-scale data pipelines on files for machine learning purposes.</p>
+
 <h2 id="business-news-and-applications">Business News and Applications</h2>
+
+<p><strong>All models are wrong, but some are completely wrong.</strong> I like <a href="https://rssdss.design.blog/2020/03/31/all-models-are-wrong-but-some-are-completely-wrong">this article</a> not least for its title. Written by Martin Goodson for the Royal Statistical Society Data Science Section, this article laments the fact that, in a time when epidemic forecasting informs policy and even individual decision-making, scientists and journalists have completely failed to communicate how these models work. Epidemiologists are making the same mistakes that the climate science community made a decade ago. A series of crises forced climatologists to learn painful lessons on how (not) to communicate with policy-makers and the public. In 2010 the 4th IPCC report was attacked for containing a single error – a claim that the Himalayan glaciers would likely have completely melted by 2035 (‘Glacier Gate’). Climate denialists and recalcitrant nations such as Russia and Saudi Arabia seized on this error as a way to discredit the entire 3000 page report, which was otherwise irreproachable. By the time of the 5th IPPC report, <a href="https://www.ipcc.ch/site/assets/uploads/2017/08/AR5_Uncertainty_Guidance_Note.pdf">mechanisms</a> had been developed to enforce clear communication about the uncertainty surrounding predictive models; and transparency about models and data. The infectious disease community needs to learn these lessons. And learn them quickly. Proposed guidelines for scientists and journalists are: (1) express the level of uncertainty associated with a forecast; (2) get quotes from other experts before publishing; (3) describe the critical inputs and assumptions of their models; (4) be as transparent as possible; (5) use multiple models to inform policy; (6) indicate when a model was produced by somebody without a background in infectious diseases.</p>
 
 <h2 id="publications">Publications</h2>
 

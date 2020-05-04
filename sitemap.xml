@@ -109,6 +109,11 @@
   </url>
   
   <url>
+    <loc>https://joachimweise.github.io/tags/pytorch/</loc>
+    <lastmod>2020-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://joachimweise.github.io/post/2020-03-07-ai-weekly-10-2020/</loc>
     <lastmod>2020-03-07T00:00:00+00:00</lastmod>
   </url>
@@ -185,11 +190,6 @@
   
   <url>
     <loc>https://joachimweise.github.io/tags/kubernetes/</loc>
-    <lastmod>2020-02-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/pytorch/</loc>
     <lastmod>2020-02-08T00:00:00+00:00</lastmod>
   </url>
   

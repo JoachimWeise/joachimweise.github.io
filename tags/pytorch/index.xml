@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sat, 08 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI weekly (11/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-03-14-ai-weekly-11-2020/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-03-14-ai-weekly-11-2020/</guid>
+      <description>&lt;p&gt;+++ Creators and Core Contributors Talk About 6 High-Level APIs in the PyTorch Ecosystem +++ Satellites and AI Monitor Chinese Economy’s Reaction to Coronavirus +++ Best Practices for Managing and Engineering ML Projects +++ AlphaGo - The Movie +++&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>AI weekly (06/2020)</title>
