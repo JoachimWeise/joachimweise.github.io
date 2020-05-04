@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Converting LaTeX to Markdown, - Joachim Weise</title>
+  <title>Converting LaTeX to Markdown - Joachim Weise</title>
   <meta name="description" content="Using Regular Expressions">
   <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
 {
@@ -45,7 +45,7 @@
         "position": 3,
         "item": {
           "@id": "https:\/\/joachimweise.github.io\/post\/2020-03-25-regex\/",
-          "name": "Converting la te x to markdown,"
+          "name": "Converting la te x to markdown"
         }
     }]
 }
@@ -56,10 +56,10 @@
   "author": {
     "name" : "Joachim Weise"
   },
-  "headline": "Converting LaTeX to Markdown,",
+  "headline": "Converting LaTeX to Markdown",
   "description" : "I\x27m usually writing my notes on physics and mathematics, e.g. the ongoing series of posts on Riemannian geometry, in \\(\\LaTeX\\) documents, as probably most people do. For the purpose of this blog I regularly need to convert parts of these documents into markdown that Hugo can understand. Since I haven\x27t found any better solution yet I decided to develop a set of regular expressions in Python that do the job pretty well. I normally run the code in a Jupyter notebook that allows me to check the quality of conversion immediately and do some minor tweaking if required.\n",
   "inLanguage" : "en",
-  "wordCount":  567 ,
+  "wordCount":  995 ,
   "datePublished" : "2020-03-25T00:00:00",
   "dateModified" : "2020-03-25T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
@@ -78,14 +78,14 @@
 }
 </script>
 
-<meta property="og:title" content="Converting LaTeX to Markdown," />
+<meta property="og:title" content="Converting LaTeX to Markdown" />
 <meta property="og:description" content="Using Regular Expressions">
 <meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
 <meta property="og:url" content="https://joachimweise.github.io/post/2020-03-25-regex/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Joachim Weise" />
 
-  <meta name="twitter:title" content="Converting LaTeX to Markdown," />
+  <meta name="twitter:title" content="Converting LaTeX to Markdown" />
   <meta name="twitter:description" content="Using Regular Expressions">
   <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
   <meta name="twitter:card" content="summary" />
@@ -249,7 +249,7 @@
           <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
               <div class="post-heading">
-                <h1>Converting LaTeX to Markdown,</h1>
+                <h1>Converting LaTeX to Markdown</h1>
                   
                     
                       <h2 class="post-subheading">Using Regular Expressions</h2>
@@ -262,10 +262,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Mar 25, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;567&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;995&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
   
   
   
@@ -286,7 +286,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Converting LaTeX to Markdown,</h1>
+                <h1>Converting LaTeX to Markdown</h1>
               
               
                 
@@ -300,10 +300,10 @@
   <i class="fas fa-calendar"></i> &nbsp;Mar 25, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;567&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;995&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;3&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;5&nbsp;minutes
   
   
   
@@ -330,11 +330,20 @@
 
 <p>A regular expression is a special sequence of characters that helps you match or find other strings or sets of strings, using a specialized syntax held in a pattern. Regular expressions are widely used in UNIX world. The Python module <code>re</code> provides full support for Perl-like regular expressions in Python. You can then ask questions such as “Does this string match the pattern?”, or “Is there a match for the pattern anywhere in this string?”. You can also use regular expressions to modify a string or to split it apart in various ways. Regular expression patterns are compiled into a series of bytecodes which are then executed by a matching engine written in C.</p>
 
-<p>The regular expression language is relatively small and restricted, so not all possible string processing tasks can be done using regular expressions. There are also tasks that can be done with regular expressions, but the expressions turn out to be very complicated. In these cases, you may be better off writing Python code to do the processing; while Python code will be slower than an elaborate regular expression, it will also probably be more understandable. However, many websites help explain how regexes work. I specially like <a href="regexr.com">regexr.com</a> where you can interactively play with regexes, watch their effect on a sample string and receive insights by pressing the .</p>
+<p>The regular expression language is relatively small and restricted, so not all possible string processing tasks can be done using regular expressions. There are also tasks that can be done with regular expressions, but the expressions turn out to be very complicated. In these cases, you may be better off writing Python code to do the processing; while Python code will be slower than an elaborate regular expression, it will also probably be more understandable. However, many websites help explain how regexes work. I specially like <a href="https://regexr.com/">regexr.com</a> where you can interactively play with regexes, watch their effect on a sample string and receive insights by pressing the .</p>
+
+<p>The secret sauce of regexes are the matching characters and metacharacters. The metacharacter <code>.</code> matches anything except a newline character. The question mark symbol <code>?</code> matches zero or one occurrence of the pattern left to it. A <code>*</code> matches zero or more repetitions of the preceding regex. But there is a catch: quantifier metacharacters such as <code>*</code> or <code>?</code> are greedy, meaning they produce the longest possible match. If you want the shortest possible
+match instead, then use the non-greedy metacharacter sequence <code>*?</code> instead.</p>
 
 <p>Basically the only regex task I am using is to find all the matches for a pattern, and replace them with a different string. The <code>sub()</code> method takes a replacement value, which can be either a string or a function, and the string to be processed:</p>
-<div class="highlight"><pre class="chroma">re.sub(replacement, string[, count=0])</pre></div>
-<p>It returns the string obtained by replacing the leftmost non-overlapping occurrences of the regex in <code>string</code> by the replacement <code>replacement</code>. If the pattern isn’t found, <code>string</code> is returned unchanged. The optional argument <code>count</code> is the maximum number of pattern occurrences to be replaced; <code>count</code> must be a non-negative integer. The default value of 0 means to replace all occurrences.</p>
+<div class="highlight"><pre class="chroma">re.sub(pattern, repl, str[, count=0])</pre></div>
+<p>It returns the string obtained by replacing in the input <code>str</code> the leftmost non-overlapping occurrences of <code>pattern</code> by the replacement <code>repl</code>. If the <code>pattern</code> isn’t found, <code>str</code> is returned unchanged. The optional argument <code>count</code> is the maximum number of pattern occurrences to be replaced; <code>count</code> must be a non-negative integer. The default value of 0 means to replace all occurrences. The replacement string can include <code>\1, \2</code> which refer to the text from <code>group(1)</code>, <code>group(2)</code>, and so on from the original matching text. For example, the following statement</p>
+<div class="highlight"><pre class="chroma">latex = re.sub(r&#34;(\\section{)(.*?)\}&#34;, r&#34;### \2&#34;, latex)</pre></div>
+<p>will substitute a <span  class="math">\(\LaTeX\)</span> section command like</p>
+<div class="highlight"><pre class="chroma">\section{First Section}</pre></div>
+<p>by an equivalent markdown section</p>
+<div class="highlight"><pre class="chroma">### First Section</pre></div>
+<p>The full code I am currently using is shown in the following listing. Note that I had to escape the double curly braces <code>{{</code> or <code>}}</code> in a few lines with additional quotation marks.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3"><span class="kn">import</span> <span class="nn">re</span>
 
@@ -369,6 +378,68 @@
 <span class="n">out_path</span> <span class="o">=</span> <span class="s2">&#34;C:/.../markdown-output.md&#34;</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">out_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&#34;utf8&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out_file</span><span class="p">:</span>
     <span class="n">out_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">markdown</span><span class="p">)</span></code></pre></div>
+
+<p>I am using the <span  class="math">\(\LaTeX\)</span>-package <code>tcolorbox</code> to create environments for coloured and framed text boxes with or without a heading line, either for displaying code or for the setting of mathematical definitions, theorems, etc. My default environment for the latter purpose, which I have named <code>blockquote</code>, looks as follows:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\usepackage</span><span class="nb">{</span>tcolorbox<span class="nb">}</span>
+<span class="k">\tcbuselibrary</span><span class="nb">{</span>breakable<span class="nb">}</span>
+<span class="k">\tcbset</span><span class="nb">{</span>textmarker/.style=<span class="nb">{</span><span class="c">%
+</span><span class="c"></span>		breakable, parbox=false,
+		boxrule=0mm, leftrule=1mm, rightrule=0mm, boxsep=0mm, 
+		before skip=12pt, after skip=12pt, arc=0mm, outer arc=0mm,
+		left=4mm, right=4mm, top=3mm, bottom=3mm,
+		toptitle=1mm, bottomtitle=1mm<span class="nb">}}</span>
+
+<span class="k">\newtcolorbox</span><span class="nb">{</span>blockquote<span class="nb">}{</span>textmarker,colback=red!15!white,colframe=red<span class="nb">}</span></code></pre></div>
+
+<p>In order to display this in a Hugo markdown page I am using the following shortcode that leverages the <code>.panel</code> class of Bootstrap:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">{{ $_hugo_config := `{ &#34;version&#34;: 1 }` }}
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;panel {{with .Get &#34;</span><span class="na">theme</span><span class="err">&#34;</span> <span class="err">}}</span><span class="na">panel-</span><span class="err">{{.}}{{</span><span class="na">else</span><span class="err">}}</span><span class="na">panel-primary</span><span class="err">{{</span><span class="na">end</span><span class="err">}}&#34;</span><span class="p">&gt;</span>
+	{{- with .Get &#34;header&#34; -}}<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;panel-heading&#34;</span><span class="p">&gt;</span>{{- htmlUnescape . | markdownify -}}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>{{- end -}}
+	<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;panel-body&#34;</span><span class="p">&gt;</span>{{- .Inner -}}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+	{{- with .Get &#34;footer&#34; -}}<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;panel-footer&#34;</span><span class="p">&gt;</span>{{- htmlUnescape . | markdownify -}}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>{{- end -}}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+
+<p>The styling of several Panel themes is taken care of in the <code>main.css</code> file of my site. For example, the <code>note</code>-theme used in one of the above regexes is styled as follows:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">panel</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#FFF</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="mi">0</span><span class="kt">em</span> <span class="mi">1</span><span class="kt">em</span> <span class="mi">0</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">panel-body</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#323232</span><span class="p">;</span> 
+  <span class="k">margin</span><span class="p">:</span> <span class="mf">-0.7</span><span class="kt">em</span> <span class="mi">0</span><span class="kt">em</span> <span class="mf">-0.7</span><span class="kt">em</span> <span class="mf">0.3</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">panel-primary</span> <span class="p">{</span>
+  <span class="k">border-color</span><span class="p">:</span> <span class="mh">#87b5dd</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">panel-primary</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nc">panel-heading</span><span class="o">,</span> <span class="p">.</span><span class="nc">panel-primary</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nc">panel-footer</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#a3c6e5</span><span class="p">;</span>
+  <span class="k">border-color</span><span class="p">:</span> <span class="mh">#87b5dd</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">84</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">148</span><span class="p">,</span> <span class="mf">0.9925</span><span class="p">);</span> <span class="p">}</span>
+
+<span class="p">.</span><span class="nc">panel-note</span> <span class="p">{</span>
+  <span class="k">border-left</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#008AFF</span><span class="p">;</span>
+  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#E7F2FA</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="p">.</span><span class="nc">panel-note</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nc">panel-heading</span><span class="o">,</span> <span class="p">.</span><span class="nc">panel-info</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nc">panel-footer</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#E7F2FA</span><span class="p">;</span>
+  <span class="k">border-color</span><span class="p">:</span> <span class="mh">#6AB0DE</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
+
+<h3 id="links">Links</h3>
+
+<p>Finally, some links that I found helpful:</p>
+
+<ul>
+<li>On regexes: <a href="https://realpython.com/regex-python/">Real Python</a>, <a href="https://docs.python.org/3/howto/regex.html">Python docs</a></li>
+<li>On Bootstrap panels: <a href="https://www.w3schools.com/bootstrap/bootstrap_panels.asp">w3schools</a></li>
+</ul>
 
         
           <div class="blog-tags">
