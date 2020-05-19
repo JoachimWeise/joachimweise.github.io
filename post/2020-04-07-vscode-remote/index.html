@@ -59,7 +59,7 @@
   "headline": "Remote Development on Raspberry and Arduino with VS Code",
   "description" : "In this short note I will summarize how I can happily use Visual Studio Code on my local Windows desktop or laptop to do remote development on a Raspberry Pi or another Linux machine, and even push Arduino sketches from the Raspberry to an Arduino without touching the Arduino IDE. I have been a fan of the Raspberry Pi single board computer for a number of years now, and have used quite a number of them in my desktop single board computer cluster and my developing Raspberry\/Arduino robot car. Still, I found developing code on it to be uncomfortable and sometimes cumbersome, as some IDEs don\x27t support ARM processors whereas others like Thonny are rather basic. Remote development solves this by allowing you to code on your desktop \/ laptop and run it externally on a host (like the RPi). With the nascent Arduino CLI you can even largely replace the Arduino IDE for developing Arduino sketches on RPi and pushing them to a connected Arduino.\n",
   "inLanguage" : "en",
-  "wordCount":  1194 ,
+  "wordCount":  1205 ,
   "datePublished" : "2020-04-07T00:00:00",
   "dateModified" : "2020-04-07T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
@@ -278,7 +278,7 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i> &nbsp;Apr 7, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1194&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1205&nbsp;words
   
   
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
@@ -316,7 +316,7 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i> &nbsp;Apr 7, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1194&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1205&nbsp;words
   
   
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
@@ -438,7 +438,7 @@ littleBits:avr    1.0.0   littleBits Arduino AVR Modules </pre></div>
 
 </center></p>
 
-<p>From a hardware perspective we are good to go but we may need to import external libraries before we can compile and Arduino sketch. In my case I needed a library for the Adafruit Motor shield. You can search for libraries like this:</p>
+<p>From a hardware perspective we are good to go but we may need to import external libraries before we can compile an Arduino sketch. In my case I needed a library for the Adafruit Motor shield. You can search for libraries like this:</p>
 <div class="highlight"><pre class="chroma">arduino-cli lib search adafruit motor shield</pre></div>
 <p>This will result in a list of related libaries out of which you can then install the right one:</p>
 <div class="highlight"><pre class="chroma">arduino-cli lib install &#34;Adafruit Motor Shield V2 Library&#34;</pre></div>
@@ -478,7 +478,7 @@ alias aupload=&#34;arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno&#34
 <p>Finally, some links that I found helpful:</p>
 
 <ul>
-<li>first</li>
+<li>Visual Studio Code remote development using SSH is well-documented <a href="https://code.visualstudio.com/docs/remote/ssh">here</a> and <a href="https://code.visualstudio.com/blogs/2019/05/02/remote-development">here</a>.</li>
 <li>The Arduino CLI is relatively well documented on their <a href="https://arduino.github.io/arduino-cli/">GitHub page</a>. Additional websites that may be helpful: <a href="https://learn.sparkfun.com/tutorials/efficient-arduino-programming-with-arduino-cli-and-visual-studio-code/all">One</a>, <a href="https://peppe8o.com/connecting-raspberry-pi-zero-w-to-arduino-only-via-terminal/">two</a>, <a href="https://peppe8o.com/installing-external-libraries-with-arduino-cli-on-raspberry-pi/">three</a>.</li>
 </ul>
 
