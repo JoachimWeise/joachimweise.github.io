@@ -7,10 +7,45 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Arduino Motor Control Using Serial Connection</title>
+      <link>https://joachimweise.github.io/post/2020-05-17-serial-connection/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-05-17-serial-connection/</guid>
+      <description>&lt;p&gt;In my &lt;a href=&#34;https://joachimweise.github.io/page/robot/&#34;&gt;evolving robot car project&lt;/a&gt; it is now time to go for a test drive. More precisely, I would like to establish bidirectional communication between the Raspberry Pi, acting as &lt;em&gt;spiritus rector&lt;/em&gt;, and the Arduino, translating abstract intention into concrete motor control with the Adafruit Motor Shield.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+
+
+&lt;div class=&#34;box fancy-figure caption-position-bottom caption-effect-fade&#34; style=&#34;max-width:600px&#34;&gt;
+  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://joachimweise.github.io/img/2020-05-17-serial-connection/robot.gif&#34; alt=&#34;Bot in action&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://joachimweise.github.io/img/2020-05-17-serial-connection/robot.gif&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;Bot in action&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;/center&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Remote Development on Raspberry and Arduino with VS Code</title>
+      <link>https://joachimweise.github.io/post/2020-04-07-vscode-remote/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-04-07-vscode-remote/</guid>
+      <description>&lt;p&gt;In this short note I will summarize how I can happily use Visual Studio Code on my local Windows desktop or laptop to do remote development on a Raspberry Pi or another Linux machine, and even push Arduino sketches from the Raspberry to an Arduino without touching the Arduino IDE. I have been a fan of the Raspberry Pi single board computer for a number of years now, and have used quite a number of them in my desktop single board computer cluster and my developing Raspberry/Arduino &lt;a href=&#34;https://joachimweise.github.io/page/robot/&#34;&gt;robot car&lt;/a&gt;. Still, I found developing code on it to be uncomfortable and sometimes cumbersome, as some IDEs don&#39;t support ARM processors whereas others like Thonny are rather basic. Remote development solves this by allowing you to code on your desktop / laptop and run it externally on a host (like the RPi). With the nascent Arduino CLI you can even largely replace the Arduino IDE for developing Arduino sketches on RPi and pushing them to a connected Arduino.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Mobile Robot</title>

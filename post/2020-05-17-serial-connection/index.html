@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Arduino Motor Control Using Serial Connection - Joachim Weise</title>
+  <meta name="description" content="In my evolving robot car project it is now time to go for a test drive. More precisely, I would like to establish bidirectional communication between the Raspberry Pi, acting as spiritus rector, and the Arduino, translating abstract intention into concrete motor control with the Adafruit Motor Shield.
+
+
+
+
+
+  
+    
+      
+    
+    
+      
+          Bot in action
+      
+  
+
+
+.">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2020-05-17-serial-connection\/",
+          "name": "Arduino motor control using serial connection"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "Arduino Motor Control Using Serial Connection",
+  "description" : "In my evolving robot car project it is now time to go for a test drive. More precisely, I would like to establish bidirectional communication between the Raspberry Pi, acting as spiritus rector, and the Arduino, translating abstract intention into concrete motor control with the Adafruit Motor Shield.\n    Bot in action\n   .\n",
+  "inLanguage" : "en",
+  "wordCount":  2207 ,
+  "datePublished" : "2020-05-17T00:00:00",
+  "dateModified" : "2020-05-17T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "arduino, cpp, code\x22, python, raspberry, robot" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-05-17-serial-connection\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Arduino Motor Control Using Serial Connection" />
+<meta property="og:description" content="In my evolving robot car project it is now time to go for a test drive. More precisely, I would like to establish bidirectional communication between the Raspberry Pi, acting as spiritus rector, and the Arduino, translating abstract intention into concrete motor control with the Adafruit Motor Shield.
+
+
+
+
+
+  
+    
+      
+    
+    
+      
+          Bot in action
+      
+  
+
+
+.">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2020-05-17-serial-connection/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="Arduino Motor Control Using Serial Connection" />
+  <meta name="twitter:description" content="In my evolving robot car project it is now time to go for a test drive. More precisely, I would like to establish bidirectional communication between the Raspberry Pi, acting as spiritus rector, and …">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165585092-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+                  <a href="/page/robot">Robot Car</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/2020-05-17-serial-connection/background.jpg" 
+         
+         data-img-desc-1="Adafruit Motor Shield"
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>Arduino Motor Control Using Serial Connection</h1>
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;May 17, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;2207&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;11&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Arduino Motor Control Using Serial Connection</h1>
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;May 17, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;2207&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;11&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>In my <a href="/page/robot/">evolving robot car project</a> it is now time to go for a test drive. More precisely, I would like to establish bidirectional communication between the Raspberry Pi, acting as <em>spiritus rector</em>, and the Arduino, translating abstract intention into concrete motor control with the Adafruit Motor Shield.</p>
+
+<p><center>
+
+<link rel="stylesheet" href="https://joachimweise.github.io/css/hugo-easy-gallery.css" />
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:600px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-05-17-serial-connection/robot.gif" alt="Bot in action"/>
+    </div>
+    <a href="/img/2020-05-17-serial-connection/robot.gif" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Bot in action</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center>.</p>
+
+<h3 id="basics-of-serial-communication">Basics of Serial Communication</h3>
+
+<p>Serial communication is the process of sending data one bit at a time, sequentially, over a communication channel or computer bus. This is in contrast to parallel communication, where several bits are sent as a whole, on a link with several parallel channels. Many communication systems were generally designed to connect two integrated circuits on the same printed circuit board, connected by signal traces on that board (rather than external cables). Integrated circuits are more expensive when they have more pins. To reduce the number of pins in a package, many ICs use a serial bus to transfer data when speed is not important. Some examples of such low-cost serial buses include RS-232, SPI, I²C, and PCI Express.</p>
+
+<p>Some people specifically limit serial communication between Raspberry and Arduino to serial communication using the UART protocol, where UART stands for “Universal Asynchronous Reception and Transmission”. Basically it’s an asynchronous multi-master protocol based on the Serial communication, which will allow you to communicate between the two boards. There isn’t a common clock in asynchronous serial communication; instead, both devices keep time independently, and either send or listen for new bits of data at an agreed-upon rate.</p>
+
+<p>Multi-master means that all connected devices will be free to send data when they want. This is one of the main difference with master-slaves protocols, where only the master device can initiate a communication. Usually you’ll use other protocols such as I²C and SPI when you need master-slaves configurations: for example when you have one Arduino board and multiple sensors or actuators. In contrast to UART, I²C and SPI are synchronous interfaces.</p>
+
+<p>UART can also refer to a piece of computer hardware called the &quot;Universal Asynchronous Receiver-Transmitter&quot; (see <a href="https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter">Wikipedia</a>). A UART is usually an individual (or part of an) integrated circuit (IC) used for serial communications over a computer or peripheral device serial port. At the origin, a UART takes bytes of data and transmits the individual bits in a sequential fashion. At the destination, a second UART re-assembles the bits into complete bytes. Each UART contains a shift register, which is the fundamental method of conversion between serial and parallel forms.</p>
+
+<p>Most processors on the market today are equipped with one or more UARTs. However, most personal computers do not have an asynchronous serial port anymore. Instead, they have USB ports, which is slightly different and more complex serial protocol that allows multiple devices to communicate over the same wires (bus configuration). Because so many devices still use asynchronous serial communication, USB includes a so-called Communications Device Class (CDC) that supports asynchronous serial communication.</p>
+
+<p>Devices that include a USB-to-serial converter will show up as serial ports to your computer when you plug them in. Many microcontroller boards, including the Arduino boards, include a USB-to-serial converter to communicate with your computer in this way. When you plug them in, any program that can read serial ports will list the connected Arduino in the list of serial ports.</p>
+
+<p>There are two ways to connect Raspberry Pi and Arduino for serial communication:</p>
+
+<ul>
+<li>Serial via GPIO pins (UART, SPI, I²C)</li>
+<li>Serial via USB (UART)</li>
+</ul>
+
+<p>The first way to make a serial connection is to use plain jumper wires between the Raspberry Pi GPIOs and the Arduino pins, using UART, SPI, or I²C serial protocols (see also <a href="https://www.mbtechworks.com/hardware/raspberry-pi-UART-SPI-I2C.html">this article</a>). Depending on the Arduino board you might need to use a voltage level-shifter. The Raspberry Pi is operating at 3.3V. For some Arduino boards like Due this will be fine because they also use 3.3V. But for most Arduino boards, such as my Uno, the board is operating at 5V. Thus, we would need a 3.3V/5V level-shifter to protect the Raspberry Pi (as I had used for the <a href="/post/2019-12-25-ultrasonic-sensor-raspi/">distance sensors</a>).</p>
+
+<p>The easier way is to use a USB cable between both boards (UART protocol). I will choose this option since I anyhow need this cable, both to upload sketches from the Raspberry and to power the Arduino (but not the motor shield which has its own battery pack).</p>
+
+<p>When connecting the Arduino with a USB cable, you should see it appear as <code>/dev/ttyACM0</code>, or <code>/dev/ttyUSB0</code> (sometimes the number can be different, for example <code>/dev/ttyACM1</code>). Simply run <code>ls /dev/tty*</code> and you should see it. At this point if you’re not sure which device is the Arduino board, simply disconnect the board and run <code>ls /dev/tty*</code> again. This way you will easily spot the serial device name of your Arduino.</p>
+
+<p>We need to initialize the serial communication both on Raspberry and Arduino and choose a baud rate. A commonly used baud rate is 9600, which is pretty low; baud rates of 57,600 or even 115,200 should also work without any problem. You need to use the same baud rate on both devices, or else everything you’ll read and write will be garbage.</p>
+
+<h3 id="raspberry-pi-python-code">Raspberry Pi Python code</h3>
+
+<p>On the Raspberry we need to install a library to be able to use the serial interface with Python, e.g., the commonly used <a href="https://pyserial.readthedocs.io/en/latest/pyserial.html">pySerial library </a>:</p>
+<div class="highlight"><pre class="chroma">$ python3 -m pip install pyserial</pre></div>
+<p>In the Python code, serial communication is initialized by calling <code>serial.Serial()</code> to generate an object we can use for all serial communication:</p>
+<div class="highlight"><pre class="chroma">ser = serial.Serial(&#39;/dev/ttyACM0&#39;, 9600, timeout=1)</pre></div>
+<p>The <code>timeout</code> parameter is important for read operations. While we reading from serial, it will prevent us from getting stuck forever if the data is not coming. Setting timeout to <code>x</code> seconds (float allowed) returns immediately when the requested number of bytes are available, otherwise wait until the timeout expires and return all bytes that were received until then. The <code>flush()</code> function will flush any input and output buffer, so it will avoid receiving or sending weird/not useful/not complete data at the beginning of the communication.</p>
+<div class="highlight"><pre class="chroma">ser.flush()</pre></div>
+<p>In an infinite loop, similar to <code>void loop()</code> function in the Arduino sketch, we check if some data is available with the <code>in_waiting attribute</code>. The <code>readline()</code> function will read all bytes until a newline character is detected. You receive bytes when you read from serial, and you have to convert those bytes into the appropriate data type. So, we use <code>decode(‘utf-8’)</code> to decode the received data to a string. To remove any trailing characters, such as a newline <code>\n</code>, we apply the <code>rstrip()</code> function:</p>
+<div class="highlight"><pre class="chroma">line = ser.readline().decode(&#39;utf-8&#39;).rstrip()</pre></div>
+<p>In essence, the Python program is looping over a list called <code>fahrprogramm</code> that contains the actions the robot car is supposed to perform. The command strings are sent (as bytes) over the serial link to the Arduino, the end being indicated by a newline characters. The Raspberry is then entering into the infinite read loop, waiting for the Arduino to complete its action and answer &quot;<code>Ardu says: Done!</code>&quot;. Then the next action is sent to the Arduino. Here is the complete listing:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-py3" data-lang="py3"><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">serial</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">fahrprogramm</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&#34;drive forward</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;turn left</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;turn right</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;turn around</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;drive forward</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;turn around</span><span class="se">\n</span><span class="s2">&#34;</span>
+<span class="p">]</span>
+
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="s1">&#39;/dev/ttyACM0&#39;</span><span class="p">,</span> <span class="mi">9600</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ser</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Rasp says: Let&#39;s start!&#34;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">fahrprogramm</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Rasp says: Let&#39;s &#34;</span> <span class="o">+</span> <span class="n">action</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+        <span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">action</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">ser</span><span class="o">.</span><span class="n">in_waiting</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">line</span> <span class="o">=</span> <span class="n">ser</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">line</span> <span class="o">==</span> <span class="s2">&#34;Ardu says: Done!&#34;</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Rasp says: Yes, I&#39;m waiting for you&#34;</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Rasp says: OK, let&#39;s stop here!&#34;</span><span class="p">)</span></code></pre></div>
+
+<h3 id="arduino-code">Arduino Code</h3>
+
+<p>The code on the Arduino side is also fairly straightforward.</p>
+
+<p>The <code>Adafruit_MotorShield</code> class represents a motor shield and must be instantiated before any DCMotors or
+StepperMotors can be used. You will need to declare one <code>Adafruit_MotorShield</code> for each shield in your system (but I currently don't see a reason why I would need more motors and shields ...). The <code>Adafruit_MotorShield()</code> constructor takes one optional parameter to specify the I²C address of the shield (default adress as shipped is <code>0x60</code>). The function <code>Adafruit_DCMotor *getMotor()</code> returns one of 4 pre-defined DC motor objects controlled by the shield. A parameter <code>1-4</code> specifies the associated motor channel.</p>
+
+<p>The <code>Adafruit_DCMotor</code> class represents a DC motor attached to the shield. You must declare one for each motor in your system. The constructor takes no arguments. The motor object is typically initialized by assigning a motor object retrieved from the shield class as below:</p>
+<div class="highlight"><pre class="chroma">Adafruit_DCMotor *myMotor1 = AFMS.getMotor(1);</pre></div>
+<p>I have defined two parameters that control the driving behavior of the robot. <code>max_speed</code> limits the speed to some value smaller than the actual maximum speed of <code>255</code> (the robot can drive quite fast ...). <code>accel_delay</code> controls how smoothly the robot accelerates and decelerates. As usual in C++ the delay is measured in milliseconds.</p>
+
+<p>The Arduino <code>setup()</code> function is called when the sketch starts and will only run once, after each powerup or reset of the Arduino board. Here we initialize serial communication at a baud rate of 9600 and call the <code>begin()</code> function of the <code>Adafruit_MotorShield</code> class to initialize the shield. Since no PWM frequency parameter is given the default (maximum) value of 1.6KHz will be used.</p>
+
+<p>In summary, the beginning of the Arduino code looks like this:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-ino" data-lang="ino"><span class="cm">/* 
+</span><span class="cm">This is a modification of a test sketch for the Adafruit Motor Shield 
+</span><span class="cm">for Arduino v2 (http://www.adafruit.com/products/1438) with built-in PWM  
+</span><span class="cm">*/</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;Wire.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;Adafruit_MotorShield.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="c1">// Create the motor shield object with the default I2C address
+</span><span class="c1"></span><span class="n">Adafruit_MotorShield</span> <span class="n">AFMS</span> <span class="o">=</span> <span class="n">Adafruit_MotorShield</span><span class="p">();</span> 
+
+<span class="c1">// Select &#39;ports&#39;  
+</span><span class="c1"></span><span class="n">Adafruit_DCMotor</span> <span class="o">*</span><span class="n">myMotor1</span> <span class="o">=</span> <span class="n">AFMS</span><span class="p">.</span><span class="n">getMotor</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// front-left
+</span><span class="c1"></span><span class="n">Adafruit_DCMotor</span> <span class="o">*</span><span class="n">myMotor2</span> <span class="o">=</span> <span class="n">AFMS</span><span class="p">.</span><span class="n">getMotor</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// back-right
+</span><span class="c1"></span><span class="n">Adafruit_DCMotor</span> <span class="o">*</span><span class="n">myMotor3</span> <span class="o">=</span> <span class="n">AFMS</span><span class="p">.</span><span class="n">getMotor</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span> <span class="c1">// front-right (reverse)
+</span><span class="c1"></span><span class="n">Adafruit_DCMotor</span> <span class="o">*</span><span class="n">myMotor4</span> <span class="o">=</span> <span class="n">AFMS</span><span class="p">.</span><span class="n">getMotor</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span> <span class="c1">// back-left (reverse)
+</span><span class="c1"></span>
+<span class="c1">// Variables for tweaking drive behavior
+</span><span class="c1"></span><span class="kt">uint8_t</span> <span class="n">max_speed</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span> 
+<span class="kt">uint8_t</span> <span class="n">accel_delay</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nc">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>   <span class="c1">// set up Serial library at 9600 bps
+</span><span class="c1"></span>  <span class="nc">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Ardu says: Let&#39;s start!&#34;</span><span class="p">);</span>
+  <span class="n">AFMS</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span>         <span class="c1">// create with the default frequency 1.6KHz
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div>
+
+<p>The Arduino <code>loop()</code> function loops consecutively and is used to actively control the Arduino board. It just reads commands such as  <code>&quot;drive forward\n&quot;</code> from the serial port and stores them in the string <code>state</code> , acknowledges receipt back over the serial port, and then executes those commands by calling functions such as <code>drive_forward()</code>. Once a drive command is executed,  <code>state</code> is set to `&quot;Done!&quot;, the Arduino communicates this fact back over the serial connection to the Raspberry and waits for the next drive command.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-ino" data-lang="ino"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nc">Serial</span><span class="p">.</span><span class="nf">available</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">String</span> <span class="n">state</span> <span class="o">=</span> <span class="nc">Serial</span><span class="p">.</span><span class="nf">readStringUntil</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+    <span class="nc">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;Ardu says: You told me to &#34;</span><span class="p">);</span>
+    <span class="nc">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">state</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s">&#34;drive forward&#34;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">drive_forward</span><span class="p">();</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="s">&#34;Done!&#34;</span><span class="p">;</span>
+        <span class="nc">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;Ardu says: &#34;</span><span class="p">);</span>
+        <span class="nc">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">state</span><span class="p">);</span>
+        <span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>  
+    <span class="p">}</span>  
+
+    <span class="p">[...</span> <span class="n">etc</span> <span class="p">...]</span>
+
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s">&#34;turn around&#34;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">turn_around</span><span class="p">();</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="s">&#34;Done!&#34;</span><span class="p">;</span>
+        <span class="nc">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;Ardu says: &#34;</span><span class="p">);</span>
+        <span class="nc">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">state</span><span class="p">);</span>
+        <span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>          
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nc">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Ardu says: Waiting for input!&#34;</span><span class="p">);</span>
+      <span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Finally we have a set of functions that perform the actual motor control. I just show the <code>drive_forward()</code> function, all others look very similar.</p>
+
+<p>The <code>run()</code> function controls the motor state. The parameter can have one the values <code>FORWARD</code>, <code>BACKWARD</code> and <code>RELEASE</code>. Foward and backward directions are arbitrary and can be changed by swapping the motor leads. <code>RELEASE</code> will simply cut power to the motor without any braking.</p>
+
+<p>The <code>setSpeed()</code> function controls the power level delivered to the motor. The speed parameter is a value between 0 and 255. The actual speed of the motor will depend on several factors, including the motor itself, the power supply and the load. And the actual driving speed of the robot, of course, depends on many more factors, such as the gear ratio, wheel diameter, grip, mass of the robot, etc.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-ino" data-lang="ino"><span class="kt">void</span> <span class="nf">drive_forward</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">uint8_t</span> <span class="n">i</span><span class="p">;</span>
+  <span class="kt">uint16_t</span> <span class="n">drive_time</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+  
+  <span class="nc">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Ardu says: Starting to drive forward!&#34;</span><span class="p">);</span>
+
+  <span class="n">myMotor1</span><span class="o">-&gt;</span><span class="nf">run</span><span class="p">(</span><span class="n">FORWARD</span><span class="p">);</span>
+  <span class="n">myMotor2</span><span class="o">-&gt;</span><span class="nf">run</span><span class="p">(</span><span class="n">FORWARD</span><span class="p">);</span>
+  <span class="n">myMotor3</span><span class="o">-&gt;</span><span class="nf">run</span><span class="p">(</span><span class="n">BACKWARD</span><span class="p">);</span>
+  <span class="n">myMotor4</span><span class="o">-&gt;</span><span class="nf">run</span><span class="p">(</span><span class="n">BACKWARD</span><span class="p">);</span>  
+  
+  <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">max_speed</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">myMotor1</span><span class="o">-&gt;</span><span class="nf">setSpeed</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>  
+    <span class="n">myMotor2</span><span class="o">-&gt;</span><span class="nf">setSpeed</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>  
+    <span class="n">myMotor3</span><span class="o">-&gt;</span><span class="nf">setSpeed</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>  
+    <span class="n">myMotor4</span><span class="o">-&gt;</span><span class="nf">setSpeed</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>      
+    <span class="nf">delay</span><span class="p">(</span><span class="n">accel_delay</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="nf">delay</span><span class="p">(</span><span class="n">drive_time</span><span class="p">);</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">max_speed</span><span class="p">;</span> <span class="n">i</span><span class="o">!=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">myMotor1</span><span class="o">-&gt;</span><span class="nf">setSpeed</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>  
+    <span class="n">myMotor2</span><span class="o">-&gt;</span><span class="nf">setSpeed</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>  
+    <span class="n">myMotor3</span><span class="o">-&gt;</span><span class="nf">setSpeed</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>  
+    <span class="n">myMotor4</span><span class="o">-&gt;</span><span class="nf">setSpeed</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>     
+    <span class="nf">delay</span><span class="p">(</span><span class="n">accel_delay</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+<span class="p">}</span>
+
+<span class="p">[...</span> <span class="n">etc</span> <span class="p">...]</span>
+</code></pre></div>
+
+<p>When executing the Python code on the Raspberry and the Arduino/C++ code on the Arduino, magic happens and we see the following epic dialog in the terminal of our <a href="/post/2020-04-07-vscode-remote/">remote development environment in VS Code</a>:</p>
+
+<p><center>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:750px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-05-17-serial-connection/VSCode4b.jpg" alt="Dialog between RPi and Arduino"/>
+    </div>
+    <a href="/img/2020-05-17-serial-connection/VSCode4b.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Dialog between RPi and Arduino</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
+<p>While all of this is working nicely I realize that I should learn more about the Arduino language, which subset of C/C++ functions it actually supports, and how far one can go with object oriented programming on the Arduino. Somehow the current ad-hoc implementation feels a bit like Spaghetti code:</p>
+
+<p><center>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://imgs.xkcd.com/comics/good_code.png" alt="https://imgs.xkcd.com/comics/good_code.png"/>
+    </div>
+    <a href="https://imgs.xkcd.com/comics/good_code.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<small>Source: <a href="https://xkcd.com/844/">xkcd.com/844/</a></small>
+</center>.</p>
+
+<h3 id="links">Links</h3>
+
+<p>I had a hard time finding useful articles on the Internet regarding serial communication with the Raspberry which provided some conceptual understanding and went beyond displaying short code snippets. Notable exceptions are the following:</p>
+
+<ul>
+<li><a href="https://itp.nyu.edu/physcomp/">ITP Physical Computing</a>: Tom Igoe writing on <a href="https://itp.nyu.edu/physcomp/lessons/serial-communication/serial-communication-the-basics/">Asynchronous Serial Communication</a> and <a href="https://itp.nyu.edu/physcomp/lessons/serial-communication/synchronous-serial-communication-the-basics/">Synchronous Serial Communication</a>. And then there is also this <a href="https://itp.nyu.edu/physcomp/labs/labs-serial-communication/serial-output-from-an-arduino/">interesting lab</a>.</li>
+<li><a href="https://roboticsbackend.com/raspberry-pi-arduino-serial-communication/#What_is_Serial_communication_(with_UART)">The Robotics Back-End</a>: Raspberry Pi Arduino Serial Communication – Everything You Need To Know</li>
+<li><a href="https://www.elektronikpraxis.vogel.de/raspberry-pi-grundlagen-serieller-kommunikation-a-824110/">Elektronik Praxis</a>: Raspberry Pi: Grundlagen serieller Kommunikation</li>
+<li><a href="https://www.springer.com/de/book/9783658087104">Raspberry Pi - Das technische Handbuch</a> (Klaus Dembowski), Section 6.3 - 6.5</li>
+</ul>
+
+<p>The Adafruit Motor Shield V2 is well documented in this <a href="https://cdn-learn.adafruit.com/downloads/pdf/adafruit-motor-shield-v2-for-arduino.pdf">PDF file</a>. Future learning on better Arduino coding can be supported by these links:</p>
+
+<ul>
+<li><a href="https://roboticsbackend.com/arduino-object-oriented-programming-oop/">The Robotics Back-End</a>: Arduino Object Oriented Programming (OOP)</li>
+<li><a href="https://www.arduino.cc/en/Hacking/LibraryTutorial">Arduino Hacking</a>: Writing a Library for Arduino</li>
+<li><a href="https://paulmurraycbr.github.io/ArduinoTheOOWay.html">Arduino the Object Oriented way</a></li>
+</ul>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/arduino/">arduino</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/cpp/">cpp</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/code/">code&#34;</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/python/">python</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/raspberry/">raspberry</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/robot/">robot</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2020-04-07-vscode-remote/">Remote Development on Raspberry and Arduino with VS Code</a></li>
+                
+                    <li><a href="/post/2020-03-25-regex/">Converting LaTeX to Markdown</a></li>
+                
+                    <li><a href="/post/2020-01-26-robot/">Mobile Robot</a></li>
+                
+                    <li><a href="/post/2019-12-25-ultrasonic-sensor-raspi/">Ultrasonic Range Sensor on the Raspberry Pi</a></li>
+                
+                    <li><a href="/post/2019-12-21-ai-weekly-51-2019/">AI weekly (51/2019)</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2020-05-01-derivative/" data-toggle="tooltip" data-placement="top" title="Derivative (or Tangent Map)">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

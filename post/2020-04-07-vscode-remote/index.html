@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Remote Development on Raspberry and Arduino with VS Code - Joachim Weise</title>
+  <meta name="description" content="Efficient Programming with Visual Studio Code Remote-SSH extension and Arduino CLI">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2020-04-07-vscode-remote\/",
+          "name": "Remote development on raspberry and arduino with v s code"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "Remote Development on Raspberry and Arduino with VS Code",
+  "description" : "In this short note I will summarize how I can happily use Visual Studio Code on my local Windows desktop or laptop to do remote development on a Raspberry Pi or another Linux machine, and even push Arduino sketches from the Raspberry to an Arduino without touching the Arduino IDE. I have been a fan of the Raspberry Pi single board computer for a number of years now, and have used quite a number of them in my desktop single board computer cluster and my developing Raspberry\/Arduino robot car. Still, I found developing code on it to be uncomfortable and sometimes cumbersome, as some IDEs don\x27t support ARM processors whereas others like Thonny are rather basic. Remote development solves this by allowing you to code on your desktop \/ laptop and run it externally on a host (like the RPi). With the nascent Arduino CLI you can even largely replace the Arduino IDE for developing Arduino sketches on RPi and pushing them to a connected Arduino.\n",
+  "inLanguage" : "en",
+  "wordCount":  1194 ,
+  "datePublished" : "2020-04-07T00:00:00",
+  "dateModified" : "2020-04-07T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "arduino, python, raspberry" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-04-07-vscode-remote\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Remote Development on Raspberry and Arduino with VS Code" />
+<meta property="og:description" content="Efficient Programming with Visual Studio Code Remote-SSH extension and Arduino CLI">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2020-04-07-vscode-remote/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="Remote Development on Raspberry and Arduino with VS Code" />
+  <meta name="twitter:description" content="Efficient Programming with Visual Studio Code Remote-SSH extension and Arduino CLI">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165585092-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+                  <a href="/page/robot">Robot Car</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="/img/2020-04-07-vscode-remote/background.jpg" 
+         
+         data-img-desc-1="Flying over Idaho (2017)"
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>Remote Development on Raspberry and Arduino with VS Code</h1>
+                  
+                    
+                      <h2 class="post-subheading">Efficient Programming with Visual Studio Code Remote-SSH extension and Arduino CLI</h2>
+                    
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Apr 7, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1194&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Remote Development on Raspberry and Arduino with VS Code</h1>
+              
+              
+                
+                  <h2 class="post-subheading">Efficient Programming with Visual Studio Code Remote-SSH extension and Arduino CLI</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Apr 7, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1194&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>In this short note I will summarize how I can happily use Visual Studio Code on my local Windows desktop or laptop to do remote development on a Raspberry Pi or another Linux machine, and even push Arduino sketches from the Raspberry to an Arduino without touching the Arduino IDE. I have been a fan of the Raspberry Pi single board computer for a number of years now, and have used quite a number of them in my desktop single board computer cluster and my developing Raspberry/Arduino <a href="/page/robot/">robot car</a>. Still, I found developing code on it to be uncomfortable and sometimes cumbersome, as some IDEs don't support ARM processors whereas others like Thonny are rather basic. Remote development solves this by allowing you to code on your desktop / laptop and run it externally on a host (like the RPi). With the nascent Arduino CLI you can even largely replace the Arduino IDE for developing Arduino sketches on RPi and pushing them to a connected Arduino.</p>
+
+<h3 id="remote-development-with-visual-studio-code">Remote Development with Visual Studio Code</h3>
+
+<p>For remote development to work in VS Code, you need to be able to SSH into your Raspberry, or other remote machine, using <code>ssh pi@IP_ADDRESS</code> in a command prompt (Windows) / terminal (Linux). You also need to install the VS Code <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote - SSH extension</a>. Once done there's a new symbol in the left toolbar and an indicator on the bottom-left corner of the Status bar. This indicator tells you in which context VS Code is running (local or remote). Click on the indicator to bring up a list of Remote extension commands.</p>
+
+<p><center>
+
+<link rel="stylesheet" href="https://joachimweise.github.io/css/hugo-easy-gallery.css" />
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:750px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-04-07-vscode-remote/VSCode5.jpg" alt="VS Code Remote - SSH extension"/>
+    </div>
+    <a href="/img/2020-04-07-vscode-remote/VSCode5.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>VS Code Remote - SSH extension</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
+<p>You can enter a new SSH connection or choose among previously used ones that are stored in a configuration file. More details can be found in Microsoft tutorial pages <a href="https://code.visualstudio.com/docs/remote/ssh">here</a> and <a href="https://code.visualstudio.com/remote-tutorials/ssh/getting-started">here</a>. Upon connection to a new system VS Code will provision the VS Code Server to the remote environement. This will work with a <a href="https://code.visualstudio.com/docs/remote/linux">number of Linux flavors</a>, but certain other extensions may not work on ARMv7l (AArch32) and ARMv8l (AArch64) devices if they use x86 native code in the extension. The installation on my Raspberry looked as follows:</p>
+
+<p><center>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:750px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-04-07-vscode-remote/VSCode2a.jpg" alt="VS Code Remote - SSH extension"/>
+    </div>
+    <a href="/img/2020-04-07-vscode-remote/VSCode2a.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>VS Code Remote - SSH extension</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
+<p>That's basically it, from here on everything works fine, even on my old Raspberry Pi 2 Model B. Regarding supported / unsupported extensions I will need more time to explore and will eventually add to this post later on.</p>
+
+<h3 id="arduino-cli">Arduino CLI</h3>
+
+<p>The Arduino IDE is great at achieving its intended purpose: It's a simple, single-file application development environment. It has just enough integrated tools to help achieve that purpose. But for larger application development it doesn't compare with a full-featured C/C++ IDE, lacking features such as code navigation, auto-completion, version control integration, or an integrated terminal.</p>
+
+<p>Thanks to the nascent <a href="https://arduino.github.io/arduino-cli/">Arduino CLI</a> there is now a potentially much more efficient mode of coding for the Arduino. Arduino CLI is the &quot;glue&quot; that can pair the VS Code IDE with common Arduino compilation and upload tools, providing a command-line interface for such tasks as building Arduino sketches, uploading Arduino sketches, downloading libraries and downloading new board definition files - all without ever opening the Arduino IDE.</p>
+
+<p>The latest version of the Arduino CLI on any supported platform can be obtained using the <code>install.sh</code> script:</p>
+<div class="highlight"><pre class="chroma">$ curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh</pre></div>
+<p>Next, I created a configuration file as suggested on the Arduino CLI man page, in order to avoid a lot of typing when issuing a command:</p>
+<div class="highlight"><pre class="chroma">$ arduino-cli config init</pre></div>
+<p>The next thing to do upon a fresh install is to update the local cache of available platforms and libraries by running:</p>
+<div class="highlight"><pre class="chroma">$ arduino-cli core update-index
+Updating index: package_index.json downloaded</pre></div>
+<p>Arduino and Raspberry are connected via USB cable on my mobile robot, so let's see whether the Arduino can be recognized:</p>
+<div class="highlight"><pre class="chroma">$ arduino-cli board list
+Port         Type              Board Name   FQBN            Core
+/dev/ttyACM0 Serial Port (USB) Arduino Uno  arduino:avr:uno arduino:avr 
+/dev/ttyACM0 Serial Port       Unknown</pre></div>
+<p>The Arduino Uno was recognized and from the output of the command we see the platform core called <code>arduino:avr</code> is the one that needs to be installed to make it work. The fact that we see an <code>Unknown</code> board listed doesn't really matter as long as we identify the platform core and use the correct FQBN string.</p>
+
+<p>You can search for available cores like this:</p>
+<div class="highlight"><pre class="chroma">$ arduino-cli core search arduino
+ID                Version Name                                             
+Intel:arc32       2.0.4   Intel Curie Boards                               
+arduino:avr       1.8.2   Arduino AVR Boards                               
+arduino:mbed      1.1.4   Arduino nRF528x Boards (Mbed OS)                 
+arduino:megaavr   1.8.6   Arduino megaAVR Boards                           
+arduino:nrf52     1.0.2   Arduino nRF52 Boards                             
+arduino:sam       1.6.12  Arduino SAM Boards (32-bits ARM Cortex-M3)       
+arduino:samd      1.8.6   Arduino SAMD Boards (32-bits ARM Cortex-M0+)     
+arduino:samd_beta 1.6.25  Arduino SAMD Beta Boards (32-bits ARM Cortex-M0+)
+littleBits:avr    1.0.0   littleBits Arduino AVR Modules </pre></div>
+<p>Let's install the  <code>arduino:avr</code> platform core:</p>
+<div class="highlight"><pre class="chroma">$ arduino-cli core install arduino:avr</pre></div>
+<p>The process is also documented in the following picture which, on the left hand side, shows the folder structure that has been built during the installation process:
+<center>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:750px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-04-07-vscode-remote/arduino-cli_01a.jpg" alt="Installing Arduino Boards"/>
+    </div>
+    <a href="/img/2020-04-07-vscode-remote/arduino-cli_01a.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Installing Arduino Boards</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
+<p>From a hardware perspective we are good to go but we may need to import external libraries before we can compile and Arduino sketch. In my case I needed a library for the Adafruit Motor shield. You can search for libraries like this:</p>
+<div class="highlight"><pre class="chroma">arduino-cli lib search adafruit motor shield</pre></div>
+<p>This will result in a list of related libaries out of which you can then install the right one:</p>
+<div class="highlight"><pre class="chroma">arduino-cli lib install &#34;Adafruit Motor Shield V2 Library&#34;</pre></div>
+<p>We are now good to go. Arduino sketches can be developed in VS Code and then compiled and uploaded from the integrated terminal. To make the last two steps handier and avoid typing long commands I added a few lines to the <code>.bashrc</code> shell script, using</p>
+<div class="highlight"><pre class="chroma">$ nano ~/.bashrc</pre></div>
+<p>First I added the directory of the <code>arduino-cli</code> executable to the user $PATH variable so that I can execute the Arduino CLI without typing the full path:</p>
+<div class="highlight"><pre class="chroma">export PATH=&#34;/home/pi/Documents/Arduino Projects/arduino-cli/bin:$PATH&#34;</pre></div>
+<p>This is necessary since I didn't store  <code>arduino-cli</code> in one of the standard directories for files with executable permissions, such as <code>/bin</code>, <code>/sbin</code>, <code>/usr/sbin</code>, <code>/usr/local/bin</code> or <code>/usr/local/sbin</code>. As a second addition, I create aliases <code>acompile</code> and <code>aupload</code> as follows:</p>
+<div class="highlight"><pre class="chroma">alias acompile=&#34;arduino-cli compile --fqbn arduino:avr:uno&#34;
+alias aupload=&#34;arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:uno&#34;</pre></div>
+<p>They allow me to compile Arduino sketches and upload them to the board using the following short commands:</p>
+<div class="highlight"><pre class="chroma">acompile DCMotorTest/ &amp;&amp; aupload DCMotorTest/</pre></div>
+<p>Note that you need to give the directories as arguments, not, e.g., the <code>.ino</code> file for compilation. After saving the  <code>.bashrc</code> file I loaded the changes into the current shell session using the source command:</p>
+<div class="highlight"><pre class="chroma">$ source ~/.bashrc</pre></div>
+<p>To confirm that the directory was successfully added, one can print the value of $PATH by typing:</p>
+<div class="highlight"><pre class="chroma">$ echo $PATH</pre></div>
+<p>The final picture shows the result of our work. We can now develop Python code for the Raspberry and C++/.ino code for the Arduino side by side. Also we can use several parallel terminal windows to upload sketches and monitor code execution:
+<center>
+
+
+<div class="box fancy-figure caption-position-bottom caption-effect-fade" style="max-width:750px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-04-07-vscode-remote/VSCode4a.jpg" alt="Remote development environment is complete!"/>
+    </div>
+    <a href="/img/2020-04-07-vscode-remote/VSCode4a.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Remote development environment is complete!</p>
+      </figcaption>
+  </figure>
+</div>
+
+</center></p>
+
+<h3 id="links">Links</h3>
+
+<p>Finally, some links that I found helpful:</p>
+
+<ul>
+<li>first</li>
+<li>The Arduino CLI is relatively well documented on their <a href="https://arduino.github.io/arduino-cli/">GitHub page</a>. Additional websites that may be helpful: <a href="https://learn.sparkfun.com/tutorials/efficient-arduino-programming-with-arduino-cli-and-visual-studio-code/all">One</a>, <a href="https://peppe8o.com/connecting-raspberry-pi-zero-w-to-arduino-only-via-terminal/">two</a>, <a href="https://peppe8o.com/installing-external-libraries-with-arduino-cli-on-raspberry-pi/">three</a>.</li>
+</ul>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/arduino/">arduino</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/python/">python</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/raspberry/">raspberry</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2020-05-17-serial-connection/">Arduino Motor Control Using Serial Connection</a></li>
+                
+                    <li><a href="/post/2020-03-25-regex/">Converting LaTeX to Markdown</a></li>
+                
+                    <li><a href="/post/2020-01-26-robot/">Mobile Robot</a></li>
+                
+                    <li><a href="/post/2019-12-25-ultrasonic-sensor-raspi/">Ultrasonic Range Sensor on the Raspberry Pi</a></li>
+                
+                    <li><a href="/post/2019-12-21-ai-weekly-51-2019/">AI weekly (51/2019)</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2020-04-04-ai-weekly-14-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (14/2020)">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://joachimweise.github.io/post/2020-04-11-ai-weekly-15-2020/" data-toggle="tooltip" data-placement="top" title="AI weekly (15/2020)">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

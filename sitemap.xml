@@ -4,8 +4,53 @@
   
   <url>
     <loc>https://joachimweise.github.io/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/arduino/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-05-17-serial-connection/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/code/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/cpp/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/python/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/raspberry/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/robot/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -29,17 +74,7 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/post/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/tags/relativity/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -74,6 +109,11 @@
   </url>
   
   <url>
+    <loc>https://joachimweise.github.io/post/2020-04-07-vscode-remote/</loc>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://joachimweise.github.io/post/2020-04-04-ai-weekly-14-2020/</loc>
     <lastmod>2020-04-04T00:00:00+00:00</lastmod>
   </url>
@@ -85,11 +125,6 @@
   
   <url>
     <loc>https://joachimweise.github.io/post/2020-03-25-regex/</loc>
-    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/python/</loc>
     <lastmod>2020-03-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -219,27 +254,12 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/arduino/</loc>
-    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/tags/electronics/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://joachimweise.github.io/post/2020-01-26-robot/</loc>
-    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/raspberry/</loc>
-    <lastmod>2020-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/robot/</loc>
     <lastmod>2020-01-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -306,11 +326,6 @@
   <url>
     <loc>https://joachimweise.github.io/tags/deep-learning/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/code/</loc>
-    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -564,6 +579,10 @@
   
   <url>
     <loc>https://joachimweise.github.io/page/qt/</loc>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/page/robot/</loc>
   </url>
   
 </urlset>

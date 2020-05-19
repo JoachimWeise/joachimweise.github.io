@@ -60,5 +60,17 @@ Tangent Spaces: Defining tangent vectors as derivations, or directional derivati
       <description>No content yet &amp;hellip;</description>
     </item>
     
+    <item>
+      <title>Raspberry Pi / Arduino Robot</title>
+      <link>https://joachimweise.github.io/page/robot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/page/robot/</guid>
+      <description>Bot in action
+   .
+The Basics Basic setup using Arduino and Raspberry Pi: Describing the basic construction of the bot, using Pirate-4WD Mobile Platform, Raspberry Pi and Arduino Uno.
+Ultrasonic Range Sensor on the Raspberry Pi: Interfacing the HC-SR04 ultrasonic sensor module with a Raspberry Pi to measure distance. Using an oscilloscope to dive a little deeper into the inner workings of the sensor.</description>
+    </item>
+    
   </channel>
 </rss>
