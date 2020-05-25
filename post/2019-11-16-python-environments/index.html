@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Python virtual environments - Joachim Weise</title>
-  <meta name="description" content="tbd tbd">
+  <meta name="description" content="Getting to know pipenv, pyenv, conda and friends">
   <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -59,7 +59,7 @@
   "headline": "Python virtual environments",
   "description" : "Anyone who works on Python projects and uses various packages will sooner or later have to deal with different versions of packages across different branches and projects. Because each project has its own set of dependencies, it’s a good practice to avoid mixing them. If all the dependencies are installed together in a single Python environment, then it will be difficult to discern where each one came from. In the worst cases, two different projects may depend on two different versions of a package, but with Python you can only have one version of a package installed at one time. What a mess! Virtual environments address this issue. A virtual environment, put simply, is an isolated working copy of Python which allows you to work on a specific project without worry of affecting other projects.\n",
   "inLanguage" : "en",
-  "wordCount":  719 ,
+  "wordCount":  3036 ,
   "datePublished" : "2019-11-15T00:00:00",
   "dateModified" : "2019-11-15T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
@@ -79,14 +79,14 @@
 </script>
 
 <meta property="og:title" content="Python virtual environments" />
-<meta property="og:description" content="tbd tbd">
+<meta property="og:description" content="Getting to know pipenv, pyenv, conda and friends">
 <meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
 <meta property="og:url" content="https://joachimweise.github.io/post/2019-11-16-python-environments/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Joachim Weise" />
 
   <meta name="twitter:title" content="Python virtual environments" />
-  <meta name="twitter:description" content="tbd tbd">
+  <meta name="twitter:description" content="Getting to know pipenv, pyenv, conda and friends">
   <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -268,7 +268,7 @@ if (!doNotTrack) {
                 <h1>Python virtual environments</h1>
                   
                     
-                      <h2 class="post-subheading">tbd tbd</h2>
+                      <h2 class="post-subheading">Getting to know pipenv, pyenv, conda and friends</h2>
                     
                   
                   
@@ -278,10 +278,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i> &nbsp;Nov 15, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;719&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;3036&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;15&nbsp;minutes
   
   
   
@@ -306,7 +306,7 @@ if (!doNotTrack) {
               
               
                 
-                  <h2 class="post-subheading">tbd tbd</h2>
+                  <h2 class="post-subheading">Getting to know pipenv, pyenv, conda and friends</h2>
                 
               
               
@@ -316,10 +316,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i> &nbsp;Nov 15, 2019
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;719&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;3036&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;4&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;15&nbsp;minutes
   
   
   
@@ -344,38 +344,228 @@ if (!doNotTrack) {
       <article role="main" class="blog-post">
         <p>Anyone who works on Python projects and uses various packages will sooner or later have to deal with different versions of packages across different branches and projects. Because each project has its own set of dependencies, it’s a good practice to avoid mixing them. If all the dependencies are installed together in a single Python environment, then it will be difficult to discern where each one came from. In the worst cases, two different projects may depend on two different versions of a package, but with Python you can only have one version of a package installed at one time. What a mess! Virtual environments address this issue. A virtual environment, put simply, is an isolated working copy of Python which allows you to work on a specific project without worry of affecting other projects.</p>
 
-<p>[NOTE: THIS IS WORK IN PROGRESS]</p>
-
 <h3 id="overview">Overview</h3>
 
-<p>At its core, the main purpose of Python virtual environments is to create an isolated environment for Python projects. This means that each project can have its own dependencies, regardless of what dependencies every other project has. You can think of a virtual environment as a carbon copy of a base version of Python. If you’ve installed Python 3.7.3, for example, then you can create many virtual environments based off of it. When you install a package in a virtual environment, you do it in isolation from other Python environments you may have. Each virtual environment has its own copy of the python executable.</p>
+<p>Python is considered a &ldquo;batteries included&rdquo; language. In other words, the Python standard library includes an extensive set of packages and modules to help developers with their scripts and applications. At the same time, Python has a very active community that contributes an even bigger set of packages that can help you with your development needs. These packages are published to the Python Package Index, also known as <a href="https://pypi.org/">PyPI</a>, which hosts an extensive collection of packages that include development frameworks, tools, and libraries.</p>
 
-<p>The Python ecosystem offers various tools vor managing virtual environments.</p>
+<p>At its core, the main purpose of Python virtual environments is to create an isolated environment for Python projects. This means that each project can have its own dependencies, regardless of what dependencies every other project has. You can think of a virtual environment as a carbon copy of a base version of Python. If you’ve installed Python 3.7.3, for example, then you can create many virtual environments based off of it. When you install a package in a virtual environment, you do it in isolation from other Python environments you may have. Each virtual environment has its own copy of the Python executable. Sanitary environment management practice reduces dependency version conflicts between your projects and keeps the base development environment from becoming bloated with packages:</p>
+
+<p><center>
+
+<link rel="stylesheet" href="https://joachimweise.github.io/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://imgs.xkcd.com/comics/python_environment.png" alt="https://imgs.xkcd.com/comics/python_environment.png"/>
+    </div>
+    <a href="https://imgs.xkcd.com/comics/python_environment.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<small>Source: <a href="https://xkcd.com/1987/">xkcd.com/1987/</a></small>
+</center>.</p>
+
+<p>The whole story of Python environments can be broken down into the following three levels:</p>
+
+<ol>
+<li><strong>Package Management</strong>: Package management tools help you download and install third-party packages and their dependencies. They mostly work in tandem with virtual environments, isolating the packages you install in one Python environment from another. Examples are <code>pip</code>, <code>pipenv</code>, <code>poetry</code>, and <code>conda</code>.</li>
+<li><strong>Virtual Environments</strong>: Tools that allow you to work on multiple projects in parallel, building on &lsquo;carbon copies&rsquo; of the same Python version, but with different <em>package dependencies</em>. Examples are <code>venv</code>, <code>pyenv-virtualenv</code>, <code>pipenv</code>, and <code>conda</code>.</li>
+<li><strong>Python Version Management</strong>: Tools that allow you to accomodate several different <em>versions</em> of Python in parallel, such as <code>pyenv</code> and <code>conda</code>.</li>
+</ol>
+
+<p>We will now tackle these levels and related tools in the following three sections before spending a final secion on <code>conda</code>, which lives more or less in a parallel universe to the other tools.</p>
+
+<h3 id="package-management">Package Management</h3>
+
+<p>For many Python projects one actually needs a number of third-party packages. Those packages may have their own dependencies in turn. In the early days of Python, using packages involved manually downloading files and pointing Python at them. Today, we’re fortunate to have a variety of package management tools available to us. Let&rsquo;s start with a brief overview:</p>
 
 <ul>
-<li><code>pip</code> is the central tool for installing and uninstalling packages. We could specify versions, run <code>pip freeze &gt; requirements.txt</code> to output a list of installed packages to a text file, and use that same text file to install everything an app needed with <code>pip install -r requirements.txt</code>. But <code>pip</code> doesn&rsquo;t include a way to isolate packages from each other.</li>
-<li><code>Pipenv</code> is a dependency manager for Python projects. While <code>pip</code> can install Python packages, <code>Pipenv</code> is recommended as it’s a higher-level tool that simplifies dependency management for common use cases. <code>Pipenv</code> is a rather new tool (born in 2017) that aims to bring the best of all packaging worlds to the Python world. Windows is considered a first-class citizen. It automatically creates and manages a <code>virtualenv</code> for your projects, as well as adds/removes packages from your <code>Pipfile</code> as you install/uninstall packages. It also generates the important <code>Pipfile.lock</code>, which is used to produce deterministic builds. Pipenv is primarily meant to provide users and developers of applications with an easy method to setup a working environment.</li>
-<li><code>virtualenv</code> is a tool to create isolated Python environments. <code>virtualenv</code> creates a folder which contains all the necessary executables to use the packages that a Python project would need. It can be used standalone, in place of <code>Pipenv</code>. Since Python 3.3, a subset of <code>virtualenv</code> has been integrated into the standard library under the <code>venv</code> module.</li>
-<li><code>venv</code> provides support for creating lightweight virtual environments with their own site directories, optionally isolated from system site directories. Each virtual environment has its own Python binary (which matches the version of the binary that was used to create this environment) and can have its own independent set of installed Python packages in its site directories. Note though, that the <code>venv</code> module does not offer all features of <code>virtualenv</code> (e.g. cannot create bootstrap scripts, cannot create virtual environments for other python versions than the host python, not relocatable, etc.).</li>
-<li><code>virtualenvwrapper</code> provides a set of commands which makes working with virtual environments much more pleasant. It also places all your virtual environments in one place.</li>
-<li><code>conda</code> is the package management tool for Anaconda Python installations. Conda is a completely separate tool to <code>pip</code>, <code>virtualenv</code> and <code>wheel</code>, but provides many of their combined features in terms of package management, virtual environment management and deployment of binary extensions. <code>Conda</code> does not install packages from PyPI and can install only from the official Anaconda repositories, or anaconda.org (a place for user-contributed conda packages), or a local (e.g. intranet) package server. However, note that <code>pip</code> can be installed into, and work side-by-side with <code>conda</code> for managing distributions from PyPI.</li>
+<li><code>pip</code> (&ldquo;pip installs packages&rdquo;) has been the de facto standard for package management in Python for several years. Python incorporated <code>pip</code> into the standard distribution starting in version 3.4. <code>pip</code> automates the process of downloading packages and making Python aware of them.</li>
+<li><a href="https://pipenv.readthedocs.io/en/latest/"><code>pipenv</code></a> is a dependency manager for Python projects. While <code>pip</code> can install Python packages, <code>pipenv</code> is recommended as it is a higher-level tool that simplifies dependency management for common use cases.  It automatically creates and manages a <code>virtualenv</code> for your projects, as well as adds/removes packages from your <code>pipfile</code> as you install/uninstall packages. It also generates the important <code>pipfile.lock</code>, which is used to produce deterministic builds.</li>
+<li><a href="https://python-poetry.org/"><code>poetry</code></a> is another <code>pip</code> alternative that is gaining a lot of traction. Like <code>pipenv</code>, it simplifies package version management and separates development vs production dependencies, and it works by isolating those dependencies into a virtual environment. It also goes beyond package management, helping you build distributions for your applications and libraries and <a href="https://realpython.com/pypi-publish-python-package/">deploying them to PyPI</a>.</li>
 </ul>
 
-<h3 id="links-to-documentation">Links to documentation:</h3>
+<p><code>pip</code> is the central tool for installing and uninstalling packages. The <code>pip install</code> command always installs the latest published version of a package, but sometimes, you may want to install a specific version that you know works with your code. You want to create a specification of the dependencies and versions you used to develop and test your application, so there are no surprises when you use the application in production. A common way to specify project dependencies for <code>pip</code> is with a <code>requirements.txt</code> file. Requirement files allow you to specify exactly which packages and versions should be installed.</p>
+
+<p>The <code>pip freeze</code> command allows you to get exact versions for all 3rd party libraries currently installed, including the sub-dependencies <code>pip</code> installed automatically. So you can freeze everything in development to ensure that you have the same environment in production. We could run <code>pip freeze &gt; requirements.txt</code> to output a list of installed packages to a text file, and use that same text file to install everything an app needed with <code>pip install -r requirements.txt</code>. But <code>pip</code> doesn&rsquo;t include a way to isolate packages from each other.</p>
+
+<h3 id="virtual-environments">Virtual Environments</h3>
+
+<p>Python, like most other modern programming languages, has its own unique way of downloading, storing, and resolving packages (or modules). There are a few different locations where these packages can be installed on your system. For example, most system packages are stored in a child directory of the path stored in <a href="https://docs.python.org/3/library/sys.html#sys.prefix"><code>sys.prefix</code></a>. Third party packages installed using <code>pip</code> are typically placed in one of the directories pointed to by <a href="https://docs.python.org/3/library/site.html#site.getsitepackages"><code>site.getsitepackages</code></a>. By default, every project on your system will use these same directories to store and retrieve site packages (third party libraries), irrespective of the specific version needed. If two projects were developed with dependencies on different versions of the same package, we are (potentially) heading for a conflict.</p>
+
+<p>Virtual environments are key to preventing such conflicts. The tool landscape here is a little confusing, so let&rsquo;s also kick this section off with a list of tools:</p>
+
+<ul>
+<li><code>pipenv</code> is a rather new tool (born in 2017) that aims to bring the best of all packaging worlds to the Python world. <code>pipenv</code> is a dependency manager for Python projects. While <code>pip</code> can install Python packages, <code>pipenv</code> is recommended as it is a higher-level tool that simplifies dependency management for common use cases.  It automatically creates and manages a <code>virtualenv</code> for your projects, as well as adds/removes packages from your <code>pipfile</code> as you install/uninstall packages. It also generates the important <code>pipfile.lock</code>, which is used to produce deterministic builds. <code>pipenv</code> is primarily meant to provide users and developers of applications with an easy method to setup a working environment. Windows is considered a first-class citizen.<br /></li>
+<li><code>virtualenv</code> is a tool to create isolated Python environments. <code>virtualenv</code> creates a folder which contains all the necessary executables to use the packages that a Python project would need. It can be used standalone, in place of <code>pipenv</code>. Since Python 3.3, a subset of <code>virtualenv</code> has been integrated into the standard library under the <code>venv</code> module. Note though, that the <code>venv</code> module does not offer all features of <code>virtualenv</code> (e.g. cannot create bootstrap scripts, cannot create virtual environments for other Python versions than the host Python, not relocatable, etc.).</li>
+<li><code>pyenv-virtualenv</code> enhances <code>pyenv</code> with a subcommand for managing virtual environments. You can configure <code>pyenv-virtualenv</code> so that it auto-activates the right environments as you switch to different directories.</li>
+<li><code>virtualenvwrapper</code> provides a set of commands which makes working with virtual environments much more pleasant. It also places all your virtual environments in one place.</li>
+</ul>
+
+<p>Let&rsquo;s take a look at <code>pipenv</code>. First, let’s install it:</p>
+<div class="highlight"><pre class="chroma">$ pip install pipenv</pre></div>
+<p>Once you’ve done that, you can effectively forget about <code>pip</code> since <code>pipenv</code> essentially acts as a replacement. It also introduces two new files, the <code>pipfile</code> (which is meant to replace <code>requirements.txt</code>) and the <code>pipfile.lock</code> (which enables deterministic builds acts as a snapshot of the precise set of packages installed, including direct dependencies as well as their sub-dependencies). <code>pipenv</code> uses <code>pip</code> and <code>virtualenv</code> under the hood but simplifies their usage with a single command line interface.</p>
+
+<p><code>pipenv</code> manages dependencies on a per-project basis. To install packages, change into your project’s directory and install the package like this:</p>
+<div class="highlight"><pre class="chroma">$ cd myproject
+$ pipenv install &lt;package&gt;</pre></div>
+<p>This will create a <code>pipfile</code> if one doesn’t exist. If one does exist, it will automatically be edited with the new package you provided. Next, activate the project’s virtual environment by running <code>pipenv</code> shell:</p>
+<div class="highlight"><pre class="chroma">$ pipenv shell
+$ python --version</pre></div>
+<p>This will spawn a new shell subprocess, which can be deactivated by using <code>exit</code>. It will also create a virtual environment if one doesn’t already exist. <code>pipenv</code> creates all your virtual environments in a default location. The following commands can sometimes be helpful:</p>
+<div class="highlight"><pre class="chroma">$ pipenv --venv    # Find out where your virtual environment is
+$ pipenv --where   # Find out where your project home is
+$ pipenv graph     # Print a tree-like structure showing your dependencies</pre></div>
+<h3 id="python-version-management">Python Version Management</h3>
+
+<p>Something many Python developers will eventually run into is the need to run multiple versions of Python in parallel. As an example, macOS and most Unix operating systems come with a version of Python installed by default. This is often called the <em>system Python</em>. The system Python works just fine, but it’s usually out of date. Still it is important that you leave the system Python as the default, because many parts of the system rely on the default Python being a specific version.</p>
+
+<p><code>pyenv</code> is a mature tool for installing and managing multiple Python versions. The installation process is described <a href="https://github.com/pyenv/pyenv">here</a> and <a href="https://realpython.com/intro-to-pyenv/">here</a>. <code>pyenv</code> did not originally support Windows, but by now you can use <a href="https://github.com/pyenv-win/pyenv-win#installation"><code>pyenv-win</code></a>. After you’ve got <code>pyenv</code> installed, you can take a look at Python versions installed so far:</p>
+<div class="highlight"><pre class="chroma">$ pyenv versions
+* system</pre></div>
+<p>Only the <code>system</code> environment is found, with the default Python installed along with the operating system. Let&rsquo;s check it&rsquo;s version:</p>
+<div class="highlight"><pre class="chroma">$ python --version     # Or: python -V
+Python 2.7.10</pre></div>
+<p>Let&rsquo;s install another Python version, using <code>pyenv</code>:</p>
+<div class="highlight"><pre class="chroma">$ pyenv install 3.6.8  # This may take some time
+$ pyenv install 3.7.3  # This may take some time    
+$ pyenv versions
+* system
+3.6.8
+3.7.3</pre></div>
+<p>The <code>*</code> indicates that the system Python version is active currently. Each version that you have installed using <code>pyenv</code> is located nicely in the <code>pyenv</code> root directory:</p>
+<div class="highlight"><pre class="chroma">$ ls ~/.pyenv/versions/
+3.6.8  3.7.3</pre></div>
+<p>Removing a particular Python version can be simply done like this:</p>
+<div class="highlight"><pre class="chroma">$ rm -rf ~/.pyenv/versions/3.6.8</pre></div>
+<p>or by using a proper <code>pyenv</code> command:</p>
+<div class="highlight"><pre class="chroma">$ pyenv uninstall 3.6.8</pre></div>
+<p>Virtual environments and <code>pyenv</code> are a <a href="https://realpython.com/intro-to-pyenv/#virtual-environments-and-pyenv">match made in heaven</a>. <code>pyenv</code> has a plugin called <code>pyenv-virtualenv</code> that makes working with multiple Python version and multiple virtual environments a breeze. An <a href="https://realpython.com/intro-to-pyenv/#working-with-multiple-environments">opinionated workflow</a> can look as follows.</p>
+
+<p>Create a virtual environment:</p>
+<div class="highlight"><pre class="chroma">$ pyenv virtualenv &lt;python_version&gt; &lt;environment_name&gt;</pre></div>
+<p>Technically, the <code>&lt;python_version&gt;</code> is optional, but you should consider always specifying it so that you’re certain of what Python version you’re using. The <code>&lt;environment_name&gt;</code> is just a name for you to help keep your environments separate. A good practice is to name your environments the same name as your project. For example, if you were working on myproject and wanted to develop against Python 3.6.8, you would run this:</p>
+<div class="highlight"><pre class="chroma">$ cd myproject
+$ pyenv which python
+/usr/bin/python
+$ pyenv virtualenv 3.6.8 myproject</pre></div>
+<p>Now that you’ve created your virtual environment, using it is the next step. Normally, you should activate your environments by running the following:</p>
+<div class="highlight"><pre class="chroma">$ pyenv local myproject
+$ python -V
+.../.pyenv/versions/project1/bin/python</pre></div>
+<p>This creates a <code>.python-version</code> file in your current working directory. If during installationof <code>pyenv</code> you have added the following lines to your <code>~/.bashrc</code> (or <code>~/.zshrc</code> or <code>~/.bash_profile</code>)</p>
+<div class="highlight"><pre class="chroma">eval &#34;$(pyenv init -)&#34;
+eval &#34;$(pyenv virtualenv-init -)&#34;</pre></div>
+<p>then <code>pyenv</code> will automatically activate and deactivate environments when changing directories. You can verify this by running the following:</p>
+<div class="highlight"><pre class="chroma">$ pyenv which python</pre></div>
+<p>If you did not configure your shell accordingly, you can still manually activate/deactivate your Python versions with this:</p>
+<div class="highlight"><pre class="chroma">$ pyenv activate &lt;environment_name&gt;
+$ pyenv deactivate</pre></div>
+<p>This is what <code>pyenv-virtualenv</code> is actually doing when it enters or exits a directory with a <code>.python-version</code> file in it.</p>
+
+<h3 id="conda">Conda</h3>
+
+<p><code>conda</code> is the package and environment management tool for Anaconda Python installations that runs on Windows, Mac OS and Linux. <code>conda</code> is a completely separate tool to <code>pip</code> or <code>virtualenv</code>, but provides many of their combined features in terms of package management, virtual environment management and deployment of binary extensions. <code>conda</code> does not install packages from PyPI and can install only from the official Anaconda repositories, or <code>anaconda.org</code> (a place for user-contributed conda packages), or a local (e.g. intranet) package server. However, note that <code>pip</code> can be installed into, and work side-by-side with <code>conda</code> for managing distributions from PyPI. Here are some reasons why people recommend to use <code>conda</code>:</p>
+
+<ul>
+<li><code>conda</code> provides prebuilt packages, avoiding the need to deal with compilers, or trying to work out how exactly to set up a specific tool. Fields such as Astronomy use <code>conda</code> to distribute some of their most difficult-to-install tools such as IRAF. However, TensorFlow 2.0 can currently only be installed through <code>pip</code>, there are no <code>conda</code> packages</li>
+<li><code>conda</code> is cross platform, with support for Windows, MacOS, GNU/Linux, and support for multiple hardware platforms</li>
+<li><code>conda</code> allows for using other package management tools (such as pip) inside <code>conda</code> environments, where a library or tools is not already packaged for <code>conda</code><br /></li>
+<li>Anaconda provides commonly used data science libraries and tools, such as R, NumPy, SciPy and TensorFlow built using optimised, hardware specific libraries (such as Intel’s MKL or NVIDIA’s CUDA), which provides a speedup without having to change any of your code.</li>
+</ul>
+
+<p>To create an environment with conda for Python development, run:</p>
+<div class="highlight"><pre class="chroma">$ conda create --name conda-env python</pre></div>
+<p>The command above will create a new <code>conda</code> environment called “conda-env” and install the most recent version of Python. If you wish, you may specify a particular version of Python for <code>conda</code> to install as follows</p>
+<div class="highlight"><pre class="chroma">$ conda create -n conda-env python=3.7</pre></div>
+<p>You can also specify which versions of packages you’d like to install:</p>
+<div class="highlight"><pre class="chroma">$ conda create -n conda-env python=3.7 numpy=1.16.1 requests=2.19.1</pre></div>
+<p>It’s recommended to install all the packages you want to include in an environment at the same time to help avoid dependency conflicts. However, you can also add additional packages later on like this:</p>
+<div class="highlight"><pre class="chroma">(conda-env) % conda install pandas=0.24.1   # From inside an active environment
+conda install -n conda-env pandas=0.24.1    # From your default shell</pre></div>
+<p>Likewise, you can update the packages in an environment in two ways:</p>
+<div class="highlight"><pre class="chroma">(conda-env) % conda update pandas           # From inside an active environment
+conda update -n conda-env pandas            # From your default shell</pre></div>
+<p>It is strongly recommend to install packages from inside and active environment, as it removes the danger of unintentionally installing packages system-wide. When <code>conda</code> installs a package into an environment it also installs any required dependencies. Last, you can activate and deactivate your environment like this:</p>
+<div class="highlight"><pre class="chroma">$ conda activate conda-env           
+(conda-env) $                      # Fancy new command prompt
+(conda-env) $ conda deactivate
+$</pre></div>
+<p>Environments created with <code>conda</code> live by default in the <code>envs/</code> folder of your <code>conda</code> directory, whose path will look something like:</p>
+<div class="highlight"><pre class="chroma">.../Users/$USERNAME/anaconda3/envs</pre></div>
+<p>However, you may also choose another approach, as described <a href="https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/02-working-with-environments/index.html">here</a>. You can control where a Conda environment lives by providing a path to a target directory when creating the environment. For example to following command will create a new environment in a sub-directory of the current working directory called <code>env</code>.</p>
+<div class="highlight"><pre class="chroma">$ conda create --prefix ./env ipython=7.13 matplotlib=3.1 pandas=1.0 python=3.6</pre></div>
+<p>You activate an environment created with a prefix using the same command used to activate environments created by name.</p>
+<div class="highlight"><pre class="chroma">$ conda activate ./env</pre></div>
+<p>You activate an environment created with a prefix using the same command used to activate environments created by name.</p>
+<div class="highlight"><pre class="chroma">$ conda activate ./env</pre></div>
+<p>Advantages that may be seen in this approach are the following:</p>
+
+<ul>
+<li>Presence of sub-directory makes it easy to tell if your project utilizes an isolated environment</li>
+<li>Makes your project more self-contained as everything including the required software is contained in a single project directory</li>
+<li>You can use the same name for all your environments</li>
+<li>If you use <code>env</code> as the name of the sub-directory that contains your <code>conda</code> environment it will be automatically ignored by the default Python <code>.gitignore</code> file used on GitHub</li>
+</ul>
+
+<p>The overall process in this approach would look like this:</p>
+<div class="highlight"><pre class="chroma">$ mkdir project-dir
+$ cd project-dir
+project-dir $ conda create --prefix ./env python=3.6 matplotlib=3.1 ....
+project-dir $ conda activate ./env</pre></div>
+<p>If you go for this approach you should also update your <code>.condarc</code> file as described <a href="https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/02-working-with-environments/index.html">here</a>. If you created your <code>conda</code> environment using the <code>--prefix</code> option to install packages into a particular directory, then you will need to use that prefix in order to list the contents of that environment:</p>
+<div class="highlight"><pre class="chroma">$ conda list --prefix /path/to/conda-env</pre></div>
+<p>In the more general case you would list the contents of an environment like this:</p>
+<div class="highlight"><pre class="chroma">$ conda list --name basic-conda-env</pre></div>
+<p>In order to list all of your existing environments you would use the following command:</p>
+<div class="highlight"><pre class="chroma">$ conda env list</pre></div>
+<p>Removing an environment is done like this, depending on how it was set up:</p>
+<div class="highlight"><pre class="chroma">$ conda remove --name my-first-conda-env --all
+$ conda remove --prefix /path/to/conada-env/ --all</pre></div>
+<h3 id="links-to-documentation-and-further-reading">Links to documentation and further reading</h3>
+
+<p><strong>Documentation</strong></p>
 
 <ul>
 <li>PyPA guides: <a href="https://packaging.python.org/guides/tool-recommendations/">here</a>, <a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/">here</a>, and <a href="https://packaging.python.org/tutorials/managing-dependencies/">here</a></li>
-<li><code>Pipenv</code>: <a href="https://pipenv.readthedocs.io/en/latest/">https://pipenv.readthedocs.io/en/latest/</a><br /></li>
+<li><code>pipenv</code>: <a href="https://pipenv.readthedocs.io/en/latest/">https://pipenv.readthedocs.io/en/latest/</a><br /></li>
 <li><code>virtualenv</code>: <a href="https://virtualenv.pypa.io/en/stable/">https://virtualenv.pypa.io/en/stable/</a></li>
 <li><code>venv</code>: <a href="https://docs.python.org/3/library/venv.html">https://docs.python.org/3/library/venv.html</a></li>
 <li><code>conda</code>: <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">https://docs.conda.io/&hellip;/manage-environments.html</a></li>
 </ul>
 
-<h3 id="further-helpful-articles">Further helpful articles:</h3>
+<p><strong>Overview articles</strong></p>
 
 <ul>
-<li><a href="https://opensource.com/article/18/2/why-python-devs-should-use-pipenv">Why Python devs should use Pipenv</a></li>
-<li><a href="https://docs.python-guide.org/dev/virtualenvs/">Pipenv &amp; Virtual Environments</a></li>
+<li>Python Virtual Environments: <a href="https://realpython.com/python-virtual-environments-a-primer/">A Primer</a></li>
+<li>An <a href="https://realpython.com/effective-python-environment/">Effective</a> Python Environment: Making Yourself at Home</li>
+<li>Python Environment <a href="https://towardsdatascience.com/python-environment-101-1d68bda3094d">101</a>: How are pyenv and pipenv different and when you should be using them</li>
+<li><a href="https://realpython.com/what-is-pip/">What Is Pip?</a> A Guide for New Pythonistas</li>
+<li>Using Python environments in <a href="https://code.visualstudio.com/docs/python/environments">VS Code</a></li>
+</ul>
+
+<p><strong>Articles on <code>pyenv</code></strong></p>
+
+<ul>
+<li>Managing Multiple Python Versions With <a href="https://realpython.com/intro-to-pyenv/">pyenv</a></li>
+<li>Managing virtual environments with <a href="https://towardsdatascience.com/managing-virtual-environment-with-pyenv-ae6f3fb835f8">pyenv</a></li>
+</ul>
+
+<p><strong>Articles on <code>pipenv</code></strong></p>
+
+<ul>
+<li><a href="https://realpython.com/pipenv-guide/">Pipenv:</a> A Guide to the New Python Packaging Tool</li>
+<li>Why Python devs should use <a href="https://opensource.com/article/18/2/why-python-devs-should-use-pipenv">Pipenv</a></li>
+<li><a href="https://docs.python-guide.org/dev/virtualenvs/">Pipenv</a> &amp; Virtual Environments</li>
+</ul>
+
+<p><strong>Articles on <code>conda</code></strong></p>
+
+<ul>
+<li>Introduction to Conda for <a href="https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/index.html">(Data) Scientists</a></li>
+<li>Setting Up Python for <a href="https://realpython.com/python-windows-machine-learning-setup/">Machine Learning</a> on Windows</li>
+<li>The <a href="https://towardsdatascience.com/a-guide-to-conda-environments-bc6180fc533">Definitive Guide</a> to Conda Environments</li>
+<li>Why you need Python environments and how to manage them with <a href="https://protostar.space/why-you-need-python-environments-and-how-to-manage-them-with-conda">Conda</a></li>
 </ul>
 
         
