@@ -22,33 +22,6 @@
     </item>
     
     <item>
-      <title>ai-news</title>
-      <link>https://joachimweise.github.io/tags/ai-news/</link>
-      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/ai-news/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>deep-learning</title>
-      <link>https://joachimweise.github.io/tags/deep-learning/</link>
-      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine learning</title>
-      <link>https://joachimweise.github.io/tags/machine-learning/</link>
-      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      <author>youremail@domain.com (Joachim Weise)</author>
-      <guid>https://joachimweise.github.io/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>arduino</title>
       <link>https://joachimweise.github.io/tags/arduino/</link>
       <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
@@ -126,6 +99,15 @@
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/relativity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ai-news</title>
+      <link>https://joachimweise.github.io/tags/ai-news/</link>
+      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/ai-news/</guid>
       <description></description>
     </item>
     
@@ -351,6 +333,15 @@
       <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/neural-architecture-search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deep-learning</title>
+      <link>https://joachimweise.github.io/tags/deep-learning/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/deep-learning/</guid>
       <description></description>
     </item>
     
