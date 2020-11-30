@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Sun, 17 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fraunhofer Lines</title>
+      <link>https://joachimweise.github.io/post/2020-10-20-fraunhofer-lines/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-10-20-fraunhofer-lines/</guid>
+      <description>&lt;p&gt;Fraunhofer lines are a set of spectral absorption lines named after the German physicist Joseph von Fraunhofer (1787–1826). The lines were originally observed as dark features in the optical spectrum of the Sun by the English chemist William Hyde Wollaston in 1802. In 1814, Fraunhofer independently rediscovered the lines and began to systematically study and measure the wavelengths where these features are observed. He mapped over 570 lines, designating the principal features (lines) with the letters A through K and weaker lines with other letters. Modern observations of sunlight can detect many thousands of lines. About 45 years later Kirchhoff and Bunsen noticed that several Fraunhofer lines coincide with characteristic emission lines identified in the spectra of heated elements. It was correctly deduced that dark lines in the solar spectrum are caused by absorption by chemical elements in the solar atmosphere.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>AI weekly (41/2020)</title>
+      <link>https://joachimweise.github.io/post/2020-10-10-ai-weekly-41-2020/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-10-10-ai-weekly-41-2020/</guid>
+      <description>&lt;p&gt;+++ +++&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Neural Networks from Scratch</title>
+      <link>https://joachimweise.github.io/post/2020-07-01-dnn-from-scratch/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-07-01-dnn-from-scratch/</guid>
+      <description>&lt;p&gt;Abstract ...&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Arduino Motor Control Using Serial Connection</title>

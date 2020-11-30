@@ -4,8 +4,53 @@
   
   <url>
     <loc>https://joachimweise.github.io/</loc>
-    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-10-20-fraunhofer-lines/</loc>
+    <lastmod>2020-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/physics/</loc>
+    <lastmod>2020-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/</loc>
+    <lastmod>2020-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/</loc>
+    <lastmod>2020-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-10-10-ai-weekly-41-2020/</loc>
+    <lastmod>2020-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/ai-news/</loc>
+    <lastmod>2020-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/deep-learning/</loc>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/tags/machine-learning/</loc>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joachimweise.github.io/post/2020-07-01-dnn-from-scratch/</loc>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -29,11 +74,6 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/post/</loc>
-    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/tags/python/</loc>
     <lastmod>2020-05-17T00:00:00+00:00</lastmod>
   </url>
@@ -45,11 +85,6 @@
   
   <url>
     <loc>https://joachimweise.github.io/tags/robot/</loc>
-    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/</loc>
     <lastmod>2020-05-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -69,22 +104,12 @@
   </url>
   
   <url>
-    <loc>https://joachimweise.github.io/tags/physics/</loc>
-    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joachimweise.github.io/tags/relativity/</loc>
     <lastmod>2020-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://joachimweise.github.io/post/2020-04-25-ai-weekly-17-2020/</loc>
-    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/ai-news/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -320,11 +345,6 @@
   
   <url>
     <loc>https://joachimweise.github.io/post/2020-01-04-ai-weekly-01-2020/</loc>
-    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joachimweise.github.io/tags/deep-learning/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
   </url>
   
