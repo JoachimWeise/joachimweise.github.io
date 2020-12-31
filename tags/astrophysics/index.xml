@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>astrophysics on Joachim Weise</title>
+    <link>https://joachimweise.github.io/tags/astrophysics/</link>
+    <description>Recent content in astrophysics on Joachim Weise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
+    <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
+    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joachimweise.github.io/tags/astrophysics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Stellar Classification</title>
+      <link>https://joachimweise.github.io/post/2020-11-12-classification-stellar-spectra/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-11-12-classification-stellar-spectra/</guid>
+      <description>&lt;p&gt;Stellar spectroscopy, the study and classification of spectra, was born early in the 19th century when the German scientist Joseph von Fraunhofer discovered dark lines in the spectrum of the Sun &lt;a href=&#34;https://joachimweise.github.io/post/2020-10-20-fraunhofer-lines/&#34;&gt;(see previous post)&lt;/a&gt;. He later observed similar lines in the spectra of stars and noted that different stars had different patterns of lines. Following Fraunhofer, Angelo Secchi and others developed classification schemes in the 2nd half of the 19th century, which via the Draper system, Harvard system and MKK system led to today&#39;s MK system. We follow some of the history just for the fun of it, and to understand how the &amp;quot;O, B, A, F, G, K, M&amp;quot; alphabet came about.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fraunhofer Lines</title>
+      <link>https://joachimweise.github.io/post/2020-10-20-fraunhofer-lines/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/post/2020-10-20-fraunhofer-lines/</guid>
+      <description>&lt;p&gt;Fraunhofer lines are a set of spectral absorption lines named after the German physicist Joseph von Fraunhofer (1787–1826). The lines were originally observed as dark features in the optical spectrum of the Sun by the English chemist William Hyde Wollaston in 1802. In 1814, Fraunhofer independently rediscovered the lines and began to systematically study and measure the wavelengths where these features are observed. He mapped over 570 lines, designating the principal features (lines) with the letters A through K and weaker lines with other letters. Modern observations of sunlight can detect many thousands of lines. About 45 years later Kirchhoff and Bunsen noticed that several Fraunhofer lines coincide with characteristic emission lines identified in the spectra of heated elements. It was correctly deduced that dark lines in the solar spectrum are caused by absorption by chemical elements in the solar atmosphere.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

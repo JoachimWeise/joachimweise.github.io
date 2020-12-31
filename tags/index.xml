@@ -7,15 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Tue, 20 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>astronomy</title>
+      <link>https://joachimweise.github.io/tags/astronomy/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/astronomy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>astrophysics</title>
+      <link>https://joachimweise.github.io/tags/astrophysics/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Joachim Weise)</author>
+      <guid>https://joachimweise.github.io/tags/astrophysics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>physics</title>
       <link>https://joachimweise.github.io/tags/physics/</link>
-      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/physics/</guid>
       <description></description>

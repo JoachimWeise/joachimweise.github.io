@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Measuring the Stars - Joachim Weise</title>
+  <meta name="description" content="Some early history and physics of solar spectra">
+  <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Joachim Weise",
+    
+    "url": "https:\/\/joachimweise.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/joachimweise.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/joachimweise.github.io\/post\/2020-11-13-measuring-stars\/",
+          "name": "Measuring the stars"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Joachim Weise"
+  },
+  "headline": "Measuring the Stars",
+  "description" : "tbd\n",
+  "inLanguage" : "en",
+  "wordCount":  1091 ,
+  "datePublished" : "2020-11-20T00:00:00",
+  "dateModified" : "2020-11-20T00:00:00",
+  "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+  "keywords" : [ "astronomy, astrophysics, physics" ],
+  "mainEntityOfPage" : "https:\/\/joachimweise.github.io\/post\/2020-11-13-measuring-stars\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/joachimweise.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Measuring the Stars" />
+<meta property="og:description" content="Some early history and physics of solar spectra">
+<meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
+<meta property="og:url" content="https://joachimweise.github.io/post/2020-11-13-measuring-stars/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Joachim Weise" />
+
+  <meta name="twitter:title" content="Measuring the Stars" />
+  <meta name="twitter:description" content="Some early history and physics of solar spectra">
+  <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.58.2" />
+  <link rel="alternate" href="https://joachimweise.github.io/index.xml" type="application/rss+xml" title="Joachim Weise"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://joachimweise.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://joachimweise.github.io/css/syntax.css" /><link rel="stylesheet" href="https://joachimweise.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-165585092-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://joachimweise.github.io/">Joachim Weise</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Subject pages</a>
+              <div class="navlinks-children">
+                
+                  <a href="/page/aiml">AI / ML</a>
+                
+                  <a href="/page/ds">Data Science 101</a>
+                
+                  <a href="/page/gr">General Relativity</a>
+                
+                  <a href="/page/qt">Quantum Theory</a>
+                
+                  <a href="/page/robot">Robot Car</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Joachim Weise" href="https://joachimweise.github.io/">
+            <img class="avatar-img" src="https://joachimweise.github.io/img/joachim3.png" alt="Joachim Weise" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+    <div id="header-big-imgs" data-num-img=1 
+      
+         
+          data-img-src-1="solar_spectrum_CCD.jpg" 
+         
+         data-img-desc-1="Solar spectrum (KPNO 1981)"
+      ></div>
+  
+
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="post-heading">
+                <h1>Measuring the Stars</h1>
+                  
+                    
+                      <h2 class="post-subheading">Some early history and physics of solar spectra</h2>
+                    
+                  
+                  
+                    <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Nov 20, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1091&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
+  
+  
+  
+</span>
+
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Measuring the Stars</h1>
+              
+              
+                
+                  <h2 class="post-subheading">Some early history and physics of solar spectra</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i> &nbsp;Nov 20, 2020
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1091&nbsp;words
+  
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+
+      <article role="main" class="blog-post">
+        <p>tbd</p>
+
+<h3 id="luminosity-vs-radiant-flux-aka-apparent-brightness">Luminosity vs radiant flux (aka apparent brightness)</h3>
+
+<p>Luminosity <span  class="math">\(L\)</span> is an absolute measure of radiated electromagnetic power, or radiant power, emitted by a light-emitting object. In astronomy, luminosity is the total amount of electromagnetic energy emitted per unit of time by a star, galaxy, or other astronomical object. Luminosity is an intrinsic property of the object &mdash; it does not depend in any way on the location or motion of the observer.</p>
+
+<p>The IAU has defined a nominal solar luminosity of 3.846 × 10<sup>26</sup> W to promote publication of consistent and comparable values in units of the solar luminosity <span  class="math">\(L_\odot\)</span>. When not qualified, the term &quot;luminosity&quot; means <em>bolometric</em> luminosity, taking into account electromagnetic radiation at all wavelengths.</p>
+
+<p>Luminosity is sometimes referred to as the star’s <em>absolute</em> brightness. However, when we look at a star, we don't see its luminosity, but rather its <em>apparent</em> brightness &mdash; the amount of energy striking a unit area of some light-sensitive surface or device (e.g. CCD chip or human eye) per unit time. The apparanet brightness of a star is actually measured in terms of the radiant flux <span  class="math">\(F\)</span> received from the star. Of course, the radiant flux received from an object depends on both its intrinsic luminosity and its distance from the observer. Imagine a star of luminosity <span  class="math">\(L\)</span> surrounded by a huge spherical shell of radius <span  class="math">\(r\)</span>. Then, assuming that no light is absorbed during its journey out to the shell, the radiant flux, <span  class="math">\(F\)</span>, measured at distance <span  class="math">\(r\)</span> is related to the star’s luminosity by</p>
+
+<p><span  class="math">\[F = \frac{L}{4 \pi r^2} \; .\]</span></p>
+
+<p>The luminosity of the sun is <span  class="math">\(L_\odot\)</span> = 3.846 × 10<sup>26</sup> W. At a distance of AU = 1.496<sup>11</sup> m, Earth receives a radiant flux or apparent brightness of <span  class="math">\(F\)</span> = 1370 W/m<sup>2</sup>. That is, a solar panel with an area of 1 m<sup>2</sup> receives
+1370 W of power from the Sun.</p>
+
+<h3 id="apparent-brightness-and-the-magnitude-scale">Apparent Brightness and the Magnitude Scale</h3>
+
+<p>Apparent brightness is a measure, not of a star’s luminosity, but of the energy flux (energy per unit area per unit time) produced by the star, as seen from Earth. A star’s apparent brightness depends on our distance from the star.</p>
+
+<h3 id="history-of-the-spectral-sequence">History of the Spectral Sequence</h3>
+
+<p>Many astronomers of the 1800s were able to do research only because of family wealth. One such astronomer was Henry Draper (1837–1882), an early pioneer of stellar spectroscopy. After Draper died in 1882, his widow made a series of large donations to Harvard College Observatory for the purpose of building on his work. The observatory director, Edward Pickering (1846–1919), used the gifts to improve the facilities and to hire numerous assistants, whom he called “computers.” Pickering added money of his own, as did other wealthy donors. Most of Pickering’s hired computers were women who had studied physics or astronomy at women’s colleges such as Wellesley and Radcliffe. Women had few opportunities to advance in science at the time. Harvard, for example, did not allow women to enroll as students and would not hire them as faculty. Pickering’s project of studying and classifying stellar spectra provided plenty of work and opportunity for his “computers,” and many of the Harvard Observatory women ended up among the most prominent astronomers of the late 1800s and early 1900s.</p>
+
+<p>One of the first computers was Williamina Fleming (1857–1911). Following Pickering’s suggestion, Fleming classified stellar spectra according to the strength of their hydrogen lines: type A for the strongest hydrogen lines, type B for slightly weaker hydrogen lines, and so on, to type O, for
+stars with the weakest hydrogen lines. Pickering published Fleming’s classifications of more than 10,000 stars in 1890.</p>
+
+<p>As more stellar spectra were obtained and the spectra were studied in greater detail, it became clear that the classification scheme based solely on hydrogen lines was inadequate. Ultimately, the task of finding a better classification scheme fell to Annie Jump Cannon (1863–1941), who joined
+Pickering’s team in 1896 (FIGURE 5). Building on the work of Fleming and another of Pickering’s “computers,” Antonia Maury (1866–1952), Cannon soon realized that the spectral classes fell into a natural order—but not the alphabetical order determined by hydrogen lines alone. Moreover, she
+found that some of the original classes overlapped others and could be eliminated. Cannon discovered that the natural sequence consisted of just a few of Pickering’s original classes
+in the order OBAFGKM and also added the subdivisions by number. Cannon became so adept that she could properly classify a stellar spectrum with little more than a momentary glance.
+In the course of her career, she personally classified more than 400,000 stars. She became the first woman ever awarded an honorary degree by Oxford University, and in 1923 the League of Women Voters named her one of the 12 greatest living American women. The astronomical community adopted Cannon’s system of stellar classification in 1910.</p>
+
+<p>However, no one at that time knew why spectra followed the OBAFGKM sequence. Many astronomers guessed, incorrectly, that the different sets of spectral lines indicated different
+compositions for the stars. The correct answer—that all stars are made primarily of hydrogen and  helium and that a star’s surface temperature determines the strength of its spectral lines—was discovered at Harvard Observatory by Cecilia Payne-Gaposchkin (1900–1979).</p>
+
+<p>Relying on insights from what was then the newly developing science of quantum mechanics, Payne-Gaposchkin showed that the differences in spectral lines from star to star merely reflect changes in the ionization level of the emitting atoms. For example, O stars have weak hydrogen lines
+because, at their high surface temperatures, nearly all their hydrogen is ionized. Without an electron to “jump” between energy levels, ionized hydrogen can neither emit nor absorb its usual specific wavelengths of light. At the other end of the spectral sequence, M stars are cool enough for some particularly stable molecules to form, explaining their strong molecular absorption lines. Payne-Gaposchkin described her work and her conclusions in a dissertation published in 1925 that
+was later called “undoubtedly the most brilliant Ph.D. thesis ever written in astronomy.”</p>
+
+<h3 id="isaac-newton-and-the-composition-of-sunlight">Isaac Newton and the Composition of Sunlight</h3>
+
+<p>These laws are neatly summarized in the following image:</p>
+
+<p><center>
+
+<link rel="stylesheet" href="https://joachimweise.github.io/css/hugo-easy-gallery.css" />
+<div class="box" style="max-width:650px">
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/img/2020-10-20-fraunhofer-lines/kirchoffs_laws_2.jpg" alt="/img/2020-10-20-fraunhofer-lines/kirchoffs_laws_2.jpg"/>
+    </div>
+    <a href="/img/2020-10-20-fraunhofer-lines/kirchoffs_laws_2.jpg" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<p style="color:#989898; width: 650px; line-height: 1.1"><small>
+Kirchhoff's Laws
+</small></p>
+</center></p>
+
+<h3 id="sources-and-further-reading">Sources and further reading</h3>
+
+<p>Fara, P.: <em>Newton Shows the Light: A Commentary on Newton (1672) 'A Letter … Containing His New Theory About Light and Colours…'</em>, Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences 373, 2039 (2015).
+<small><a href="https://doi.org/10.1098/rsta.2014.0213">[https://doi.org/10.1098/rsta.2014.0213]</a></small></p>
+
+<p>Fraunhofer, J.: <em>Bestimmung Des Brechungs- Und Des Farbenzerstreungs-Vermögens Verschiedener Glasarten, in Bezug Auf Die Vervollkommnung Achromatischer Fernröhre</em>, Annalen Der Physik 56, 7 (1817).
+<small><a href="https://doi.org/10.1002/andp.18170560706">[https://doi.org/10.1002/andp.18170560706]</a>
+<a href="https://gallica.bnf.fr/ark:/12148/bpt6k15065z/f276.item.r=Annalen%20der%20physik%20(Leipzig).langEN.zoom">[fulltext]</a></small></p>
+
+<p>Hearnshaw, J.B.:  <em>The Analysis of Starlight</em> (Cambridge University Press, 2014)</p>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://joachimweise.github.io//tags/astronomy/">astronomy</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/astrophysics/">astrophysics</a>&nbsp;
+            
+              <a href="https://joachimweise.github.io//tags/physics/">physics</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/2020-11-12-classification-stellar-spectra/">Classification of Stellar Spectra</a></li>
+                
+                    <li><a href="/post/2020-10-20-fraunhofer-lines/">Fraunhofer Lines</a></li>
+                
+                    <li><a href="/post/2020-05-01-derivative/">Derivative (or Tangent Map)</a></li>
+                
+                    <li><a href="/post/2020-03-01-tangent-space/">Tangent Spaces</a></li>
+                
+                    <li><a href="/post/2020-01-12-differential-manifolds/">Differentiable Manifolds</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://joachimweise.github.io/post/2020-11-12-classification-stellar-spectra/" data-toggle="tooltip" data-placement="top" title="Classification of Stellar Spectra">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/username" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kaggle.com/username" title="kaggle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="yourwebsite.com">Joachim Weise</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://joachimweise.github.io/">Joachim Weise</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.58.2</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://joachimweise.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://joachimweise.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
