@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>youremail@domain.com (Joachim Weise)</managingEditor>
     <webMaster>youremail@domain.com (Joachim Weise)</webMaster>
-    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://joachimweise.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>astronomy</title>
       <link>https://joachimweise.github.io/tags/astronomy/</link>
-      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/astronomy/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>astrophysics</title>
       <link>https://joachimweise.github.io/tags/astrophysics/</link>
-      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/astrophysics/</guid>
       <description></description>
@@ -33,7 +33,7 @@
     <item>
       <title>physics</title>
       <link>https://joachimweise.github.io/tags/physics/</link>
-      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>
       <guid>https://joachimweise.github.io/tags/physics/</guid>
       <description></description>
@@ -544,7 +544,7 @@
     </item>
     
     <item>
-      <title>event</title>
+      <title>event&#34;</title>
       <link>https://joachimweise.github.io/tags/event/</link>
       <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
       <author>youremail@domain.com (Joachim Weise)</author>

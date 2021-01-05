@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Measuring the Stars - Joachim Weise</title>
-  <meta name="description" content="Some early history and physics of solar spectra">
+  <meta name="description" content="How are luminosity, flux, brightness, magnitude, color index and distance modulus related?">
   <meta name="author" content="Joachim Weise"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -57,9 +57,9 @@
     "name" : "Joachim Weise"
   },
   "headline": "Measuring the Stars",
-  "description" : "tbd\n",
+  "description" : "While trying to plot Hipparcos satellite data into observational and theoretical Hertzsprung-Russel diagrams I got bogged down in a photometric definitions jungle, which I try to untangle in this post. The working astronomer will know all of this by heart, but at least I needed this workout.\n",
   "inLanguage" : "en",
-  "wordCount":  1091 ,
+  "wordCount":  2200 ,
   "datePublished" : "2020-11-20T00:00:00",
   "dateModified" : "2020-11-20T00:00:00",
   "image" : "https:\/\/joachimweise.github.io\/img\/joachim3.png",
@@ -79,14 +79,14 @@
 </script>
 
 <meta property="og:title" content="Measuring the Stars" />
-<meta property="og:description" content="Some early history and physics of solar spectra">
+<meta property="og:description" content="How are luminosity, flux, brightness, magnitude, color index and distance modulus related?">
 <meta property="og:image" content="https://joachimweise.github.io/img/joachim3.png" />
 <meta property="og:url" content="https://joachimweise.github.io/post/2020-11-13-measuring-stars/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Joachim Weise" />
 
   <meta name="twitter:title" content="Measuring the Stars" />
-  <meta name="twitter:description" content="Some early history and physics of solar spectra">
+  <meta name="twitter:description" content="How are luminosity, flux, brightness, magnitude, color index and distance modulus related?">
   <meta name="twitter:image" content="https://joachimweise.github.io/img/joachim3.png" />
   <meta name="twitter:card" content="summary" />
   <link href='https://joachimweise.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -268,7 +268,7 @@ if (!doNotTrack) {
                 <h1>Measuring the Stars</h1>
                   
                     
-                      <h2 class="post-subheading">Some early history and physics of solar spectra</h2>
+                      <h2 class="post-subheading">How are luminosity, flux, brightness, magnitude, color index and distance modulus related?</h2>
                     
                   
                   
@@ -278,10 +278,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i> &nbsp;Nov 20, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1091&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;2200&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;11&nbsp;minutes
   
   
   
@@ -306,7 +306,7 @@ if (!doNotTrack) {
               
               
                 
-                  <h2 class="post-subheading">Some early history and physics of solar spectra</h2>
+                  <h2 class="post-subheading">How are luminosity, flux, brightness, magnitude, color index and distance modulus related?</h2>
                 
               
               
@@ -316,10 +316,10 @@ if (!doNotTrack) {
   <i class="fas fa-calendar"></i> &nbsp;Nov 20, 2020
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;1091&nbsp;words
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-book"></i> &nbsp;2200&nbsp;words
   
   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;6&nbsp;minutes
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> &nbsp;11&nbsp;minutes
   
   
   
@@ -342,76 +342,137 @@ if (!doNotTrack) {
     
 
       <article role="main" class="blog-post">
-        <p>tbd</p>
+        <p>While trying to plot Hipparcos satellite data into observational and theoretical Hertzsprung-Russel diagrams I got bogged down in a photometric definitions jungle, which I try to untangle in this post. The working astronomer will know all of this by heart, but at least I needed this workout.</p>
 
-<h3 id="luminosity-vs-radiant-flux-aka-apparent-brightness">Luminosity vs radiant flux (aka apparent brightness)</h3>
+<h3 id="luminosity">Luminosity</h3>
 
 <p>Luminosity <span  class="math">\(L\)</span> is an absolute measure of radiated electromagnetic power, or radiant power, emitted by a light-emitting object. In astronomy, luminosity is the total amount of electromagnetic energy emitted per unit of time by a star, galaxy, or other astronomical object. Luminosity is an intrinsic property of the object &mdash; it does not depend in any way on the location or motion of the observer.</p>
 
-<p>The IAU has defined a nominal solar luminosity of 3.846 × 10<sup>26</sup> W to promote publication of consistent and comparable values in units of the solar luminosity <span  class="math">\(L_\odot\)</span>. When not qualified, the term &quot;luminosity&quot; means <em>bolometric</em> luminosity, taking into account electromagnetic radiation at all wavelengths.</p>
+<p>The IAU has defined a <a href="https://www.iau.org/static/resolutions/IAU2015_English.pdf">nominal solar luminosity</a> of 3.828 × 10<sup>26</sup> W to promote publication of consistent and comparable values in units of the solar luminosity <span  class="math">\(L_\odot\)</span>. There are stars that are 1 million times more luminous than the Sun and other stars that are 1 million times less luminous than the Sun. The exceptionally luminous beacons are rare, and the most common stars are not even as luminous as the Sun.</p>
 
-<p>Luminosity is sometimes referred to as the star’s <em>absolute</em> brightness. However, when we look at a star, we don't see its luminosity, but rather its <em>apparent</em> brightness &mdash; the amount of energy striking a unit area of some light-sensitive surface or device (e.g. CCD chip or human eye) per unit time. The apparanet brightness of a star is actually measured in terms of the radiant flux <span  class="math">\(F\)</span> received from the star. Of course, the radiant flux received from an object depends on both its intrinsic luminosity and its distance from the observer. Imagine a star of luminosity <span  class="math">\(L\)</span> surrounded by a huge spherical shell of radius <span  class="math">\(r\)</span>. Then, assuming that no light is absorbed during its journey out to the shell, the radiant flux, <span  class="math">\(F\)</span>, measured at distance <span  class="math">\(r\)</span> is related to the star’s luminosity by</p>
+<p>When not qualified, the term luminosity means <strong>bolometric</strong> luminosity, taking into account electromagnetic radiation at all wavelengths. Luminosity is sometimes referred to as the star’s <strong>absolute brightness</strong>.</p>
+
+<h3 id="radiation-flux-aka-apparent-brightness">Radiation flux (aka apparent brightness)</h3>
+
+<p>When we look at a star, we actually don't see its luminosity, but rather its <strong>apparent brightness</strong> &mdash; the amount of energy striking a unit area of some light-sensitive surface or device (e.g. CCD chip or human eye) per unit time.</p>
+
+<p>The apparent brightness of a star is actually measured in terms of the <strong>radiation flux</strong> or <strong>radiant flux</strong> <span  class="math">\(F\)</span> received from the star. Flux means the power going through some surface. The flux emitted by a star into a solid angle <span  class="math">\(\omega\)</span> is</p>
+
+<p><span  class="math">\[F = \frac{L}{\omega r^2} \; .\]</span></p>
+
+<p>Imagine a star of luminosity <span  class="math">\(L\)</span> surrounded by a huge spherical shell of radius <span  class="math">\(r\)</span>. Then, assuming that no light is absorbed during its journey out to the shell, the radiation flux, <span  class="math">\(F\)</span>, measured at distance <span  class="math">\(r\)</span> is related to the star’s luminosity by</p>
 
 <p><span  class="math">\[F = \frac{L}{4 \pi r^2} \; .\]</span></p>
 
-<p>The luminosity of the sun is <span  class="math">\(L_\odot\)</span> = 3.846 × 10<sup>26</sup> W. At a distance of AU = 1.496<sup>11</sup> m, Earth receives a radiant flux or apparent brightness of <span  class="math">\(F\)</span> = 1370 W/m<sup>2</sup>. That is, a solar panel with an area of 1 m<sup>2</sup> receives
-1370 W of power from the Sun.</p>
+<p>Instruments aboard satellites have measured the Sun’s apparent brightness, known as the <strong>solar constant</strong> <span  class="math">\(f_\odot\)</span>, which is the total amount of radiant solar energy per unit area reaching the top of the Earth’s atmosphere at the Earth’s mean distance from the Sun. The measurements indicate that <span  class="math">\(f_\odot\)</span> = 1,361 W m<sup>-2</sup> (but note: you will not receive this at your solar panel &mdash; the Sun's rays are attenuated as they pass through the atmosphere, leaving maximum normal surface irradiance at approximately 1000 W m<sup>-2</sup> at sea level on a clear day). At a distance of 1 AU = 1.496 x 10<sup>11</sup> m, the luminosity of the sun is thus <span  class="math">\(L_\odot\)</span> = 3.828 × 10<sup>26</sup> W. By extrapolating the Sun’s radiation flux back to its visible disk, we can further derive the disk’s effective temperature, <span  class="math">\(T_\text{eff}\)</span> from the relation</p>
 
-<h3 id="apparent-brightness-and-the-magnitude-scale">Apparent Brightness and the Magnitude Scale</h3>
+<p><span  class="math">\[ F_\odot = \frac{L_\odot}{4 \pi R_\odot^2} = \sigma T_\text{eff}^4 \;  .\]</span></p>
+
+<p>Using the Sun's radius <span  class="math">\(R_\odot\)</span> = 6.955 x 10<sup>8</sup> m and the Stefan-Boltzmann constant <span  class="math">\(\sigma\)</span> = 5.67 x  10<sup>-8</sup> W m<sup>-2</sup> K<sup>-4</sup> yields a surface temperature <span  class="math">\(T_\text{eff}\)</span> = 5780 K for the visible disk.</p>
+
+<p>Note that physics textbooks use slightly different terminology regarding flux:</p>
+
+<ul>
+<li><p>Most US textbooks on elementary astronomy (e.g. Arny/Schneider, Bennett et al., Freedman/Kaufmann, Kay et al.) talk about apparent brightness (or simply brightness) while avoiding the term flux, and correspondingly use the symbol <span  class="math">\(B\)</span> instead of <span  class="math">\(F\)</span>.</p></li>
+
+<li><p>Astrophysics books such as Carroll/Ostlie (2017), Lang (2013) or Gallaway (2020) tend to talk about radiant flux (or simply flux) <span  class="math">\(F\)</span>.</p></li>
+
+<li><p>Unsöld/Baschek (2002) define the radiation flux <span  class="math">\(F_\nu\)</span> per unit frequency range (1 Hz) and call <span  class="math">\(F = \int_{0}^{\infty} F_\nu \,d\nu\)</span> the total radiation flux.</p></li>
+
+<li><p>Karttunen <em>et al.</em> (2016), and with them <a href="https://en.wikipedia.org/wiki/Luminosity#Luminosity_formulae">Wikipedia</a>, call <span  class="math">\(F\)</span> the flux density, while describing the flux emitted into a solid angle <span  class="math">\(\omega\)</span> by <span  class="math">\(L = \omega r^2 F\)</span> and reserving total flux (or luminosity) for <span  class="math">\(L =  4 \pi r^2 F\)</span>.</p></li>
+</ul>
+
+<h3 id="apparent-brightness-and-apparent-magnitude">Apparent brightness and apparent magnitude</h3>
 
 <p>Apparent brightness is a measure, not of a star’s luminosity, but of the energy flux (energy per unit area per unit time) produced by the star, as seen from Earth. A star’s apparent brightness depends on our distance from the star.</p>
 
-<h3 id="history-of-the-spectral-sequence">History of the Spectral Sequence</h3>
+<p>The Greek astronomer Hipparchos (c. 190 BC–c. 120 BC) was one of the first sky watchers to catalog the stars
+that he saw. In addition to compiling a list of the positions of some 850 stars, Hipparchos invented a numerical scale to describe how bright each star appeared in the sky. He divided the stars that he could see into six groups to better measure their relative brightness, relative to the eyes. This way of measuring brightness is called the apparent visual magnitude  and is designated by the lowercase letter <span  class="math">\(m\)</span> or to be explicit about the visual aspect, by <span  class="math">\(m_\text{v}\)</span> with the subscript V denoting ‘‘visual’’.</p>
 
-<p>Many astronomers of the 1800s were able to do research only because of family wealth. One such astronomer was Henry Draper (1837–1882), an early pioneer of stellar spectroscopy. After Draper died in 1882, his widow made a series of large donations to Harvard College Observatory for the purpose of building on his work. The observatory director, Edward Pickering (1846–1919), used the gifts to improve the facilities and to hire numerous assistants, whom he called “computers.” Pickering added money of his own, as did other wealthy donors. Most of Pickering’s hired computers were women who had studied physics or astronomy at women’s colleges such as Wellesley and Radcliffe. Women had few opportunities to advance in science at the time. Harvard, for example, did not allow women to enroll as students and would not hire them as faculty. Pickering’s project of studying and classifying stellar spectra provided plenty of work and opportunity for his “computers,” and many of the Harvard Observatory women ended up among the most prominent astronomers of the late 1800s and early 1900s.</p>
+<p>Hipparchos designated the brightest stars, such as Sirius or Rigel, with the first and most important
+magnitude, <span  class="math">\(m = 1\)</span>; Polaris and most of the stars in the Big Dipper were designated <span  class="math">\(m = 2\)</span>; and the faintest stars visible to the unaided eye received the sixth magnitude, or <span  class="math">\(m = 6\)</span>. Note that a smaller apparent magnitude means a brighter-appearing star.</p>
 
-<p>One of the first computers was Williamina Fleming (1857–1911). Following Pickering’s suggestion, Fleming classified stellar spectra according to the strength of their hydrogen lines: type A for the strongest hydrogen lines, type B for slightly weaker hydrogen lines, and so on, to type O, for
-stars with the weakest hydrogen lines. Pickering published Fleming’s classifications of more than 10,000 stars in 1890.</p>
+<p>The rather vague classification of Hipparchos was replaced about two millennia later by the British astronomer Sir Norman Pogson (1829–1891). He noted in 1856 that the stars of the first magnitude were about 100 times as bright as stars of the sixth magnitude. Accordingly, Pogson defined the ratio of the brightnesses
+of classes <span  class="math">\(n\)</span> and <span  class="math">\(n+1\)</span> as <span  class="math">\(100^{1/5} = 2.512\)</span>.</p>
 
-<p>As more stellar spectra were obtained and the spectra were studied in greater detail, it became clear that the classification scheme based solely on hydrogen lines was inadequate. Ultimately, the task of finding a better classification scheme fell to Annie Jump Cannon (1863–1941), who joined
-Pickering’s team in 1896 (FIGURE 5). Building on the work of Fleming and another of Pickering’s “computers,” Antonia Maury (1866–1952), Cannon soon realized that the spectral classes fell into a natural order—but not the alphabetical order determined by hydrogen lines alone. Moreover, she
-found that some of the original classes overlapped others and could be eliminated. Cannon discovered that the natural sequence consisted of just a few of Pickering’s original classes
-in the order OBAFGKM and also added the subdivisions by number. Cannon became so adept that she could properly classify a stellar spectrum with little more than a momentary glance.
-In the course of her career, she personally classified more than 400,000 stars. She became the first woman ever awarded an honorary degree by Oxford University, and in 1923 the League of Women Voters named her one of the 12 greatest living American women. The astronomical community adopted Cannon’s system of stellar classification in 1910.</p>
+<p>The <strong>brightness class</strong> or <strong>apparent visual magnitude</strong> <span  class="math">\(m\)</span> can now be defined by demanding that a difference of 5 magnitudes between the apparent magnitudes of two stars shall correspond to the smaller-magnitude star being 100 times brighter than the larger-magnitude star, or expressed through their flux ratio</p>
 
-<p>However, no one at that time knew why spectra followed the OBAFGKM sequence. Many astronomers guessed, incorrectly, that the different sets of spectral lines indicated different
-compositions for the stars. The correct answer—that all stars are made primarily of hydrogen and  helium and that a star’s surface temperature determines the strength of its spectral lines—was discovered at Harvard Observatory by Cecilia Payne-Gaposchkin (1900–1979).</p>
+<p><span  class="math">\[ \frac{F_2}{F_1} = 100^{(m_1 - m_2)/5} = 10^{0.4(m_1 - m_2)} \; .\]</span></p>
 
-<p>Relying on insights from what was then the newly developing science of quantum mechanics, Payne-Gaposchkin showed that the differences in spectral lines from star to star merely reflect changes in the ionization level of the emitting atoms. For example, O stars have weak hydrogen lines
-because, at their high surface temperatures, nearly all their hydrogen is ionized. Without an electron to “jump” between energy levels, ionized hydrogen can neither emit nor absorb its usual specific wavelengths of light. At the other end of the spectral sequence, M stars are cool enough for some particularly stable molecules to form, explaining their strong molecular absorption lines. Payne-Gaposchkin described her work and her conclusions in a dissertation published in 1925 that
-was later called “undoubtedly the most brilliant Ph.D. thesis ever written in astronomy.”</p>
+<p>Taking the logarithm of both sides leads to the standard relation between the observed magnitudes of two celestial bodies and their corresponding fluxes:</p>
 
-<h3 id="isaac-newton-and-the-composition-of-sunlight">Isaac Newton and the Composition of Sunlight</h3>
 
-<p>These laws are neatly summarized in the following image:</p>
+<div class="panel panel-note"><div class="panel-body"><p><span  class="math">\[m_1 - m_2 = - 2.5 \log_{10} \left( \frac{F_1}{F_2} \right) \; .\]</span></p>
+</div></div>
 
-<p><center>
+<p>The apparent magnitude relation takes into account the nonlinear, roughly logarithmic response of the human eye to light intensity (which is still actively debated in psychophysics, see the Wikipedia articles on <a href="https://en.wikipedia.org/wiki/Weber%E2%80%93Fechner_law">Weber's law</a> and <a href="https://en.wikipedia.org/wiki/Stevens%27s_power_law">Stevens's power law</a>). Perhaps surprisingly, it turned out that for most stars, Hipparchos’s assessments were actually roughly correct. Today, magnitudes extend both ways from the original six values and the  logarithmic scale causes the very brightest stars to climb to negative apparent magnitudes. Sirius is <span  class="math">\(m = -1.45\)</span>, Venus can attain a magnitude of <span  class="math">\(−4.5\)</span>, the full Moon is around magnitude <span  class="math">\(−13\)</span>, and the Sun is so close and bright that it is <span  class="math">\(m = -26.7\)</span>. The number of stars increases dramatically with increasing apparent visual magnitude. There are 14 stars brighter than <span  class="math">\(m = 1\)</span> and about 5,600 stars brighter than <span  class="math">\(m = 6\)</span>, which are all of the stars detectable by the unaided human eye. There are 335,000 stars brighter than <span  class="math">\(m = 10\)</span> and 4.8 billion stars brighter than <span  class="math">\(m = 25\)</span>. A backyard telescope can detect stars of apparent magnitude between 10 and 15; the Hubble Space Telescope can approach apparent magnitude 30. These stars are 4 billion times fainter than the human eye can see without a telescope.</p>
 
-<link rel="stylesheet" href="https://joachimweise.github.io/css/hugo-easy-gallery.css" />
-<div class="box" style="max-width:650px">
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/img/2020-10-20-fraunhofer-lines/kirchoffs_laws_2.jpg" alt="/img/2020-10-20-fraunhofer-lines/kirchoffs_laws_2.jpg"/>
-    </div>
-    <a href="/img/2020-10-20-fraunhofer-lines/kirchoffs_laws_2.jpg" itemprop="contentUrl"></a>
-  </figure>
-</div>
+<h3 id="colors-and-filters">Colors and filters</h3>
 
-<p style="color:#989898; width: 650px; line-height: 1.1"><small>
-Kirchhoff's Laws
-</small></p>
-</center></p>
+<p>There are reddish stars like Betelgeuse and Antares, yellowish stars like the Sun and Capella, and whitish stars like Vega and Sirius. These colors provide a rough indication of the temperature of a star’s photosphere as the wavelength of maximum starlight intensity varies inversely with temperature. As the temperature rises, the colors change from red (near 3,000 K), to yellow (around 6,000 K), to white (around 10,000 K).</p>
+
+<p>The coloring of a star, however, is very subtle, depending on the relative amount of light seen in different colors. Blue-colored stars, for example, are not just bluer than red stars. For a star of the same radius, a blue star is more luminous than a red one. Exceptionally hot stars emit most of their radiation at invisible ultraviolet wavelengths, and such a star is even more luminous. There is enhanced radiation intensity at adjacent wavelengths, and this ultraviolet spillover produces more blue light than expected for a cooler star. In this case, the temperature of the star is much hotter than that inferred from blue light alone.</p>
+
+<p>In daylight the human eye is most sensitive to radiation with a wavelength of about 550 nm, the sensitivity decreasing towards red (longer wavelengths) and violet (shorter wavelengths). The magnitude corresponding to the sensitivity of the eye is called the <strong>visual magnitude</strong>  <span  class="math">\(m_\text{v}\)</span>.</p>
+
+<p>If, in an ideal case, we were able to measure the radiation at all wavelengths, we would get the <strong>bolometric magnitude</strong>  <span  class="math">\(m_\text{bol}\)</span>. In practice this is very difficult, since part of the radiation is absorbed by the atmosphere; also, different wavelengths require different detectors. The sensitivity of the detector is different at different wavelengths. Also, different instruments detect different wavelength ranges.</p>
+
+<p>Astronomers therefore decided to quantify color by comparing the apparent magnitudes measured in different wavelength bands. The most accurate magnitude measurements are made using photoelectric photometers. The color of a star may be precisely determined by using filters that transmit the star’s light only within certain narrow wavelength bands. One of the multicolor magnitude systems used widely in photoeletric photometry is the <strong>UBV system</strong>  developed in the early 1950’s by Harold L. Johnson and William W. Morgan <a href="/post/2020-11-12-classification-stellar-spectra/">(see also this post)</a>.</p>
+
+<p>In the standard UBV system, a star’s apparent magnitude is measured through three filters, designated by three capital letters:</p>
+
+<ul>
+<li><span  class="math">\(U = m_\text{U}\)</span>, the star’s ultraviolet magnitude, is measured through a filter centered at 365 nm with an effective bandwidth of 68 nm.</li>
+<li><span  class="math">\(B = m_\text{B}\)</span>, the star’s blue magnitude, is measured through a filter centered at 440 nm with an effective bandwidth of 98 nm.</li>
+<li><span  class="math">\(V = m_\text{V}\)</span> , the star’s visual magnitude, is measured through a filter centered at 550 nm with an effective bandwidth of 89 nm.</li>
+</ul>
+
+<p>In any multicolor system, we can define color indices; a color index is the difference of two apparent magnitudes measured in different wavelength ranges X and Y, in other words color index <span  class="math">\(= m_\text{X} - m_\text{Y}.\)</span> In the UBV system it is common to give only the <span  class="math">\(V\)</span> magnitude and the color indices <span  class="math">\(U−B\)</span> and <span  class="math">\(B−V\)</span>.</p>
+
+<p>Within photometry there is an important concept, that of the zero point, which is the magnitude of an
+object that for the specified instrument setup will produce one count per second. It is represented by a  preselected flux density <span  class="math">\(F_0\)</span> chosen to correspond to the magnitude 0. All other magnitudes are then defined by <span  class="math">\(m = -2.5 \log (F/F_0)\)</span>. The three magnitudes <span  class="math">\(U\)</span>, <span  class="math">\(B\)</span>, and <span  class="math">\(V\)</span> are by definition related to each other in such a way (i.e. the three constants are chosen in such a way) that for A0 V stars (e.g. <span  class="math">\(\alpha\)</span> Lyr = Vega) <span  class="math">\(B-V=U-B=0\)</span>.</p>
+
+<h3 id="color-index-and-temperature">Color index and temperature</h3>
+
+<p>The color indices give a measure of the energy distribution in the stellar spectra, i.e. of the wavelength dependence of the radiation flux, as first recognized by Karl Schwarzschild; they are thus also a measure
+of the temperatures of the stellar atmospheres.</p>
+
+<p>Various empiricial fits for the relation between temperature <span  class="math">\(T\)</span> and the <span  class="math">\(B-V\)</span> color index can be found in the literature, see e.g. <a href="https://arxiv.org/pdf/1201.1809.pdf">Ballesteros (2012)</a>, <a href="https://iopscience.iop.org/article/10.1086/301490">Sekiguchi/Fukugita (2000)</a> or <a href="http://articles.adsabs.harvard.edu//full/1998JRASC..92...36R/0000036.000.html">Reed (1998)</a>. As an example we state the formula by Ballesteros (2012) which works well in
+the whole spectrum:</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p><span  class="math">\[T = 4600 \left(\frac{1}{0.92(B-V)+1.7} + \frac{1}{0.92(B-V)+0.62}\right) \; .\]</span></p>
+</div></div>
+
+<h3 id="abolute-magnitude-and-distance-modulus">Abolute magnitude and distance modulus</h3>
+
+<p>Apparent magnitudes do not tell us anything about the true brightness of stars, since the distances differ. A quantity measuring the intrinsic brightness of a star is the absolute magnitude <span  class="math">\(M\)</span>. It is defined as the apparent magnitude at a distance of 10 parsecs from the star. To derive it we note that the flux density <span  class="math">\(F_d\)</span> at a distance <span  class="math">\(d\)</span> and the flux density <span  class="math">\(F_{10}\)</span> at a distance <span  class="math">\(10\)</span> pc are related by</p>
+
+<p><span  class="math">\[\frac{F_d}{F_{10}} = \left(\frac{10\:\text{pc}}{d}\right)^2 \; .\]</span></p>
+
+<p>The so-called <strong>distance-modulus</strong> <span  class="math">\(m-M\)</span>, i.e. the difference of magnitudes at <span  class="math">\(r\)</span> and 10 pc, is therefore</p>
+
+<p><span  class="math">\[m-M = -2.5\log\left(\frac{F_d}{F_{10}}\right) = -2.5\log\left(\frac{10\:\text{pc}}{d}\right)^2 \; ,\]</span></p>
+
+<p>or</p>
+
+
+<div class="panel panel-note"><div class="panel-body"><p><span  class="math">\[m-M = 5 \log \left(\frac{d}{10\:\text{pc}}\right) \; .\]</span></p>
+</div></div>
+
+<p>The distance modulus of the Sun is obtained from the definition of 1 pc = 3.086 x 10<sup>16</sup> m and the definition of 1 AU = 1.496 x 10<sup>11</sup> m and is <span  class="math">\((m-M)_{\odot} = -31.57\)</span>  mag. The Sun has an apparent visual magnitude of <span  class="math">\(m_{\text{V}\odot} = -26.74\)</span> and therefore an absolute visual magnitude of <span  class="math">\(M_{\text{V}\odot} = 4.83\)</span>.</p>
 
 <h3 id="sources-and-further-reading">Sources and further reading</h3>
 
-<p>Fara, P.: <em>Newton Shows the Light: A Commentary on Newton (1672) 'A Letter … Containing His New Theory About Light and Colours…'</em>, Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences 373, 2039 (2015).
-<small><a href="https://doi.org/10.1098/rsta.2014.0213">[https://doi.org/10.1098/rsta.2014.0213]</a></small></p>
+<p>B. W. Carroll and D. A. Ostlie, <em>An Introduction to Modern Astrophysics</em> (Cambridge University Press, 2017), Chapter 3.</p>
 
-<p>Fraunhofer, J.: <em>Bestimmung Des Brechungs- Und Des Farbenzerstreungs-Vermögens Verschiedener Glasarten, in Bezug Auf Die Vervollkommnung Achromatischer Fernröhre</em>, Annalen Der Physik 56, 7 (1817).
-<small><a href="https://doi.org/10.1002/andp.18170560706">[https://doi.org/10.1002/andp.18170560706]</a>
-<a href="https://gallica.bnf.fr/ark:/12148/bpt6k15065z/f276.item.r=Annalen%20der%20physik%20(Leipzig).langEN.zoom">[fulltext]</a></small></p>
+<p>M. Gallaway, <em>An Introduction to Observational Astrophysics</em> (Springer, 2020), Chapter 2.</p>
 
-<p>Hearnshaw, J.B.:  <em>The Analysis of Starlight</em> (Cambridge University Press, 2014)</p>
+<p>H. Karttunen, <em>Fundamental Astronomy</em> (Springer-Verlag GmbH, 2016), Chapter 4.</p>
+
+<p>K. R. Lang, <em>Essential Astrophysics</em> (Springer Verlag, 2013), Chapters 2 and 10.</p>
+
+<p>A. Unsöld and B. Baschek, <em>The New Cosmos</em> (Springer-Verlag, New York, 2002), Chapters 4 and 6.</p>
 
         
           <div class="blog-tags">
@@ -437,7 +498,7 @@ Kirchhoff's Laws
                   <ul>
                 
                 
-                    <li><a href="/post/2020-11-12-classification-stellar-spectra/">Classification of Stellar Spectra</a></li>
+                    <li><a href="/post/2020-11-12-classification-stellar-spectra/">Stellar Classification</a></li>
                 
                     <li><a href="/post/2020-10-20-fraunhofer-lines/">Fraunhofer Lines</a></li>
                 
@@ -457,7 +518,7 @@ Kirchhoff's Laws
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://joachimweise.github.io/post/2020-11-12-classification-stellar-spectra/" data-toggle="tooltip" data-placement="top" title="Classification of Stellar Spectra">&larr; Previous Post</a>
+              <a href="https://joachimweise.github.io/post/2020-11-12-classification-stellar-spectra/" data-toggle="tooltip" data-placement="top" title="Stellar Classification">&larr; Previous Post</a>
             </li>
           
           
